@@ -9,6 +9,10 @@
 ├── README.md
 ├── AGENTS.md
 ├── .gitignore
+├── src/
+├── assets/
+├── docs/
+│   └── SETUP.md
 └── notes/
     └── README.md
 ```
@@ -27,3 +31,8 @@ git add .
 git commit -m "Update project files"
 git push
 ```
+
+
+## 下一步建议
+
+请参考 `docs/SETUP.md` 获取仓库初始化与工作流建议。
