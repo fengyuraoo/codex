@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f1e8;
+  color: #2b2926;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #dac6ad;
+}
+
+.quiet-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d7cab8 transparent;
+}
+
+.quiet-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.quiet-scrollbar::-webkit-scrollbar-thumb {
+  background: #d7cab8;
+  border-radius: 999px;
+}
