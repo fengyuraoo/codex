@@ -1,23 +1,28 @@
-# Deployment
+# GitHub Pages Deployment
 
-Recommended target: **Vercel**.
+Target repository: `fengyuraoo/codex`
 
-## First Deploy
+Final URL:
 
-1. Push this project to a GitHub repository.
-2. Open Vercel and choose **Add New Project**.
-3. Import the GitHub repository.
-4. Keep the default Next.js settings.
-5. Click **Deploy**.
+`https://fengyuraoo.github.io/codex/`
 
-Vercel will provide a fixed HTTPS link. Open that link on the MatePad browser.
+## First Setup
+
+1. Push this project to the `main` branch of `fengyuraoo/codex`.
+2. Open the GitHub repository page.
+3. Go to **Settings > Pages**.
+4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+5. Go to **Actions** and wait for **Deploy GitHub Pages** to finish.
+6. Open `https://fengyuraoo.github.io/codex/` on the MatePad browser.
 
 ## Update Later
 
-1. Commit code changes.
-2. Push to the same GitHub branch.
-3. Vercel redeploys automatically.
+1. Commit changes.
+2. Push to `main`.
+3. GitHub Actions builds the static Next.js export and deploys the `out` folder automatically.
 
-## Data Reminder
+## Notes
 
-This app stores materials and recordings in the browser with IndexedDB. Deployment updates do not upload or sync recordings. Use **Settings > Export Full Backup** before clearing browser data or moving devices.
+- GitHub Pages uses `/codex/`, so production builds set `basePath` and `assetPrefix` to `/codex`.
+- Local development can still use the normal localhost path.
+- Materials and recordings stay in the browser through IndexedDB. Use **Settings > Export Full Backup** before clearing browser data or changing devices.
