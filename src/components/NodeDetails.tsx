@@ -2,14 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, Edit3, FilePlus2, Save, Trash2, X } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { NodeRecorder } from "@/components/NodeRecorder";
+import { SpeakButton } from "@/components/SpeakButton";
 import { cn, formatDateTime } from "@/lib/utils";
 import { useMaterialStore } from "@/store/useMaterialStore";
-import type { MaterialNode } from "@/types";
+import { useVocabularyStore } from "@/store/useVocabularyStore";
+import type { MaterialNode, VocabularyDifficulty } from "@/types";
 
 function toLines(items: string[]) {
   return items.join("\n");
@@ -23,17 +26,22 @@ function fromLines(value: string) {
 }
 
 function ContentBlock({
+  action,
   title,
   children
 }: {
+  action?: React.ReactNode;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
-      <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
-        {title}
-      </h3>
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+          {title}
+        </h3>
+        {action}
+      </div>
       <div className="whitespace-pre-wrap text-sm leading-7 text-foreground">
         {children}
       </div>
@@ -53,6 +61,9 @@ export function NodeDetails({
   const saveNode = useMaterialStore((state) => state.saveNode);
   const addNode = useMaterialStore((state) => state.addNode);
   const deleteNode = useMaterialStore((state) => state.deleteNode);
+  const vocabularyItems = useVocabularyStore((state) => state.items);
+  const initializeVocabulary = useVocabularyStore((state) => state.initialize);
+  const addVocabularyItem = useVocabularyStore((state) => state.addItem);
   const selected = useMemo(
     () => nodes.find((node) => node.id === selectedNodeId) ?? nodes[0],
     [nodes, selectedNodeId]
@@ -61,7 +72,22 @@ export function NodeDetails({
   const [tagText, setTagText] = useState("");
   const [questionText, setQuestionText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+  const [showVocabularyForm, setShowVocabularyForm] = useState(false);
+  const [vocabularyDraft, setVocabularyDraft] = useState({
+    word: "",
+    meaningZh: "",
+    meaningEn: "",
+    exampleSentence: "",
+    exampleTranslation: "",
+    tags: "",
+    difficulty: "medium" as VocabularyDifficulty
+  });
   const isRoot = selected?.parentId === null;
+  const nodeVocabulary = useMemo(
+    () => vocabularyItems.filter((item) => item.nodeId === selected?.id),
+    [selected?.id, vocabularyItems]
+  );
+  const recentVocabulary = nodeVocabulary.slice(0, 5);
 
   useEffect(() => {
     setDraft(selected ?? null);
@@ -69,6 +95,10 @@ export function NodeDetails({
     setQuestionText(toLines(selected?.relatedQuestions ?? []));
     setIsEditing(false);
   }, [selected]);
+
+  useEffect(() => {
+    void initializeVocabulary();
+  }, [initializeVocabulary]);
 
   if (!selected || !draft) {
     return (
@@ -95,6 +125,38 @@ export function NodeDetails({
     setTagText(selected.tags.join(", "));
     setQuestionText(toLines(selected.relatedQuestions));
     setIsEditing(false);
+  };
+
+  const resetVocabularyDraft = () => {
+    setVocabularyDraft({
+      word: "",
+      meaningZh: "",
+      meaningEn: "",
+      exampleSentence: "",
+      exampleTranslation: "",
+      tags: "",
+      difficulty: "medium"
+    });
+  };
+
+  const saveVocabulary = async () => {
+    if (!selected || !vocabularyDraft.word.trim()) return;
+    await addVocabularyItem({
+      nodeId: selected.id,
+      word: vocabularyDraft.word.trim(),
+      meaningZh: vocabularyDraft.meaningZh.trim(),
+      meaningEn: vocabularyDraft.meaningEn.trim(),
+      exampleSentence: vocabularyDraft.exampleSentence.trim(),
+      exampleTranslation: vocabularyDraft.exampleTranslation.trim() || undefined,
+      tags: vocabularyDraft.tags
+        .split(",")
+        .map((tag) => tag.trim())
+        .filter(Boolean),
+      difficulty: vocabularyDraft.difficulty,
+      status: "new"
+    });
+    resetVocabularyDraft();
+    setShowVocabularyForm(false);
   };
 
   return (
@@ -127,6 +189,11 @@ export function NodeDetails({
             <p className="mt-2 break-words text-base text-muted">
               {isEditing ? draft.enTitle : selected.enTitle}
             </p>
+            {!isEditing && (
+              <div className="mt-3">
+                <SpeakButton label="朗读标题 / Speak title" text={selected.enTitle} />
+              </div>
+            )}
           </div>
           <div className="flex shrink-0 gap-2">
             <Button
@@ -271,19 +338,37 @@ export function NodeDetails({
               {selected.zhContent || "待补充"}
             </ContentBlock>
 
-            <ContentBlock title="英文表达 / English Expression">
+            <ContentBlock
+              action={
+                <SpeakButton
+                  label="朗读英文 / Speak"
+                  size="md"
+                  text={selected.enContent}
+                />
+              }
+              title="英文表达 / English Expression"
+            >
               {selected.enContent || "To be completed."}
             </ContentBlock>
 
             <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
-              <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
-                相关题目 / Related Questions
-              </h3>
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+                  相关题目 / Related Questions
+                </h3>
+                <SpeakButton
+                  label="朗读全部 / Speak all"
+                  text={selected.relatedQuestions.join(". ")}
+                />
+              </div>
               {selected.relatedQuestions.length ? (
                 <ul className="space-y-2 pl-4 text-sm leading-6 text-foreground">
                   {selected.relatedQuestions.map((question) => (
                     <li className="list-disc marker:text-[#c7b79f]" key={question}>
-                      {question}
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span>{question}</span>
+                        <SpeakButton label="Speak" text={question} />
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -293,6 +378,152 @@ export function NodeDetails({
             </section>
           </div>
         )}
+
+        <section className="mt-5 rounded-lg border border-border bg-card p-4 shadow-sm">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 className="text-sm font-semibold">节点词汇 / Node Vocabulary</h3>
+              <p className="mt-1 text-xs text-muted">
+                {nodeVocabulary.length} words linked to this node.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                className="min-h-10"
+                onClick={() => setShowVocabularyForm((current) => !current)}
+                size="sm"
+                variant="secondary"
+              >
+                <FilePlus2 className="h-4 w-4" />
+                添加词汇 / Add Vocabulary
+              </Button>
+              <Button asChild className="min-h-10" size="sm" variant="secondary">
+                <Link href="/vocabulary">查看全部 / View All</Link>
+              </Button>
+            </div>
+          </div>
+
+          {recentVocabulary.length ? (
+            <div className="mb-3 grid gap-2">
+              {recentVocabulary.map((item) => (
+                <div
+                  className="rounded-md border border-border bg-[#fffaf3] p-3 text-sm"
+                  key={item.id}
+                >
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                      <p className="font-medium">{item.word}</p>
+                      <p className="mt-1 text-xs text-muted">{item.meaningZh}</p>
+                    </div>
+                    <SpeakButton label="Speak" text={item.word} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="mb-3 text-sm text-muted">
+              No vocabulary yet. Add useful words from this material.
+            </p>
+          )}
+
+          {showVocabularyForm && (
+            <div className="grid gap-3 rounded-lg border border-border bg-[#fffaf3] p-3">
+              <div className="grid gap-3 md:grid-cols-2">
+                <Input
+                  onChange={(event) =>
+                    setVocabularyDraft({
+                      ...vocabularyDraft,
+                      word: event.target.value
+                    })
+                  }
+                  placeholder="word / phrase"
+                  value={vocabularyDraft.word}
+                />
+                <Input
+                  onChange={(event) =>
+                    setVocabularyDraft({
+                      ...vocabularyDraft,
+                      meaningZh: event.target.value
+                    })
+                  }
+                  placeholder="中文含义"
+                  value={vocabularyDraft.meaningZh}
+                />
+              </div>
+              <Input
+                onChange={(event) =>
+                  setVocabularyDraft({
+                    ...vocabularyDraft,
+                    meaningEn: event.target.value
+                  })
+                }
+                placeholder="English definition"
+                value={vocabularyDraft.meaningEn}
+              />
+              <Textarea
+                className="min-h-24"
+                onChange={(event) =>
+                  setVocabularyDraft({
+                    ...vocabularyDraft,
+                    exampleSentence: event.target.value
+                  })
+                }
+                placeholder="Example sentence"
+                value={vocabularyDraft.exampleSentence}
+              />
+              <Input
+                onChange={(event) =>
+                  setVocabularyDraft({
+                    ...vocabularyDraft,
+                    exampleTranslation: event.target.value
+                  })
+                }
+                placeholder="例句翻译（可选）"
+                value={vocabularyDraft.exampleTranslation}
+              />
+              <div className="grid gap-3 md:grid-cols-2">
+                <Input
+                  onChange={(event) =>
+                    setVocabularyDraft({
+                      ...vocabularyDraft,
+                      tags: event.target.value
+                    })
+                  }
+                  placeholder="tags, separated by commas"
+                  value={vocabularyDraft.tags}
+                />
+                <select
+                  className="h-10 rounded-md border border-border bg-card px-3 text-sm"
+                  onChange={(event) =>
+                    setVocabularyDraft({
+                      ...vocabularyDraft,
+                      difficulty: event.target.value as VocabularyDifficulty
+                    })
+                  }
+                  value={vocabularyDraft.difficulty}
+                >
+                  <option value="easy">easy</option>
+                  <option value="medium">medium</option>
+                  <option value="hard">hard</option>
+                </select>
+              </div>
+              <div className="flex justify-end gap-2">
+                <Button
+                  onClick={() => {
+                    resetVocabularyDraft();
+                    setShowVocabularyForm(false);
+                  }}
+                  variant="secondary"
+                >
+                  取消 / Cancel
+                </Button>
+                <Button onClick={() => void saveVocabulary()}>
+                  保存词汇 / Save Vocabulary
+                </Button>
+              </div>
+            </div>
+          )}
+        </section>
 
         <div className="mt-5 rounded-lg border border-border bg-[#fffaf3] p-3 text-xs leading-5 text-muted">
           Created {formatDateTime(selected.createdAt)}

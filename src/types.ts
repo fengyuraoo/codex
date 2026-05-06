@@ -33,6 +33,29 @@ export type AppSettings = {
   updatedAt: string;
 };
 
+export type VocabularyDifficulty = "easy" | "medium" | "hard";
+
+export type VocabularyStatus = "new" | "learning" | "mastered";
+
+export type VocabularySource = "manual" | "seed";
+
+export type VocabularyItem = {
+  id: string;
+  nodeId?: string;
+  word: string;
+  phrase?: string;
+  meaningZh: string;
+  meaningEn: string;
+  exampleSentence: string;
+  exampleTranslation?: string;
+  tags: string[];
+  difficulty: VocabularyDifficulty;
+  status: VocabularyStatus;
+  source: VocabularySource;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export type ExportRecordingItem = Omit<RecordingItem, "audioBlob"> & {
   audioDataUrl: string;
   audioType: string;

@@ -1,7 +1,12 @@
 "use client";
 
 import { db } from "@/lib/db";
-import type { AppSettings, MaterialNode, RecordingItem } from "@/types";
+import type {
+  AppSettings,
+  MaterialNode,
+  RecordingItem,
+  VocabularyItem
+} from "@/types";
 
 const BACKUP_VERSION = 1;
 const APP_NAME = "Speaking Map";
@@ -23,6 +28,7 @@ export type FullBackup = {
   appName: string;
   materialNodes: MaterialNode[];
   recordings: BackupRecording[];
+  vocabularyItems: VocabularyItem[];
   appSettings: AppSettings[];
   layoutSettings?: unknown;
 };
@@ -74,6 +80,9 @@ export function validateFullBackup(value: unknown): asserts value is FullBackup 
   if (!Array.isArray(backup.materialNodes) || !Array.isArray(backup.recordings)) {
     throw new Error("Backup is missing required data");
   }
+  if (backup.vocabularyItems && !Array.isArray(backup.vocabularyItems)) {
+    throw new Error("Backup contains invalid vocabulary data");
+  }
   for (const recording of backup.recordings) {
     if (
       !recording ||
@@ -88,9 +97,10 @@ export function validateFullBackup(value: unknown): asserts value is FullBackup 
 }
 
 export async function createFullBackup(): Promise<FullBackup> {
-  const [materialNodes, recordings, appSettings] = await Promise.all([
+  const [materialNodes, recordings, vocabularyItems, appSettings] = await Promise.all([
     db.materialNodes.toArray(),
     db.recordings.toArray(),
+    db.vocabularyItems.toArray(),
     db.appSettings.toArray()
   ]);
   return {
@@ -109,6 +119,7 @@ export async function createFullBackup(): Promise<FullBackup> {
         createdAt: recording.createdAt
       }))
     ),
+    vocabularyItems,
     appSettings,
     layoutSettings: readLayoutSettings()
   };
@@ -125,16 +136,27 @@ export async function importFullBackup(backup: FullBackup, mode: ImportMode) {
     createdAt: recording.createdAt
   }));
 
-  await db.transaction("rw", db.materialNodes, db.recordings, db.appSettings, async () => {
-    if (mode === "replace") {
-      await db.materialNodes.clear();
-      await db.recordings.clear();
-      await db.appSettings.clear();
+  await db.transaction(
+    "rw",
+    db.materialNodes,
+    db.recordings,
+    db.vocabularyItems,
+    db.appSettings,
+    async () => {
+      if (mode === "replace") {
+        await db.materialNodes.clear();
+        await db.recordings.clear();
+        await db.vocabularyItems.clear();
+        await db.appSettings.clear();
+      }
+      await db.materialNodes.bulkPut(backup.materialNodes);
+      if (recordings.length) await db.recordings.bulkPut(recordings);
+      if (backup.vocabularyItems?.length) {
+        await db.vocabularyItems.bulkPut(backup.vocabularyItems);
+      }
+      if (backup.appSettings?.length) await db.appSettings.bulkPut(backup.appSettings);
     }
-    await db.materialNodes.bulkPut(backup.materialNodes);
-    if (recordings.length) await db.recordings.bulkPut(recordings);
-    if (backup.appSettings?.length) await db.appSettings.bulkPut(backup.appSettings);
-  });
+  );
 
   if (backup.layoutSettings && typeof window !== "undefined") {
     window.localStorage.setItem(
