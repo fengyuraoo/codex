@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DesignMate v0.6</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <div class="brand">DesignMate <span>v0.6</span></div>
+        <p>本地 AI 作品集资料库</p>
+      </div>
+      <nav class="tabs">
+        <button class="tab active" data-view="dashboard">Dashboard</button>
+        <button class="tab" data-view="search">Search</button>
+        <button class="tab" data-view="ask">Ask</button>
+        <button class="tab" data-view="report">Reports</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboardView" class="view active">
+        <section class="import-guide" id="importGuide">
+          <div>
+            <h1>导入真实作品集资料</h1>
+            <p>把 Markdown、TXT、PDF、图片放入 <code>DesignMate/data/inbox</code>，运行 <code>run_designmate.bat</code> 或 <code>python scripts/run_designmate.py</code>，刷新本页即可查看资料。</p>
+          </div>
+          <div class="import-stats" id="importStats"></div>
+        </section>
+        <section class="stats" id="stats"></section>
+        <section class="distribution">
+          <div>
+            <h2>项目分布</h2>
+            <div id="projectCards" class="mini-grid"></div>
+          </div>
+          <div>
+            <h2>类型分布</h2>
+            <div id="typeCards" class="mini-grid"></div>
+          </div>
+        </section>
+        <h2>高价值资料</h2>
+        <section class="entry-grid">
+          <article class="entry-card"><h2>Ask DesignMate</h2><p>询问项目缺口、用户痛点、调研页资料和作品集页面结构。</p><button class="secondary jump" data-target="ask">进入 Ask</button></article>
+          <article class="entry-card"><h2>Portfolio Draft</h2><p>用规则版生成器按项目和页面类型输出作品集页面草稿。</p><button class="secondary jump" data-target="report">查看 Drafts</button></article>
+        </section>
+        <div class="material-list" id="highlightList"></div>
+      </section>
+
+      <section id="searchView" class="view">
+        <section class="controls">
+          <label class="search">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="搜索低干扰、用户痛点、图信中心、双城通勤..." />
+          </label>
+          <label><span>Project</span><select id="projectFilter"></select></label>
+          <label><span>Type</span><select id="typeFilter"></select></label>
+          <label><span>Stage</span><select id="stageFilter"></select></label>
+          <label><span>Limit</span><select id="limitFilter"><option>10</option><option selected>20</option><option>50</option></select></label>
+          <label><span>Sort</span><select id="sortFilter"><option value="score">score</option><option value="updated_at">updated_at</option><option value="filename">filename</option></select></label>
+          <button id="clearFilters" class="secondary">清空筛选</button>
+        </section>
+        <section class="quick-filters" id="quickFilters">
+          <button data-quick="high">高价值资料</button>
+          <button data-quick="confirm">待确认资料</button>
+          <button data-quick="reader">Reader Design</button>
+          <button data-quick="info">Info Center</button>
+          <button data-quick="feedback">Feedback</button>
+          <button data-quick="research">Research</button>
+          <button data-quick="unknown">Unknown</button>
+        </section>
+        <section class="batch-toolbar" id="batchToolbar">
+          <strong id="selectedCount">已选择 0 条</strong>
+          <select id="batchProject"><option value="">Project 不修改</option></select>
+          <select id="batchType"><option value="">Type 不修改</option></select>
+          <select id="batchStage"><option value="">Stage 不修改</option></select>
+          <input id="batchTags" placeholder="批量标签，逗号分隔；留空不修改" />
+          <button id="applyBatch" class="primary small">批量保存</button>
+          <button id="clearSelection" class="secondary small">取消选择</button>
+        </section>
+        <section class="layout">
+          <div>
+            <h2 id="resultTitle">搜索结果</h2>
+            <div class="material-list" id="materialList"></div>
+          </div>
+          <aside class="detail" id="detailPanel">
+            <h2>资料详情</h2>
+            <p>点击资料查看路径、解析状态、作品集用途和待确认问题。</p>
+          </aside>
+        </section>
+      </section>
+
+      <section id="askView" class="view">
+        <section class="ask-panel">
+          <div>
+            <h1>Ask DesignMate</h1>
+            <p>基于本地资料回答，不编造没有证据的设计结论。无 API Key 时使用 rule_based fallback。</p>
+          </div>
+          <label><span>Project</span><select id="askProject"></select></label>
+          <label class="ask-input"><span>Question</span><textarea id="askQuestion" rows="4" placeholder="例如：阅读器项目可以生成哪几页作品集？"></textarea></label>
+          <button id="askButton" class="primary">提问</button>
+        </section>
+        <section class="ask-result" id="askResult">
+          <h2>回答</h2>
+          <p class="meta">输入问题后，DesignMate 会先检索本地资料，再生成规则版回答。</p>
+        </section>
+      </section>
+
+      <section id="reportView" class="view">
+        <div class="report-grid">
+          <article>
+            <h2>Latest Report</h2>
+            <div id="latestReport" class="markdown-body"></div>
+          </article>
+          <article>
+            <h2>Need Confirm</h2>
+            <div id="needConfirm" class="markdown-body emphasize"></div>
+          </article>
+          <article>
+            <h2>Next Actions</h2>
+            <div id="nextActions" class="markdown-body"></div>
+          </article>
+          <article>
+            <h2>Portfolio Draft</h2>
+            <div class="draft-entry">
+              <p>规则版作品集页面草稿可以从当前资料库生成，适合先搭页面叙事骨架。</p>
+              <code>python scripts/generate_portfolio_draft.py --project reader-design --page pain-points</code>
+              <code>python scripts/generate_portfolio_draft.py --project info-center --page concept</code>
+              <p>输出位置：<code>drafts/latest_portfolio_page_draft.md</code></p>
+              <div id="draftList" class="draft-list"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="status" id="status">Loading local data...</div>
+    <script src="data/app_data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

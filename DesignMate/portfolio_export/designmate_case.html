@@ -1,0 +1,15 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><title>DesignMate Case</title>
+<style>body{font-family:Segoe UI,Microsoft YaHei,sans-serif;margin:0;background:#f6f5f1;color:#1b1c1d}main{max-width:980px;margin:auto;padding:36px}section{background:#fff;border:1px solid #d7d2c9;border-radius:8px;margin:16px 0;padding:22px}h1{font-size:34px}h2{color:#146c68}</style></head><body><main>
+<h1>DesignMate Portfolio Case</h1><p>本地 AI 作品集资料库原型：从资料管理到页面叙事。</p>
+<section><h2>Project Overview</h2><p>DesignMate 是一个围绕设计学生作品集资料管理展开的本地 AI 产品原型。项目从“资料很多但叙事很散”的问题出发，尝试把扫描、搜索、分类、编辑、报告和页面草稿生成整合为一个可演示工作流。</p></section>
+<section><h2>Product Positioning</h2><p>产品定位为本地 AI 作品集资料库。它不追求替代设计判断，而是让用户在准备作品集时更快找到证据、整理项目逻辑、确认缺失资料，并把资料转化为页面草稿。</p></section>
+<section><h2>User Pain Points</h2><p>目标用户的核心痛点包括资料分散、灵感难回收、调研和方案之间缺少证据链、反馈难沉淀、最终页面叙事常常临时拼接。</p></section>
+<section><h2>Feature Map</h2><p>核心功能包括资料导入、SQLite 本地数据库、中文搜索、资料详情编辑、批量编辑、Ask DesignMate、每日报告、作品集草稿生成和作品集案例导出。</p></section>
+<section><h2>User Flow</h2><p>用户每天只需要放入资料、运行扫描、打开 Web UI。之后可以搜索资料、批量确认分类、向 Ask DesignMate 提问、查看报告，并生成页面草稿。</p></section>
+<section><h2>Information Architecture</h2><p>信息架构围绕 Dashboard、Search、Ask、Reports 和 Drafts 展开。核心数据对象是 MaterialRecord，包含文件、解析、分类、项目、标签、评分、备注、扫描历史和图片元数据。</p></section>
+<section><h2>Interface Screens</h2><p>界面强调克制、清晰和可截图展示。Dashboard 展示导入状态和资料分布，Search 承担整理工作，Ask 提供规则版 AI 问答，Reports 连接下一步行动。</p></section>
+<section><h2>Technical Prototype</h2><p>原型使用 Python 标准库优先、SQLite、可选 FTS5、纯 HTML/CSS/JS 前端和本地 API。没有 API Key 时仍可使用 rule_based fallback。</p></section>
+<section><h2>Iteration Log</h2><p>v0.1 完成文件夹 MVP，v0.3 引入 SQLite 和 API，v0.4 实现编辑闭环，v0.5 增加批量编辑和草稿生成，v0.6 增加 AI 抽象、Ask 工作区、扫描历史和作品集导出。</p></section>
+<section><h2>Portfolio Storyboard</h2><p>建议排版为四页：第一页讲用户问题和产品机会，第二页讲信息架构与核心流程，第三页展示 Dashboard/Search/Ask 的界面，第四页展示技术原型、验证和下一步迭代。</p></section>
+<section><h2>Demo Script</h2><p>演示顺序：导入资料，运行扫描，打开 Dashboard 查看导入状态，搜索“用户痛点”，批量确认资料，向 Ask DesignMate 提问，生成 pain-points 页面草稿，导出作品集案例。</p></section>
+</main></body></html>

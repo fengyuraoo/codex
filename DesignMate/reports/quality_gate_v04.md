@@ -1,0 +1,41 @@
+# Quality Gate v0.4
+
+Generated at: 2026-05-06T23:32:21
+
+## Commands
+
+| Check | Status | Notes |
+| --- | --- | --- |
+| `python scripts/run_designmate.py` | PASS | - review/latest_next_actions.md |
+| `python scripts/build_static_site.py` | PASS | Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser. |
+| `python scripts/run_tests.py` | PASS | Test report written to reports\test_report_v04.md |
+| `python scripts/api_smoke_test.py` | PASS | - PASS `rebuild`: `{"fts5_available": true}` |
+
+## Required Files
+
+| File | Status | Fix Suggestion |
+| --- | --- | --- |
+| `data/designmate.db` | PASS | - |
+| `frontend/index.html` | PASS | - |
+| `frontend/app.js` | PASS | - |
+| `frontend/style.css` | PASS | - |
+| `frontend/data/materials.json` | PASS | - |
+| `frontend/data/app_data.js` | PASS | - |
+| `reports/latest_report.md` | PASS | - |
+| `review/latest_need_confirm.md` | PASS | - |
+| `review/latest_next_actions.md` | PASS | - |
+| `drafts/latest_portfolio_materials.md` | PASS | - |
+
+## Functional Checks
+
+| Check | Status | Fix Suggestion |
+| --- | --- | --- |
+| materials 数量 > 0 | PASS | - |
+| 高价值资料数量 > 0 | PASS | - |
+| search 低干扰有结果 | PASS | - |
+| search 图信中心有结果 | PASS | - |
+| search 用户痛点有结果 | PASS | - |
+| update_material 可用 | PASS | - |
+| frontend data 非空 | PASS | - |
+
+Final status: PASS

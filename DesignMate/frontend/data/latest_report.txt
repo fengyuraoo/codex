@@ -1,0 +1,260 @@
+# DesignMate 本地资料报告
+
+Generated at: 2026-05-07T15:27:27
+
+## 1. 今日摘要
+
+当前资料库共有 36 条资料，其中 33 条属于高价值资料，2 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
+
+### 新增资料提示
+
+- 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。
+- 上次扫描时间：2026-05-07T15:27:26。
+- 上次报告生成时间：2026-05-07T15:27:25。
+- 最近扫描批次：scan-fdad29dc01a8，新增 0，更新 36，重复 0，失败 1。
+
+### 未解析资料提示
+
+- 未解析或解析异常资料：1 条。
+- 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。
+
+### 建议补充资料
+
+- 阅读器设计：补充低干扰阅读的用户访谈摘录、草图演进和功能取舍说明。
+- 图信中心设计：补充空间调研照片说明、动线观察记录和功能分区依据。
+- 论文资料：补充双城通勤的概念定义、样本来源和结论边界。
+
+### 本次扫描资料状态
+
+- 本次新增资料：0 条。
+- 本次更新资料：36 条。
+- 重复资料：0 条。
+- 解析失败资料：1 条。
+
+## 2. 资料分布
+
+### 类型分布
+
+| 项目 | 数量 |
+| --- | ---: |
+| competitor | 2 |
+| draft | 4 |
+| feedback | 9 |
+| idea | 4 |
+| paper | 3 |
+| reference | 2 |
+| research | 9 |
+| sketch | 2 |
+| unknown | 1 |
+
+### 项目分布
+
+| 项目 | 数量 |
+| --- | ---: |
+| general | 10 |
+| info-center | 9 |
+| reader-design | 10 |
+| thesis | 5 |
+| unknown | 2 |
+
+### 阶段分布
+
+| 项目 | 数量 |
+| --- | ---: |
+| background | 4 |
+| concept | 5 |
+| development | 8 |
+| presentation | 7 |
+| research | 10 |
+| unknown | 2 |
+
+### 解析状态
+
+| 项目 | 数量 |
+| --- | ---: |
+| parse_failed | 1 |
+| parsed | 35 |
+
+## 3. 高价值资料 Top 10
+
+### general-design-critique-checklist.md
+
+- 为什么重要：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
+- 可用于哪个项目：general
+- 可用于作品集哪个阶段：concept
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### portfolio-page-structure.md
+
+- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察
+- 可用于哪个项目：general
+- 可用于作品集哪个阶段：presentation
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### reader-design-low-interruption-reading.md
+
+- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：background
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### reader-design-sketch-panel-layout.md
+
+- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：development
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### portfolio-feedback-page-order.md
+
+- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集
+- 可用于哪个项目：general
+- 可用于作品集哪个阶段：presentation
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### reader-design-feedback-mentor.md
+
+- 为什么重要：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：development
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### design_student_notes.md
+
+- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、作品集
+- 可用于哪个项目：general
+- 可用于作品集哪个阶段：presentation
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### info-center-feedback-teacher.md
+
+- 为什么重要：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线
+- 可用于哪个项目：info-center
+- 可用于作品集哪个阶段：development
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### portfolio-design-opportunity.md
+
+- 为什么重要：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：concept
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### portfolio-project-narrative.md
+
+- 为什么重要：有正文；类型明确为 draft；可对应 presentation 阶段；项目归属为 general；包含 用户、方案、机会、作品集
+- 可用于哪个项目：general
+- 可用于作品集哪个阶段：presentation
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+## 4. 项目视角分析
+
+### reader-design
+
+- 当前资料数量：10
+- 最强资料：reader-design-low-interruption-reading.md
+- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
+- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
+
+### info-center
+
+- 当前资料数量：9
+- 最强资料：info-center-feedback-teacher.md
+- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
+- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
+
+### thesis
+
+- 当前资料数量：5
+- 最强资料：thesis-commuter-group.md
+- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
+- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
+
+### general
+
+- 当前资料数量：10
+- 最强资料：general-design-critique-checklist.md
+- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
+- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
+
+### unknown
+
+- 当前资料数量：2
+- 最强资料：research_feedback.md
+- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
+- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
+
+## 5. 作品集转化建议
+
+### 背景页可用资料
+
+- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
+- `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈
+- `thesis-dual-city-commute.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤
+- `thesis-langfang-urban-structure.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤
+
+### 调研页可用资料
+
+- `reader-design-user-interview-commute.md`：有正文；正文信息量较足；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、痛点
+- `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案
+- `info-center-space-research.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研、动线
+- `portfolio-pain-point-analysis.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 general；包含 用户、痛点、作品集
+- `reader-design-research-note-reading-goals.txt`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、调研、低干扰
+- `info-center-functional-zoning.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研
+- `info-center-user-behavior.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、痛点
+- `thesis-commuter-group.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 thesis；包含 机会
+
+### 痛点页可用资料
+
+- 暂无明确资料。
+
+### 概念页可用资料
+
+- `general-design-critique-checklist.md`：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
+- `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰
+- `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰
+- `reader-design-competitor-kindle-notion.md`：有正文；类型明确为 competitor；可对应 concept 阶段；项目归属为 reader-design；包含 方案、机会、低干扰
+- `info-center-reference-learning-commons.md`：有正文；类型明确为 reference；可对应 concept 阶段；项目归属为 info-center；包含 机会
+
+### 发展页可用资料
+
+- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
+- `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
+- `info-center-feedback-teacher.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线
+- `sketch_reference_note.md`：有正文；类型明确为 sketch；可对应 development 阶段；项目归属为 general；包含 草图、方案、作品集
+- `reader-design-draft-portfolio-page.txt`：有正文；类型明确为 draft；可对应 development 阶段；项目归属为 reader-design；包含 用户、草图、机会
+- `info-center-circulation-flow.md`：有正文；类型明确为 idea；可对应 development 阶段；项目归属为 info-center；包含 作品集、动线
+- `info-center-draft-service-touchpoints.txt`：有正文；类型明确为 draft；可对应 development 阶段；项目归属为 info-center；包含 用户、动线
+- `v06-fake-image.png`：可对应 development 阶段
+
+### 最终展示页可用资料
+
+- 暂无明确资料。
+
+## 6. 需要确认的问题
+
+- `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
+- `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
+- `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
+- 阅读器设计是否已有明确目标用户和低干扰阅读场景？
+- 阅读器设计的竞品分析是否能支持功能取舍？
+- 图信中心设计是否已有空间动线证据？
+- 图信中心设计的功能分区是否对应真实用户行为？
+- 论文资料是否需要独立于作品集项目管理？
+- 通用作品集资料是否需要转成页面模板？
+- 哪些资料应该从 inbox 移入 library？
+
+## 7. 明日任务
+
+- P0：复核 unknown 项目归属，优先处理高分资料。
+- P0：为阅读器设计补充一条用户痛点到设计机会的证据链。
+- P0：为图信中心设计补充空间动线和功能分区之间的关系。
+- P0：检查 feedback 类资料，把可执行修改点拆成任务。
+- P1：把 Top 10 高价值资料分别标注可进入的作品集页。
+- P1：为 thesis 资料确认是否进入作品集或独立论文资料库。
+- P1：为每个项目补一段 100 字项目概括。
+- P1：将 inbox 中已确认资料迁移到 library。
+- P2：给图片资料补充手动描述，方便后续搜索。
+- P2：整理一份页面结构草稿，把背景、调研、洞察、方案串起来。
+- P2：准备 PDF/DOCX/PPTX 解析测试文件。
+- P2：记录 Web UI 中最想先编辑的字段。

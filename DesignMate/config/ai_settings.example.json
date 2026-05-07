@@ -1,0 +1,12 @@
+{
+  "provider": "rule_based",
+  "model": "designmate-local-rules",
+  "temperature": 0.2,
+  "max_tokens": 1200,
+  "fallback_enabled": true,
+  "env": {
+    "openai": "OPENAI_API_KEY",
+    "deepseek": "DEEPSEEK_API_KEY",
+    "ollama": "OLLAMA_BASE_URL"
+  }
+}
