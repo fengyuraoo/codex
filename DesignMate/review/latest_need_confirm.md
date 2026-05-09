@@ -1,14 +1,16 @@
 # Latest Need Confirm
 
-Generated at: 2026-05-07T23:42:44
+Generated at: 2026-05-09T19:58:57
 
 - [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
 - [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
+- [ ] `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- [ ] `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？
+- [ ] `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- [ ] `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
+- [ ] `behance link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- [ ] `bilibili link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
+- [ ] `bilibili link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - [ ] `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
 - [ ] `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
 - [ ] `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
-- [ ] `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
-- [ ] 阅读器设计是否已有明确目标用户和低干扰阅读场景？
-- [ ] 阅读器设计的竞品分析是否能支持功能取舍？
-- [ ] 图信中心设计是否已有空间动线证据？
-- [ ] 图信中心设计的功能分区是否对应真实用户行为？

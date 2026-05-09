@@ -25,8 +25,9 @@ def configured_provider(provider: str | None = None) -> tuple[str, str]:
 
 def item_line(item: MaterialRecord) -> str:
     tags = ", ".join(item.tags[:5])
-    preview = " ".join((item.content_preview or item.notes or "").split())[:120]
-    return f"- {item.filename} | {item.material_type}/{item.portfolio_stage}/{item.project_guess} | score {item.material_score} | tags: {tags} | {preview}"
+    preview = " ".join((item.content_preview or item.user_note or item.notes or item.excerpt or "").split())[:120]
+    link_bits = f" | platform {item.platform} | placement {item.portfolio_placement}" if item.url else ""
+    return f"- {item.filename} | {item.material_type}/{item.portfolio_stage}/{item.project_guess}{link_bits} | score {item.material_score} | tags: {tags} | {preview}"
 
 
 def summarize_material(material: MaterialRecord, provider: str | None = None) -> dict[str, Any]:
@@ -79,19 +80,19 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
     top = sorted(context_materials, key=lambda item: item.material_score, reverse=True)[:8]
     if not top:
         sections = {
-            "回答摘要": "暂时没有找到可引用的本地资料。",
-            "相关资料": [],
-            "设计判断": "当前不能形成可靠设计判断。",
-            "可以放进作品集的位置": "待导入资料后确认。",
-            "需要确认": ["当前回答没有资料证据支撑。"],
-            "下一步建议": ["导入调研、草图、反馈或页面草稿", "运行 python scripts/run_designmate.py", "尝试用项目名或资料类型提问"],
+            "Summary": "No local materials were found for this question yet.",
+            "Relevant materials": [],
+            "Design insight": "DesignMate cannot make a reliable design judgement without evidence.",
+            "Portfolio placement": "Import project evidence first, then decide whether it belongs to research, pain points, design process, final solution or reflection.",
+            "Things to confirm": ["This answer has no supporting local evidence yet."],
+            "Next action": ["Import research notes, sketches, feedback or page drafts", "Run python scripts/run_designmate.py", "Ask again with a project name or material type"],
         }
         return {
             "mode": mode,
             "answer": sections_to_markdown(sections),
             "answer_sections": sections,
-            "suggestions": sections["下一步建议"],
-            "need_confirm": sections["需要确认"],
+            "suggestions": sections["Next action"],
+            "need_confirm": sections["Things to confirm"],
             "confidence": 0.2,
         }
     evidence = "\n".join(item_line(item) for item in top[:5])
@@ -100,9 +101,9 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
     if any(word in q for word in ["缺少", "问题", "最大问题", "风险"]):
         summary = "当前最大问题不是资料数量，而是证据链是否能支撑作品集叙事。"
         judgement = "建议检查调研、痛点、概念和最终展示之间是否连续，避免只展示素材而没有设计判断。"
-    elif any(word in q for word in ["痛点", "调研", "资料", "找"]):
+    elif any(word in q for word in ["痛点", "调研", "资料", "找", "灵感链接", "短视频", "外部参考", "moodboard", "参考"]):
         summary = "已优先找到与问题、调研或证据相关的资料。"
-        judgement = "这些资料适合转化为调研页、痛点页或设计机会页，但需要补充具体用户语句和图像证据。"
+        judgement = "这些资料适合转化为调研页、痛点页、Moodboard 或设计机会页；外部链接需要用 user note 说明它为何能支撑项目判断。"
     elif any(word in q for word in ["几页", "页面", "作品集"]):
         summary = "建议先组织为背景、调研、痛点、概念、发展、最终展示 6 类页面。"
         judgement = "页面数量应由证据强度决定，高分资料进入主线，弱资料作为补充或内部参考。"
@@ -110,19 +111,19 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
         summary = "基于当前命中的本地资料，建议先把高分资料转成作品集证据。"
         judgement = "下一步应确认缺失阶段，并为每条关键资料写一句作品集用途。"
     sections = {
-        "回答摘要": summary,
-        "相关资料": related,
-        "设计判断": judgement,
-        "可以放进作品集的位置": f"优先考虑这些阶段：{', '.join(stages[:5]) or 'research / insight / concept'}。",
-        "需要确认": ["规则版回答只基于本地资料字段和关键词，需要人工确认设计结论。"],
-        "下一步建议": ["打开 Search 查看这些资料", "为 Top 资料补 notes", "生成对应项目的页面草稿", "补充缺失图像或调研证据"],
+        "Summary": summary,
+        "Relevant materials": related,
+        "Design insight": judgement,
+        "Portfolio placement": f"Prioritize these portfolio stages: {', '.join(stages[:5]) or 'research / insight / concept'}.",
+        "Things to confirm": ["This rule-based answer is based on local fields and keyword evidence; confirm the design conclusion manually."],
+        "Next action": ["Open Text Search to inspect these materials", "Add notes to the top evidence cards", "Generate a page draft for the project", "Add missing image or research evidence"],
     }
     return {
         "mode": mode,
         "answer": sections_to_markdown(sections) + "\n\n## 原始命中\n" + evidence,
         "answer_sections": sections,
-        "suggestions": sections["下一步建议"],
-        "need_confirm": sections["需要确认"],
+        "suggestions": sections["Next action"],
+        "need_confirm": sections["Things to confirm"],
         "confidence": min(0.9, 0.45 + len(top) * 0.05),
     }
 

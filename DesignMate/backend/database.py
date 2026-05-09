@@ -20,6 +20,15 @@ ALLOWED_UPDATE_FIELDS = {
     "notes",
     "review_status",
     "reason",
+    "url",
+    "platform",
+    "source_type",
+    "title",
+    "excerpt",
+    "cover_url",
+    "user_note",
+    "design_stage",
+    "portfolio_placement",
 }
 
 
@@ -74,6 +83,15 @@ def init_db(db_path: Path = DB_PATH) -> bool:
                 image_height INTEGER DEFAULT 0,
                 image_note TEXT,
                 source_mode TEXT DEFAULT 'unknown',
+                url TEXT DEFAULT '',
+                platform TEXT DEFAULT '',
+                source_type TEXT DEFAULT '',
+                title TEXT DEFAULT '',
+                excerpt TEXT DEFAULT '',
+                cover_url TEXT DEFAULT '',
+                user_note TEXT DEFAULT '',
+                design_stage TEXT DEFAULT '',
+                portfolio_placement TEXT DEFAULT '',
                 created_at TEXT,
                 updated_at TEXT
             )
@@ -91,6 +109,15 @@ def init_db(db_path: Path = DB_PATH) -> bool:
         ensure_column(conn, "materials", "image_height", "INTEGER DEFAULT 0")
         ensure_column(conn, "materials", "image_note", "TEXT DEFAULT ''")
         ensure_column(conn, "materials", "source_mode", "TEXT DEFAULT 'unknown'")
+        ensure_column(conn, "materials", "url", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "platform", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "source_type", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "title", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "excerpt", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "cover_url", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "user_note", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "design_stage", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "portfolio_placement", "TEXT DEFAULT ''")
         conn.execute(
             """
             CREATE TABLE IF NOT EXISTS scan_batches (
@@ -200,9 +227,10 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 material_type, portfolio_stage, project_guess, tags, material_score,
                 reason, notes, review_status, file_hash, first_seen_at, last_seen_at,
                 scan_batch_id, is_duplicate, image_preview_path, image_width, image_height,
-                image_note, source_mode, created_at, updated_at
+                image_note, source_mode, url, platform, source_type, title, excerpt,
+                cover_url, user_note, design_stage, portfolio_placement, created_at, updated_at
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(id) DO UPDATE SET
                 filename=excluded.filename,
                 path=excluded.path,
@@ -242,6 +270,18 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 image_height=excluded.image_height,
                 image_note=excluded.image_note,
                 source_mode=excluded.source_mode,
+                url=excluded.url,
+                platform=excluded.platform,
+                source_type=excluded.source_type,
+                title=excluded.title,
+                excerpt=excluded.excerpt,
+                cover_url=excluded.cover_url,
+                user_note=CASE
+                    WHEN materials.user_note IS NOT NULL AND materials.user_note != '' THEN materials.user_note
+                    ELSE excluded.user_note
+                END,
+                design_stage=excluded.design_stage,
+                portfolio_placement=excluded.portfolio_placement,
                 updated_at=excluded.updated_at
             """,
             (
@@ -275,6 +315,15 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 record.image_height,
                 record.image_note,
                 record.source_mode,
+                record.url,
+                record.platform,
+                record.source_type,
+                record.title,
+                record.excerpt,
+                record.cover_url,
+                record.user_note,
+                record.design_stage,
+                record.portfolio_placement,
                 record.created_at,
                 record.updated_at,
             ),

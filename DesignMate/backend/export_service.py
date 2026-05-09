@@ -4,6 +4,7 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
+from . import database
 from .paths import ROOT
 from .utils import atomic_write_text
 
@@ -103,6 +104,36 @@ def export_portfolio_case() -> dict[str, Path]:
         path = EXPORT_DIR / filename
         atomic_write_text(path, build_markdown(title, body))
         written[filename] = path
+    link_materials = [item for item in database.list_materials(limit=None) if item.url]
+    external_lines = [
+        "# External References and Link Capture Evidence",
+        "",
+        f"Generated at: {datetime.now().isoformat(timespec='seconds')}",
+        "",
+        "This file collects captured external links that can support moodboards, research sources, inspiration evidence and process references.",
+        "",
+    ]
+    if link_materials:
+        for item in link_materials[:50]:
+            external_lines.extend(
+                [
+                    f"## {item.title or item.filename}",
+                    "",
+                    f"- Platform: {item.platform or 'generic webpage'}",
+                    f"- Source type: {item.source_type or 'link'}",
+                    f"- Project: {item.project_guess or 'unknown'}",
+                    f"- Portfolio placement: {item.portfolio_placement or 'Design Inspiration'}",
+                    f"- URL: {item.url}",
+                    f"- User note: {item.user_note or item.notes or '待补充'}",
+                    f"- Excerpt: {item.excerpt or item.content_preview[:240] or '自动提取受限，需人工补充说明。'}",
+                    "",
+                ]
+            )
+    else:
+        external_lines.extend(["- No captured link material yet.", "- Use Link Capture in the Web UI to add external references.", ""])
+    external_path = EXPORT_DIR / "external_references.md"
+    atomic_write_text(external_path, "\n".join(external_lines))
+    written["external_references.md"] = external_path
     html_parts = [
         "<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><title>DesignMate Case</title>",
         "<style>body{font-family:Segoe UI,Microsoft YaHei,sans-serif;margin:0;background:#f6f5f1;color:#1b1c1d;line-height:1.65}main{max-width:1120px;margin:auto;padding:42px}header{padding:42px 0}section{background:#fff;border:1px solid #d7d2c9;border-radius:8px;margin:16px 0;padding:24px;box-shadow:0 10px 24px rgba(40,42,44,.06)}h1{font-size:42px;margin:0}h2{color:#146c68;margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tag{display:inline-block;border:1px solid #dcefed;color:#146c68;border-radius:999px;padding:4px 10px;margin-right:8px}</style></head><body><main>",
@@ -113,6 +144,12 @@ def export_portfolio_case() -> dict[str, Path]:
         if filename == "README.md":
             continue
         html_parts.append(f"<section><h2>{escape(title)}</h2><p>{escape(body)}</p></section>")
+    if link_materials:
+        refs = "".join(
+            f"<li><strong>{escape(item.title or item.filename)}</strong> · {escape(item.platform or 'generic webpage')} · <a href='{escape(item.url)}'>{escape(item.url)}</a></li>"
+            for item in link_materials[:12]
+        )
+        html_parts.append(f"<section><h2>External References</h2><p>Captured links can be used as inspiration evidence, research sources and moodboard sources.</p><ul>{refs}</ul></section>")
     html_parts.append("</div></main></body></html>")
     html_path = EXPORT_DIR / "designmate_case.html"
     atomic_write_text(html_path, "\n".join(html_parts))

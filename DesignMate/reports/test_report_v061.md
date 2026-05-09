@@ -1,6 +1,6 @@
 # Test Report v0.6.1
 
-Generated at: 2026-05-07T23:42:46
+Generated at: 2026-05-09T19:58:58
 Exit code: 0
 
 ## stdout
@@ -11,15 +11,16 @@ Exit code: 0
 Mode: direct backend service smoke test
 
 - PASS `health`: `{"ok": true, "version": "v0.6.1"}`
-- PASS `stats`: `{"total_materials": 72, "by_type": {"research": 18, "feedback": 18, "idea": 8, "sketch": 4, "draft": 8, "reference": 4, "competitor": 4, "paper": 6, "unknown": 2}, "by_project": {"general": 20, "reader-design": 20, "info-center": 18, "unknown": 4, "thesis": 10}, "by_stage": {"concept": 10, "presentation": 14, "background": 8, "development": 16, "research": 20, "unknown": 4}, "parse_status": {"parsed": 70, "parse_failed": 2}, "by_source": {"user": 36, "demo": 36}, "high_value_count": 66, "unknown_count": 4, "fts5_available": true, "import": {"inbox_file_count": 36, "library_file_count": 0, "last_scan_time": "2026-05-07T23:42:38", "last_report_time": "2026-05-07T23:42:38", "watched_folders": ["data/examples", "data/inbox", "data/library"], "latest_batch": {"id": "scan-842e8360553c", "started_at": "2026-05-07T23:42:38", "finished_at": "2026-05-07T23:42:38", "total_files": 72, "new_files": 0, "updated_files": 0, "duplicate_files": 72, "failed_files": 2}}}`
+- PASS `stats`: `{"total_materials": 76, "by_type": {"research": 19, "feedback": 18, "idea": 8, "sketch": 4, "draft": 8, "reference": 7, "competitor": 4, "paper": 6, "unknown": 2}, "by_project": {"general": 21, "reader-design": 21, "info-center": 18, "unknown": 6, "thesis": 10}, "by_stage": {"concept": 10, "presentation": 14, "background": 9, "development": 16, "research": 21, "unknown": 6}, "parse_status": {"parsed": 70, "link_captured": 4, "parse_failed": 2}, "by_source": {"user": 36, "demo": 36, "imported": 4}, "high_value_count": 68, "unknown_count": 6, "fts5_available": true, "import": {"inbox_file_count": 36, "library_file_count": 0, "last_scan_time": "2026-05-09T19:58:53", "last_report_time": "2026-05-09T19:58:53", "watched_folders": ["data/examples", "data/inbox", "data/library"], "latest_batch": {"id": "scan-343c9a9677d0", "started_at": "2026-05-09T19:58:53", "finished_at": "2026-05-09T19:58:53", "total_files": 72, "new_files": 0, "updated_files": 0, "duplicate_files": 72, "failed_files": 2}}}`
 - PASS `search`: `{"count": 5}`
 - PASS `get material detail`: `{"id": "mat-64831effa44c"}`
-- PASS `patch material`: `{"id": "mat-64831effa44c", "filename": "general-design-critique-checklist.md", "path": "data/inbox/general-design-critique-checklist.md", "extension": "md", "size": 354, "modified_time": "2026-05-06T22:36:34", "source_folder": "data/inbox", "content_preview": "# General Design Critique Checklist\n\n��Ʒ���Բ��嵥�������Ƿ���ȷĿ���û����Ƿ�˵������ʹ�㣬�Ƿ��е���֤�ݣ��Ƿ������ƻ��ᣬ�Ƿ�չʾ�����������Ƿ������Ч����ǰ�������Ӧ������ÿ����Ŀ������Ҫһҳ˵����Ϊʲô������ơ����������ֻ�ܿ������ͼ��", "content_full_path": "index/materials_content/mat-64831effa44c.txt", "parse_status": "parsed", "parse_error": "", "word_count": 98, "material_type": "draft", "portfolio_stage": "presentation", "project_guess": "general", "tags": ["api-smoke", "edited"], "material_score": 77, "reason": "�˹��༭���û��� DesignMate v0.4 ��ȷ�ϻ�����˷��ࡣ", "notes": "api smoke test note", "review_status": "confirmed", "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5", "first_seen_at": "2026-05-06T22:36:59", "last_seen_at": "2026-05-07T23:42:38", "scan_batch_id": "scan-842e8360553c", "is_duplicate": true, "image_preview_path": "", "image_width": 0, "image_height": 0, "image_note": "", "source_mode": "user", "created_at": "2026-05-06T22:36:59", "updated_at": "2026-05-07T23:42:38"}`
-- PASS `patch verified by get`: `{"id": "mat-64831effa44c", "filename": "general-design-critique-checklist.md", "path": "data/inbox/general-design-critique-checklist.md", "extension": "md", "size": 354, "modified_time": "2026-05-06T22:36:34", "source_folder": "data/inbox", "content_preview": "# General Design Critique Checklist\n\n��Ʒ���Բ��嵥�������Ƿ���ȷĿ���û����Ƿ�˵������ʹ�㣬�Ƿ��е���֤�ݣ��Ƿ������ƻ��ᣬ�Ƿ�չʾ�����������Ƿ������Ч����ǰ�������Ӧ������ÿ����Ŀ������Ҫһҳ˵����Ϊʲô������ơ����������ֻ�ܿ������ͼ��", "content_full_path": "index/materials_content/mat-64831effa44c.txt", "parse_status": "parsed", "parse_error": "", "word_count": 98, "material_type": "draft", "portfolio_stage": "presentation", "project_guess": "general", "tags": ["api-smoke", "edited"], "material_score": 77, "reason": "�˹��༭���û��� DesignMate v0.4 ��ȷ�ϻ�����˷��ࡣ", "notes": "api smoke test note", "review_status": "confirmed", "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5", "first_seen_at": "2026-05-06T22:36:59", "last_seen_at": "2026-05-07T23:42:38", "scan_batch_id": "scan-842e8360553c", "is_duplicate": true, "image_preview_path": "", "image_width": 0, "image_height": 0, "image_note": "", "source_mode": "user", "created_at": "2026-05-06T22:36:59", "updated_at": "2026-05-07T23:42:38"}`
+- PASS `patch material`: `{"id": "mat-64831effa44c", "filename": "general-design-critique-checklist.md", "path": "data/inbox/general-design-critique-checklist.md", "extension": "md", "size": 354, "modified_time": "2026-05-06T22:36:34", "source_folder": "data/inbox", "content_preview": "# General Design Critique Checklist\n\n��Ʒ���Բ��嵥�������Ƿ���ȷĿ���û����Ƿ�˵������ʹ�㣬�Ƿ��е���֤�ݣ��Ƿ������ƻ��ᣬ�Ƿ�չʾ�����������Ƿ������Ч����ǰ�������Ӧ������ÿ����Ŀ������Ҫһҳ˵����Ϊʲô������ơ����������ֻ�ܿ������ͼ��", "content_full_path": "index/materials_content/mat-64831effa44c.txt", "parse_status": "parsed", "parse_error": "", "word_count": 98, "material_type": "draft", "portfolio_stage": "presentation", "project_guess": "general", "tags": ["api-smoke", "edited"], "material_score": 77, "reason": "�˹��༭���û��� DesignMate v0.4 ��ȷ�ϻ�����˷��ࡣ", "notes": "api smoke test note", "review_status": "confirmed", "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5", "first_seen_at": "2026-05-06T22:36:59", "last_seen_at": "2026-05-09T19:58:53", "scan_batch_id": "scan-343c9a9677d0", "is_duplicate": true, "image_preview_path": "", "image_width": 0, "image_height": 0, "image_note": "", "source_mode": "user", "url": "", "platform": "", "source_type": "", "title": "", "excerpt": "", "cover_url": "", "user_note": "", "design_stage": "", "portfolio_placement": "", "created_at": "2026-05-06T22:36:59", "updated_at": "2026-05-09T19:58:53"}`
+- PASS `patch verified by get`: `{"id": "mat-64831effa44c", "filename": "general-design-critique-checklist.md", "path": "data/inbox/general-design-critique-checklist.md", "extension": "md", "size": 354, "modified_time": "2026-05-06T22:36:34", "source_folder": "data/inbox", "content_preview": "# General Design Critique Checklist\n\n��Ʒ���Բ��嵥�������Ƿ���ȷĿ���û����Ƿ�˵������ʹ�㣬�Ƿ��е���֤�ݣ��Ƿ������ƻ��ᣬ�Ƿ�չʾ�����������Ƿ������Ч����ǰ�������Ӧ������ÿ����Ŀ������Ҫһҳ˵����Ϊʲô������ơ����������ֻ�ܿ������ͼ��", "content_full_path": "index/materials_content/mat-64831effa44c.txt", "parse_status": "parsed", "parse_error": "", "word_count": 98, "material_type": "draft", "portfolio_stage": "presentation", "project_guess": "general", "tags": ["api-smoke", "edited"], "material_score": 77, "reason": "�˹��༭���û��� DesignMate v0.4 ��ȷ�ϻ�����˷��ࡣ", "notes": "api smoke test note", "review_status": "confirmed", "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5", "first_seen_at": "2026-05-06T22:36:59", "last_seen_at": "2026-05-09T19:58:53", "scan_batch_id": "scan-343c9a9677d0", "is_duplicate": true, "image_preview_path": "", "image_width": 0, "image_height": 0, "image_note": "", "source_mode": "user", "url": "", "platform": "", "source_type": "", "title": "", "excerpt": "", "cover_url": "", "user_note": "", "design_stage": "", "portfolio_placement": "", "created_at": "2026-05-06T22:36:59", "updated_at": "2026-05-09T19:58:53"}`
 - PASS `batch patch material`: `{"count": 2}`
 - PASS `batch patch verified`: `{"ids": ["mat-76512a8f2d58", "mat-d4580285d017"]}`
 - PASS `ask designmate fallback`: `{"mode": "rule_based"}`
-- PASS `ask designmate answer`: `{"answer_length": 1766}`
+- PASS `ask designmate answer`: `{"answer_length": 2026}`
+- PASS `link capture fallback`: `{"ok": true, "material_id": "link-094f18ce8b8bbbbb", "url": "https://www.bilibili.com/video/BV1DesignMateSmoke", "platform": "bilibili", "title": "bilibili link", "excerpt": "", "source_type": "short_video", "cover_url": "", "message": "This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.", "fallback_saved": true, "material": {"id": "link-094f18ce8b8bbbbb", "filename": "bilibili link", "path": "https://www.bilibili.com/video/BV1DesignMateSmoke", "extension": "link", "size": 0, "modified_time": "2026-05-09T19:58:53", "source_folder": "link-capture", "content_preview": "Title: bilibili link\nPlatform: bilibili\nURL: https://www.bilibili.com/video/BV1DesignMateSmoke\nUser note: api smoke external reference\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.", "content_full_path": "", "parse_status": "link_captured", "parse_error": "This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.", "word_count": 35, "material_type": "reference", "portfolio_stage": "research", "project_guess": "general", "tags": ["link", "external-reference", "bilibili", "short_video", "inspiration"], "material_score": 84, "reason": "Captured external short_video link for Moodboard.", "notes": "api smoke external reference", "review_status": "needs_review", "file_hash": "094f18ce8b8bbbbb9f3fedd0db54661477eaa094", "first_seen_at": "2026-05-09T19:58:53", "last_seen_at": "2026-05-09T19:58:53", "scan_batch_id": "", "is_duplicate": false, "image_preview_path": "", "image_width": 0, "image_height": 0, "image_note": "", "source_mode": "imported", "url": "https://www.bilibili.com/video/BV1DesignMateSmoke", "platform": "bilibili", "source_type": "short_video", "title": "bilibili link", "excerpt": "", "cover_url": "", "user_note": "api smoke external reference", "design_stage": "inspiration", "portfolio_placement": "Moodboard", "created_at": "2026-05-09T19:15:22", "updated_at": "2026-05-09T19:58:53"}}`
 - PASS `rebuild`: `{"fts5_available": true}`
 Running scan_library.py...
 Running classify_materials.py...
@@ -28,7 +29,7 @@ Running build_static_site.py...
 
 DesignMate v0.6.1 run completed.
 - SQLite DB: data/designmate.db
-- Total materials: 72
+- Total materials: 76
 - FTS5 available: True
 Please review:
 - reports/latest_report.md
@@ -43,7 +44,7 @@ Running build_static_site.py...
 
 DesignMate v0.6.1 run completed.
 - SQLite DB: data/designmate.db
-- Total materials: 72
+- Total materials: 76
 - FTS5 available: True
 Please review:
 - reports/latest_report.md
@@ -51,15 +52,15 @@ Please review:
 - index/classification_report.md
 - frontend/index.html
 - review/latest_next_actions.md
-Generated frontend data with 72 materials.
+Generated frontend data with 76 materials.
 Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
-Generated frontend data with 72 materials.
+Generated frontend data with 76 materials.
 Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
 Generated portfolio draft for reader-design/overview: drafts\latest_portfolio_page_draft.md
 Also wrote page-specific draft: drafts/reader-design_overview_draft.md
-Generated frontend data with 72 materials.
+Generated frontend data with 76 materials.
 Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
-Exported 16 portfolio case files to portfolio_export.
+Exported 17 portfolio case files to portfolio_export.
 Open portfolio_export/designmate_case.html for a quick case overview.
 
 ```
@@ -149,9 +150,16 @@ test_project_filtered_ask_context (test_v06_ai_import_export.V06AiImportExportTe
 test_prompt_service_returns_prompt (test_v06_ai_import_export.V06AiImportExportTests.test_prompt_service_returns_prompt) ... ok
 test_repeated_scan_does_not_duplicate_count (test_v06_ai_import_export.V06AiImportExportTests.test_repeated_scan_does_not_duplicate_count) ... ok
 test_scan_batch_record_exists (test_v06_ai_import_export.V06AiImportExportTests.test_scan_batch_record_exists) ... ok
+test_bilibili_platform (test_v071_link_capture.LinkCaptureTests.test_bilibili_platform) ... ok
+test_douyin_platform (test_v071_link_capture.LinkCaptureTests.test_douyin_platform) ... ok
+test_generic_webpage_fallback_capture (test_v071_link_capture.LinkCaptureTests.test_generic_webpage_fallback_capture) ... ok
+test_generic_webpage_platform (test_v071_link_capture.LinkCaptureTests.test_generic_webpage_platform) ... ok
+test_invalid_url_friendly_error (test_v071_link_capture.LinkCaptureTests.test_invalid_url_friendly_error) ... ok
+test_short_video_fallback_saved (test_v071_link_capture.LinkCaptureTests.test_short_video_fallback_saved) ... ok
+test_xiaohongshu_platform (test_v071_link_capture.LinkCaptureTests.test_xiaohongshu_platform) ... ok
 
 ----------------------------------------------------------------------
-Ran 82 tests in 8.042s
+Ran 89 tests in 5.695s
 
 OK
 

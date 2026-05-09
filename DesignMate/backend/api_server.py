@@ -4,7 +4,7 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
-from . import ai_service, database, report_service, search_engine
+from . import ai_service, database, link_capture_service, report_service, search_engine
 from .material_parser import scan_library
 from .paths import REPORTS_DIR
 
@@ -130,6 +130,21 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                     )
                 except ValueError as exc:
                     error(self, str(exc), 400)
+                return
+            if path == "/api/link-capture":
+                try:
+                    payload = self.read_json_body()
+                    result = link_capture_service.capture_link(
+                        str(payload.get("url", "")),
+                        user_note=str(payload.get("user_note", "")),
+                        project=str(payload.get("project", "unknown") or "unknown"),
+                        design_stage=str(payload.get("design_stage", "unknown") or "unknown"),
+                        portfolio_placement=str(payload.get("portfolio_placement", "") or ""),
+                    )
+                    status = 200 if result.ok else 400
+                    json_response(self, result.to_dict(), status)
+                except ValueError as exc:
+                    json_response(self, {"ok": False, "message": str(exc), "fallback_saved": False}, 400)
                 return
             if path in {"/api/reindex", "/api/rebuild"}:
                 database.init_db()

@@ -4,7 +4,7 @@
 
 > 作品集页面草稿
 
-Generated at: 2026-05-07T23:42:44
+Generated at: 2026-05-09T19:58:57
 
 ## 1. 页面目的
 
@@ -22,8 +22,6 @@ Generated at: 2026-05-07T23:42:44
 - `reader-design-user-interview-commute.md`：research / research / score 90。# Reader Design User Interview Commute 用户访谈记录聚焦通勤阅读。受访者描述在地铁上读长文章时，最容易被社交软件和系统通知...
 - `reader-design-research-note-reading-goals.txt`：research / research / score 85。Reader Design Research Note Reading Goals 阅读目标调研显示，用户并不总是为了读完整本书而打开阅读器。有些人是为了找资料...
 - `reader-design-research-note-reading-goals.txt`：research / research / score 85。Reader Design Research Note Reading Goals 阅读目标调研显示，用户并不总是为了读完整本书而打开阅读器。有些人是为了找资料...
-- `reader-design-feedback-usability-test.md`：feedback / background / score 80。# Reader Design Feedback Usability Test 可用性测试反馈：用户能理解专注会话，但不确定摘录会保存到哪里。修改建议是在摘录动...
-- `reader-design-feedback-usability-test.md`：feedback / background / score 80。# Reader Design Feedback Usability Test 可用性测试反馈：用户能理解专注会话，但不确定摘录会保存到哪里。修改建议是在摘录动...
 
 ## 3. 设计洞察
 
@@ -49,7 +47,7 @@ Generated at: 2026-05-07T23:42:44
 
 - 缺少草图、概念发散或方案演进资料。
 - 缺少竞品或案例对比，功能取舍的依据还不够清楚。
-- 缺少 insight 阶段资料，可补充：痛点归纳、需求证据、设计机会。
+- 缺少 background 阶段资料，可补充：项目背景、问题来源、使用场景。
 
 ## 7. 导师视角自检
 
@@ -59,7 +57,7 @@ Generated at: 2026-05-07T23:42:44
 
 ## 推荐页面结构
 
-- 背景与场景：可用资料：`reader-design-feedback-usability-test.md`
+- 背景与场景：待补充资料
 - 调研证据：可用资料：`reader-design-user-interview-commute.md`
 - 痛点与机会：待补充资料
 - 概念方向：待补充资料

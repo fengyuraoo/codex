@@ -1,8 +1,8 @@
 # Materials Dashboard
 
-Generated at: 2026-05-07T23:42:42
+Generated at: 2026-05-09T19:58:56
 
-- 总资料数：72
+- 总资料数：76
 
 ## 各类型数量
 
@@ -13,7 +13,7 @@ Generated at: 2026-05-07T23:42:42
 | feedback | 18 |
 | idea | 8 |
 | paper | 6 |
-| reference | 4 |
+| reference | 8 |
 | research | 18 |
 | sketch | 4 |
 | unknown | 2 |
@@ -24,9 +24,9 @@ Generated at: 2026-05-07T23:42:42
 | --- | ---: |
 | general | 20 |
 | info-center | 18 |
-| reader-design | 20 |
+| reader-design | 21 |
 | thesis | 10 |
-| unknown | 4 |
+| unknown | 7 |
 
 ## 各阶段数量
 
@@ -36,8 +36,8 @@ Generated at: 2026-05-07T23:42:42
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 20 |
-| unknown | 4 |
+| research | 21 |
+| unknown | 7 |
 
 ## 高价值资料 Top 10
 
@@ -56,5 +56,8 @@ Generated at: 2026-05-07T23:42:42
 
 - `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案
 - `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案
+- `generic webpage link`：有正文；类型明确为 reference；可对应 research 阶段
+- `behance link`：有正文；类型明确为 reference
+- `bilibili link`：有正文；类型明确为 reference
 - `v06-fake-image.png`：可对应 development 阶段
 - `v06-fake-image.png`：可对应 development 阶段

@@ -1,6 +1,6 @@
 # Materials Index
 
-Generated at: 2026-05-07T23:42:41
+Generated at: 2026-05-09T19:58:56
 Total materials: 72
 
 ## mat-60428ed780cd general-design-critique-checklist.md

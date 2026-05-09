@@ -41,6 +41,15 @@ class MaterialRecord:
     image_height: int = 0
     image_note: str = ""
     source_mode: str = "unknown"
+    url: str = ""
+    platform: str = ""
+    source_type: str = ""
+    title: str = ""
+    excerpt: str = ""
+    cover_url: str = ""
+    user_note: str = ""
+    design_stage: str = ""
+    portfolio_placement: str = ""
     created_at: str = field(default_factory=now_iso)
     updated_at: str = field(default_factory=now_iso)
 

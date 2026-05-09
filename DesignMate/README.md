@@ -1,5 +1,52 @@
 # DesignMate
 
+## v0.7.1 Link Capture
+
+DesignMate v0.7.1 adds **Link Capture**, a safe way to turn external inspiration links into searchable design evidence.
+
+What it does:
+- Saves webpage, portfolio case, social post and short-video links as link materials.
+- Detects platforms such as xiaohongshu, douyin, bilibili, tiktok, youtube, pinterest, behance, dribbble, wechat article and generic webpages.
+- Attempts public webpage metadata extraction when access is allowed.
+- Gracefully falls back for restricted social/short-video platforms by saving the original link and user note.
+- Makes captured links available in Search, Ask DesignMate and Portfolio Export.
+
+What it does not do:
+- It does not download videos.
+- It does not bypass login, anti-scraping systems or platform restrictions.
+- It does not download copyrighted video content.
+
+API:
+
+```http
+POST /api/link-capture
+```
+
+Frontend:
+- Open the Web UI and choose `Link Capture`.
+- Paste a design inspiration link, add project/stage/user note/portfolio placement, then click `Capture Link`.
+
+## v0.7 Search Hub
+
+DesignMate v0.7 reframes the product as **DesignMate Search Hub: A Local AI Search Hub for Design Portfolio Materials**.
+
+Current v0.7 additions:
+- A centered Search Hub home page with a large local search box.
+- Three primary entries: Text Search, Image Search and Ask DesignMate.
+- Search results are shown as **Design Evidence Cards** instead of plain file rows.
+- Each card infers source mode, project, design stage, material type, confidence and portfolio placement.
+- Image Search has an upload shell and metadata/filename matching. Real vision model integration is planned for v0.8.
+- Ask DesignMate returns portfolio-oriented sections: Summary, Relevant materials, Design insight, Portfolio placement, Things to confirm and Next action.
+- Showcase status displays total materials, user materials, demo materials, generated drafts and export status.
+- v0.7 docs live in `docs/v0.7_search_hub.md` and `docs/demo_script_v07.md`.
+
+Run the v0.7 checks:
+
+```powershell
+python DesignMate/scripts/run_tests.py
+python DesignMate/scripts/quality_gate_v07.py
+```
+
 DesignMate 是一个面向设计学生的本地 AI 作品集资料管理与创作辅助工具。v0.6.1 是作品集演示稳定版：在 v0.6 的功能基础上，进一步区分 Demo/真实资料，优化 Web UI 截图表现，增强 Ask DesignMate 的结构化回答，并把作品集导出内容打磨成可用于项目展示的素材。
 
 ## v0.6.1 能做什么

@@ -1,7 +1,7 @@
 # Classification Report
 
-Generated at: 2026-05-07T23:42:42
-Total materials: 72
+Generated at: 2026-05-09T19:58:56
+Total materials: 76
 
 ## Material Type Stats
 
@@ -10,7 +10,7 @@ Total materials: 72
 - feedback: 18
 - idea: 8
 - paper: 6
-- reference: 4
+- reference: 8
 - research: 18
 - sketch: 4
 - unknown: 2
@@ -21,16 +21,16 @@ Total materials: 72
 - concept: 10
 - development: 16
 - presentation: 14
-- research: 20
-- unknown: 4
+- research: 21
+- unknown: 7
 
 ## Project Stats
 
 - general: 20
 - info-center: 18
-- reader-design: 20
+- reader-design: 21
 - thesis: 10
-- unknown: 4
+- unknown: 7
 
 ## Details
 
@@ -803,6 +803,50 @@ Total materials: 72
 - Tags: thesis
 - Needs confirmation: False
 - Reason: 有正文；类型明确为 paper；项目归属为 thesis；包含 双城通勤
+
+### link-9ec83e625fd3a3c7 douyin link
+
+- Path: `https://www.douyin.com/video/123`
+- Material type: `reference`
+- Portfolio stage: `unknown`
+- Project guess: `reader-design`
+- Score: 52
+- Tags: douyin, external-reference, inspiration, link, short_video, user
+- Needs confirmation: False
+- Reason: 有正文；类型明确为 reference；项目归属为 reader-design
+
+### link-30e8b428c0d3dfda generic webpage link
+
+- Path: `https://example.com/design-reference`
+- Material type: `reference`
+- Portfolio stage: `research`
+- Project guess: `unknown`
+- Score: 47
+- Tags: external-reference, generic webpage, link, reference, research, user, webpage
+- Needs confirmation: True
+- Reason: 有正文；类型明确为 reference；可对应 research 阶段
+
+### link-01deac4febc0133b behance link
+
+- Path: `https://www.behance.net/gallery/example`
+- Material type: `reference`
+- Portfolio stage: `unknown`
+- Project guess: `unknown`
+- Score: 37
+- Tags: behance, external-reference, link, reference, user
+- Needs confirmation: True
+- Reason: 有正文；类型明确为 reference
+
+### link-094f18ce8b8bbbbb bilibili link
+
+- Path: `https://www.bilibili.com/video/BV1DesignMateSmoke`
+- Material type: `reference`
+- Portfolio stage: `unknown`
+- Project guess: `unknown`
+- Score: 37
+- Tags: bilibili, external-reference, inspiration, link, short_video, user
+- Needs confirmation: True
+- Reason: 有正文；类型明确为 reference
 
 ### mat-a9754fc26e4a v06-fake-image.png
 

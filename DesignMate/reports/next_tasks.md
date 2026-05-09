@@ -1,5 +1,66 @@
 # Next Tasks for v0.7
 
+## v0.7.2 / v0.8 Link Capture next steps
+
+### P0
+
+- Test Link Capture with real user-provided links from portfolio references.
+- Add clearer duplicate handling for repeated captured URLs.
+- Add a link-only source filter in Search.
+- Show captured link count in Search Hub status cards.
+- Add a safer editable title field for captured links.
+- Improve user-note prompts so link cards are more useful for Ask DesignMate.
+- Add API-level tests for `/api/link-capture` with a local HTTP handler.
+- Verify Portfolio Export external references with multiple real projects.
+
+### P1
+
+- Add optional readability extraction for public webpage articles.
+- Add Open Graph image preview display for link cards.
+- Add per-platform help text for xiaohongshu, douyin, bilibili, pinterest and behance.
+- Add link collections for Moodboard / Research / Inspiration.
+- Add manual screenshot attachment for links where metadata is unavailable.
+- Add link recapture / refresh metadata command.
+
+### P2
+
+- Plan v0.8 real vision model integration.
+- Explore user-authorized subtitle or transcript extraction where legally available.
+- Add stronger citation formatting for portfolio exports.
+- Add browser bookmarklet or simple paste helper later, without platform bypass.
+
+## v0.8 priorities after v0.7 Search Hub
+
+### P0
+
+- Verify the Search Hub UI with real user materials, not only demo materials.
+- Improve Design Evidence Card ranking with better field weighting.
+- Add a clearer empty state when `User inbox` has no real materials.
+- Test the Search Hub layout on small screens and presentation screenshots.
+- Tighten Ask DesignMate answers so they cite fewer but stronger materials.
+- Add API-backed Text Search results to match the frontend local search presentation.
+- Add visual regression screenshots for Search Hub, Evidence Cards, Ask and Reports.
+- Fix any remaining mojibake in older Chinese documentation that predates v0.7.
+
+### P1
+
+- Integrate real image understanding for Image Search in v0.8.
+- Add optional OpenAI / DeepSeek / Ollama calls behind the current fallback interface.
+- Add vector search or hybrid semantic ranking for design evidence retrieval.
+- Add richer PDF/DOCX/PPTX parsing with dependency detection.
+- Add project-level portfolio storyline generation across multiple pages.
+- Improve portfolio export visual templates for two-page and A3 layouts.
+- Add saved searches and reusable portfolio page themes.
+- Add evidence confirmation workflow for user-only materials.
+
+### P2
+
+- Explore Electron or another desktop packaging path.
+- Add a guided onboarding sample project that can be hidden from real work.
+- Add user testing checklist for design students.
+- Prepare a short demo video script and shot list from `docs/demo_script_v07.md`.
+- Add export to static HTML case pages for selected projects.
+
 ## P0
 
 - 用真实阅读器项目资料跑完整导入、搜索、Ask 和草稿生成流程。

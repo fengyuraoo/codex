@@ -89,6 +89,13 @@ def score_record(record: MaterialRecord, query: str, project: str | None, materi
         "content_preview": (record.content_preview, 25),
         "content_full": (content_full, 20),
         "notes": (record.notes, 18),
+        "url": (record.url, 18),
+        "title": (record.title, 30),
+        "excerpt": (record.excerpt, 24),
+        "user_note": (record.user_note, 28),
+        "platform": (record.platform, 18),
+        "source_type": (record.source_type, 18),
+        "portfolio_placement": (record.portfolio_placement, 18),
         "project_guess": (record.project_guess, 10),
         "material_type": (record.material_type, 10),
         "portfolio_stage": (record.portfolio_stage, 10),
@@ -139,6 +146,11 @@ def score_record(record: MaterialRecord, query: str, project: str | None, materi
         "material_score": record.material_score,
         "parse_status": record.parse_status,
         "word_count": record.word_count,
+        "url": record.url,
+        "platform": record.platform,
+        "source_type": record.source_type,
+        "portfolio_placement": record.portfolio_placement,
+        "user_note": record.user_note,
     }
 
 

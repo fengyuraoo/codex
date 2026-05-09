@@ -1,32 +1,14 @@
 # Latest Portfolio Materials
 
-Generated at: 2026-05-07T23:42:44
-
-## reader-design-low-interruption-reading.md
-
-- 类型：feedback
-- 项目：general
-- 作品集阶段：background
-- 分数：100
-- 可用理由：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
-- 路径：`data/examples/reader-design-low-interruption-reading.md`
-
-## reader-design-sketch-panel-layout.md
-
-- 类型：feedback
-- 项目：general
-- 作品集阶段：development
-- 分数：100
-- 可用理由：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
-- 路径：`data/examples/reader-design-sketch-panel-layout.md`
+Generated at: 2026-05-09T19:58:57
 
 ## general-design-critique-checklist.md
 
-- 类型：research
+- 类型：feedback
 - 项目：general
 - 作品集阶段：concept
 - 分数：100
-- 可用理由：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
+- 可用理由：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
 - 路径：`data/inbox/general-design-critique-checklist.md`
 
 ## portfolio-page-structure.md
@@ -35,7 +17,7 @@ Generated at: 2026-05-07T23:42:44
 - 项目：general
 - 作品集阶段：presentation
 - 分数：100
-- 可用理由：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察
+- 可用理由：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
 - 路径：`data/inbox/portfolio-page-structure.md`
 
 ## reader-design-low-interruption-reading.md
@@ -73,6 +55,24 @@ Generated at: 2026-05-07T23:42:44
 - 分数：100
 - 可用理由：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察
 - 路径：`data/examples/portfolio-page-structure.md`
+
+## reader-design-low-interruption-reading.md
+
+- 类型：idea
+- 项目：reader-design
+- 作品集阶段：background
+- 分数：100
+- 可用理由：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
+- 路径：`data/examples/reader-design-low-interruption-reading.md`
+
+## reader-design-sketch-panel-layout.md
+
+- 类型：sketch
+- 项目：reader-design
+- 作品集阶段：development
+- 分数：100
+- 可用理由：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
+- 路径：`data/examples/reader-design-sketch-panel-layout.md`
 
 ## portfolio-feedback-page-order.md
 

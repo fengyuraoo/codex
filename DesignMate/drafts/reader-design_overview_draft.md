@@ -4,7 +4,7 @@
 
 > 作品集页面草稿
 
-Generated at: 2026-05-07T23:42:44
+Generated at: 2026-05-09T19:58:57
 
 ## 1. 页面目的
 
@@ -17,17 +17,15 @@ Generated at: 2026-05-07T23:42:44
 ## 2. 关键资料
 
 - `reader-design-low-interruption-reading.md`：idea / background / score 100。# Reader Design Low Interruption Reading 阅读器设计的核心方向是低干扰阅读。目标用户是在通勤、图书馆、自习室中需要长时间...
+- `reader-design-low-interruption-reading.md`：idea / background / score 100。# Reader Design Low Interruption Reading 阅读器设计的核心方向是低干扰阅读。目标用户是在通勤、图书馆、自习室中需要长时间...
 - `reader-design-user-interview-commute.md`：research / research / score 90。# Reader Design User Interview Commute 用户访谈记录聚焦通勤阅读。受访者描述在地铁上读长文章时，最容易被社交软件和系统通知...
 - `reader-design-user-interview-commute.md`：research / research / score 90。# Reader Design User Interview Commute 用户访谈记录聚焦通勤阅读。受访者描述在地铁上读长文章时，最容易被社交软件和系统通知...
 - `reader-design-research-note-reading-goals.txt`：research / research / score 85。Reader Design Research Note Reading Goals 阅读目标调研显示，用户并不总是为了读完整本书而打开阅读器。有些人是为了找资料...
 - `reader-design-research-note-reading-goals.txt`：research / research / score 85。Reader Design Research Note Reading Goals 阅读目标调研显示，用户并不总是为了读完整本书而打开阅读器。有些人是为了找资料...
-- `reader-design-feedback-usability-test.md`：feedback / background / score 80。# Reader Design Feedback Usability Test 可用性测试反馈：用户能理解专注会话，但不确定摘录会保存到哪里。修改建议是在摘录动...
-- `reader-design-feedback-usability-test.md`：feedback / background / score 80。# Reader Design Feedback Usability Test 可用性测试反馈：用户能理解专注会话，但不确定摘录会保存到哪里。修改建议是在摘录动...
 
 ## 3. 设计洞察
 
 - 项目需要先用调研资料建立真实场景，再进入方案表达。
-- 老师或他人反馈可以作为迭代依据，帮助页面说明设计判断如何被修正。
 - 草图和概念资料能够展示方案从模糊问题到具体功能的形成过程。
 
 ## 4. 作品集正文
@@ -48,6 +46,7 @@ Generated at: 2026-05-07T23:42:44
 ## 6. 证据缺口
 
 - 缺少竞品或案例对比，功能取舍的依据还不够清楚。
+- 缺少反馈与修改记录，迭代过程不够可见。
 - 缺少 insight 阶段资料，可补充：痛点归纳、需求证据、设计机会。
 
 ## 7. 导师视角自检

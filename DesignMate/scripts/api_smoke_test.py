@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from backend import ai_service, database, report_service, search_engine
+from backend import ai_service, database, link_capture_service, report_service, search_engine
 from backend.material_parser import scan_library
 from backend.paths import REPORTS_DIR
 from backend.utils import atomic_write_text
@@ -62,6 +62,13 @@ def main() -> int:
         ask_context = [database.get_material(row["id"]) for row in search_engine.search("用户痛点", project="reader-design", limit=5)]
         ask_context = [item for item in ask_context if item]
         ask_result = ai_service.ask_designmate("阅读器项目最大问题是什么？", ask_context)
+        link_result = link_capture_service.capture_link(
+            "https://www.bilibili.com/video/BV1DesignMateSmoke",
+            user_note="api smoke external reference",
+            project="general",
+            design_stage="inspiration",
+            fetch_metadata=False,
+        )
 
         checks = [
             check("health", True, {"ok": True, "version": "v0.6.1"}),
@@ -74,6 +81,7 @@ def main() -> int:
             check("batch patch verified", all("api-batch" in item.tags for item in batch_updated), {"ids": [item.id for item in batch_updated]}),
             check("ask designmate fallback", ask_result["mode"] in {"rule_based", "rule_based_fallback"}, {"mode": ask_result["mode"]}),
             check("ask designmate answer", bool(ask_result["answer"]), {"answer_length": len(ask_result["answer"])}),
+            check("link capture fallback", link_result.ok and link_result.platform == "bilibili", link_result.to_dict()),
             check("rebuild", True, {"fts5_available": database.get_stats()["fts5_available"]}),
         ]
         for line, ok in checks:

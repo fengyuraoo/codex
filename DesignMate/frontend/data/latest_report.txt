@@ -1,23 +1,23 @@
 # DesignMate 本地资料报告
 
-Generated at: 2026-05-07T23:42:44
+Generated at: 2026-05-09T19:58:57
 
 ## 1. 今日摘要
 
-当前资料库共有 72 条资料，其中 66 条属于高价值资料，4 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
-数据来源：Demo 36 条，User inbox 36 条，Imported library 0 条，Unknown 0 条。
+当前资料库共有 76 条资料，其中 66 条属于高价值资料，7 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
+数据来源：Demo 36 条，User inbox 36 条，Imported library 4 条，Unknown 0 条。
 如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。
 
 ### 新增资料提示
 
 - 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。
-- 上次扫描时间：2026-05-07T23:42:43。
-- 上次报告生成时间：2026-05-07T23:42:42。
-- 最近扫描批次：scan-27f58e491333，新增 0，更新 0，重复 72，失败 2。
+- 上次扫描时间：2026-05-09T19:58:57。
+- 上次报告生成时间：2026-05-09T19:58:56。
+- 最近扫描批次：scan-e8b8f9f8859d，新增 0，更新 0，重复 72，失败 2。
 
 ### 未解析资料提示
 
-- 未解析或解析异常资料：2 条。
+- 未解析或解析异常资料：6 条。
 - 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。
 
 ### 建议补充资料
@@ -41,23 +41,23 @@ Generated at: 2026-05-07T23:42:44
 | --- | ---: |
 | competitor | 4 |
 | draft | 8 |
-| feedback | 20 |
-| idea | 7 |
+| feedback | 19 |
+| idea | 8 |
 | paper | 6 |
-| reference | 4 |
-| research | 18 |
-| sketch | 3 |
+| reference | 8 |
+| research | 17 |
+| sketch | 4 |
 | unknown | 2 |
 
 ### 项目分布
 
 | 项目 | 数量 |
 | --- | ---: |
-| general | 22 |
+| general | 20 |
 | info-center | 18 |
-| reader-design | 18 |
+| reader-design | 21 |
 | thesis | 10 |
-| unknown | 4 |
+| unknown | 7 |
 
 ### 阶段分布
 
@@ -67,13 +67,14 @@ Generated at: 2026-05-07T23:42:44
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 20 |
-| unknown | 4 |
+| research | 21 |
+| unknown | 7 |
 
 ### 解析状态
 
 | 项目 | 数量 |
 | --- | ---: |
+| link_captured | 4 |
 | parse_failed | 2 |
 | parsed | 70 |
 
@@ -82,34 +83,21 @@ Generated at: 2026-05-07T23:42:44
 | 项目 | 数量 |
 | --- | ---: |
 | demo | 36 |
+| imported | 4 |
 | user | 36 |
 
 ## 3. 高价值资料 Top 10
 
-### reader-design-low-interruption-reading.md
-
-- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
-- 可用于哪个项目：general
-- 可用于作品集哪个阶段：background
-- 需要补充什么：补充来源、图像证据或设计决策说明。
-
-### reader-design-sketch-panel-layout.md
-
-- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
-- 可用于哪个项目：general
-- 可用于作品集哪个阶段：development
-- 需要补充什么：补充来源、图像证据或设计决策说明。
-
 ### general-design-critique-checklist.md
 
-- 为什么重要：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
+- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
 - 可用于哪个项目：general
 - 可用于作品集哪个阶段：concept
 - 需要补充什么：补充来源、图像证据或设计决策说明。
 
 ### portfolio-page-structure.md
 
-- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察
+- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
 - 可用于哪个项目：general
 - 可用于作品集哪个阶段：presentation
 - 需要补充什么：补充来源、图像证据或设计决策说明。
@@ -142,6 +130,20 @@ Generated at: 2026-05-07T23:42:44
 - 可用于作品集哪个阶段：presentation
 - 需要补充什么：补充来源、图像证据或设计决策说明。
 
+### reader-design-low-interruption-reading.md
+
+- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：background
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
+### reader-design-sketch-panel-layout.md
+
+- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
+- 可用于哪个项目：reader-design
+- 可用于作品集哪个阶段：development
+- 需要补充什么：补充来源、图像证据或设计决策说明。
+
 ### portfolio-feedback-page-order.md
 
 - 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集
@@ -160,7 +162,7 @@ Generated at: 2026-05-07T23:42:44
 
 ### reader-design
 
-- 当前资料数量：18
+- 当前资料数量：21
 - 最强资料：reader-design-low-interruption-reading.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
@@ -181,14 +183,14 @@ Generated at: 2026-05-07T23:42:44
 
 ### general
 
-- 当前资料数量：22
-- 最强资料：reader-design-low-interruption-reading.md
+- 当前资料数量：20
+- 最强资料：general-design-critique-checklist.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
 
 ### unknown
 
-- 当前资料数量：4
+- 当前资料数量：7
 - 最强资料：research_feedback.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
@@ -197,7 +199,7 @@ Generated at: 2026-05-07T23:42:44
 
 ### 背景页可用资料
 
-- `reader-design-low-interruption-reading.md`：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
+- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
 - `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰
 - `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈
 - `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈
@@ -223,7 +225,7 @@ Generated at: 2026-05-07T23:42:44
 
 ### 概念页可用资料
 
-- `general-design-critique-checklist.md`：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
+- `general-design-critique-checklist.md`：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
 - `general-design-critique-checklist.md`：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会
 - `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰
 - `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰
@@ -234,7 +236,7 @@ Generated at: 2026-05-07T23:42:44
 
 ### 发展页可用资料
 
-- `reader-design-sketch-panel-layout.md`：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。
+- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
 - `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案
 - `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
 - `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
@@ -251,14 +253,16 @@ Generated at: 2026-05-07T23:42:44
 
 - `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
 - `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
+- `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？
+- `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
+- `behance link` 解析状态为 link_captured，是否需要补充文本版摘要？
+- `bilibili link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
+- `bilibili link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
 - `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
 - `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
-- `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
-- 阅读器设计是否已有明确目标用户和低干扰阅读场景？
-- 阅读器设计的竞品分析是否能支持功能取舍？
-- 图信中心设计是否已有空间动线证据？
-- 图信中心设计的功能分区是否对应真实用户行为？
 
 ## 7. 明日任务
 

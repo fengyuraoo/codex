@@ -10,7 +10,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from backend import database
-from backend.paths import DRAFTS_DIR, FRONTEND_DATA_DIR, FRONTEND_DIR, REPORTS_DIR, REVIEW_DIR
+from backend.paths import DRAFTS_DIR, FRONTEND_DATA_DIR, FRONTEND_DIR, REPORTS_DIR, REVIEW_DIR, ROOT
 from backend.utils import atomic_write_json, atomic_write_text
 
 
@@ -32,6 +32,14 @@ def main() -> None:
     if DRAFTS_DIR.exists():
         for path in sorted(DRAFTS_DIR.glob("*_draft.md"), key=lambda item: item.stat().st_mtime, reverse=True)[:20]:
             drafts.append({"path": str(path.relative_to(ROOT)).replace("\\", "/"), "modified_time": path.stat().st_mtime})
+    by_source = stats.get("by_source", {})
+    showcase_status = {
+        "total_materials": len(materials),
+        "user_materials": by_source.get("user", 0),
+        "demo_materials": by_source.get("demo", 0),
+        "drafts_generated": len(drafts),
+        "export_status": (ROOT / "portfolio_export" / "designmate_case.html").exists(),
+    }
     atomic_write_json(FRONTEND_DATA_DIR / "materials.json", payload)
     atomic_write_text(FRONTEND_DATA_DIR / "latest_report.txt", latest_report)
     atomic_write_text(FRONTEND_DATA_DIR / "latest_need_confirm.txt", need_confirm)
@@ -43,6 +51,7 @@ def main() -> None:
         "latest_need_confirm": need_confirm,
         "latest_next_actions": next_actions,
         "drafts": drafts,
+        "showcase_status": showcase_status,
     }
     atomic_write_text(
         FRONTEND_DATA_DIR / "app_data.js",

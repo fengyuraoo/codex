@@ -1,21 +1,23 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.6.1</title>
+    <title>DesignMate v0.7 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.6.1</span></div>
-        <p>本地 AI 作品集资料库</p>
+        <div class="brand">DesignMate <span>v0.7</span></div>
+        <p>Search Hub for local design portfolio materials</p>
       </div>
       <nav class="tabs">
-        <button class="tab active" data-view="dashboard">Dashboard</button>
-        <button class="tab" data-view="search">Search</button>
-        <button class="tab" data-view="ask">Ask</button>
+        <button class="tab active" data-view="dashboard">Search Hub</button>
+        <button class="tab" data-view="search">Text Search</button>
+        <button class="tab" data-view="image">Image Search</button>
+        <button class="tab" data-view="link">Link Capture</button>
+        <button class="tab" data-view="ask">Ask DesignMate</button>
         <button class="tab" data-view="report">Reports</button>
       </nav>
       <button id="showcaseToggle" class="secondary">Showcase Mode</button>
@@ -23,47 +25,106 @@
 
     <main>
       <section id="dashboardView" class="view active">
-        <section class="import-guide" id="importGuide">
-          <div class="hero-copy">
-            <h1>把零散设计资料转化为清晰的作品集叙事</h1>
-            <p>把 Markdown、TXT、PDF、图片放入 <code>DesignMate/data/inbox</code>，运行 <code>run_designmate.bat</code> 或 <code>python scripts/run_designmate.py</code>，刷新本页即可查看资料。</p>
+        <section class="search-hero" id="importGuide">
+          <p class="eyebrow">Local-first design evidence search</p>
+          <h1>DesignMate</h1>
+          <h2>A Local AI Search Hub for Design Portfolio Materials</h2>
+          <p class="hero-subtitle">Search sketches, research notes, feedback screenshots, references and project files. Turn scattered design materials into portfolio-ready stories.</p>
+          <div class="hub-search">
+            <input id="hubSearchInput" type="search" placeholder="Search pain points, sketches, feedback, page themes..." />
+            <button id="hubSearchButton" class="primary">Search</button>
           </div>
+          <div class="hub-tags">
+            <span>Local-first</span>
+            <span>Portfolio-aware</span>
+            <span>Design evidence</span>
+            <span>Privacy-friendly</span>
+            <span>For design students</span>
+            <span>For portfolio building</span>
+          </div>
+          <div class="hub-entry-grid">
+            <article class="hub-entry" data-hub-target="search">
+              <strong>Text Search</strong>
+              <p>Find project names, keywords, user pain points, design stages, file content and portfolio page topics.</p>
+            </article>
+            <article class="hub-entry" data-hub-target="image">
+              <strong>Image Search</strong>
+              <p>Use image metadata and filename matching for sketches, references and screenshots.</p>
+            </article>
+            <article class="hub-entry" data-hub-target="ask">
+              <strong>Ask DesignMate</strong>
+              <p>Ask portfolio-focused questions and get structured answers backed by local materials.</p>
+            </article>
+            <article class="hub-entry" data-hub-target="link">
+              <strong>Link Capture</strong>
+              <p>Save web articles, portfolio cases, social posts and short-video references as searchable design evidence.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="showcase-panel">
+          <div>
+            <p class="eyebrow">Showcase / Demo Status</p>
+            <h2>Local library snapshot</h2>
+          </div>
+          <div class="status-grid" id="demoStatus"></div>
+        </section>
+
+        <section class="why-designmate">
+          <div>
+            <p class="eyebrow">Why DesignMate</p>
+            <h2>From scattered materials to portfolio-ready stories</h2>
+          </div>
+          <p>Designers collect many sketches, references, research notes, feedback screenshots and project files. But these materials are often scattered across folders and hard to turn into a clear portfolio story. DesignMate helps search local design materials, organize evidence, and generate portfolio-ready narratives.</p>
+        </section>
+
+        <section class="onboarding">
+          <div>
+            <p class="eyebrow">Start with your own files</p>
+            <h2>Import real materials</h2>
+          </div>
+          <div class="step-grid">
+            <div><strong>Step 1</strong><span>Put materials into <code>DesignMate/data/inbox</code></span></div>
+            <div><strong>Step 2</strong><span>Run <code>run_designmate.bat</code></span></div>
+            <div><strong>Step 3</strong><span>Refresh this page</span></div>
+            <div><strong>Step 4</strong><span>Search, edit, ask and export</span></div>
+          </div>
+          <p class="meta">Supported: Markdown, TXT, PDF, DOCX, PPTX, JPG and PNG.</p>
           <div class="import-stats" id="importStats"></div>
         </section>
-        <section class="onboarding">
-          <h2>开始使用</h2>
-          <div class="step-grid">
-            <div><strong>Step 1</strong><span>把资料放进 DesignMate/data/inbox</span></div>
-            <div><strong>Step 2</strong><span>运行 run_designmate.bat</span></div>
-            <div><strong>Step 3</strong><span>刷新网页</span></div>
-            <div><strong>Step 4</strong><span>搜索、编辑、Ask、生成草稿</span></div>
-          </div>
-          <p class="meta">支持 Markdown、TXT、PDF、DOCX、PPTX、JPG、PNG。</p>
-        </section>
+
         <section class="stats" id="stats"></section>
         <section class="distribution">
           <div>
-            <h2>项目分布</h2>
+            <h2>Project distribution</h2>
             <div id="projectCards" class="mini-grid"></div>
           </div>
           <div>
-            <h2>类型分布</h2>
+            <h2>Material type distribution</h2>
             <div id="typeCards" class="mini-grid"></div>
           </div>
         </section>
-        <h2>高价值资料</h2>
         <section class="entry-grid">
-          <article class="entry-card"><h2>Ask DesignMate</h2><p>询问项目缺口、用户痛点、调研页资料和作品集页面结构。</p><button class="secondary jump" data-target="ask">进入 Ask</button></article>
-          <article class="entry-card"><h2>Portfolio Draft</h2><p>用规则版生成器按项目和页面类型输出作品集页面草稿。</p><button class="secondary jump" data-target="report">查看 Drafts</button></article>
+          <article class="entry-card">
+            <h2>Ask DesignMate</h2>
+            <p>Use the rule-based portfolio assistant to inspect evidence gaps and page structure.</p>
+            <button class="secondary jump" data-target="ask">Open Ask</button>
+          </article>
+          <article class="entry-card">
+            <h2>Portfolio Export</h2>
+            <p>Generate portfolio case materials for the DesignMate project itself.</p>
+            <button class="secondary jump" data-target="report">View Drafts</button>
+          </article>
         </section>
+        <h2>High-value Design Evidence</h2>
         <div class="material-list" id="highlightList"></div>
       </section>
 
       <section id="searchView" class="view">
-        <section class="controls">
+        <section class="controls search-controls">
           <label class="search">
-            <span>Search</span>
-            <input id="searchInput" type="search" placeholder="搜索低干扰、用户痛点、图信中心、双城通勤..." />
+            <span>Text Search</span>
+            <input id="searchInput" type="search" placeholder="Search low-distraction reading, user pain points, library space, commuting..." />
           </label>
           <label><span>Project</span><select id="projectFilter"></select></label>
           <label><span>Type</span><select id="typeFilter"></select></label>
@@ -71,11 +132,11 @@
           <label><span>Source</span><select id="sourceFilter"><option value="all">All</option><option value="demo">Demo data</option><option value="user">User inbox</option><option value="imported">Imported library</option><option value="unknown">Unknown</option></select></label>
           <label><span>Limit</span><select id="limitFilter"><option>10</option><option selected>20</option><option>50</option></select></label>
           <label><span>Sort</span><select id="sortFilter"><option value="score">score</option><option value="updated_at">updated_at</option><option value="filename">filename</option></select></label>
-          <button id="clearFilters" class="secondary">清空筛选</button>
+          <button id="clearFilters" class="secondary">Clear</button>
         </section>
         <section class="quick-filters" id="quickFilters">
-          <button data-quick="high">高价值资料</button>
-          <button data-quick="confirm">待确认资料</button>
+          <button data-quick="high">High value</button>
+          <button data-quick="confirm">Need confirm</button>
           <button data-quick="reader">Reader Design</button>
           <button data-quick="info">Info Center</button>
           <button data-quick="feedback">Feedback</button>
@@ -83,39 +144,83 @@
           <button data-quick="unknown">Unknown</button>
         </section>
         <section class="batch-toolbar" id="batchToolbar">
-          <strong id="selectedCount">已选择 0 条</strong>
-          <select id="batchProject"><option value="">Project 不修改</option></select>
-          <select id="batchType"><option value="">Type 不修改</option></select>
-          <select id="batchStage"><option value="">Stage 不修改</option></select>
-          <input id="batchTags" placeholder="批量标签，逗号分隔；留空不修改" />
-          <button id="applyBatch" class="primary small">批量保存</button>
-          <button id="clearSelection" class="secondary small">取消选择</button>
+          <strong id="selectedCount">Selected 0</strong>
+          <select id="batchProject"><option value="">Project unchanged</option></select>
+          <select id="batchType"><option value="">Type unchanged</option></select>
+          <select id="batchStage"><option value="">Stage unchanged</option></select>
+          <input id="batchTags" placeholder="Batch tags, comma separated" />
+          <button id="applyBatch" class="primary small">Save batch</button>
+          <button id="clearSelection" class="secondary small">Cancel</button>
         </section>
         <section class="layout">
           <div>
-            <h2 id="resultTitle">搜索结果</h2>
+            <h2 id="resultTitle">Design Evidence Cards</h2>
             <div class="material-list" id="materialList"></div>
           </div>
           <aside class="detail" id="detailPanel">
-            <h2>资料详情</h2>
-            <p>点击资料查看路径、解析状态、作品集用途和待确认问题。</p>
+            <h2>Evidence Inspector</h2>
+            <p>Select a card to view its path, source, parsing status, portfolio placement and editable classification fields.</p>
           </aside>
         </section>
+      </section>
+
+      <section id="imageView" class="view">
+        <section class="image-shell">
+          <div>
+            <p class="eyebrow">Image Search</p>
+            <h1>Find related sketches, references and screenshots</h1>
+            <p>Upload a sketch, reference image or screenshot to find related design materials.</p>
+          </div>
+          <div class="upload-zone" id="imageDropzone">
+            <strong>Drop image here</strong>
+            <span>or choose a JPG / PNG from your local project folder</span>
+            <input type="file" accept="image/png,image/jpeg" />
+          </div>
+          <p class="placeholder-note">Current version uses image metadata and filename matching. Vision model integration is planned for v0.8.</p>
+          <div class="image-query">
+            <input id="imageFilenameQuery" type="search" placeholder="Try: sketch, screenshot, reference, moodboard..." />
+            <button id="imageMetadataSearch" class="primary">Search image metadata</button>
+          </div>
+        </section>
+        <h2>Image-related Evidence Cards</h2>
+        <div class="material-list" id="imageSearchResults"></div>
+      </section>
+
+      <section id="linkView" class="view">
+        <section class="link-capture-shell">
+          <div>
+            <p class="eyebrow">Link Capture</p>
+            <h1>Turn external inspiration links into searchable evidence</h1>
+            <p>Paste a webpage, portfolio case, social post or short-video link. DesignMate will save the source link, detect the platform, extract public metadata when possible, and preserve your design note.</p>
+          </div>
+          <label class="wide"><span>Paste a design inspiration link here.</span><textarea id="linkUrl" rows="3" placeholder="https://www.behance.net/... or https://www.bilibili.com/video/..."></textarea></label>
+          <div class="link-form-grid">
+            <label><span>Project</span><input id="linkProject" placeholder="reader-design / info-center / general" value="general" /></label>
+            <label><span>Design stage</span><select id="linkDesignStage"><option>research</option><option>inspiration</option><option>reference</option><option>feedback</option><option>unknown</option></select></label>
+            <label><span>Portfolio placement</span><select id="linkPlacement"><option>Research</option><option>Moodboard</option><option>Design Inspiration</option><option>User Insight</option><option>Process Evidence</option></select></label>
+          </div>
+          <label class="wide"><span>User note</span><textarea id="linkNote" rows="4" placeholder="Why does this link matter for your portfolio story?"></textarea></label>
+          <button id="captureLinkButton" class="primary">Capture Link</button>
+          <p class="placeholder-note">Short-video and social platforms may limit automatic extraction. DesignMate does not download videos, bypass login, or work around platform restrictions.</p>
+        </section>
+        <h2>Captured Link Evidence</h2>
+        <div id="linkCaptureResult" class="material-list"></div>
       </section>
 
       <section id="askView" class="view">
         <section class="ask-panel">
           <div>
+            <p class="eyebrow">Portfolio Assistant</p>
             <h1>Ask DesignMate</h1>
-            <p>基于本地资料回答，不编造没有证据的设计结论。无 API Key 时使用 rule_based fallback。</p>
+            <p>Ask questions about project logic, evidence gaps, page structure and portfolio placement. Without an API key, DesignMate uses a rule-based fallback over local materials.</p>
           </div>
           <label><span>Project</span><select id="askProject"></select></label>
-          <label class="ask-input"><span>Question</span><textarea id="askQuestion" rows="4" placeholder="例如：阅读器项目可以生成哪几页作品集？"></textarea></label>
-          <button id="askButton" class="primary">提问</button>
+          <label class="ask-input"><span>Question</span><textarea id="askQuestion" rows="4" placeholder="Example: Which materials prove the user pain points?"></textarea></label>
+          <button id="askButton" class="primary">Ask</button>
         </section>
         <section class="ask-result" id="askResult">
-          <h2>回答</h2>
-          <p class="meta">输入问题后，DesignMate 会先检索本地资料，再生成规则版回答。</p>
+          <h2>Answer</h2>
+          <p class="meta">DesignMate will first search local materials, then return Summary, Relevant materials, Design insight, Portfolio placement, Things to confirm and Next action.</p>
         </section>
       </section>
 
@@ -134,12 +239,13 @@
             <div id="nextActions" class="markdown-body"></div>
           </article>
           <article>
-            <h2>Portfolio Draft</h2>
+            <h2>Drafts / Export</h2>
             <div class="draft-entry">
-              <p>规则版作品集页面草稿可以从当前资料库生成，适合先搭页面叙事骨架。</p>
+              <p>Generate portfolio page drafts from local materials, or export the DesignMate case package for portfolio storytelling.</p>
               <code>python scripts/generate_portfolio_draft.py --project reader-design --page pain-points</code>
-              <code>python scripts/generate_portfolio_draft.py --project info-center --page concept</code>
-              <p>输出位置：<code>drafts/latest_portfolio_page_draft.md</code></p>
+              <code>python scripts/export_portfolio_case.py</code>
+              <p>Draft path: <code>drafts/latest_portfolio_page_draft.md</code></p>
+              <p>Export path: <code>portfolio_export/designmate_case.html</code></p>
               <div id="draftList" class="draft-list"></div>
             </div>
           </article>

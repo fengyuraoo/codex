@@ -1,5 +1,33 @@
 # DesignMate Roadmap
 
+## v0.7.1 Link Capture (completed)
+
+- Add Link Capture for external inspiration links.
+- Save links as first-class materials in the existing SQLite `materials` table.
+- Detect xiaohongshu, douyin, bilibili, tiktok, youtube, pinterest, behance, dribbble, wechat article and generic webpage links.
+- Add `POST /api/link-capture`.
+- Add Web UI page for pasted links, project, design stage, user note and portfolio placement.
+- Make link materials searchable through Design Evidence Cards.
+- Include link materials in Ask DesignMate context and Portfolio Export as External References.
+- Add `docs/v0.7.1_link_capture.md`, Link Capture tests and `scripts/quality_gate_v071.py`.
+
+## v0.7 Search Hub (current polish)
+
+- Reposition DesignMate as **DesignMate Search Hub: A Local AI Search Hub for Design Portfolio Materials**.
+- Replace the dashboard-first home screen with a search-first home page.
+- Add Text Search, Image Search and Ask DesignMate as the three primary product entries.
+- Render search results as Design Evidence Cards with inferred source mode, project, design stage, material type, confidence and portfolio placement.
+- Keep Image Search honest: current version uses image metadata and filename matching; real vision model integration remains planned for v0.8.
+- Add v0.7 product and demo docs: `docs/v0.7_search_hub.md` and `docs/demo_script_v07.md`.
+- Add `scripts/quality_gate_v07.py` to verify the v0.7 Search Hub deliverables.
+
+## v0.8 next direction
+
+- Real vision model integration for sketch/reference/screenshot understanding.
+- Real AI provider wiring for OpenAI / DeepSeek / Ollama while preserving fallback.
+- Vector search and richer design evidence ranking.
+- More polished portfolio export pages and desktop packaging research.
+
 ## v0.1 文件夹驱动 MVP（已完成）
 
 - 建立项目结构、核心文档和提示词模板。
