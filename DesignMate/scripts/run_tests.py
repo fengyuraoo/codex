@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "reports" / "test_report_v06.md"
+REPORT = ROOT / "reports" / "test_report_v061.md"
 
 
 def main() -> int:
@@ -21,7 +21,7 @@ def main() -> int:
     )
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     lines = [
-        "# Test Report v0.6",
+        "# Test Report v0.6.1",
         "",
         f"Generated at: {datetime.now().isoformat(timespec='seconds')}",
         f"Exit code: {result.returncode}",

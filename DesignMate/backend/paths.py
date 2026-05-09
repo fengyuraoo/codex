@@ -13,5 +13,4 @@ REVIEW_DIR = ROOT / "review"
 DRAFTS_DIR = ROOT / "drafts"
 FRONTEND_DIR = ROOT / "frontend"
 FRONTEND_DATA_DIR = FRONTEND_DIR / "data"
-DATA_FOLDERS = [DATA_DIR / "inbox", DATA_DIR / "library"]
-
+DATA_FOLDERS = [DATA_DIR / "examples", DATA_DIR / "inbox", DATA_DIR / "library"]

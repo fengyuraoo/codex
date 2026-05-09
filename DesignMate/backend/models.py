@@ -40,6 +40,7 @@ class MaterialRecord:
     image_width: int = 0
     image_height: int = 0
     image_note: str = ""
+    source_mode: str = "unknown"
     created_at: str = field(default_factory=now_iso)
     updated_at: str = field(default_factory=now_iso)
 

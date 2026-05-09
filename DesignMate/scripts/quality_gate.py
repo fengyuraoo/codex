@@ -14,14 +14,15 @@ if str(ROOT) not in sys.path:
 from backend import ai_service, database, search_engine
 
 
-REPORT = ROOT / "reports" / "quality_gate_v06.md"
+REPORT = ROOT / "reports" / "quality_gate_v061.md"
 
 COMMANDS = [
     ["python", "scripts/run_designmate.py"],
     ["python", "scripts/build_static_site.py"],
+    ["python", "scripts/export_portfolio_case.py"],
+    ["python", "scripts/generate_portfolio_draft.py", "--project", "reader-design", "--page", "overview"],
     ["python", "scripts/generate_portfolio_draft.py", "--project", "reader-design", "--page", "pain-points"],
     ["python", "scripts/generate_portfolio_draft.py", "--project", "info-center", "--page", "concept"],
-    ["python", "scripts/export_portfolio_case.py"],
     ["python", "scripts/api_smoke_test.py"],
     ["python", "scripts/run_tests.py"],
 ]
@@ -34,13 +35,17 @@ REQUIRED_FILES = [
     "frontend/data/materials.json",
     "frontend/data/app_data.js",
     "reports/latest_report.md",
-    "reports/quality_gate_v06.md",
+    "reports/quality_gate_v061.md",
     "review/latest_need_confirm.md",
     "review/latest_next_actions.md",
     "drafts/latest_portfolio_materials.md",
     "drafts/latest_portfolio_page_draft.md",
     "portfolio_export/designmate_case.html",
+    "portfolio_export/a3_portfolio_page_content.md",
+    "portfolio_export/two_page_portfolio_story.md",
     "portfolio_export/demo_script.md",
+    "portfolio_export/screenshot_checklist.md",
+    "drafts/draft_index.md",
 ]
 
 
@@ -57,8 +62,8 @@ def passfail(condition: bool) -> str:
 def main() -> int:
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     if not REPORT.exists():
-        REPORT.write_text("# Quality Gate v0.6\n\nStatus: running\n", encoding="utf-8")
-    lines = ["# Quality Gate v0.6", "", f"Generated at: {datetime.now().isoformat(timespec='seconds')}", ""]
+        REPORT.write_text("# Quality Gate v0.6.1\n\nStatus: running\n", encoding="utf-8")
+    lines = ["# Quality Gate v0.6.1", "", f"Generated at: {datetime.now().isoformat(timespec='seconds')}", ""]
     all_pass = True
     lines.extend(["## Commands", "", "| Check | Status | Notes |", "| --- | --- | --- |"])
     for command in COMMANDS:
@@ -103,6 +108,8 @@ def main() -> int:
         ("portfolio draft 可用", (ROOT / "drafts" / "latest_portfolio_page_draft.md").exists(), "Run generate_portfolio_draft"),
         ("portfolio export 可用", (ROOT / "portfolio_export" / "designmate_case.html").exists(), "Run export_portfolio_case"),
         ("无 API Key fallback 不崩溃", ask_result.get("mode") == "rule_based_fallback", "Check ai_service fallback"),
+        ("source_mode 统计可用", bool(stats.get("by_source")), "Check source_mode scan"),
+        ("Ask answer_sections 可用", bool(ask_result.get("answer_sections")), "Check Ask sections"),
     ]
     lines.extend(["", "## Functional Checks", "", "| Check | Status | Fix Suggestion |", "| --- | --- | --- |"])
     for name, ok, fix in functional:

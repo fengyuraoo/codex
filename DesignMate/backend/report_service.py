@@ -98,6 +98,7 @@ def build_latest_report(items: list[MaterialRecord]) -> str:
     project_counts = Counter(item.project_guess for item in items)
     stage_counts = Counter(item.portfolio_stage for item in items)
     parse_counts = Counter(item.parse_status for item in items)
+    source_counts = Counter(item.source_mode for item in items)
     top = sorted(items, key=lambda item: item.material_score, reverse=True)[:10]
     by_project = defaultdict(list)
     by_stage = defaultdict(list)
@@ -120,6 +121,8 @@ def build_latest_report(items: list[MaterialRecord]) -> str:
         "## 1. 今日摘要",
         "",
         f"当前资料库共有 {len(items)} 条资料，其中 {high_value} 条属于高价值资料，{unknown} 条仍需要确认分类或项目归属。`data/inbox` 中有 {inbox_count} 个文件，`data/library` 中有 {library_count} 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。",
+        f"数据来源：Demo {source_counts.get('demo', 0)} 条，User inbox {source_counts.get('user', 0)} 条，Imported library {source_counts.get('imported', 0)} 条，Unknown {source_counts.get('unknown', 0)} 条。",
+        "如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。",
         "",
         "### 新增资料提示",
         "",
@@ -163,6 +166,10 @@ def build_latest_report(items: list[MaterialRecord]) -> str:
         "### 解析状态",
         "",
         *table(parse_counts),
+        "",
+        "### 数据来源",
+        "",
+        *table(source_counts),
         "",
         "## 3. 高价值资料 Top 10",
         "",

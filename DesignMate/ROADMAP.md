@@ -42,6 +42,17 @@
 - 增加 `portfolio_export/` 作品集案例导出。
 - 升级到 66 项测试和 `quality_gate_v06.md`。
 
+## v0.6.1 Portfolio Demo Polish（当前完成）
+
+- 增加 source_mode，区分 demo / user / imported / unknown。
+- Dashboard 和 Search 支持真实资料状态与 Source 筛选。
+- 增加真实资料导入文档 `docs/import_real_materials.md`。
+- 优化 Web UI 视觉层级和 Showcase Mode。
+- Ask DesignMate 输出结构化 answer_sections 和 confidence。
+- 作品集草稿升级为 7 段式作品集页面结构，并生成 `drafts/draft_index.md`。
+- `portfolio_export` 增加 A3 页面内容、两页叙事、演示脚本和截图清单。
+- 升级到 82 项测试和 `quality_gate_v061.md`。
+
 ## v0.7 真实 AI 与发布准备
 
 - 接入真实 OpenAI / DeepSeek / Ollama 调用。

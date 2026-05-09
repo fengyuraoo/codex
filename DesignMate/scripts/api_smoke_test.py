@@ -22,7 +22,7 @@ def check(name: str, condition: bool, payload: dict | None = None) -> tuple[str,
 
 
 def main() -> int:
-    lines = ["# API Smoke Test v0.6", "", "Mode: direct backend service smoke test", ""]
+    lines = ["# API Smoke Test v0.6.1", "", "Mode: direct backend service smoke test", ""]
     passed = True
     try:
         database.init_db()
@@ -64,7 +64,7 @@ def main() -> int:
         ask_result = ai_service.ask_designmate("阅读器项目最大问题是什么？", ask_context)
 
         checks = [
-            check("health", True, {"ok": True, "version": "v0.6"}),
+            check("health", True, {"ok": True, "version": "v0.6.1"}),
             check("stats", stats["total_materials"] > 0, stats),
             check("search", len(results) > 0, {"count": len(results)}),
             check("get material detail", detail_before is not None, {"id": first.id}),

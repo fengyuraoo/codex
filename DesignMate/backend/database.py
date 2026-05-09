@@ -73,6 +73,7 @@ def init_db(db_path: Path = DB_PATH) -> bool:
                 image_width INTEGER DEFAULT 0,
                 image_height INTEGER DEFAULT 0,
                 image_note TEXT,
+                source_mode TEXT DEFAULT 'unknown',
                 created_at TEXT,
                 updated_at TEXT
             )
@@ -89,6 +90,7 @@ def init_db(db_path: Path = DB_PATH) -> bool:
         ensure_column(conn, "materials", "image_width", "INTEGER DEFAULT 0")
         ensure_column(conn, "materials", "image_height", "INTEGER DEFAULT 0")
         ensure_column(conn, "materials", "image_note", "TEXT DEFAULT ''")
+        ensure_column(conn, "materials", "source_mode", "TEXT DEFAULT 'unknown'")
         conn.execute(
             """
             CREATE TABLE IF NOT EXISTS scan_batches (
@@ -198,9 +200,9 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 material_type, portfolio_stage, project_guess, tags, material_score,
                 reason, notes, review_status, file_hash, first_seen_at, last_seen_at,
                 scan_batch_id, is_duplicate, image_preview_path, image_width, image_height,
-                image_note, created_at, updated_at
+                image_note, source_mode, created_at, updated_at
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(id) DO UPDATE SET
                 filename=excluded.filename,
                 path=excluded.path,
@@ -239,6 +241,7 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 image_width=excluded.image_width,
                 image_height=excluded.image_height,
                 image_note=excluded.image_note,
+                source_mode=excluded.source_mode,
                 updated_at=excluded.updated_at
             """,
             (
@@ -271,6 +274,7 @@ def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:
                 record.image_width,
                 record.image_height,
                 record.image_note,
+                record.source_mode,
                 record.created_at,
                 record.updated_at,
             ),
@@ -281,7 +285,7 @@ def update_material_classification(record: MaterialRecord, db_path: Path = DB_PA
     upsert_material(record, db_path)
 
 
-def list_materials(db_path: Path = DB_PATH, project: str | None = None, material_type: str | None = None, stage: str | None = None, limit: int | None = None) -> list[MaterialRecord]:
+def list_materials(db_path: Path = DB_PATH, project: str | None = None, material_type: str | None = None, stage: str | None = None, source_mode: str | None = None, limit: int | None = None) -> list[MaterialRecord]:
     query = "SELECT * FROM materials WHERE 1=1"
     params: list[Any] = []
     if project:
@@ -293,6 +297,9 @@ def list_materials(db_path: Path = DB_PATH, project: str | None = None, material
     if stage:
         query += " AND portfolio_stage = ?"
         params.append(stage)
+    if source_mode:
+        query += " AND source_mode = ?"
+        params.append(source_mode)
     query += " ORDER BY material_score DESC, updated_at DESC"
     if limit:
         query += " LIMIT ?"
@@ -410,6 +417,7 @@ def get_stats(db_path: Path = DB_PATH) -> dict[str, Any]:
     by_project = Counter(item.project_guess for item in materials)
     by_stage = Counter(item.portfolio_stage for item in materials)
     by_parse = Counter(item.parse_status for item in materials)
+    by_source = Counter(item.source_mode for item in materials)
     import_stats = get_import_stats(db_path)
     return {
         "total_materials": len(materials),
@@ -417,6 +425,7 @@ def get_stats(db_path: Path = DB_PATH) -> dict[str, Any]:
         "by_project": dict(by_project),
         "by_stage": dict(by_stage),
         "parse_status": dict(by_parse),
+        "by_source": dict(by_source),
         "high_value_count": sum(1 for item in materials if item.material_score >= 70),
         "unknown_count": sum(1 for item in materials if item.material_type == "unknown" or item.project_guess == "unknown"),
         "fts5_available": init_db(db_path),

@@ -78,24 +78,62 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
     q = (question or "").strip()
     top = sorted(context_materials, key=lambda item: item.material_score, reverse=True)[:8]
     if not top:
+        sections = {
+            "回答摘要": "暂时没有找到可引用的本地资料。",
+            "相关资料": [],
+            "设计判断": "当前不能形成可靠设计判断。",
+            "可以放进作品集的位置": "待导入资料后确认。",
+            "需要确认": ["当前回答没有资料证据支撑。"],
+            "下一步建议": ["导入调研、草图、反馈或页面草稿", "运行 python scripts/run_designmate.py", "尝试用项目名或资料类型提问"],
+        }
         return {
             "mode": mode,
-            "answer": "我暂时没有找到可引用的本地资料。请先把资料放入 data/inbox，运行 run_designmate.py 后再提问。",
-            "suggestions": ["导入调研、草图、反馈或页面草稿", "运行 python scripts/run_designmate.py", "尝试用项目名或资料类型提问"],
-            "need_confirm": ["当前回答没有资料证据支撑。"],
+            "answer": sections_to_markdown(sections),
+            "answer_sections": sections,
+            "suggestions": sections["下一步建议"],
+            "need_confirm": sections["需要确认"],
+            "confidence": 0.2,
         }
     evidence = "\n".join(item_line(item) for item in top[:5])
+    related = [item.filename for item in top[:5]]
+    stages = sorted({item.portfolio_stage for item in top if item.portfolio_stage})
     if any(word in q for word in ["缺少", "问题", "最大问题", "风险"]):
-        answer = "从当前资料看，最大问题通常不是资料数量，而是证据是否能串成页面叙事。建议先检查调研、痛点、概念和最终展示之间是否连续。\n\n参考资料：\n" + evidence
+        summary = "当前最大问题不是资料数量，而是证据链是否能支撑作品集叙事。"
+        judgement = "建议检查调研、痛点、概念和最终展示之间是否连续，避免只展示素材而没有设计判断。"
     elif any(word in q for word in ["痛点", "调研", "资料", "找"]):
-        answer = "我优先找到了和问题、调研或证据相关的资料。可以把这些资料用于调研页、痛点页或设计机会页。\n\n参考资料：\n" + evidence
+        summary = "已优先找到与问题、调研或证据相关的资料。"
+        judgement = "这些资料适合转化为调研页、痛点页或设计机会页，但需要补充具体用户语句和图像证据。"
     elif any(word in q for word in ["几页", "页面", "作品集"]):
-        answer = "建议先组织为背景、调研、痛点、概念、发展、最终展示 6 类页面，再按资料强弱删减。\n\n参考资料：\n" + evidence
+        summary = "建议先组织为背景、调研、痛点、概念、发展、最终展示 6 类页面。"
+        judgement = "页面数量应由证据强度决定，高分资料进入主线，弱资料作为补充或内部参考。"
     else:
-        answer = "基于当前命中的本地资料，我建议先把高分资料转成作品集证据，再确认缺失阶段。\n\n参考资料：\n" + evidence
+        summary = "基于当前命中的本地资料，建议先把高分资料转成作品集证据。"
+        judgement = "下一步应确认缺失阶段，并为每条关键资料写一句作品集用途。"
+    sections = {
+        "回答摘要": summary,
+        "相关资料": related,
+        "设计判断": judgement,
+        "可以放进作品集的位置": f"优先考虑这些阶段：{', '.join(stages[:5]) or 'research / insight / concept'}。",
+        "需要确认": ["规则版回答只基于本地资料字段和关键词，需要人工确认设计结论。"],
+        "下一步建议": ["打开 Search 查看这些资料", "为 Top 资料补 notes", "生成对应项目的页面草稿", "补充缺失图像或调研证据"],
+    }
     return {
         "mode": mode,
-        "answer": answer,
-        "suggestions": ["打开 Search 查看这些资料", "为 Top 资料补 notes", "生成对应项目的页面草稿"],
-        "need_confirm": ["规则版回答只基于本地资料字段和关键词，需要人工确认设计结论。"],
+        "answer": sections_to_markdown(sections) + "\n\n## 原始命中\n" + evidence,
+        "answer_sections": sections,
+        "suggestions": sections["下一步建议"],
+        "need_confirm": sections["需要确认"],
+        "confidence": min(0.9, 0.45 + len(top) * 0.05),
     }
+
+
+def sections_to_markdown(sections: dict[str, Any]) -> str:
+    lines: list[str] = []
+    for title, value in sections.items():
+        lines.extend([f"## {title}", ""])
+        if isinstance(value, list):
+            lines.extend([f"- {item}" for item in value] or ["- 暂无"])
+        else:
+            lines.append(str(value))
+        lines.append("")
+    return "\n".join(lines)

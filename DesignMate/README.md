@@ -1,8 +1,8 @@
 # DesignMate
 
-DesignMate 是一个面向设计学生的本地 AI 作品集资料管理与创作辅助工具。v0.6 已升级为更像真实 AI 产品的本地原型：它能导入资料、建立 SQLite 索引、搜索与编辑、批量整理、向 Ask DesignMate 提问、生成作品集页面草稿，并导出 DesignMate 自身的作品集案例包。
+DesignMate 是一个面向设计学生的本地 AI 作品集资料管理与创作辅助工具。v0.6.1 是作品集演示稳定版：在 v0.6 的功能基础上，进一步区分 Demo/真实资料，优化 Web UI 截图表现，增强 Ask DesignMate 的结构化回答，并把作品集导出内容打磨成可用于项目展示的素材。
 
-## v0.6 能做什么
+## v0.6.1 能做什么
 
 - 扫描 `data/inbox/` 和 `data/library/`，写入 `data/designmate.db`。
 - 记录文件 hash、首次出现时间、最近出现时间、扫描批次和重复标记。
@@ -14,7 +14,12 @@ DesignMate 是一个面向设计学生的本地 AI 作品集资料管理与创�
 - 图片资料记录尺寸、预览路径、图片说明提示；未接入视觉模型时可手动写 notes。
 - 作品集草稿支持页面类型：overview、background、research、pain-points、insight、concept、development、final、reflection。
 - 一键导出 DesignMate 作品集案例：`portfolio_export/`。
-- 提供 66 项测试和 `quality_gate_v06.md`。
+- 区分数据来源：`demo` / `user` / `imported` / `unknown`。
+- Search 支持 Source 筛选，可只看自己的 `data/inbox` 资料。
+- Ask DesignMate 返回结构化 sections 和 confidence。
+- Showcase Mode 可隐藏部分开发提示，便于截图展示。
+- 作品集导出增加 A3 页面内容、两页叙事、演示脚本和截图清单。
+- 提供 82 项测试和 `quality_gate_v061.md`。
 
 ## 一键运行
 
@@ -53,7 +58,17 @@ python scripts/start_api.py
 1. 启动 API 和前端。
 2. 打开 Web UI 的 Ask 页面。
 3. 输入问题，例如“阅读器项目可以生成哪几页作品集？”。
-4. DesignMate 会先检索本地资料，再返回规则版回答、使用资料、后续建议和需要确认的问题。
+4. DesignMate 会先检索本地资料，再返回回答摘要、相关资料、设计判断、作品集位置、需要确认和下一步建议。
+
+## 只查看真实资料
+
+在 Web UI 的 Search 页面使用 Source 筛选：
+
+- `User inbox`：只看 `data/inbox` 中的真实资料。
+- `Demo data`：只看示例资料。
+- `Imported library`：只看 `data/library` 中的长期资料。
+
+Demo 数据只用于演示，不应当被当成真实项目结论。
 
 ## AI 配置
 
@@ -95,8 +110,15 @@ python scripts/export_portfolio_case.py
 输出：
 
 - `portfolio_export/designmate_case.html`
+- `portfolio_export/a3_portfolio_page_content.md`
+- `portfolio_export/two_page_portfolio_story.md`
 - `portfolio_export/demo_script.md`
+- `portfolio_export/screenshot_checklist.md`
 - `portfolio_export/*.md`
+
+## Showcase Mode
+
+打开 Web UI 后点击顶部 `Showcase Mode` 按钮，可以隐藏部分开发提示，让 Dashboard/Search/Ask/Reports 更适合截图放入作品集。
 
 ## 当前限制
 

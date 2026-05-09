@@ -1,0 +1,4 @@
+Reader Design Research Note Reading Goals
+
+阅读目标调研显示，用户并不总是为了读完整本书而打开阅读器。有些人是为了找资料，有些人是为了保持专注，有些人只是想在碎片时间读完一篇长文章。低干扰阅读器需要支持不同阅读目标，而不是只提供一种沉浸模式。这个资料适合补充 reader-design 的 research 页面。
+

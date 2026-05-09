@@ -9,6 +9,7 @@ const API_BASE = "http://127.0.0.1:8765";
 const PROJECTS = ["reader-design", "info-center", "thesis", "general", "unknown"];
 const TYPES = ["sketch", "reference", "research", "competitor", "feedback", "draft", "presentation", "paper", "idea", "unknown"];
 const STAGES = ["background", "research", "insight", "concept", "development", "final", "presentation", "reflection", "unknown"];
+const SOURCES = ["demo", "user", "imported", "unknown"];
 
 const els = {
   status: document.getElementById("status"),
@@ -23,6 +24,7 @@ const els = {
   projectFilter: document.getElementById("projectFilter"),
   typeFilter: document.getElementById("typeFilter"),
   stageFilter: document.getElementById("stageFilter"),
+  sourceFilter: document.getElementById("sourceFilter"),
   limitFilter: document.getElementById("limitFilter"),
   sortFilter: document.getElementById("sortFilter"),
   clearFilters: document.getElementById("clearFilters"),
@@ -45,6 +47,7 @@ const els = {
   needConfirm: document.getElementById("needConfirm"),
   nextActions: document.getElementById("nextActions"),
   draftList: document.getElementById("draftList"),
+  showcaseToggle: document.getElementById("showcaseToggle"),
 };
 
 function esc(value) {
@@ -105,11 +108,18 @@ function renderDashboard() {
   const pending = materials.filter(needsConfirm).length;
   const unknown = materials.filter((item) => item.material_type === "unknown" || item.project_guess === "unknown").length;
   const failed = materials.filter((item) => !["parsed", "metadata_only"].includes(item.parse_status)).length;
+  const bySource = countBy("source_mode");
+  const docs = materials.filter((item) => ["md", "txt", "pdf", "docx", "pptx"].includes(item.extension)).length;
+  const images = materials.filter((item) => ["jpg", "jpeg", "png"].includes(item.extension)).length;
   els.importStats.innerHTML = [
     statCard("Inbox 文件", importStats.inbox_file_count ?? 0),
     statCard("Library 文件", importStats.library_file_count ?? 0),
     statCard("上次扫描", importStats.last_scan_time || "暂无"),
     statCard("上次报告", importStats.last_report_time || "暂无"),
+    statCard("真实资料", bySource.user || 0),
+    statCard("Demo 资料", bySource.demo || 0),
+    statCard("图片文件", images),
+    statCard("文档文件", docs),
   ].join("");
   els.stats.innerHTML = [
     statCard("总资料数", materials.length),
@@ -117,6 +127,10 @@ function renderDashboard() {
     statCard("待确认资料", pending),
     statCard("未分类资料", unknown),
     statCard("解析失败", failed),
+    statCard("Demo 数据", bySource.demo || 0),
+    statCard("User Inbox", bySource.user || 0),
+    statCard("Library", bySource.imported || 0),
+    statCard("Unknown Source", bySource.unknown || 0),
   ].join("");
   els.projectCards.innerHTML = miniCards(countBy("project_guess"));
   els.typeCards.innerHTML = miniCards(countBy("material_type"));
@@ -124,7 +138,7 @@ function renderDashboard() {
   const recent = [...materials].sort((a, b) => String(b.updated_at || "").localeCompare(String(a.updated_at || ""))).slice(0, 5);
   els.highlightList.innerHTML = [
     `<h3>今日建议</h3>`,
-    `<div class="advice-card">先处理待确认资料，再把高价值资料按项目批量确认；如果 inbox 为空，请放入真实调研、草图、反馈或页面草稿后重新扫描。</div>`,
+    `<div class="advice-card">${(bySource.user || 0) === 0 ? "当前主要是 Demo 数据。请放入你的真实作品集资料后重新运行扫描。" : "先处理待确认资料，再把高价值资料按项目批量确认；用 Source 筛选只查看自己的资料。"}</div>`,
     `<h3>高价值资料 Top 5</h3>`,
     highlights.length ? highlights.map(card).join("") : emptyState(),
     `<h3>最近更新资料</h3>`,
@@ -147,12 +161,14 @@ function filtered() {
   const project = els.projectFilter.value;
   const type = els.typeFilter.value;
   const stage = els.stageFilter.value;
+  const source = els.sourceFilter.value;
   const sort = els.sortFilter.value;
   const limit = Number(els.limitFilter.value || 20);
   const rows = materials
     .filter((item) => project === "all" || item.project_guess === project)
     .filter((item) => type === "all" || item.material_type === type)
     .filter((item) => stage === "all" || item.portfolio_stage === stage)
+    .filter((item) => source === "all" || item.source_mode === source)
     .filter((item) => matches(item, query))
     .filter((item) => {
       if (quickMode === "high") return Number(item.material_score || 0) >= 70;
@@ -203,6 +219,7 @@ function filterSummary(count) {
   if (els.projectFilter.value !== "all") bits.push(`project=${els.projectFilter.value}`);
   if (els.typeFilter.value !== "all") bits.push(`type=${els.typeFilter.value}`);
   if (els.stageFilter.value !== "all") bits.push(`stage=${els.stageFilter.value}`);
+  if (els.sourceFilter.value !== "all") bits.push(`source=${els.sourceFilter.value}`);
   return `${count} 条结果${bits.length ? " / " + bits.join(" / ") : ""}`;
 }
 
@@ -256,9 +273,10 @@ function showDetail(id) {
         <dt>更新</dt><dd>${esc(item.updated_at || "")}</dd>
         <dt>Hash</dt><dd>${esc(item.file_hash || "未记录")}</dd>
         <dt>图片尺寸</dt><dd>${esc(item.image_width && item.image_height ? `${item.image_width}x${item.image_height}` : "非图片或未读取")}</dd>
+        <dt>数据来源</dt><dd>${esc(item.source_mode || "unknown")}</dd>
       </dl>
     </section>
-    <section class="detail-section">
+    <section class="detail-section ask-sections">
       <h3>分类编辑</h3>
       <label>Project<select id="editProject">${options(PROJECTS, item.project_guess || "unknown")}</select></label>
       <label>Type<select id="editType">${options(TYPES, item.material_type || "unknown")}</select></label>
@@ -305,7 +323,7 @@ async function askDesignMate() {
     if (!response.ok || !data.ok) throw new Error(data.error || "Ask failed");
     els.askResult.innerHTML = `
       <h2>回答 <span class="mode">${esc(data.mode)}</span></h2>
-      <div class="answer">${renderMarkdown(data.answer || "")}</div>
+      <div class="answer">${data.answer_sections ? renderAnswerSections(data.answer_sections) : renderMarkdown(data.answer || "")}</div>
       <h3>使用资料</h3>
       <div class="material-list">${(data.used_materials || []).slice(0, 6).map(card).join("") || emptyState()}</div>
       <h3>后续建议</h3>
@@ -318,6 +336,10 @@ async function askDesignMate() {
     els.askResult.innerHTML = `<h2>回答</h2><p class="empty">提问失败：${esc(error.message)}</p>`;
     setStatus("Ask DesignMate 失败", "error");
   }
+}
+
+function renderAnswerSections(sections) {
+  return Object.entries(sections).map(([title, value]) => `<section class="answer-section"><h3>${esc(title)}</h3>${Array.isArray(value) ? `<ul>${value.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : `<p>${esc(value)}</p>`}</section>`).join("");
 }
 
 async function applyBatchUpdate() {
@@ -517,19 +539,21 @@ async function init() {
 }
 
 els.tabs.forEach((tab) => tab.addEventListener("click", () => switchView(tab.dataset.view)));
-[els.searchInput, els.projectFilter, els.typeFilter, els.stageFilter, els.limitFilter, els.sortFilter].forEach((node) => node.addEventListener("input", renderSearch));
+[els.searchInput, els.projectFilter, els.typeFilter, els.stageFilter, els.sourceFilter, els.limitFilter, els.sortFilter].forEach((node) => node.addEventListener("input", renderSearch));
 els.clearFilters.addEventListener("click", () => {
   quickMode = "";
   els.searchInput.value = "";
   els.projectFilter.value = "all";
   els.typeFilter.value = "all";
   els.stageFilter.value = "all";
+  els.sourceFilter.value = "all";
   els.limitFilter.value = "20";
   els.sortFilter.value = "score";
   renderSearch();
 });
 els.applyBatch.addEventListener("click", applyBatchUpdate);
 els.askButton.addEventListener("click", askDesignMate);
+els.showcaseToggle.addEventListener("click", () => document.body.classList.toggle("showcase"));
 els.clearSelection.addEventListener("click", () => {
   selectedIds.clear();
   renderSearch();

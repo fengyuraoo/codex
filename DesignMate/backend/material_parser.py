@@ -18,6 +18,17 @@ from .utils import atomic_write_text
 SUPPORTED_EXTENSIONS = {".md", ".txt", ".pdf", ".jpg", ".jpeg", ".png", ".docx", ".pptx"}
 
 
+def infer_source_mode(path: Path) -> str:
+    rel = str(path.relative_to(ROOT)).replace("\\", "/")
+    if rel.startswith("data/examples/"):
+        return "demo"
+    if rel.startswith("data/inbox/"):
+        return "user"
+    if rel.startswith("data/library/"):
+        return "imported"
+    return "unknown"
+
+
 def stable_id(path: Path) -> str:
     rel_path = str(path.relative_to(ROOT)).replace("\\", "/").lower()
     digest = hashlib.sha1(rel_path.encode("utf-8")).hexdigest()[:12]
@@ -165,6 +176,7 @@ def parse_material(path: Path, source_folder: Path, scan_batch_id: str = "") -> 
         image_width=image_width,
         image_height=image_height,
         image_note="当前未接入图像理解，可手动填写图片说明。" if path.suffix.lower() in {".jpg", ".jpeg", ".png"} else "",
+        source_mode=infer_source_mode(path),
     )
     return classify(record, full_text)
 

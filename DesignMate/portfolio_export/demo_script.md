@@ -1,10 +1,10 @@
 # Demo Script
 
-Generated at: 2026-05-07T15:27:29
+Generated at: 2026-05-07T23:42:44
 
 ## 作品集叙事
 
-演示顺序：导入资料，运行扫描，打开 Dashboard 查看导入状态，搜索“用户痛点”，批量确认资料，向 Ask DesignMate 提问，生成 pain-points 页面草稿，导出作品集案例。
+2 分钟演示脚本：开场说明 DesignMate 用来把零散设计资料变成作品集叙事；导入资料到 inbox；运行扫描；在 Search 中搜索用户痛点；编辑分类；向 Ask DesignMate 提问；生成页面草稿；导出作品集案例；最后总结当前是规则版 AI，真实模型和图像理解在下一轮接入。
 
 ## 可视化建议
 

@@ -4,9 +4,9 @@
 
 > 作品集页面草稿
 
-Generated at: 2026-05-07T15:27:28
+Generated at: 2026-05-07T23:42:44
 
-## 页面目的
+## 1. 页面目的
 
 证明项目的背景、目标用户、核心问题和设计路径。 证明空间设计不是形式堆叠，而是由用户行为、功能分区和动线组织共同驱动。
 
@@ -14,45 +14,47 @@ Generated at: 2026-05-07T15:27:28
 
 这一页的目标是把本地资料转译为可被作品集读者理解的证据链。
 
-## 可用资料
+## 2. 关键资料
 
+- `info-center-space-research.md`：research / research / score 85。# Info Center Space Research 图信中心空间调研记录了入口、咨询台、自习区、借阅区和开放讨论区的关系。观察发现，新用户进入后常停在入口...
 - `info-center-space-research.md`：research / research / score 85。# Info Center Space Research 图信中心空间调研记录了入口、咨询台、自习区、借阅区和开放讨论区的关系。观察发现，新用户进入后常停在入口...
 - `info-center-functional-zoning.md`：research / research / score 80。# Info Center Functional Zoning 功能分区设想把图信中心划分为快速服务区、安静阅读区、资料检索区和协作讨论区。分区依据不是装饰风格...
 - `info-center-user-behavior.md`：research / research / score 80。# Info Center User Behavior 用户行为观察显示，图信中心使用者主要有三类：快速借还书的人、寻找安静座位的人、需要小组讨论的人。三类用户...
+- `info-center-functional-zoning.md`：research / research / score 80。# Info Center Functional Zoning 功能分区设想把图信中心划分为快速服务区、安静阅读区、资料检索区和协作讨论区。分区依据不是装饰风格...
+- `info-center-user-behavior.md`：research / research / score 80。# Info Center User Behavior 用户行为观察显示，图信中心使用者主要有三类：快速借还书的人、寻找安静座位的人、需要小组讨论的人。三类用户...
+- `info-center-competitor-campus-library.md`：competitor / research / score 70。# Info Center Competitor Campus Library 竞品分析比较了几个高校图书馆和学习中心的空间组织。部分案例把咨询服务放在入口中央...
 - `info-center-competitor-campus-library.md`：competitor / research / score 70。# Info Center Competitor Campus Library 竞品分析比较了几个高校图书馆和学习中心的空间组织。部分案例把咨询服务放在入口中央...
 
-## 核心论点
+## 3. 设计洞察
 
 - 项目需要先用调研资料建立真实场景，再进入方案表达。
 
-## 页面文案
+## 4. 作品集正文
 
 图信中心设计 的页面可以从“为什么需要这个设计”开始，而不是直接展示最终方案。先用调研、反馈或场景资料说明问题如何出现，再把草图、功能设想和方案迭代作为设计判断的证据。页面叙事应避免只罗列素材，重点展示每一类资料如何推动下一步决策。
 当前最适合作为页面入口的资料是 `info-center-space-research.md`，因为它的评分较高，且与 `info-center` 的 `research` 阶段相关。可以把它放在页面上方作为问题或证据入口，再向下展开设计机会和方案发展。
 
-## 图像建议
+## 5. 图像与版式建议
 
 - 首屏放一张能够代表项目场景或核心问题的图，而不是只放最终效果。
 - 调研页使用访谈摘录、观察照片或竞品对比表。
 - 概念与发展页使用草图序列、功能模块图或关键决策标注。
 - 最终展示页用 2-4 张主图串起使用流程，并保留问题、行动、反馈之间的关系。
-
-## 排版建议
-
 - 首屏说明页面目的
 - 中段展示证据和判断
 - 尾部连接到下一页叙事
 
-## 缺失证据
+## 6. 证据缺口
 
 - 缺少草图、概念发散或方案演进资料。
 - 缺少反馈与修改记录，迭代过程不够可见。
 - 缺少 background 阶段资料，可补充：项目背景、问题来源、使用场景。
 
-## AI 自检
+## 7. 导师视角自检
 
 - 规则版草稿可能把资料字段当作结论，需要人工确认真实设计证据。
 - 如果页面文案听起来像方法论，而不是项目事实，请补充具体用户、场景、图像或反馈。
+- AI 自检：当前为规则版生成，不能替代导师评审和真实项目判断。
 
 ## 推荐页面结构
 

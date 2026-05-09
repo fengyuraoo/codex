@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.6</title>
+    <title>DesignMate v0.6.1</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.6</span></div>
+        <div class="brand">DesignMate <span>v0.6.1</span></div>
         <p>本地 AI 作品集资料库</p>
       </div>
       <nav class="tabs">
@@ -18,16 +18,27 @@
         <button class="tab" data-view="ask">Ask</button>
         <button class="tab" data-view="report">Reports</button>
       </nav>
+      <button id="showcaseToggle" class="secondary">Showcase Mode</button>
     </header>
 
     <main>
       <section id="dashboardView" class="view active">
         <section class="import-guide" id="importGuide">
-          <div>
-            <h1>导入真实作品集资料</h1>
+          <div class="hero-copy">
+            <h1>把零散设计资料转化为清晰的作品集叙事</h1>
             <p>把 Markdown、TXT、PDF、图片放入 <code>DesignMate/data/inbox</code>，运行 <code>run_designmate.bat</code> 或 <code>python scripts/run_designmate.py</code>，刷新本页即可查看资料。</p>
           </div>
           <div class="import-stats" id="importStats"></div>
+        </section>
+        <section class="onboarding">
+          <h2>开始使用</h2>
+          <div class="step-grid">
+            <div><strong>Step 1</strong><span>把资料放进 DesignMate/data/inbox</span></div>
+            <div><strong>Step 2</strong><span>运行 run_designmate.bat</span></div>
+            <div><strong>Step 3</strong><span>刷新网页</span></div>
+            <div><strong>Step 4</strong><span>搜索、编辑、Ask、生成草稿</span></div>
+          </div>
+          <p class="meta">支持 Markdown、TXT、PDF、DOCX、PPTX、JPG、PNG。</p>
         </section>
         <section class="stats" id="stats"></section>
         <section class="distribution">
@@ -57,6 +68,7 @@
           <label><span>Project</span><select id="projectFilter"></select></label>
           <label><span>Type</span><select id="typeFilter"></select></label>
           <label><span>Stage</span><select id="stageFilter"></select></label>
+          <label><span>Source</span><select id="sourceFilter"><option value="all">All</option><option value="demo">Demo data</option><option value="user">User inbox</option><option value="imported">Imported library</option><option value="unknown">Unknown</option></select></label>
           <label><span>Limit</span><select id="limitFilter"><option>10</option><option selected>20</option><option>50</option></select></label>
           <label><span>Sort</span><select id="sortFilter"><option value="score">score</option><option value="updated_at">updated_at</option><option value="filename">filename</option></select></label>
           <button id="clearFilters" class="secondary">清空筛选</button>

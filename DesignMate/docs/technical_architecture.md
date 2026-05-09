@@ -1,10 +1,10 @@
 # Technical Architecture
 
-DesignMate v0.6 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态 Web UI 原型。核心原则是：没有外部 API Key 也能完整运行，真实 AI 能力通过抽象层逐步接入。
+DesignMate v0.6.1 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态 Web UI 原型。核心原则是：没有外部 API Key 也能完整运行，真实 AI 能力通过抽象层逐步接入；Demo 数据和真实资料必须可区分。
 
 ## Backend
 
-- `backend/models.py`：统一资料模型 `MaterialRecord`，包含文件信息、解析状态、分类字段、评分、备注、扫描历史、hash、重复标记和图片元数据。
+- `backend/models.py`：统一资料模型 `MaterialRecord`，包含文件信息、解析状态、分类字段、评分、备注、扫描历史、hash、重复标记、图片元数据和 `source_mode`。
 - `backend/database.py`：SQLite 初始化、资料 upsert、单条更新、批量更新、FTS 重建、统计和扫描批次记录。
 - `backend/material_parser.py`：扫描 `data/inbox` / `data/library`，解析文本资料，记录图片元数据，生成 content 文件。
 - `backend/classifier.py`：规则分类、项目推断、标签生成和资料评分。
@@ -30,6 +30,13 @@ DesignMate v0.6 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态
 - `reports`：报告记录。
 - `app_logs`：应用日志。
 - `scan_batches`：扫描批次，记录 total/new/updated/duplicate/failed。
+
+`materials.source_mode` 标记数据来源：
+
+- `demo`：`data/examples`
+- `user`：`data/inbox`
+- `imported`：`data/library`
+- `unknown`：其他来源
 
 ## API
 
@@ -57,6 +64,20 @@ DesignMate v0.6 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态
 - `scripts/run_tests.py`：运行 unittest。
 - `scripts/quality_gate.py`：运行 v0.6 质量门禁。
 
+## Ask Sections
+
+`ai_service.ask_designmate()` 返回：
+
+- `answer`
+- `answer_sections`
+- `used_materials`
+- `suggestions`
+- `need_confirm`
+- `confidence`
+- `mode`
+
+前端优先渲染 `answer_sections`，让 Ask 页面更适合展示和截图。
+
 ## Frontend
 
 - `frontend/index.html`
@@ -65,7 +86,15 @@ DesignMate v0.6 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态
 - `frontend/data/materials.json`
 - `frontend/data/app_data.js`
 
-前端支持静态模式和 API 模式。静态模式可查看资料、报告和搜索；API 模式可保存单条编辑、批量编辑，并使用 Ask DesignMate。
+前端支持静态模式和 API 模式。静态模式可查看资料、报告和搜索；API 模式可保存单条编辑、批量编辑，并使用 Ask DesignMate。v0.6.1 增加 Source 筛选和 Showcase Mode。
+
+## Draft Index
+
+`portfolio_writer.py` 会生成：
+
+- `drafts/latest_portfolio_page_draft.md`
+- `drafts/{project}_{page}_draft.md`
+- `drafts/draft_index.md`
 
 ## Quality Gate
 
@@ -78,3 +107,4 @@ DesignMate v0.6 是本地优先的 Python + SQLite + 标准库 HTTP API + 静态
 - API smoke test 是否通过。
 - 66 项测试是否通过。
 - Ask、搜索、编辑、批量编辑、fallback 是否可用。
+- source_mode、Ask sections、作品集导出文件和 draft index 是否可用。

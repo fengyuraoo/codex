@@ -52,7 +52,7 @@ def main() -> int:
     start = datetime.now().isoformat(timespec="seconds")
     append_dev_log("")
     append_dev_log(f"## Run {start}")
-    append_dev_log("- Started DesignMate v0.6 pipeline.")
+    append_dev_log("- Started DesignMate v0.6.1 pipeline.")
     try:
         has_fts = database.init_db()
         append_dev_log(f"- SQLite initialized. FTS5 available: {has_fts}.")
@@ -64,7 +64,7 @@ def main() -> int:
         stats = database.get_stats()
         append_dev_log(f"- Pipeline completed successfully. Materials: {stats['total_materials']}.")
         print("")
-        print("DesignMate v0.6 run completed.")
+        print("DesignMate v0.6.1 run completed.")
         print(f"- SQLite DB: data/designmate.db")
         print(f"- Total materials: {stats['total_materials']}")
         print(f"- FTS5 available: {stats['fts5_available']}")

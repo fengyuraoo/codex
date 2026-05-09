@@ -128,7 +128,7 @@ def build_portfolio_draft(project: str, page: str = "overview") -> str:
         "",
         f"Generated at: {datetime.now().isoformat(timespec='seconds')}",
         "",
-        "## 页面目的",
+        "## 1. 页面目的",
         "",
         page_purpose + " " + PROJECT_PURPOSES.get(project, "说明该项目的设计问题、关键证据、方案逻辑和下一步补充方向。"),
         "",
@@ -136,7 +136,7 @@ def build_portfolio_draft(project: str, page: str = "overview") -> str:
         "",
         "这一页的目标是把本地资料转译为可被作品集读者理解的证据链。",
         "",
-        "## 可用资料",
+        "## 2. 关键资料",
         "",
     ]
     if focused:
@@ -144,10 +144,10 @@ def build_portfolio_draft(project: str, page: str = "overview") -> str:
             lines.append(f"- `{item.filename}`：{item.material_type} / {item.portfolio_stage} / score {item.material_score}。{clean_preview(item, 80)}")
     else:
         lines.append("- 暂无该项目资料。请先把资料放入 `data/inbox` 并运行 `python scripts/run_designmate.py`。")
-    lines.extend(["", "## 核心论点", ""])
+    lines.extend(["", "## 3. 设计洞察", ""])
     for claim in build_claims(focused):
         lines.append(f"- {claim}")
-    lines.extend(["", "## 页面文案", ""])
+    lines.extend(["", "## 4. 作品集正文", ""])
     lines.append(
         f"{label} 的页面可以从“为什么需要这个设计”开始，而不是直接展示最终方案。"
         "先用调研、反馈或场景资料说明问题如何出现，再把草图、功能设想和方案迭代作为设计判断的证据。"
@@ -159,7 +159,7 @@ def build_portfolio_draft(project: str, page: str = "overview") -> str:
             f"当前最适合作为页面入口的资料是 `{best.filename}`，因为它的评分较高，且与 `{best.project_guess}` 的 `{best.portfolio_stage}` 阶段相关。"
             "可以把它放在页面上方作为问题或证据入口，再向下展开设计机会和方案发展。"
         )
-    lines.extend(["", "## 图像建议", ""])
+    lines.extend(["", "## 5. 图像与版式建议", ""])
     lines.extend(
         [
             "- 首屏放一张能够代表项目场景或核心问题的图，而不是只放最终效果。",
@@ -168,15 +168,15 @@ def build_portfolio_draft(project: str, page: str = "overview") -> str:
             "- 最终展示页用 2-4 张主图串起使用流程，并保留问题、行动、反馈之间的关系。",
         ]
     )
-    lines.extend(["", "## 排版建议", ""])
     for advice in layout_advice(page):
         lines.append(f"- {advice}")
-    lines.extend(["", "## 缺失证据", ""])
+    lines.extend(["", "## 6. 证据缺口", ""])
     for item in missing_evidence(focused):
         lines.append(f"- {item}")
-    lines.extend(["", "## AI 自检", ""])
+    lines.extend(["", "## 7. 导师视角自检", ""])
     lines.append("- 规则版草稿可能把资料字段当作结论，需要人工确认真实设计证据。")
     lines.append("- 如果页面文案听起来像方法论，而不是项目事实，请补充具体用户、场景、图像或反馈。")
+    lines.append("- AI 自检：当前为规则版生成，不能替代导师评审和真实项目判断。")
     lines.append("")
     lines.extend(["## 推荐页面结构", ""])
     for stage, title in [
@@ -204,4 +204,18 @@ def generate_portfolio_draft(project: str, page: str = "overview", output_path: 
     atomic_write_text(output, content)
     atomic_write_text(project_output, content)
     atomic_write_text(legacy_output, content)
+    update_draft_index()
     return output
+
+
+def update_draft_index() -> Path:
+    lines = ["# Draft Index", "", f"Generated at: {datetime.now().isoformat(timespec='seconds')}", "", "| 草稿 | 项目 | 页面类型 | 修改时间 |", "| --- | --- | --- | --- |"]
+    for path in sorted(DRAFTS_DIR.glob("*_draft.md")):
+        name = path.stem
+        parts = name.split("_")
+        project = parts[0] if parts else "unknown"
+        page = parts[1] if len(parts) > 1 else "unknown"
+        lines.append(f"| `{path.name}` | {project} | {page} | {datetime.fromtimestamp(path.stat().st_mtime).isoformat(timespec='seconds')} |")
+    index_path = DRAFTS_DIR / "draft_index.md"
+    atomic_write_text(index_path, "\n".join(lines) + "\n")
+    return index_path

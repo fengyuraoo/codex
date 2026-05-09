@@ -28,7 +28,7 @@ def material_payload(record) -> dict:
 
 
 class DesignMateHandler(BaseHTTPRequestHandler):
-    server_version = "DesignMateAPI/0.6"
+    server_version = "DesignMateAPI/0.6.1"
 
     def do_OPTIONS(self) -> None:
         self.send_response(204)
@@ -56,7 +56,7 @@ class DesignMateHandler(BaseHTTPRequestHandler):
             path = parsed.path.rstrip("/") or "/"
             query = parse_qs(parsed.query)
             if path == "/api/health":
-                json_response(self, {"ok": True, "version": "v0.6"})
+                json_response(self, {"ok": True, "version": "v0.6.1"})
             elif path == "/api/stats":
                 database.init_db()
                 json_response(self, {"ok": True, "stats": database.get_stats()})
@@ -66,6 +66,7 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                     project=query.get("project", [None])[0],
                     material_type=query.get("type", [None])[0],
                     stage=query.get("stage", [None])[0],
+                    source_mode=query.get("source", [None])[0],
                     limit=limit,
                 )
                 json_response(self, {"ok": True, "count": len(items), "materials": [material_payload(item) for item in items]})
@@ -119,10 +120,12 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                             "ok": True,
                             "question": question,
                             "answer": ai_result["answer"],
+                            "answer_sections": ai_result.get("answer_sections", {}),
                             "used_materials": [item.to_dict() for item in context],
                             "mode": ai_result["mode"],
                             "suggestions": ai_result["suggestions"],
                             "need_confirm": ai_result["need_confirm"],
+                            "confidence": ai_result.get("confidence", 0.5),
                         },
                     )
                 except ValueError as exc:
