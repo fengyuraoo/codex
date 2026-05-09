@@ -90,6 +90,32 @@ This is DesignMate v0.7.2, a local AI search hub for design portfolio materials.
 
 这条路线更符合真实设计学生工作流：先收集资料，再搜索证据，再让 DesignMate 辅助整理叙事，最后导出作品集素材。
 
+## v0.7.4 Design Process Positioning
+
+### 30 秒中文定位
+
+DesignMate v0.7.4 不再只定位为作品集资料工具，而是一个面向设计全过程的本地 AI 资料搜索与设计证据管理工具。它帮助设计学生、工业设计师、产品设计师、UX/UI 设计师和自由设计师搜索草图、调研、反馈、链接和项目文件，把零散资料整理成可追溯的设计证据。作品集仍然是重要输出，但 DesignMate 的价值贯穿调研、迭代、反馈、汇报、复盘和作品集生成。
+
+### 60 秒中文演示
+
+打开 DesignMate 首页，首先看到的是“面向设计全过程的本地 AI 资料助手”。我可以先进入“添加资料”，把草图、调研笔记、会议记录、反馈截图、外部链接或项目文件加入资料库。然后回到搜索中心，搜索“用户痛点”“竞品分析”或“方案证据”，DesignMate 会把结果显示为 Design Evidence Card，并标注项目、阶段、来源、类型和使用场景。
+
+接着进入 Ask DesignMate，询问“这个项目还缺少什么证据？”或者“哪些资料适合方案汇报？”当前版本会用本地规则版 fallback，基于资料库返回摘要、相关资料、设计洞察、可用场景、需要确认和下一步建议。最后，这些资料既可以用于项目复盘和方案汇报，也可以继续输出为作品集草稿。
+
+### 60 秒英文演示
+
+DesignMate v0.7.4 is a local AI material search and design evidence tool for the whole design process. It is not only for portfolio building. Designers can add sketches, research notes, feedback screenshots, meeting notes, links and project files, then search them as traceable design evidence.
+
+On the home screen, the three main actions are Add Materials, Search Library and Ask DesignMate. Search results appear as Design Evidence Cards with project, stage, source, type, relevance and use case. Ask DesignMate helps organize project logic, user pain points, design evidence, iteration history and next actions. Portfolio output remains supported, but it is now one use case among research, presentation, reflection and future design iteration.
+
+### v0.7.4 推荐截图
+
+1. 中文首页：展示“面向设计全过程”的新定位。
+2. 英文首页：展示 “A Local AI Search Hub for the Design Process”。
+3. 添加资料页面：展示 Upload Files、Capture Link、Paste Note、Import Folder。
+4. Ask DesignMate 页面：展示设计过程问题和 Use Cases / 可用场景。
+5. Link Capture 页面：展示外部参考链接如何变成设计证据。
+
 ## 推荐截图清单
 
 - Search Hub 首页全屏。

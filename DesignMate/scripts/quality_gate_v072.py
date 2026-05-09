@@ -51,7 +51,7 @@ def main() -> int:
         contains(app_js, "en:", "translation dictionary has en"),
         contains(app_js, "localStorage", "language persists to localStorage"),
         contains(app_js, "setLanguage", "language switch handler exists"),
-        contains_any(index_html, ["v0.7.2", "v0.7.3"], "frontend displays a compatible v0.7.x version"),
+        contains_any(index_html, ["v0.7.2", "v0.7.3", "v0.7.4"], "frontend displays a compatible v0.7.x version"),
         contains(index_html, "langZh", "Chinese language button exists"),
         contains(index_html, "langEn", "English language button exists"),
         contains(index_html, "data-view=\"add\"", "Add Materials navigation exists"),

@@ -1,8 +1,22 @@
 # External References and Link Capture Evidence
 
-Generated at: 2026-05-10T00:25:17
+Generated at: 2026-05-10T01:30:07
 
 This file collects captured external links that can support moodboards, research sources, inspiration evidence and process references.
+
+## xiaohongshu link
+
+- Platform: xiaohongshu
+- Source type: social_post
+- Project: general
+- Portfolio placement: Research
+- URL: http://xhslink.com/o/7vKpRwVaDiz
+- User note: 四维灵感
+- Excerpt: Title: xiaohongshu link
+Platform: xiaohongshu
+URL: http://xhslink.com/o/7vKpRwVaDiz
+User note: 四维灵感
+Capture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.
 
 ## douyin link
 

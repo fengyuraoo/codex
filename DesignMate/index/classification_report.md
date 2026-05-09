@@ -1,7 +1,7 @@
 # Classification Report
 
-Generated at: 2026-05-10T00:25:15
-Total materials: 83
+Generated at: 2026-05-10T01:30:05
+Total materials: 84
 
 ## Material Type Stats
 
@@ -10,7 +10,7 @@ Total materials: 83
 - feedback: 18
 - idea: 8
 - paper: 6
-- reference: 9
+- reference: 10
 - research: 24
 - sketch: 4
 - unknown: 2
@@ -21,12 +21,12 @@ Total materials: 83
 - concept: 10
 - development: 16
 - presentation: 14
-- research: 27
+- research: 28
 - unknown: 8
 
 ## Project Stats
 
-- general: 20
+- general: 21
 - info-center: 18
 - reader-design: 27
 - thesis: 10
@@ -869,6 +869,17 @@ Total materials: 83
 - Tags: thesis
 - Needs confirmation: False
 - Reason: 有正文；类型明确为 paper；项目归属为 thesis；包含 双城通勤
+
+### link-9c4d16b2d54457e3 xiaohongshu link
+
+- Path: `http://xhslink.com/o/7vKpRwVaDiz`
+- Material type: `reference`
+- Portfolio stage: `research`
+- Project guess: `general`
+- Score: 62
+- Tags: external-reference, link, research, social_post, user, xiaohongshu
+- Needs confirmation: False
+- Reason: 有正文；类型明确为 reference；可对应 research 阶段；项目归属为 general
 
 ### link-9ec83e625fd3a3c7 douyin link
 

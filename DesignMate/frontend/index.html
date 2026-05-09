@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.7.3 Search Hub</title>
+    <title>DesignMate v0.7.4 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.7.3</span></div>
-        <p>Search Hub for local design portfolio materials</p>
+        <div class="brand">DesignMate <span>v0.7.4</span></div>
+        <p>Design process material assistant</p>
       </div>
       <nav class="tabs">
         <button class="tab primary-tab active" data-view="dashboard">Search Hub</button>
@@ -35,8 +35,8 @@
         <section class="search-hero" id="importGuide">
           <p class="eyebrow">Local-first design evidence search</p>
           <h1>DesignMate</h1>
-          <h2>A Local AI Search Hub for Design Portfolio Materials</h2>
-          <p class="hero-subtitle">Search sketches, research notes, feedback screenshots, references and project files. Turn scattered design materials into portfolio-ready stories.</p>
+          <h2>A Local AI Search Hub for the Design Process</h2>
+          <p class="hero-subtitle">Search sketches, research, feedback, links and project files, then turn scattered materials into traceable design evidence.</p>
           <div class="hub-search">
             <input id="hubSearchInput" type="search" placeholder="Search pain points, sketches, feedback, page themes..." />
             <button id="hubSearchButton" class="primary">Search</button>
@@ -48,24 +48,24 @@
           </div>
           <div class="hub-tags">
             <span>Local-first</span>
-            <span>Portfolio-aware</span>
+            <span>Project memory</span>
             <span>Design evidence</span>
             <span>Privacy-friendly</span>
-            <span>For design students</span>
-            <span>For portfolio building</span>
+            <span>For designers</span>
+            <span>Portfolio-ready</span>
           </div>
           <div class="hub-entry-grid">
             <article class="hub-entry hub-entry-primary" data-hub-target="add">
               <strong>Add Materials</strong>
-              <p>Import sketches, links, notes and project files.</p>
+              <p>Import sketches, links, notes, research and project files.</p>
             </article>
             <article class="hub-entry" data-hub-target="search">
               <strong>Search Library</strong>
-              <p>Find pain points, feedback, research and page themes.</p>
+              <p>Find pain points, feedback, inspiration, competitors and design evidence.</p>
             </article>
             <article class="hub-entry" data-hub-target="ask">
               <strong>Ask DesignMate</strong>
-              <p>Organize evidence, insights and portfolio placement.</p>
+              <p>Organize project clues, design insights and next actions.</p>
             </article>
           </div>
         </section>
@@ -132,7 +132,7 @@
         <section class="add-materials-hero">
           <p class="eyebrow" data-i18n="addEyebrow">Material Input Hub</p>
           <h1 data-i18n="addMaterials">Add Materials</h1>
-          <p data-i18n="addMaterialsIntro">This is the material input hub for DesignMate. Add sketches, references, feedback screenshots, research notes, project files and inspiration links, then turn them into searchable design evidence.</p>
+          <p data-i18n="addMaterialsIntro">This is the material input hub for DesignMate. Add sketches, references, research notes, feedback screenshots, meeting notes, project files and inspiration links, then turn them into searchable and reusable design evidence.</p>
         </section>
 
         <section class="add-method-grid">
@@ -157,7 +157,7 @@
             <div class="link-form-grid">
               <label><span data-i18n="project">Project</span><input id="addLinkProject" placeholder="reader-design / info-center / general" value="general" /></label>
               <label><span data-i18n="designStage">Design Stage</span><select id="addLinkDesignStage"><option>research</option><option>inspiration</option><option>reference</option><option>feedback</option><option>unknown</option></select></label>
-              <label><span data-i18n="placement">Portfolio Placement</span><select id="addLinkPlacement"><option>Research</option><option>Moodboard</option><option>Design Inspiration</option><option>User Insight</option><option>Process Evidence</option></select></label>
+            <label><span data-i18n="placement">Use Case</span><select id="addLinkPlacement"><option>Research</option><option>Inspiration</option><option>Design Process</option><option>Decision Evidence</option><option>Presentation</option><option>Portfolio</option><option>Reflection</option></select></label>
             </div>
             <label class="wide"><span data-i18n="userNote">User Note</span><textarea id="addLinkNote" rows="3" placeholder="Why does this link matter?"></textarea></label>
             <button id="addCaptureLinkButton" class="primary" data-i18n="captureLink">Capture Link</button>
@@ -174,7 +174,7 @@
               <label><span data-i18n="designStage">Design Stage</span><select id="noteDesignStage"><option>research</option><option>insight</option><option>concept</option><option>development</option><option>reflection</option><option>unknown</option></select></label>
               <label><span data-i18n="materialType">Material Type</span><select id="noteMaterialType"><option>research</option><option>feedback</option><option>idea</option><option>draft</option><option>reference</option><option>unknown</option></select></label>
             </div>
-            <label><span data-i18n="placement">Portfolio Placement</span><input id="notePlacement" placeholder="Pain Points / User Research / Design Process" /></label>
+            <label><span data-i18n="placement">Use Case</span><input id="notePlacement" placeholder="Research / Decision Evidence / Presentation" /></label>
             <label class="wide"><span data-i18n="noteContent">Content</span><textarea id="noteContent" rows="7" placeholder="Paste research notes, feedback, project logic or draft copy..."></textarea></label>
             <button id="saveNoteButton" class="primary" data-i18n="saveNote">Save Note</button>
             <div id="noteSaveResult" class="material-list compact-result"></div>
@@ -235,7 +235,7 @@
           </div>
           <aside class="detail" id="detailPanel">
             <h2>Evidence Inspector</h2>
-            <p>Select a card to view its path, source, parsing status, portfolio placement and editable classification fields.</p>
+            <p>Select a card to view its path, source, parsing status, use case and editable classification fields.</p>
           </aside>
         </section>
       </section>
@@ -266,16 +266,16 @@
         <section class="link-capture-shell">
           <div>
             <p class="eyebrow">Link Capture</p>
-            <h1>Turn external inspiration links into searchable evidence</h1>
-            <p>Paste a webpage, portfolio case, social post or short-video link. DesignMate will save the source link, detect the platform, extract public metadata when possible, and preserve your design note.</p>
+            <h1>Turn external inspiration links into design evidence</h1>
+            <p>Paste webpages, portfolio cases, social posts, short videos, competitor cases or references. DesignMate saves the source link, detects the platform and extracts public metadata when possible.</p>
           </div>
           <label class="wide"><span>Paste a design inspiration link here.</span><textarea id="linkUrl" rows="3" placeholder="https://www.behance.net/... or https://www.bilibili.com/video/..."></textarea></label>
           <div class="link-form-grid">
             <label><span>Project</span><input id="linkProject" placeholder="reader-design / info-center / general" value="general" /></label>
             <label><span>Design stage</span><select id="linkDesignStage"><option>research</option><option>inspiration</option><option>reference</option><option>feedback</option><option>unknown</option></select></label>
-            <label><span>Portfolio placement</span><select id="linkPlacement"><option>Research</option><option>Moodboard</option><option>Design Inspiration</option><option>User Insight</option><option>Process Evidence</option></select></label>
+            <label><span>Use case</span><select id="linkPlacement"><option>Research</option><option>Inspiration</option><option>Design Process</option><option>Decision Evidence</option><option>Presentation</option><option>Portfolio</option><option>Reflection</option></select></label>
           </div>
-          <label class="wide"><span>User note</span><textarea id="linkNote" rows="4" placeholder="Why does this link matter for your portfolio story?"></textarea></label>
+          <label class="wide"><span>User note</span><textarea id="linkNote" rows="4" placeholder="Why does this link matter for the design process?"></textarea></label>
           <button id="captureLinkButton" class="primary">Capture Link</button>
           <p class="placeholder-note">Short-video and social platforms may limit automatic extraction. DesignMate does not download videos, bypass login, or work around platform restrictions.</p>
         </section>
@@ -286,9 +286,9 @@
       <section id="askView" class="view">
         <section class="ask-panel">
           <div>
-            <p class="eyebrow">Portfolio Assistant</p>
+            <p class="eyebrow">Design Process Assistant</p>
             <h1>Ask DesignMate</h1>
-            <p>Ask questions about project logic, evidence gaps, page structure and portfolio placement. Without an API key, DesignMate uses a rule-based fallback over local materials.</p>
+            <p>Ask DesignMate to organize project logic, user pain points, design evidence, iteration history and next actions.</p>
           </div>
           <label><span>Project</span><select id="askProject"></select></label>
           <label class="ask-input"><span>Question</span><textarea id="askQuestion" rows="4" placeholder="Example: Which materials prove the user pain points?"></textarea></label>
@@ -296,7 +296,7 @@
         </section>
         <section class="ask-result" id="askResult">
           <h2>Answer</h2>
-          <p class="meta">DesignMate will first search local materials, then return Summary, Relevant materials, Design insight, Portfolio placement, Things to confirm and Next action.</p>
+          <p class="meta">DesignMate will first search local materials, then return Summary, Relevant materials, Design insight, Use cases, Things to confirm and Next action.</p>
         </section>
       </section>
 
@@ -315,9 +315,9 @@
             <div id="nextActions" class="markdown-body"></div>
           </article>
           <article>
-            <h2>Drafts / Export</h2>
+            <h2>Export project evidence / portfolio draft</h2>
             <div class="draft-entry">
-              <p>Generate portfolio page drafts from local materials, or export the DesignMate case package for portfolio storytelling.</p>
+              <p>Use DesignMate materials for project reflection, design presentation and portfolio output.</p>
               <code>python scripts/generate_portfolio_draft.py --project reader-design --page pain-points</code>
               <code>python scripts/export_portfolio_case.py</code>
               <p>Draft path: <code>drafts/latest_portfolio_page_draft.md</code></p>

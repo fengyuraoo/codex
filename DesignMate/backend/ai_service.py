@@ -34,7 +34,7 @@ def summarize_material(material: MaterialRecord, provider: str | None = None) ->
     _, mode = configured_provider(provider)
     summary = (
         f"`{material.filename}` 属于 {material.project_guess} 项目，当前类型为 {material.material_type}，"
-        f"适合放在 {material.portfolio_stage} 阶段。它的价值在于：{material.reason or '可作为作品集叙事证据，但需要人工补充用途说明。'}"
+        f"适合放在 {material.portfolio_stage} 阶段。它的价值在于：{material.reason or '可作为设计过程证据，但需要人工补充用途说明。'}"
     )
     return {"mode": mode, "prompt": get_prompt("material_summary"), "summary": summary, "need_confirm": material.review_status != "confirmed"}
 
@@ -70,7 +70,7 @@ def critique_project(project: str, materials: list[MaterialRecord], provider: st
     return {
         "mode": mode,
         "critique": f"{project} 当前最大风险是证据链不均衡。缺失阶段：{', '.join(missing) if missing else '暂无明显阶段缺口'}。",
-        "next_actions": ["补充缺失阶段资料", "为高价值资料写一句作品集用途", "确认哪些资料进入最终页面"],
+        "next_actions": ["补充缺失阶段资料", "为高价值资料写一句使用场景", "确认哪些资料进入汇报、复盘或作品集输出"],
     }
 
 
@@ -90,7 +90,7 @@ def section_keys(language: str) -> dict[str, str]:
             "summary": "摘要",
             "materials": "相关资料",
             "insight": "设计洞察",
-            "placement": "作品集位置",
+            "placement": "可用场景",
             "confirm": "需要确认",
             "actions": "下一步建议",
         }
@@ -98,7 +98,7 @@ def section_keys(language: str) -> dict[str, str]:
         "summary": "Summary",
         "materials": "Relevant Materials",
         "insight": "Design Insight",
-        "placement": "Portfolio Placement",
+        "placement": "Use Cases",
         "confirm": "Things to Confirm",
         "actions": "Next Action",
     }
@@ -116,7 +116,7 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
                 keys["summary"]: "暂时没有找到可引用的本地资料。",
                 keys["materials"]: [],
                 keys["insight"]: "没有证据时，DesignMate 不会编造设计判断。",
-                keys["placement"]: "请先导入项目证据，再判断它属于调研、痛点、设计过程、最终方案还是反思页。",
+                keys["placement"]: "请先导入项目证据，再判断它适合项目复盘、方案汇报、作品集页面、客户沟通还是下一轮设计迭代。",
                 keys["confirm"]: ["当前回答没有本地资料支撑。"],
                 keys["actions"]: ["导入调研、草图、反馈或外部链接", "运行 python scripts/run_designmate.py", "带上项目名重新提问"],
             }
@@ -125,7 +125,7 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
                 keys["summary"]: "No local materials were found for this question yet.",
                 keys["materials"]: [],
                 keys["insight"]: "DesignMate cannot make a reliable design judgement without evidence.",
-                keys["placement"]: "Import project evidence first, then decide whether it belongs to research, pain points, design process, final solution or reflection.",
+                keys["placement"]: "Import project evidence first, then decide whether it supports project reflection, design presentation, portfolio pages, client communication or the next design iteration.",
                 keys["confirm"]: ["This answer has no supporting local evidence yet."],
                 keys["actions"]: ["Import research notes, sketches, feedback or links", "Run python scripts/run_designmate.py", "Ask again with a project name or material type"],
             }
@@ -141,7 +141,7 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
     related = [item.filename for item in top[:5]]
     stages = sorted({item.portfolio_stage for item in top if item.portfolio_stage})
     if any(word in q for word in ["缺少", "问题", "最大问题", "风险"]):
-        summary = "当前最大问题不是资料数量，而是证据链是否能支撑作品集叙事。"
+        summary = "当前最大问题不是资料数量，而是证据链是否能支撑设计判断和后续输出。"
         judgement = "建议检查调研、痛点、概念和最终展示之间是否连续，避免只展示素材而没有设计判断。"
     elif any(word in q for word in ["痛点", "调研", "资料", "找", "灵感链接", "短视频", "外部参考", "moodboard", "参考"]):
         summary = "已优先找到与问题、调研或证据相关的资料。"
@@ -150,27 +150,27 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
         summary = "建议先组织为背景、调研、痛点、概念、发展、最终展示 6 类页面。"
         judgement = "页面数量应由证据强度决定，高分资料进入主线，弱资料作为补充或内部参考。"
     else:
-        summary = "基于当前命中的本地资料，建议先把高分资料转成作品集证据。"
-        judgement = "下一步应确认缺失阶段，并为每条关键资料写一句作品集用途。"
+        summary = "基于当前命中的本地资料，建议先把高分资料转成可追溯的设计证据。"
+        judgement = "下一步应确认缺失阶段，并为每条关键资料写一句可用场景。"
     if lang == "en":
         if any(item.url for item in top):
             judgement = "Some matched materials are external links. Use their user notes to explain why they matter before placing them in a moodboard, research source list or process evidence section."
         sections = {
-            keys["summary"]: summary if not has_chinese(summary) else "Based on the matched local materials, prioritize high-scoring evidence and turn it into portfolio proof.",
+            keys["summary"]: summary if not has_chinese(summary) else "Based on the matched local materials, prioritize high-scoring evidence and turn it into traceable design evidence.",
             keys["materials"]: related,
             keys["insight"]: judgement if not has_chinese(judgement) else "Check whether research, pain points, concept development and final presentation form a continuous evidence chain.",
-            keys["placement"]: f"Prioritize these portfolio stages: {', '.join(stages[:5]) or 'research / insight / concept'}.",
+            keys["placement"]: f"Use these materials for project reflection, design presentation, portfolio pages, client communication or next iteration. Strongest stages: {', '.join(stages[:5]) or 'research / insight / concept'}.",
             keys["confirm"]: ["This rule-based answer is based on local fields and keyword evidence; confirm the design conclusion manually."],
-            keys["actions"]: ["Open Text Search to inspect these materials", "Add notes to the top evidence cards", "Generate a page draft for the project", "Add missing image, link or research evidence"],
+            keys["actions"]: ["Open Text Search to inspect these materials", "Add notes to the top evidence cards", "Use them in a report, critique or portfolio draft", "Add missing image, link or research evidence"],
         }
     else:
         sections = {
             keys["summary"]: summary,
             keys["materials"]: related,
             keys["insight"]: judgement,
-            keys["placement"]: f"优先考虑这些作品集阶段：{', '.join(stages[:5]) or 'research / insight / concept'}。",
+            keys["placement"]: f"可用于项目复盘、方案汇报、作品集页面、客户沟通或下一轮设计迭代。当前最强阶段：{', '.join(stages[:5]) or 'research / insight / concept'}。",
             keys["confirm"]: ["这是规则版回答，只基于本地字段、关键词和用户备注，需要人工确认设计结论。"],
-            keys["actions"]: ["打开文本搜索检查这些资料", "为高价值资料补充备注", "生成对应项目的页面草稿", "补充缺失的图片、链接或调研证据"],
+            keys["actions"]: ["打开文本搜索检查这些资料", "为高价值资料补充备注", "用于汇报、复盘或作品集草稿", "补充缺失的图片、链接或调研证据"],
         }
     return {
         "mode": mode,

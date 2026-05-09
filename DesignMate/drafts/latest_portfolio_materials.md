@@ -1,6 +1,6 @@
 # Latest Portfolio Materials
 
-Generated at: 2026-05-10T00:25:17
+Generated at: 2026-05-10T01:30:07
 
 ## general-design-critique-checklist.md
 
@@ -685,3 +685,12 @@ Generated at: 2026-05-10T00:25:17
 - 分数：65
 - 可用理由：有正文；类型明确为 paper；项目归属为 thesis；包含 双城通勤
 - 路径：`data/examples/thesis-transport-connection.md`
+
+## xiaohongshu link
+
+- 类型：reference
+- 项目：general
+- 作品集阶段：research
+- 分数：62
+- 可用理由：有正文；类型明确为 reference；可对应 research 阶段；项目归属为 general
+- 路径：`http://xhslink.com/o/7vKpRwVaDiz`

@@ -27,6 +27,13 @@ def contains(path: Path, marker: str, name: str) -> dict[str, str]:
     return check(name, ok, f"Found {marker}" if ok else f"Missing {marker}", f"Add `{marker}` to {path.relative_to(ROOT)}.")
 
 
+def contains_any(path: Path, markers: list[str], name: str) -> dict[str, str]:
+    content = read(path)
+    found = [marker for marker in markers if marker in content]
+    ok = bool(found)
+    return check(name, ok, f"Found {', '.join(found)}" if ok else f"Missing one of {markers}", f"Add one of `{markers}` to {path.relative_to(ROOT)}.")
+
+
 def not_contains(path: Path, marker: str, name: str) -> dict[str, str]:
     ok = marker not in read(path)
     return check(name, ok, f"Did not find {marker}" if ok else f"Still found {marker}", f"Remove or replace `{marker}` in {path.relative_to(ROOT)}.")
@@ -44,17 +51,17 @@ def main() -> int:
     app_js = ROOT / "frontend" / "app.js"
     checks = [
         exists(ROOT / "docs" / "v0.7.3_minimal_home_ui.md", "v0.7.3 minimal home UI doc exists"),
-        contains(index_html, "v0.7.3", "frontend displays version v0.7.3"),
-        contains(app_js, "v0.7.3", "frontend script uses version v0.7.3"),
+        contains_any(index_html, ["v0.7.3", "v0.7.4"], "frontend displays a compatible v0.7.x version"),
+        contains_any(app_js, ["v0.7.3", "v0.7.4"], "frontend script uses a compatible v0.7.x version"),
         contains(index_html, "addMaterialsHeroButton", "home has Add Materials action"),
         contains(index_html, "askHeroButton", "home has Ask DesignMate action"),
         contains(index_html, "searchLibraryHeroButton", "home has Search Library action"),
         contains(app_js, 'tagLocalFirst: "本地优先"', "Chinese Local-first label is translated"),
-        contains(app_js, 'tagPortfolioAware: "面向作品集"', "Chinese Portfolio-aware label is translated"),
+        contains_any(app_js, ['tagPortfolioAware: "面向作品集"', 'tagPortfolioAware: "项目记忆"'], "Chinese second tag is translated"),
         contains(app_js, 'tagDesignEvidence: "设计证据"', "Chinese Design evidence label is translated"),
         contains(app_js, 'tagPrivacyFriendly: "隐私友好"', "Chinese Privacy-friendly label is translated"),
-        contains(app_js, 'tagDesignStudents: "面向设计学生"', "Chinese design-students label is translated"),
-        contains(app_js, 'tagPortfolioBuilding: "用于作品集构建"', "Chinese portfolio-building label is translated"),
+        contains_any(app_js, ['tagDesignStudents: "面向设计学生"', 'tagDesignStudents: "面向设计师"'], "Chinese audience tag is translated"),
+        contains_any(app_js, ['tagPortfolioBuilding: "用于作品集构建"', 'tagPortfolioBuilding: "支持作品集输出"'], "Chinese portfolio-output tag is translated"),
         not_contains(index_html, "hub-entry\" data-hub-target=\"image\"", "home no longer repeats Image Search card"),
         not_contains(index_html, "hub-entry\" data-hub-target=\"link\"", "home no longer repeats Link Capture card"),
         contains(index_html, "addView", "Add Materials page still exists"),

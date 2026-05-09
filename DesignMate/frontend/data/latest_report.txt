@@ -1,23 +1,23 @@
 # DesignMate 本地资料报告
 
-Generated at: 2026-05-10T00:25:17
+Generated at: 2026-05-10T01:30:07
 
 ## 1. 今日摘要
 
-当前资料库共有 83 条资料，其中 72 条属于高价值资料，8 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
-数据来源：Demo 36 条，User inbox 42 条，Imported library 5 条，Unknown 0 条。
+当前资料库共有 84 条资料，其中 72 条属于高价值资料，8 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
+数据来源：Demo 36 条，User inbox 42 条，Imported library 6 条，Unknown 0 条。
 如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。
 
 ### 新增资料提示
 
 - 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。
-- 上次扫描时间：2026-05-10T00:25:16。
-- 上次报告生成时间：2026-05-10T00:25:15。
-- 最近扫描批次：scan-014dfc6dbfda，新增 0，更新 0，重复 72，失败 2。
+- 上次扫描时间：2026-05-10T01:30:07。
+- 上次报告生成时间：2026-05-10T01:30:05。
+- 最近扫描批次：scan-8ffc586c25d1，新增 0，更新 0，重复 72，失败 2。
 
 ### 未解析资料提示
 
-- 未解析或解析异常资料：13 条。
+- 未解析或解析异常资料：14 条。
 - 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。
 
 ### 建议补充资料
@@ -44,7 +44,7 @@ Generated at: 2026-05-10T00:25:17
 | feedback | 19 |
 | idea | 8 |
 | paper | 6 |
-| reference | 9 |
+| reference | 10 |
 | research | 23 |
 | sketch | 4 |
 | unknown | 2 |
@@ -53,7 +53,7 @@ Generated at: 2026-05-10T00:25:17
 
 | 项目 | 数量 |
 | --- | ---: |
-| general | 20 |
+| general | 21 |
 | info-center | 18 |
 | reader-design | 27 |
 | thesis | 10 |
@@ -67,14 +67,14 @@ Generated at: 2026-05-10T00:25:17
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 27 |
+| research | 28 |
 | unknown | 8 |
 
 ### 解析状态
 
 | 项目 | 数量 |
 | --- | ---: |
-| link_captured | 5 |
+| link_captured | 6 |
 | note_captured | 6 |
 | parse_failed | 2 |
 | parsed | 70 |
@@ -84,7 +84,7 @@ Generated at: 2026-05-10T00:25:17
 | 项目 | 数量 |
 | --- | ---: |
 | demo | 36 |
-| imported | 5 |
+| imported | 6 |
 | user | 42 |
 
 ## 3. 高价值资料 Top 10
@@ -184,7 +184,7 @@ Generated at: 2026-05-10T00:25:17
 
 ### general
 
-- 当前资料数量：20
+- 当前资料数量：21
 - 最强资料：general-design-critique-checklist.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
@@ -260,10 +260,10 @@ Generated at: 2026-05-10T00:25:17
 - `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
 - `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
 - `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `xiaohongshu link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？
 - `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？
-- `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
 
 ## 7. 明日任务
 

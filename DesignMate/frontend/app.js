@@ -10,7 +10,7 @@ const LANGUAGE_KEY = "designmate_language";
 
 const translations = {
   en: {
-    appSubtitle: "Search Hub for local design portfolio materials",
+    appSubtitle: "Design process material assistant",
     navDashboard: "Search Hub",
     navAdd: "Add Materials",
     navSearch: "Text Search",
@@ -20,21 +20,21 @@ const translations = {
     navReport: "Reports",
     showcase: "Showcase Mode",
     heroEyebrow: "Local-first design evidence search",
-    heroTitle: "A Local AI Search Hub for Design Portfolio Materials",
-    heroSubtitle: "Search sketches, research notes, feedback screenshots, references and project files. Turn scattered design materials into portfolio-ready stories.",
+    heroTitle: "A Local AI Search Hub for the Design Process",
+    heroSubtitle: "Search sketches, research, feedback, links and project files, then turn scattered materials into traceable design evidence.",
     heroSearchPlaceholder: "Search pain points, sketches, feedback, page themes...",
     searchLibrary: "Search Library",
-    coreAddBody: "Import sketches, links, notes and project files.",
-    coreSearchBody: "Find pain points, feedback, research and page themes.",
-    coreAskBody: "Organize evidence, insights and portfolio placement.",
+    coreAddBody: "Import sketches, links, notes, research and project files.",
+    coreSearchBody: "Find pain points, feedback, inspiration, competitors and design evidence.",
+    coreAskBody: "Organize project clues, design insights and next actions.",
     tagLocalFirst: "Local-first",
-    tagPortfolioAware: "Portfolio-aware",
+    tagPortfolioAware: "Project memory",
     tagDesignEvidence: "Design evidence",
     tagPrivacyFriendly: "Privacy-friendly",
-    tagDesignStudents: "For design students",
-    tagPortfolioBuilding: "For portfolio building",
+    tagDesignStudents: "For designers",
+    tagPortfolioBuilding: "Portfolio-ready",
     addMaterials: "Add Materials",
-    addMaterialsIntro: "This is the material input hub for DesignMate. Add sketches, references, feedback screenshots, research notes, project files and inspiration links, then turn them into searchable design evidence.",
+    addMaterialsIntro: "This is the material input hub for DesignMate. Add sketches, references, research notes, feedback screenshots, meeting notes, project files and inspiration links, then turn them into searchable and reusable design evidence.",
     addMaterialsEntry: "Start here: add files, capture links, paste notes or import a folder before searching.",
     addEyebrow: "Material Input Hub",
     uploadFiles: "Upload Files",
@@ -72,7 +72,7 @@ const translations = {
     stage: "Stage",
     type: "Type",
     relevance: "Relevance",
-    placement: "Portfolio Placement",
+    placement: "Use Case",
     userNote: "User Note",
     openLink: "Open Link",
     openSourceLink: "Open source link",
@@ -81,8 +81,8 @@ const translations = {
     confidence: "confidence",
     noPreview: "No preview available.",
     empty: "Put your materials into DesignMate/data/inbox, then run python DesignMate/scripts/run_designmate.py.",
-    linkTitle: "Turn external inspiration links into searchable evidence",
-    linkIntro: "Paste a webpage, portfolio case, social post or short-video link. DesignMate will save the source link, detect the platform, extract public metadata when possible, and preserve your design note.",
+    linkTitle: "Turn external inspiration links into design evidence",
+    linkIntro: "Paste webpages, portfolio cases, social posts, short videos, competitor cases or references. DesignMate saves the source link, detects the platform and extracts public metadata when possible.",
     linkUrlLabel: "Paste a design inspiration link here.",
     designStage: "Design Stage",
     captureLink: "Capture Link",
@@ -101,7 +101,7 @@ const translations = {
     failed: "failed",
   },
   zh: {
-    appSubtitle: "设计作品集资料搜索助手",
+    appSubtitle: "设计过程资料搜索助手",
     navDashboard: "搜索中心",
     navAdd: "添加资料",
     navSearch: "文本搜索",
@@ -111,21 +111,21 @@ const translations = {
     navReport: "报告",
     showcase: "展示模式",
     heroEyebrow: "本地优先的设计证据搜索",
-    heroTitle: "面向设计作品集资料的本地 AI 搜索中心",
-    heroSubtitle: "搜索草图、调研笔记、反馈截图、参考资料和项目文件，把零散设计资料整理成可用于作品集的叙事。",
+    heroTitle: "面向设计全过程的本地 AI 资料助手",
+    heroSubtitle: "搜索草图、调研、反馈、链接和项目文件，把零散设计资料整理成可追溯的设计证据。",
     heroSearchPlaceholder: "搜索用户痛点、草图、反馈、页面主题...",
     searchLibrary: "搜索资料",
-    coreAddBody: "导入草图、链接、笔记和项目文件。",
-    coreSearchBody: "查找痛点、反馈、调研和页面主题。",
-    coreAskBody: "整理证据、洞察和作品集位置。",
+    coreAddBody: "导入草图、链接、笔记、调研和项目文件。",
+    coreSearchBody: "查找痛点、反馈、灵感、竞品和方案证据。",
+    coreAskBody: "整理项目线索、设计洞察和下一步行动。",
     tagLocalFirst: "本地优先",
-    tagPortfolioAware: "面向作品集",
+    tagPortfolioAware: "项目记忆",
     tagDesignEvidence: "设计证据",
     tagPrivacyFriendly: "隐私友好",
-    tagDesignStudents: "面向设计学生",
-    tagPortfolioBuilding: "用于作品集构建",
+    tagDesignStudents: "面向设计师",
+    tagPortfolioBuilding: "支持作品集输出",
     addMaterials: "添加资料",
-    addMaterialsIntro: "这里是 DesignMate 的资料入口。你可以把草图、灵感图、反馈截图、调研笔记、项目文档和外部链接加入资料库，之后它们会变成可搜索、可提问、可导出的设计证据。",
+    addMaterialsIntro: "这里是 DesignMate 的资料入口。你可以添加草图、灵感图、调研笔记、反馈截图、会议记录、项目文档和外部链接，让它们成为可搜索、可提问、可复用的设计证据。",
     addMaterialsEntry: "从这里开始：添加文件、采集链接、粘贴笔记或导入文件夹，再进入搜索。",
     addEyebrow: "统一资料入口",
     uploadFiles: "上传文件",
@@ -163,7 +163,7 @@ const translations = {
     stage: "阶段",
     type: "类型",
     relevance: "匹配度",
-    placement: "作品集位置",
+    placement: "使用场景",
     userNote: "我的备注",
     openLink: "打开链接",
     capturedFromWeb: "来自网页采集",
@@ -171,8 +171,8 @@ const translations = {
     confidence: "匹配度",
     noPreview: "暂无摘要。",
     empty: "请把资料放入 DesignMate/data/inbox，然后运行 python DesignMate/scripts/run_designmate.py。",
-    linkTitle: "把外部灵感链接转化为可搜索的设计证据",
-    linkIntro: "粘贴网页文章、作品集案例、社交图文或短视频链接。DesignMate 会保存原始链接，识别平台，在可公开访问时提取元信息，并保留你的设计备注。",
+    linkTitle: "把外部灵感链接转化为设计证据",
+    linkIntro: "粘贴网页、作品集案例、社交媒体、短视频、竞品案例或参考资料链接。DesignMate 会保存原始链接、识别平台，并在可能时提取公开元数据。",
     linkUrlLabel: "在这里粘贴设计灵感链接。",
     designStage: "设计阶段",
     captureLink: "保存链接",
@@ -295,9 +295,9 @@ function applyI18nAttributes() {
 
 function applyTranslations() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-  document.title = `DesignMate v0.7.3 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
+  document.title = `DesignMate v0.7.4 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
   applyI18nAttributes();
-  text(".brand span", "v0.7.3");
+  text(".brand span", "v0.7.4");
   text(".topbar p", t("appSubtitle"));
   const navLabels = { dashboard: "navDashboard", add: "navAdd", search: "navSearch", image: "navImage", link: "navLink", ask: "navAsk", report: "navReport" };
   els.tabs.forEach((tab) => {
@@ -344,7 +344,7 @@ function applyTranslations() {
   if (linkFormLabels[1]) linkFormLabels[1].textContent = t("designStage");
   if (linkFormLabels[2]) linkFormLabels[2].textContent = t("placement");
   text("#captureLinkButton", t("captureLink"));
-  placeholder("#linkNote", currentLang === "zh" ? "这条链接为什么值得放进作品集资料库？" : "Why does this link matter for your portfolio story?");
+  placeholder("#linkNote", currentLang === "zh" ? "这条链接为什么值得作为设计证据保存？" : "Why does this link matter for the design process?");
   placeholder("#askQuestion", t("askPlaceholder"));
   text("#askView .ask-result h2", t("answer"));
   const searchLabels = document.querySelectorAll("#searchView .controls label span");
@@ -477,9 +477,9 @@ function evidenceWhy(item) {
   if (item.material_score >= 70) fields.push("high material score");
   const placement = portfolioPlacement(item);
   if (currentLang === "zh") {
-    return `命中${fields.join(" + ") || "文件名元信息"}，可作为作品集「${placement}」部分的设计证据。`;
+    return `命中${fields.join(" + ") || "文件名元信息"}，可作为「${placement}」场景中的设计证据。`;
   }
-  return `Matches ${fields.join(" + ") || "filename metadata"} and can support the ${placement} part of a portfolio narrative.`;
+  return `Matches ${fields.join(" + ") || "filename metadata"} and can support the ${placement} use case as traceable design evidence.`;
 }
 
 function renderDashboard() {
@@ -662,8 +662,8 @@ function options(values, current) {
 
 function confirmQuestion(item) {
   if (item.material_type === "unknown" || item.project_guess === "unknown") return "Confirm material type or project ownership.";
-  if (Number(item.material_score || 0) < 55) return "Add notes, evidence source or portfolio placement before using it.";
-  return "Confirm whether this evidence should enter the portfolio storyline.";
+  if (Number(item.material_score || 0) < 55) return "Add notes, evidence source or use case before using it.";
+  return "Confirm where this evidence should support research, iteration, presentation or portfolio output.";
 }
 
 function showDetail(id) {
@@ -689,7 +689,7 @@ function showDetail(id) {
       </dl>
     </section>
     <section class="detail-section">
-      <h3>Portfolio Placement</h3>
+      <h3>${esc(t("placement"))}</h3>
       <p class="meta">${esc(portfolioPlacement(item))}: ${esc(evidenceWhy(item))}</p>
       ${item.user_note ? `<p class="meta">${esc(t("userNote"))}: ${esc(item.user_note)}</p>` : ""}
       <p class="meta">Need confirm: ${esc(confirmQuestion(item))}</p>

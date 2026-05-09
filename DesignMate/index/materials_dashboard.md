@@ -1,8 +1,8 @@
 # Materials Dashboard
 
-Generated at: 2026-05-10T00:25:15
+Generated at: 2026-05-10T01:30:05
 
-- 总资料数：83
+- 总资料数：84
 
 ## 各类型数量
 
@@ -13,7 +13,7 @@ Generated at: 2026-05-10T00:25:15
 | feedback | 18 |
 | idea | 8 |
 | paper | 6 |
-| reference | 9 |
+| reference | 10 |
 | research | 24 |
 | sketch | 4 |
 | unknown | 2 |
@@ -22,7 +22,7 @@ Generated at: 2026-05-10T00:25:15
 
 | 名称 | 数量 |
 | --- | ---: |
-| general | 20 |
+| general | 21 |
 | info-center | 18 |
 | reader-design | 27 |
 | thesis | 10 |
@@ -36,7 +36,7 @@ Generated at: 2026-05-10T00:25:15
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 27 |
+| research | 28 |
 | unknown | 8 |
 
 ## 高价值资料 Top 10

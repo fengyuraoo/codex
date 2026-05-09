@@ -1,6 +1,6 @@
 # DesignMate v0.7.2 Quality Gate
 
-- Generated at: 2026-05-10T00:25:11
+- Generated at: 2026-05-10T01:29:54
 - Final status: PASS
 
 | Check | Status | Detail | Fix |
@@ -11,7 +11,7 @@
 | translation dictionary has en | PASS | Found en: | - |
 | language persists to localStorage | PASS | Found localStorage | - |
 | language switch handler exists | PASS | Found setLanguage | - |
-| frontend displays a compatible v0.7.x version | PASS | Found v0.7.3 | - |
+| frontend displays a compatible v0.7.x version | PASS | Found v0.7.4 | - |
 | Chinese language button exists | PASS | Found langZh | - |
 | English language button exists | PASS | Found langEn | - |
 | Add Materials navigation exists | PASS | Found data-view="add" | - |

@@ -1,20 +1,20 @@
 {
-  "count": 83,
+  "count": 84,
   "stats": {
-    "total_materials": 83,
+    "total_materials": 84,
     "by_type": {
       "feedback": 19,
       "idea": 8,
       "sketch": 4,
       "research": 23,
       "draft": 8,
-      "reference": 9,
+      "reference": 10,
       "competitor": 4,
       "paper": 6,
       "unknown": 2
     },
     "by_project": {
-      "general": 20,
+      "general": 21,
       "reader-design": 27,
       "info-center": 18,
       "unknown": 8,
@@ -25,19 +25,19 @@
       "presentation": 14,
       "background": 8,
       "development": 16,
-      "research": 27,
+      "research": 28,
       "unknown": 8
     },
     "parse_status": {
       "parsed": 70,
       "note_captured": 6,
-      "link_captured": 5,
+      "link_captured": 6,
       "parse_failed": 2
     },
     "by_source": {
       "user": 42,
       "demo": 36,
-      "imported": 5
+      "imported": 6
     },
     "high_value_count": 72,
     "unknown_count": 8,
@@ -45,17 +45,17 @@
     "import": {
       "inbox_file_count": 36,
       "library_file_count": 0,
-      "last_scan_time": "2026-05-10T00:25:16",
-      "last_report_time": "2026-05-10T00:25:17",
+      "last_scan_time": "2026-05-10T01:30:07",
+      "last_report_time": "2026-05-10T01:30:07",
       "watched_folders": [
         "data/examples",
         "data/inbox",
         "data/library"
       ],
       "latest_batch": {
-        "id": "scan-014dfc6dbfda",
-        "started_at": "2026-05-10T00:25:14",
-        "finished_at": "2026-05-10T00:25:15",
+        "id": "scan-8ffc586c25d1",
+        "started_at": "2026-05-10T01:30:05",
+        "finished_at": "2026-05-10T01:30:05",
         "total_files": 72,
         "new_files": 0,
         "updated_files": 0,
@@ -67,17 +67,17 @@
   "import_stats": {
     "inbox_file_count": 36,
     "library_file_count": 0,
-    "last_scan_time": "2026-05-10T00:25:16",
-    "last_report_time": "2026-05-10T00:25:17",
+    "last_scan_time": "2026-05-10T01:30:07",
+    "last_report_time": "2026-05-10T01:30:07",
     "watched_folders": [
       "data/examples",
       "data/inbox",
       "data/library"
     ],
     "latest_batch": {
-      "id": "scan-014dfc6dbfda",
-      "started_at": "2026-05-10T00:25:14",
-      "finished_at": "2026-05-10T00:25:15",
+      "id": "scan-8ffc586c25d1",
+      "started_at": "2026-05-10T01:30:05",
+      "finished_at": "2026-05-10T01:30:05",
       "total_files": 72,
       "new_files": 0,
       "updated_files": 0,
@@ -112,8 +112,8 @@
       "review_status": "confirmed",
       "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -130,7 +130,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:16"
+      "updated_at": "2026-05-10T01:30:07"
     },
     {
       "id": "mat-76512a8f2d58",
@@ -158,8 +158,8 @@
       "review_status": "confirmed",
       "file_hash": "bdda92e776159f107b867dad79211941ca87ef30",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -176,7 +176,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:16"
+      "updated_at": "2026-05-10T01:30:07"
     },
     {
       "id": "mat-d4580285d017",
@@ -206,8 +206,8 @@
       "review_status": "confirmed",
       "file_hash": "ab8c5ac8ce7d9c8b50254aa4752a25870e0f8e4c",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -224,7 +224,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-df63ba5d00f8",
@@ -255,8 +255,8 @@
       "review_status": "confirmed",
       "file_hash": "e5df39536bd0871f5cbc6adcff0a79dff36cc018",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -273,7 +273,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-60428ed780cd",
@@ -305,8 +305,8 @@
       "review_status": "confirmed",
       "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -323,7 +323,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-dfc2acd76148",
@@ -356,8 +356,8 @@
       "review_status": "confirmed",
       "file_hash": "bdda92e776159f107b867dad79211941ca87ef30",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -374,7 +374,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-fb5eae63b8d8",
@@ -404,8 +404,8 @@
       "review_status": "confirmed",
       "file_hash": "ab8c5ac8ce7d9c8b50254aa4752a25870e0f8e4c",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -422,7 +422,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-daa0a8e04c35",
@@ -453,8 +453,8 @@
       "review_status": "confirmed",
       "file_hash": "e5df39536bd0871f5cbc6adcff0a79dff36cc018",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -471,7 +471,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-57a27cc7177e",
@@ -504,8 +504,8 @@
       "review_status": "needs_review",
       "file_hash": "37258921446b7cd22855ce7b872c1cabd08bfe21",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -522,7 +522,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-a14da01822ed",
@@ -553,8 +553,8 @@
       "review_status": "needs_review",
       "file_hash": "ee2a6c97804ce16c007ef8be9edfaf4643c33a36",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -571,7 +571,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-d2fceaa5fb7b",
@@ -604,8 +604,8 @@
       "review_status": "needs_review",
       "file_hash": "37258921446b7cd22855ce7b872c1cabd08bfe21",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -622,7 +622,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-51838444fb54",
@@ -653,8 +653,8 @@
       "review_status": "needs_review",
       "file_hash": "ee2a6c97804ce16c007ef8be9edfaf4643c33a36",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -671,7 +671,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-fb3d10cf2dc1",
@@ -702,8 +702,8 @@
       "review_status": "needs_review",
       "file_hash": "5c0874005a7c9a5069a345a63d0f18fe61ccebd2",
       "first_seen_at": "2026-05-06T22:33:28",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -720,7 +720,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:33:28",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-ec4a0b556b6a",
@@ -753,8 +753,8 @@
       "review_status": "needs_review",
       "file_hash": "58cf30fd74cf7062cc73d9e103ccf88a3989eb4c",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -771,7 +771,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5126ef2253a8",
@@ -801,8 +801,8 @@
       "review_status": "needs_review",
       "file_hash": "185eee33dd1856d441a40a05aee2971bc08fb26b",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -819,7 +819,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-c782f9acdc3f",
@@ -848,8 +848,8 @@
       "review_status": "needs_review",
       "file_hash": "832fa03d2458b6d6bdce20b80517c24d8ab18b7b",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -866,7 +866,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-e1305e1c5e72",
@@ -895,8 +895,8 @@
       "review_status": "needs_review",
       "file_hash": "9fcfb5901eb41499a24f405b25b95a4749201a55",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -913,7 +913,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-8ab102771ef3",
@@ -943,8 +943,8 @@
       "review_status": "needs_review",
       "file_hash": "e4d8ab85eb9c72320f7649d0932a56ea09ae420a",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -961,7 +961,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-3257caf95946",
@@ -992,8 +992,8 @@
       "review_status": "needs_review",
       "file_hash": "5c0874005a7c9a5069a345a63d0f18fe61ccebd2",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1010,7 +1010,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-18ecff5a94a2",
@@ -1043,8 +1043,8 @@
       "review_status": "needs_review",
       "file_hash": "58cf30fd74cf7062cc73d9e103ccf88a3989eb4c",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1061,7 +1061,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-672202e5b355",
@@ -1091,8 +1091,8 @@
       "review_status": "needs_review",
       "file_hash": "185eee33dd1856d441a40a05aee2971bc08fb26b",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1109,7 +1109,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-ece2f8def105",
@@ -1138,8 +1138,8 @@
       "review_status": "needs_review",
       "file_hash": "832fa03d2458b6d6bdce20b80517c24d8ab18b7b",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1156,7 +1156,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-fc4ed6a401d8",
@@ -1185,8 +1185,8 @@
       "review_status": "needs_review",
       "file_hash": "9fcfb5901eb41499a24f405b25b95a4749201a55",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1203,7 +1203,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-63ff7227be82",
@@ -1233,8 +1233,8 @@
       "review_status": "needs_review",
       "file_hash": "e4d8ab85eb9c72320f7649d0932a56ea09ae420a",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1251,7 +1251,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-ca8912ad16ca",
@@ -1280,8 +1280,8 @@
       "review_status": "needs_review",
       "file_hash": "082e79e16b0e367f034755abb2ffab814bbc338d",
       "first_seen_at": "2026-05-06T22:33:28",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1298,7 +1298,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:33:28",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5880f90d9cca",
@@ -1329,8 +1329,8 @@
       "review_status": "needs_review",
       "file_hash": "5a3fdd985bf1ac25d664ce8563802d6b38eaa2b2",
       "first_seen_at": "2026-05-06T22:33:28",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1347,7 +1347,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:33:28",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-0f4493b41e40",
@@ -1376,8 +1376,8 @@
       "review_status": "needs_review",
       "file_hash": "fbbde0464587c22076f7dd5110cf182c94253bb2",
       "first_seen_at": "2026-05-06T22:33:28",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1394,7 +1394,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:33:28",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-8587d678fd1e",
@@ -1424,8 +1424,8 @@
       "review_status": "needs_review",
       "file_hash": "c157c0321cba744e58150c11dc56bcfd004fdd0d",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1442,7 +1442,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-9ee66b0234ef",
@@ -1472,8 +1472,8 @@
       "review_status": "needs_review",
       "file_hash": "a22ffb6bf4ca47c84da882bf1d7239f23fa702b8",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1490,7 +1490,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-58d28f79ed49",
@@ -1520,8 +1520,8 @@
       "review_status": "needs_review",
       "file_hash": "a1c39e5fea639830dc353f639b56c853edd6c3e5",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1538,7 +1538,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-d400143318c8",
@@ -1565,8 +1565,8 @@
       "review_status": "needs_review",
       "file_hash": "73b87693f04b6c1501c83db0bcd6356e1e57f784",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1583,7 +1583,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-30122984ed71",
@@ -1615,8 +1615,8 @@
       "review_status": "needs_review",
       "file_hash": "23be82308997652a2c3d2ae6ac8b85f4ced72bbd",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1633,7 +1633,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-94a2d214699b",
@@ -1662,8 +1662,8 @@
       "review_status": "needs_review",
       "file_hash": "b5a362aa8546e7a8bb57721fde158a35abd828e9",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1680,7 +1680,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-7202c0bfdb7a",
@@ -1710,8 +1710,8 @@
       "review_status": "needs_review",
       "file_hash": "c157c0321cba744e58150c11dc56bcfd004fdd0d",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1728,7 +1728,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-d9d819d845e7",
@@ -1758,8 +1758,8 @@
       "review_status": "needs_review",
       "file_hash": "a22ffb6bf4ca47c84da882bf1d7239f23fa702b8",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1776,7 +1776,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-0a94f7fa3fe8",
@@ -1806,8 +1806,8 @@
       "review_status": "needs_review",
       "file_hash": "a1c39e5fea639830dc353f639b56c853edd6c3e5",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1824,7 +1824,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5c7435626550",
@@ -1853,8 +1853,8 @@
       "review_status": "needs_review",
       "file_hash": "082e79e16b0e367f034755abb2ffab814bbc338d",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1871,7 +1871,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-69e2bf604f07",
@@ -1898,8 +1898,8 @@
       "review_status": "needs_review",
       "file_hash": "73b87693f04b6c1501c83db0bcd6356e1e57f784",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1916,7 +1916,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-339db57c7f2f",
@@ -1948,8 +1948,8 @@
       "review_status": "needs_review",
       "file_hash": "23be82308997652a2c3d2ae6ac8b85f4ced72bbd",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -1966,7 +1966,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-b82e5f579ef3",
@@ -1995,8 +1995,8 @@
       "review_status": "needs_review",
       "file_hash": "b5a362aa8546e7a8bb57721fde158a35abd828e9",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2013,7 +2013,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-bc3901eb4040",
@@ -2044,8 +2044,8 @@
       "review_status": "needs_review",
       "file_hash": "5a3fdd985bf1ac25d664ce8563802d6b38eaa2b2",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2062,7 +2062,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-e1b23b44ca3c",
@@ -2091,8 +2091,8 @@
       "review_status": "needs_review",
       "file_hash": "fbbde0464587c22076f7dd5110cf182c94253bb2",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2109,7 +2109,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "note-98e4e91d23efceee",
@@ -2117,7 +2117,7 @@
       "path": "pasted-note://note-98e4e91d23efceee",
       "extension": "note",
       "size": 98,
-      "modified_time": "2026-05-10T00:25:11",
+      "modified_time": "2026-05-10T01:30:01",
       "source_folder": "paste-note",
       "content_preview": "add-materials-unit-search-token 用户痛点来自课堂反馈，适合放进作品集调研页。",
       "content_full_path": "index/materials_content/note-98e4e91d23efceee.txt",
@@ -2141,7 +2141,7 @@
       "review_status": "confirmed",
       "file_hash": "",
       "first_seen_at": "2026-05-09T20:39:10",
-      "last_seen_at": "2026-05-10T00:25:11",
+      "last_seen_at": "2026-05-10T01:30:01",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -2159,7 +2159,7 @@
       "design_stage": "research",
       "portfolio_placement": "User Research",
       "created_at": "2026-05-09T20:39:10",
-      "updated_at": "2026-05-10T00:25:11"
+      "updated_at": "2026-05-10T01:30:01"
     },
     {
       "id": "note-3f061f2fe3fd278b",
@@ -2440,8 +2440,8 @@
       "review_status": "needs_review",
       "file_hash": "e0c732cd6599f19bf84cffb2261f80eec4a1d5e9",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2458,7 +2458,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-113e355a867c",
@@ -2488,8 +2488,8 @@
       "review_status": "needs_review",
       "file_hash": "039084036e0527078d5bdb00bf3a6ba668d6f758",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2506,7 +2506,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-b3050cc3f6c6",
@@ -2535,8 +2535,8 @@
       "review_status": "needs_review",
       "file_hash": "1eca23fb7b327022c2f51132f51fb41ab0bb9bd5",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2553,7 +2553,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-31bf56f9fdcb",
@@ -2584,8 +2584,8 @@
       "review_status": "needs_review",
       "file_hash": "598c79737c7d3c3c63b530347c086b289f1e28a3",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2602,7 +2602,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5d7b4dbd69d5",
@@ -2632,8 +2632,8 @@
       "review_status": "needs_review",
       "file_hash": "e438c77506e3f59a56678b13643c7d0c45c9bc76",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2650,7 +2650,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-212a4b973648",
@@ -2681,8 +2681,8 @@
       "review_status": "needs_review",
       "file_hash": "e0c732cd6599f19bf84cffb2261f80eec4a1d5e9",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2699,7 +2699,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-312cea4420ba",
@@ -2729,8 +2729,8 @@
       "review_status": "needs_review",
       "file_hash": "039084036e0527078d5bdb00bf3a6ba668d6f758",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2747,7 +2747,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-f66603d37a42",
@@ -2776,8 +2776,8 @@
       "review_status": "needs_review",
       "file_hash": "1eca23fb7b327022c2f51132f51fb41ab0bb9bd5",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2794,7 +2794,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-1dd00506ada0",
@@ -2825,8 +2825,8 @@
       "review_status": "needs_review",
       "file_hash": "598c79737c7d3c3c63b530347c086b289f1e28a3",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2843,7 +2843,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-f9e653e1dc73",
@@ -2873,8 +2873,8 @@
       "review_status": "needs_review",
       "file_hash": "e438c77506e3f59a56678b13643c7d0c45c9bc76",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2891,7 +2891,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-0b842113edcc",
@@ -2919,8 +2919,8 @@
       "review_status": "needs_review",
       "file_hash": "a9a5f906155561f57cb3bd620d5e34cc95939a53",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2937,7 +2937,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-3c5126646e9e",
@@ -2966,8 +2966,8 @@
       "review_status": "needs_review",
       "file_hash": "bd8bc9deba6fead1e2e4c0f81933c9c7205c3d16",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -2984,7 +2984,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-7a1c5f38ef76",
@@ -3013,8 +3013,8 @@
       "review_status": "needs_review",
       "file_hash": "fdb83450d13ef7f7f7a9f4483bc83f8c023461a4",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3031,7 +3031,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-3af144c80e80",
@@ -3060,8 +3060,8 @@
       "review_status": "needs_review",
       "file_hash": "4ad06683a19bf56a8ae1e2806bfe21ef408646c9",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3078,7 +3078,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-ba6feb0c13c8",
@@ -3106,8 +3106,8 @@
       "review_status": "needs_review",
       "file_hash": "5f57acd4b3ac66e62e06a1df4dce380df7979fea",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3124,7 +3124,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-345b220f9eb9",
@@ -3154,8 +3154,8 @@
       "review_status": "needs_review",
       "file_hash": "3f6f47a4c5153e925555645a06b8243aae047720",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3172,7 +3172,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-9c68cefcb6bb",
@@ -3200,8 +3200,8 @@
       "review_status": "needs_review",
       "file_hash": "a9a5f906155561f57cb3bd620d5e34cc95939a53",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3218,7 +3218,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5d534954879b",
@@ -3247,8 +3247,8 @@
       "review_status": "needs_review",
       "file_hash": "bd8bc9deba6fead1e2e4c0f81933c9c7205c3d16",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3265,7 +3265,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-b809aee2df32",
@@ -3294,8 +3294,8 @@
       "review_status": "needs_review",
       "file_hash": "fdb83450d13ef7f7f7a9f4483bc83f8c023461a4",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3312,7 +3312,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-fa467f388d29",
@@ -3341,8 +3341,8 @@
       "review_status": "needs_review",
       "file_hash": "4ad06683a19bf56a8ae1e2806bfe21ef408646c9",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3359,7 +3359,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-6ddede3b0968",
@@ -3387,8 +3387,8 @@
       "review_status": "needs_review",
       "file_hash": "5f57acd4b3ac66e62e06a1df4dce380df7979fea",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3405,7 +3405,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-af1d28097240",
@@ -3435,8 +3435,8 @@
       "review_status": "needs_review",
       "file_hash": "3f6f47a4c5153e925555645a06b8243aae047720",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3453,7 +3453,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-40b5503ac0d5",
@@ -3481,8 +3481,8 @@
       "review_status": "needs_review",
       "file_hash": "5bece1c33db8593064016b8e6d4537b6eff7156b",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3499,7 +3499,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-4666a27c484c",
@@ -3527,8 +3527,8 @@
       "review_status": "needs_review",
       "file_hash": "5bece1c33db8593064016b8e6d4537b6eff7156b",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3545,7 +3545,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-d39cc1d384bb",
@@ -3573,8 +3573,8 @@
       "review_status": "needs_review",
       "file_hash": "cda8c7a1f61c5b21c418f84c0618169a7d64323a",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3591,7 +3591,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-56ec384aa1fa",
@@ -3618,8 +3618,8 @@
       "review_status": "needs_review",
       "file_hash": "3d661f5d5a16de237cb43312c74bec7c22a3bab8",
       "first_seen_at": "2026-05-06T22:36:59",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3636,7 +3636,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-06T22:36:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-7ddead4f55db",
@@ -3664,8 +3664,8 @@
       "review_status": "needs_review",
       "file_hash": "cda8c7a1f61c5b21c418f84c0618169a7d64323a",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3682,7 +3682,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-5f2ed417f7b3",
@@ -3709,8 +3709,8 @@
       "review_status": "needs_review",
       "file_hash": "3d661f5d5a16de237cb43312c74bec7c22a3bab8",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "",
       "image_width": 0,
@@ -3727,7 +3727,57 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
+    },
+    {
+      "id": "link-9c4d16b2d54457e3",
+      "filename": "xiaohongshu link",
+      "path": "http://xhslink.com/o/7vKpRwVaDiz",
+      "extension": "link",
+      "size": 0,
+      "modified_time": "2026-05-10T01:10:17",
+      "source_folder": "link-capture",
+      "content_preview": "Title: xiaohongshu link\nPlatform: xiaohongshu\nURL: http://xhslink.com/o/7vKpRwVaDiz\nUser note: 四维灵感\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
+      "content_full_path": "",
+      "parse_status": "link_captured",
+      "parse_error": "This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
+      "word_count": 32,
+      "material_type": "reference",
+      "portfolio_stage": "research",
+      "project_guess": "general",
+      "tags": [
+        "external-reference",
+        "link",
+        "research",
+        "social_post",
+        "user",
+        "xiaohongshu"
+      ],
+      "material_score": 62,
+      "reason": "有正文；类型明确为 reference；可对应 research 阶段；项目归属为 general",
+      "notes": "四维灵感",
+      "review_status": "needs_review",
+      "file_hash": "9c4d16b2d54457e3bc85ecb8f0040d4ec55bb076",
+      "first_seen_at": "2026-05-10T01:10:17",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "",
+      "is_duplicate": false,
+      "image_preview_path": "",
+      "image_width": 0,
+      "image_height": 0,
+      "image_note": "",
+      "source_mode": "imported",
+      "url": "http://xhslink.com/o/7vKpRwVaDiz",
+      "platform": "xiaohongshu",
+      "source_type": "social_post",
+      "title": "xiaohongshu link",
+      "excerpt": "",
+      "cover_url": "",
+      "user_note": "四维灵感",
+      "design_stage": "research",
+      "portfolio_placement": "Research",
+      "created_at": "2026-05-10T01:10:17",
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "link-9ec83e625fd3a3c7",
@@ -3735,7 +3785,7 @@
       "path": "https://www.douyin.com/video/123",
       "extension": "link",
       "size": 0,
-      "modified_time": "2026-05-10T00:25:11",
+      "modified_time": "2026-05-10T01:30:01",
       "source_folder": "link-capture",
       "content_preview": "Title: douyin link\nPlatform: douyin\nURL: https://www.douyin.com/video/123\nUser note: short video reference for interaction motion\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
       "content_full_path": "",
@@ -3759,7 +3809,7 @@
       "review_status": "needs_review",
       "file_hash": "9ec83e625fd3a3c796db8ce3769abaa1085e7a22",
       "first_seen_at": "2026-05-09T19:14:16",
-      "last_seen_at": "2026-05-10T00:25:15",
+      "last_seen_at": "2026-05-10T01:30:05",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -3777,7 +3827,7 @@
       "design_stage": "inspiration",
       "portfolio_placement": "Moodboard",
       "created_at": "2026-05-09T19:14:16",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "link-30e8b428c0d3dfda",
@@ -3785,7 +3835,7 @@
       "path": "https://example.com/design-reference",
       "extension": "link",
       "size": 0,
-      "modified_time": "2026-05-10T00:25:11",
+      "modified_time": "2026-05-10T01:30:01",
       "source_folder": "link-capture",
       "content_preview": "Title: generic webpage link\nPlatform: generic webpage\nURL: https://example.com/design-reference\nUser note: example reference for moodboard\nCapture note: Link captured.",
       "content_full_path": "",
@@ -3810,7 +3860,7 @@
       "review_status": "needs_review",
       "file_hash": "30e8b428c0d3dfda639f5b7e007085e16772cc7a",
       "first_seen_at": "2026-05-09T19:14:16",
-      "last_seen_at": "2026-05-10T00:25:15",
+      "last_seen_at": "2026-05-10T01:30:05",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -3828,7 +3878,7 @@
       "design_stage": "reference",
       "portfolio_placement": "Moodboard",
       "created_at": "2026-05-09T19:14:16",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "link-01deac4febc0133b",
@@ -3859,7 +3909,7 @@
       "review_status": "needs_review",
       "file_hash": "01deac4febc0133b76c4451d88728cdf80214aa9",
       "first_seen_at": "2026-05-09T19:09:57",
-      "last_seen_at": "2026-05-10T00:25:15",
+      "last_seen_at": "2026-05-10T01:30:05",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -3877,7 +3927,7 @@
       "design_stage": "reference",
       "portfolio_placement": "Moodboard",
       "created_at": "2026-05-09T19:09:57",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "link-094f18ce8b8bbbbb",
@@ -3885,7 +3935,7 @@
       "path": "https://www.bilibili.com/video/BV1DesignMateSmoke",
       "extension": "link",
       "size": 0,
-      "modified_time": "2026-05-10T00:25:13",
+      "modified_time": "2026-05-10T01:30:03",
       "source_folder": "link-capture",
       "content_preview": "Title: bilibili link\nPlatform: bilibili\nURL: https://www.bilibili.com/video/BV1DesignMateSmoke\nUser note: api smoke external reference\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
       "content_full_path": "",
@@ -3909,7 +3959,7 @@
       "review_status": "needs_review",
       "file_hash": "094f18ce8b8bbbbb9f3fedd0db54661477eaa094",
       "first_seen_at": "2026-05-09T19:15:22",
-      "last_seen_at": "2026-05-10T00:25:15",
+      "last_seen_at": "2026-05-10T01:30:05",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -3927,7 +3977,7 @@
       "design_stage": "inspiration",
       "portfolio_placement": "Moodboard",
       "created_at": "2026-05-09T19:15:22",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "link-b4fe378f5745bbcb",
@@ -3935,7 +3985,7 @@
       "path": "https://www.behance.net/gallery/bilingual-test",
       "extension": "link",
       "size": 0,
-      "modified_time": "2026-05-10T00:25:11",
+      "modified_time": "2026-05-10T01:30:01",
       "source_folder": "link-capture",
       "content_preview": "Title: behance link\nPlatform: behance\nURL: https://www.behance.net/gallery/bilingual-test\nUser note: bilingual workflow reference\nCapture note: Link captured.",
       "content_full_path": "",
@@ -3958,7 +4008,7 @@
       "review_status": "needs_review",
       "file_hash": "b4fe378f5745bbcbbeea7244dfaab8f07635fc6e",
       "first_seen_at": "2026-05-09T20:24:59",
-      "last_seen_at": "2026-05-10T00:25:15",
+      "last_seen_at": "2026-05-10T01:30:05",
       "scan_batch_id": "",
       "is_duplicate": false,
       "image_preview_path": "",
@@ -3976,7 +4026,7 @@
       "design_stage": "reference",
       "portfolio_placement": "Moodboard",
       "created_at": "2026-05-09T20:24:59",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-a9754fc26e4a",
@@ -4001,8 +4051,8 @@
       "review_status": "needs_review",
       "file_hash": "eeb3de47efe293b7d1e7b66fa1c5bb2e6c5114eb",
       "first_seen_at": "2026-05-07T14:54:16",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "data/images/mat-a9754fc26e4a.png",
       "image_width": 0,
@@ -4019,7 +4069,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T14:54:16",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     },
     {
       "id": "mat-f1080306a896",
@@ -4027,7 +4077,7 @@
       "path": "data/examples/v06-fake-image.png",
       "extension": "png",
       "size": 14,
-      "modified_time": "2026-05-10T00:25:11",
+      "modified_time": "2026-05-10T01:30:00",
       "source_folder": "data/examples",
       "content_preview": "Image parse failed. 待接入图像理解模型。",
       "content_full_path": "",
@@ -4044,8 +4094,8 @@
       "review_status": "needs_review",
       "file_hash": "eeb3de47efe293b7d1e7b66fa1c5bb2e6c5114eb",
       "first_seen_at": "2026-05-07T23:42:11",
-      "last_seen_at": "2026-05-10T00:25:15",
-      "scan_batch_id": "scan-014dfc6dbfda",
+      "last_seen_at": "2026-05-10T01:30:05",
+      "scan_batch_id": "scan-8ffc586c25d1",
       "is_duplicate": true,
       "image_preview_path": "data/images/mat-f1080306a896.png",
       "image_width": 0,
@@ -4062,7 +4112,7 @@
       "design_stage": "",
       "portfolio_placement": "",
       "created_at": "2026-05-07T23:42:11",
-      "updated_at": "2026-05-10T00:25:15"
+      "updated_at": "2026-05-10T01:30:05"
     }
   ]
 }
