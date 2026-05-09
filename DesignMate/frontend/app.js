@@ -23,6 +23,16 @@ const translations = {
     heroTitle: "A Local AI Search Hub for Design Portfolio Materials",
     heroSubtitle: "Search sketches, research notes, feedback screenshots, references and project files. Turn scattered design materials into portfolio-ready stories.",
     heroSearchPlaceholder: "Search pain points, sketches, feedback, page themes...",
+    searchLibrary: "Search Library",
+    coreAddBody: "Import sketches, links, notes and project files.",
+    coreSearchBody: "Find pain points, feedback, research and page themes.",
+    coreAskBody: "Organize evidence, insights and portfolio placement.",
+    tagLocalFirst: "Local-first",
+    tagPortfolioAware: "Portfolio-aware",
+    tagDesignEvidence: "Design evidence",
+    tagPrivacyFriendly: "Privacy-friendly",
+    tagDesignStudents: "For design students",
+    tagPortfolioBuilding: "For portfolio building",
     addMaterials: "Add Materials",
     addMaterialsIntro: "This is the material input hub for DesignMate. Add sketches, references, feedback screenshots, research notes, project files and inspiration links, then turn them into searchable design evidence.",
     addMaterialsEntry: "Start here: add files, capture links, paste notes or import a folder before searching.",
@@ -104,6 +114,16 @@ const translations = {
     heroTitle: "面向设计作品集资料的本地 AI 搜索中心",
     heroSubtitle: "搜索草图、调研笔记、反馈截图、参考资料和项目文件，把零散设计资料整理成可用于作品集的叙事。",
     heroSearchPlaceholder: "搜索用户痛点、草图、反馈、页面主题...",
+    searchLibrary: "搜索资料",
+    coreAddBody: "导入草图、链接、笔记和项目文件。",
+    coreSearchBody: "查找痛点、反馈、调研和页面主题。",
+    coreAskBody: "整理证据、洞察和作品集位置。",
+    tagLocalFirst: "本地优先",
+    tagPortfolioAware: "面向作品集",
+    tagDesignEvidence: "设计证据",
+    tagPrivacyFriendly: "隐私友好",
+    tagDesignStudents: "面向设计学生",
+    tagPortfolioBuilding: "用于作品集构建",
     addMaterials: "添加资料",
     addMaterialsIntro: "这里是 DesignMate 的资料入口。你可以把草图、灵感图、反馈截图、调研笔记、项目文档和外部链接加入资料库，之后它们会变成可搜索、可提问、可导出的设计证据。",
     addMaterialsEntry: "从这里开始：添加文件、采集链接、粘贴笔记或导入文件夹，再进入搜索。",
@@ -187,6 +207,8 @@ const els = {
   hubSearchInput: document.getElementById("hubSearchInput"),
   hubSearchButton: document.getElementById("hubSearchButton"),
   addMaterialsHeroButton: document.getElementById("addMaterialsHeroButton"),
+  askHeroButton: document.getElementById("askHeroButton"),
+  searchLibraryHeroButton: document.getElementById("searchLibraryHeroButton"),
   demoStatus: document.getElementById("demoStatus"),
   stats: document.getElementById("stats"),
   importStats: document.getElementById("importStats"),
@@ -273,9 +295,9 @@ function applyI18nAttributes() {
 
 function applyTranslations() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-  document.title = `DesignMate v0.7.2 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
+  document.title = `DesignMate v0.7.3 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
   applyI18nAttributes();
-  text(".brand span", "v0.7.2");
+  text(".brand span", "v0.7.3");
   text(".topbar p", t("appSubtitle"));
   const navLabels = { dashboard: "navDashboard", add: "navAdd", search: "navSearch", image: "navImage", link: "navLink", ask: "navAsk", report: "navReport" };
   els.tabs.forEach((tab) => {
@@ -290,13 +312,17 @@ function applyTranslations() {
   placeholder("#hubSearchInput", t("heroSearchPlaceholder"));
   els.hubSearchButton.textContent = t("search");
   if (els.addMaterialsHeroButton) els.addMaterialsHeroButton.textContent = t("addMaterials");
+  if (els.askHeroButton) els.askHeroButton.textContent = t("askDesignMate");
+  if (els.searchLibraryHeroButton) els.searchLibraryHeroButton.textContent = t("searchLibrary");
+  const tagKeys = ["tagLocalFirst", "tagPortfolioAware", "tagDesignEvidence", "tagPrivacyFriendly", "tagDesignStudents", "tagPortfolioBuilding"];
+  document.querySelectorAll(".hub-tags span").forEach((tag, index) => {
+    if (tagKeys[index]) tag.textContent = t(tagKeys[index]);
+  });
   const entries = document.querySelectorAll(".hub-entry");
   const entryKeys = [
-    ["addMaterials", t("addMaterialsEntry")],
-    ["textSearch", currentLang === "zh" ? "搜索项目名、关键词、用户痛点、设计阶段、文件内容和作品集页面主题。" : "Find project names, keywords, user pain points, design stages, file content and portfolio page topics."],
-    ["imageSearch", currentLang === "zh" ? "用图片元信息和文件名匹配草图、参考图和反馈截图。" : "Use image metadata and filename matching for sketches, references and screenshots."],
-    ["askDesignMate", currentLang === "zh" ? "用本地资料回答作品集结构、证据缺口和页面位置问题。" : "Ask portfolio-focused questions and get structured answers backed by local materials."],
-    ["linkCapture", currentLang === "zh" ? "保存网页、作品集案例、社交图文和短视频链接为可搜索的设计证据。" : "Save web articles, portfolio cases, social posts and short-video references as searchable design evidence."],
+    ["addMaterials", t("coreAddBody")],
+    ["searchLibrary", t("coreSearchBody")],
+    ["askDesignMate", t("coreAskBody")],
   ];
   entries.forEach((entry, index) => {
     const pair = entryKeys[index];

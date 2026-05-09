@@ -34,6 +34,13 @@ def run_command(args: list[str], name: str) -> dict[str, str]:
     return check(name, result.returncode == 0, detail, "Run the command directly and fix the reported failure.")
 
 
+def contains_any(path: Path, markers: list[str], name: str) -> dict[str, str]:
+    content = read(path)
+    found = [marker for marker in markers if marker in content]
+    ok = bool(found)
+    return check(name, ok, f"Found {', '.join(found)}" if ok else f"Missing one of {markers}", f"Add one of `{markers}` to {path.relative_to(ROOT)}.")
+
+
 def main() -> int:
     app_js = ROOT / "frontend" / "app.js"
     index_html = ROOT / "frontend" / "index.html"
@@ -44,7 +51,7 @@ def main() -> int:
         contains(app_js, "en:", "translation dictionary has en"),
         contains(app_js, "localStorage", "language persists to localStorage"),
         contains(app_js, "setLanguage", "language switch handler exists"),
-        contains(index_html, "v0.7.2", "frontend displays version v0.7.2"),
+        contains_any(index_html, ["v0.7.2", "v0.7.3"], "frontend displays a compatible v0.7.x version"),
         contains(index_html, "langZh", "Chinese language button exists"),
         contains(index_html, "langEn", "English language button exists"),
         contains(index_html, "data-view=\"add\"", "Add Materials navigation exists"),

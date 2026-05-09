@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.7.2 Search Hub</title>
+    <title>DesignMate v0.7.3 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.7.2</span></div>
+        <div class="brand">DesignMate <span>v0.7.3</span></div>
         <p>Search Hub for local design portfolio materials</p>
       </div>
       <nav class="tabs">
-        <button class="tab active" data-view="dashboard">Search Hub</button>
-        <button class="tab" data-view="add">Add Materials</button>
-        <button class="tab" data-view="search">Text Search</button>
-        <button class="tab" data-view="image">Image Search</button>
-        <button class="tab" data-view="link">Link Capture</button>
-        <button class="tab" data-view="ask">Ask DesignMate</button>
-        <button class="tab" data-view="report">Reports</button>
+        <button class="tab primary-tab active" data-view="dashboard">Search Hub</button>
+        <button class="tab primary-tab" data-view="add">Add Materials</button>
+        <button class="tab primary-tab" data-view="ask">Ask DesignMate</button>
+        <button class="tab secondary-tab" data-view="search">Text Search</button>
+        <button class="tab secondary-tab" data-view="image">Image Search</button>
+        <button class="tab secondary-tab" data-view="link">Link Capture</button>
+        <button class="tab secondary-tab" data-view="report">Reports</button>
       </nav>
       <div class="top-actions">
         <div class="language-toggle" aria-label="Language">
@@ -41,7 +41,11 @@
             <input id="hubSearchInput" type="search" placeholder="Search pain points, sketches, feedback, page themes..." />
             <button id="hubSearchButton" class="primary">Search</button>
           </div>
-          <button id="addMaterialsHeroButton" class="primary hub-add-button jump" data-target="add">Add Materials</button>
+          <div class="hero-actions">
+            <button id="addMaterialsHeroButton" class="primary jump" data-target="add">Add Materials</button>
+            <button id="askHeroButton" class="secondary jump" data-target="ask">Ask DesignMate</button>
+            <button id="searchLibraryHeroButton" class="secondary jump" data-target="search">Search Library</button>
+          </div>
           <div class="hub-tags">
             <span>Local-first</span>
             <span>Portfolio-aware</span>
@@ -53,28 +57,20 @@
           <div class="hub-entry-grid">
             <article class="hub-entry hub-entry-primary" data-hub-target="add">
               <strong>Add Materials</strong>
-              <p>Start here: add files, capture links, paste notes or import a folder before searching.</p>
+              <p>Import sketches, links, notes and project files.</p>
             </article>
             <article class="hub-entry" data-hub-target="search">
-              <strong>Text Search</strong>
-              <p>Find project names, keywords, user pain points, design stages, file content and portfolio page topics.</p>
-            </article>
-            <article class="hub-entry" data-hub-target="image">
-              <strong>Image Search</strong>
-              <p>Use image metadata and filename matching for sketches, references and screenshots.</p>
+              <strong>Search Library</strong>
+              <p>Find pain points, feedback, research and page themes.</p>
             </article>
             <article class="hub-entry" data-hub-target="ask">
               <strong>Ask DesignMate</strong>
-              <p>Ask portfolio-focused questions and get structured answers backed by local materials.</p>
-            </article>
-            <article class="hub-entry" data-hub-target="link">
-              <strong>Link Capture</strong>
-              <p>Save web articles, portfolio cases, social posts and short-video references as searchable design evidence.</p>
+              <p>Organize evidence, insights and portfolio placement.</p>
             </article>
           </div>
         </section>
 
-        <section class="showcase-panel">
+        <section class="showcase-panel home-secondary">
           <div>
             <p class="eyebrow">Showcase / Demo Status</p>
             <h2>Local library snapshot</h2>
@@ -82,7 +78,7 @@
           <div class="status-grid" id="demoStatus"></div>
         </section>
 
-        <section class="why-designmate">
+        <section class="why-designmate home-secondary">
           <div>
             <p class="eyebrow">Why DesignMate</p>
             <h2>From scattered materials to portfolio-ready stories</h2>
@@ -90,7 +86,7 @@
           <p>Designers collect many sketches, references, research notes, feedback screenshots and project files. But these materials are often scattered across folders and hard to turn into a clear portfolio story. DesignMate helps search local design materials, organize evidence, and generate portfolio-ready narratives.</p>
         </section>
 
-        <section class="onboarding">
+        <section class="onboarding home-secondary">
           <div>
             <p class="eyebrow">Start with your own files</p>
             <h2>Import real materials</h2>
@@ -105,8 +101,8 @@
           <div class="import-stats" id="importStats"></div>
         </section>
 
-        <section class="stats" id="stats"></section>
-        <section class="distribution">
+        <section class="stats home-secondary" id="stats"></section>
+        <section class="distribution home-secondary">
           <div>
             <h2>Project distribution</h2>
             <div id="projectCards" class="mini-grid"></div>
@@ -116,7 +112,7 @@
             <div id="typeCards" class="mini-grid"></div>
           </div>
         </section>
-        <section class="entry-grid">
+        <section class="entry-grid home-secondary">
           <article class="entry-card">
             <h2>Ask DesignMate</h2>
             <p>Use the rule-based portfolio assistant to inspect evidence gaps and page structure.</p>
@@ -128,8 +124,8 @@
             <button class="secondary jump" data-target="report">View Drafts</button>
           </article>
         </section>
-        <h2>High-value Design Evidence</h2>
-        <div class="material-list" id="highlightList"></div>
+        <h2 class="home-secondary">High-value Design Evidence</h2>
+        <div class="material-list home-secondary" id="highlightList"></div>
       </section>
 
       <section id="addView" class="view">
