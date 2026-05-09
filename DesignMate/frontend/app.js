@@ -6,6 +6,173 @@ let selectedIds = new Set();
 let apiConnected = false;
 let quickMode = "";
 const API_BASE = "http://127.0.0.1:8765";
+const LANGUAGE_KEY = "designmate_language";
+
+const translations = {
+  en: {
+    appSubtitle: "Search Hub for local design portfolio materials",
+    navDashboard: "Search Hub",
+    navAdd: "Add Materials",
+    navSearch: "Text Search",
+    navImage: "Image Search",
+    navLink: "Link Capture",
+    navAsk: "Ask DesignMate",
+    navReport: "Reports",
+    showcase: "Showcase Mode",
+    heroEyebrow: "Local-first design evidence search",
+    heroTitle: "A Local AI Search Hub for Design Portfolio Materials",
+    heroSubtitle: "Search sketches, research notes, feedback screenshots, references and project files. Turn scattered design materials into portfolio-ready stories.",
+    heroSearchPlaceholder: "Search pain points, sketches, feedback, page themes...",
+    addMaterials: "Add Materials",
+    addMaterialsIntro: "This is the material input hub for DesignMate. Add sketches, references, feedback screenshots, research notes, project files and inspiration links, then turn them into searchable design evidence.",
+    addMaterialsEntry: "Start here: add files, capture links, paste notes or import a folder before searching.",
+    addEyebrow: "Material Input Hub",
+    uploadFiles: "Upload Files",
+    uploadFilesBody: "Drag in images, PDFs, Word, PPT, Markdown, TXT or screenshots from a design project.",
+    uploadDrop: "Drop design materials here",
+    uploadChoose: "images, PDF, DOCX, PPTX, Markdown, TXT and screenshots",
+    uploadFallback: "File upload is prepared. In this version, place files into the user materials folder and run scan.",
+    captureLinkBody: "Paste Xiaohongshu, Douyin, Bilibili, Behance, Pinterest, web articles or portfolio case links.",
+    pasteNote: "Paste Note",
+    pasteNoteBody: "Save a quick research note, critique, idea or page draft directly into the local library.",
+    noteTitle: "Title",
+    noteContent: "Content",
+    materialType: "Material Type",
+    saveNote: "Save Note",
+    noteSaved: "Note saved as searchable design evidence.",
+    noteContentRequired: "Please paste note content before saving.",
+    importFolder: "Import Folder",
+    importFolderBody: "DesignMate scans local folders and adds materials to the local database.",
+    importStep1: "Put files into the DesignMate user materials folder",
+    importStep2: "Run the scan script",
+    importStep3: "Return to Search Hub to search them",
+    scanCommand: "Scan command",
+    search: "Search",
+    textSearch: "Text Search",
+    imageSearch: "Image Search",
+    linkCapture: "Link Capture",
+    askDesignMate: "Ask DesignMate",
+    why: "Why DesignMate",
+    whyTitle: "From scattered materials to portfolio-ready stories",
+    whyBody: "Designers collect many sketches, references, research notes, feedback screenshots and project files. But these materials are often scattered across folders and hard to turn into a clear portfolio story. DesignMate helps search local design materials, organize evidence, and generate portfolio-ready narratives.",
+    staticMode: "Static preview mode. Saving, link capture and editing require the API: python DesignMate/scripts/start_api.py",
+    apiConnected: "API connected",
+    source: "Source",
+    project: "Project",
+    stage: "Stage",
+    type: "Type",
+    relevance: "Relevance",
+    placement: "Portfolio Placement",
+    userNote: "User Note",
+    openLink: "Open Link",
+    openSourceLink: "Open source link",
+    capturedFromWeb: "Captured from web",
+    platform: "Platform",
+    confidence: "confidence",
+    noPreview: "No preview available.",
+    empty: "Put your materials into DesignMate/data/inbox, then run python DesignMate/scripts/run_designmate.py.",
+    linkTitle: "Turn external inspiration links into searchable evidence",
+    linkIntro: "Paste a webpage, portfolio case, social post or short-video link. DesignMate will save the source link, detect the platform, extract public metadata when possible, and preserve your design note.",
+    linkUrlLabel: "Paste a design inspiration link here.",
+    designStage: "Design Stage",
+    captureLink: "Capture Link",
+    captureLinkDisabled: "Static preview mode. Saving, link capture and editing require the API: python DesignMate/scripts/start_api.py",
+    linkWhy: "Why it matters",
+    nextAction: "Suggested next action",
+    nextActionText: "Review this card in Text Search, add stronger notes, then use it as inspiration evidence or a moodboard source.",
+    linkLimit: "This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
+    askPlaceholder: "Example: Which materials prove the user pain points?",
+    answer: "Answer",
+    usedMaterials: "Used materials",
+    askEmpty: "Please enter a portfolio-focused question.",
+    askStatic: "Static preview mode. Ask DesignMate requires the API: python DesignMate/scripts/start_api.py",
+    saving: "Saving...",
+    saved: "Saved",
+    failed: "failed",
+  },
+  zh: {
+    appSubtitle: "设计作品集资料搜索助手",
+    navDashboard: "搜索中心",
+    navAdd: "添加资料",
+    navSearch: "文本搜索",
+    navImage: "图片搜索",
+    navLink: "链接采集",
+    navAsk: "问 DesignMate",
+    navReport: "报告",
+    showcase: "展示模式",
+    heroEyebrow: "本地优先的设计证据搜索",
+    heroTitle: "面向设计作品集资料的本地 AI 搜索中心",
+    heroSubtitle: "搜索草图、调研笔记、反馈截图、参考资料和项目文件，把零散设计资料整理成可用于作品集的叙事。",
+    heroSearchPlaceholder: "搜索用户痛点、草图、反馈、页面主题...",
+    addMaterials: "添加资料",
+    addMaterialsIntro: "这里是 DesignMate 的资料入口。你可以把草图、灵感图、反馈截图、调研笔记、项目文档和外部链接加入资料库，之后它们会变成可搜索、可提问、可导出的设计证据。",
+    addMaterialsEntry: "从这里开始：添加文件、采集链接、粘贴笔记或导入文件夹，再进入搜索。",
+    addEyebrow: "统一资料入口",
+    uploadFiles: "上传文件",
+    uploadFilesBody: "拖入图片、PDF、Word、PPT、Markdown、TXT 或项目截图等设计资料。",
+    uploadDrop: "把设计资料拖到这里",
+    uploadChoose: "图片、PDF、DOCX、PPTX、Markdown、TXT 和截图",
+    uploadFallback: "文件上传入口已预留。当前版本请先把文件放入 DesignMate 的用户资料文件夹后运行扫描。",
+    captureLinkBody: "粘贴小红书、抖音、B站、Behance、Pinterest、网页文章或作品集案例链接。",
+    pasteNote: "粘贴笔记",
+    pasteNoteBody: "把调研记录、老师反馈、设计想法或页面草稿直接保存进本地资料库。",
+    noteTitle: "标题",
+    noteContent: "内容",
+    materialType: "资料类型",
+    saveNote: "保存笔记",
+    noteSaved: "笔记已保存为可搜索的设计证据。",
+    noteContentRequired: "请先粘贴笔记内容。",
+    importFolder: "导入文件夹",
+    importFolderBody: "DesignMate 可以扫描本地文件夹，把资料加入本地数据库。",
+    importStep1: "把资料放入 DesignMate 的用户资料文件夹",
+    importStep2: "运行扫描脚本",
+    importStep3: "回到 Search Hub 搜索",
+    scanCommand: "扫描命令",
+    search: "搜索",
+    textSearch: "文本搜索",
+    imageSearch: "图片搜索",
+    linkCapture: "链接采集",
+    askDesignMate: "问 DesignMate",
+    why: "为什么需要 DesignMate",
+    whyTitle: "把零散资料整理成作品集叙事",
+    whyBody: "设计学生会收集很多草图、参考、调研笔记、反馈截图和项目文件，但这些资料常常分散在不同文件夹和收藏夹里，很难变成清晰的作品集故事。DesignMate 帮你搜索本地设计资料、整理证据，并生成可用于作品集的叙事线索。",
+    staticMode: "当前处于静态预览模式。保存、链接采集和编辑需要先启动 API：python DesignMate/scripts/start_api.py",
+    apiConnected: "API 已连接",
+    source: "来源",
+    project: "项目",
+    stage: "阶段",
+    type: "类型",
+    relevance: "匹配度",
+    placement: "作品集位置",
+    userNote: "我的备注",
+    openLink: "打开链接",
+    capturedFromWeb: "来自网页采集",
+    platform: "平台",
+    confidence: "匹配度",
+    noPreview: "暂无摘要。",
+    empty: "请把资料放入 DesignMate/data/inbox，然后运行 python DesignMate/scripts/run_designmate.py。",
+    linkTitle: "把外部灵感链接转化为可搜索的设计证据",
+    linkIntro: "粘贴网页文章、作品集案例、社交图文或短视频链接。DesignMate 会保存原始链接，识别平台，在可公开访问时提取元信息，并保留你的设计备注。",
+    linkUrlLabel: "在这里粘贴设计灵感链接。",
+    designStage: "设计阶段",
+    captureLink: "保存链接",
+    captureLinkDisabled: "当前处于静态预览模式。保存、链接采集和编辑需要先启动 API：python DesignMate/scripts/start_api.py",
+    linkWhy: "为什么值得保存",
+    nextAction: "下一步建议",
+    nextActionText: "在文本搜索中复查这张卡片，补充更具体的备注，再把它作为灵感证据或 Moodboard 来源。",
+    linkLimit: "这个平台可能限制自动提取。链接已保存，你的备注会帮助 DesignMate 理解它为什么重要。",
+    askPlaceholder: "例如：哪些资料能证明用户痛点？",
+    answer: "回答",
+    usedMaterials: "使用的资料",
+    askEmpty: "请输入一个和作品集有关的问题。",
+    askStatic: "当前处于静态预览模式。问 DesignMate 需要先启动 API：python DesignMate/scripts/start_api.py",
+    saving: "保存中...",
+    saved: "已保存",
+    failed: "失败",
+  },
+};
+
+let currentLang = localStorage.getItem(LANGUAGE_KEY) || ((navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en");
 
 const PROJECTS = ["reader-design", "info-center", "thesis", "general", "unknown"];
 const TYPES = ["sketch", "reference", "research", "competitor", "feedback", "draft", "presentation", "paper", "idea", "unknown"];
@@ -13,10 +180,13 @@ const STAGES = ["background", "research", "insight", "concept", "development", "
 
 const els = {
   status: document.getElementById("status"),
+  langZh: document.getElementById("langZh"),
+  langEn: document.getElementById("langEn"),
   tabs: document.querySelectorAll(".tab"),
   views: document.querySelectorAll(".view"),
   hubSearchInput: document.getElementById("hubSearchInput"),
   hubSearchButton: document.getElementById("hubSearchButton"),
+  addMaterialsHeroButton: document.getElementById("addMaterialsHeroButton"),
   demoStatus: document.getElementById("demoStatus"),
   stats: document.getElementById("stats"),
   importStats: document.getElementById("importStats"),
@@ -56,12 +226,118 @@ const els = {
   linkNote: document.getElementById("linkNote"),
   captureLinkButton: document.getElementById("captureLinkButton"),
   linkCaptureResult: document.getElementById("linkCaptureResult"),
+  addLinkUrl: document.getElementById("addLinkUrl"),
+  addLinkProject: document.getElementById("addLinkProject"),
+  addLinkDesignStage: document.getElementById("addLinkDesignStage"),
+  addLinkPlacement: document.getElementById("addLinkPlacement"),
+  addLinkNote: document.getElementById("addLinkNote"),
+  addCaptureLinkButton: document.getElementById("addCaptureLinkButton"),
+  addLinkResult: document.getElementById("addLinkResult"),
+  noteTitle: document.getElementById("noteTitle"),
+  noteProject: document.getElementById("noteProject"),
+  noteDesignStage: document.getElementById("noteDesignStage"),
+  noteMaterialType: document.getElementById("noteMaterialType"),
+  notePlacement: document.getElementById("notePlacement"),
+  noteContent: document.getElementById("noteContent"),
+  saveNoteButton: document.getElementById("saveNoteButton"),
+  noteSaveResult: document.getElementById("noteSaveResult"),
   latestReport: document.getElementById("latestReport"),
   needConfirm: document.getElementById("needConfirm"),
   nextActions: document.getElementById("nextActions"),
   draftList: document.getElementById("draftList"),
   showcaseToggle: document.getElementById("showcaseToggle"),
 };
+
+function t(key) {
+  return (translations[currentLang] && translations[currentLang][key]) || translations.en[key] || key;
+}
+
+function text(selector, value) {
+  const node = document.querySelector(selector);
+  if (node) node.textContent = value;
+}
+
+function placeholder(selector, value) {
+  const node = document.querySelector(selector);
+  if (node) node.setAttribute("placeholder", value);
+}
+
+function applyI18nAttributes() {
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = t(node.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    node.setAttribute("placeholder", t(node.dataset.i18nPlaceholder));
+  });
+}
+
+function applyTranslations() {
+  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  document.title = `DesignMate v0.7.2 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
+  applyI18nAttributes();
+  text(".brand span", "v0.7.2");
+  text(".topbar p", t("appSubtitle"));
+  const navLabels = { dashboard: "navDashboard", add: "navAdd", search: "navSearch", image: "navImage", link: "navLink", ask: "navAsk", report: "navReport" };
+  els.tabs.forEach((tab) => {
+    tab.textContent = t(navLabels[tab.dataset.view] || "navDashboard");
+  });
+  els.langZh.classList.toggle("active", currentLang === "zh");
+  els.langEn.classList.toggle("active", currentLang === "en");
+  els.showcaseToggle.textContent = t("showcase");
+  text(".search-hero .eyebrow", t("heroEyebrow"));
+  text(".search-hero h2", t("heroTitle"));
+  text(".hero-subtitle", t("heroSubtitle"));
+  placeholder("#hubSearchInput", t("heroSearchPlaceholder"));
+  els.hubSearchButton.textContent = t("search");
+  if (els.addMaterialsHeroButton) els.addMaterialsHeroButton.textContent = t("addMaterials");
+  const entries = document.querySelectorAll(".hub-entry");
+  const entryKeys = [
+    ["addMaterials", t("addMaterialsEntry")],
+    ["textSearch", currentLang === "zh" ? "搜索项目名、关键词、用户痛点、设计阶段、文件内容和作品集页面主题。" : "Find project names, keywords, user pain points, design stages, file content and portfolio page topics."],
+    ["imageSearch", currentLang === "zh" ? "用图片元信息和文件名匹配草图、参考图和反馈截图。" : "Use image metadata and filename matching for sketches, references and screenshots."],
+    ["askDesignMate", currentLang === "zh" ? "用本地资料回答作品集结构、证据缺口和页面位置问题。" : "Ask portfolio-focused questions and get structured answers backed by local materials."],
+    ["linkCapture", currentLang === "zh" ? "保存网页、作品集案例、社交图文和短视频链接为可搜索的设计证据。" : "Save web articles, portfolio cases, social posts and short-video references as searchable design evidence."],
+  ];
+  entries.forEach((entry, index) => {
+    const pair = entryKeys[index];
+    if (!pair) return;
+    entry.querySelector("strong").textContent = t(pair[0]);
+    entry.querySelector("p").textContent = pair[1];
+  });
+  text(".why-designmate .eyebrow", t("why"));
+  text(".why-designmate h2", t("whyTitle"));
+  text(".why-designmate > p", t("whyBody"));
+  text("#linkView .link-capture-shell .eyebrow", t("linkCapture"));
+  text("#linkView .link-capture-shell h1", t("linkTitle"));
+  text("#linkView .link-capture-shell > div p:not(.eyebrow)", t("linkIntro"));
+  text("#linkView label.wide span", t("linkUrlLabel"));
+  const linkWide = document.querySelectorAll("#linkView label.wide span");
+  if (linkWide[1]) linkWide[1].textContent = t("userNote");
+  const linkFormLabels = document.querySelectorAll("#linkView .link-form-grid label span");
+  if (linkFormLabels[0]) linkFormLabels[0].textContent = t("project");
+  if (linkFormLabels[1]) linkFormLabels[1].textContent = t("designStage");
+  if (linkFormLabels[2]) linkFormLabels[2].textContent = t("placement");
+  text("#captureLinkButton", t("captureLink"));
+  placeholder("#linkNote", currentLang === "zh" ? "这条链接为什么值得放进作品集资料库？" : "Why does this link matter for your portfolio story?");
+  placeholder("#askQuestion", t("askPlaceholder"));
+  text("#askView .ask-result h2", t("answer"));
+  const searchLabels = document.querySelectorAll("#searchView .controls label span");
+  const searchKeys = ["textSearch", "project", "type", "stage", "source"];
+  searchKeys.forEach((key, index) => {
+    if (searchLabels[index]) searchLabels[index].textContent = t(key);
+  });
+  if (!apiConnected) setStatus(t("staticMode"), "warn");
+}
+
+function setLanguage(lang) {
+  currentLang = lang === "zh" ? "zh" : "en";
+  localStorage.setItem(LANGUAGE_KEY, currentLang);
+  applyTranslations();
+  renderDashboard();
+  renderSearch();
+  renderImageSearch();
+  if (selectedId) showDetail(selectedId);
+}
 
 function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
@@ -78,10 +354,16 @@ async function checkApi() {
     const response = await fetch(`${API_BASE}/api/health`, { cache: "no-store" });
     const payload = await response.json();
     apiConnected = Boolean(payload.ok);
-    setStatus(apiConnected ? "API connected" : "Static mode", apiConnected ? "ok" : "warn");
+    setStatus(apiConnected ? t("apiConnected") : t("staticMode"), apiConnected ? "ok" : "warn");
+    if (els.captureLinkButton) els.captureLinkButton.disabled = !apiConnected;
+    if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = !apiConnected;
+    if (els.saveNoteButton) els.saveNoteButton.disabled = !apiConnected;
   } catch {
     apiConnected = false;
-    setStatus("Static mode: run python DesignMate/scripts/start_api.py to save edits", "warn");
+    if (els.captureLinkButton) els.captureLinkButton.disabled = true;
+    if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = true;
+    if (els.saveNoteButton) els.saveNoteButton.disabled = true;
+    setStatus(t("staticMode"), "warn");
   }
 }
 
@@ -168,6 +450,9 @@ function evidenceWhy(item) {
   if (item.user_note) fields.push("user note");
   if (item.material_score >= 70) fields.push("high material score");
   const placement = portfolioPlacement(item);
+  if (currentLang === "zh") {
+    return `命中${fields.join(" + ") || "文件名元信息"}，可作为作品集「${placement}」部分的设计证据。`;
+  }
   return `Matches ${fields.join(" + ") || "filename metadata"} and can support the ${placement} part of a portfolio narrative.`;
 }
 
@@ -273,7 +558,7 @@ function chips(item) {
 }
 
 function card(item) {
-  const preview = (item.content_preview || "No preview available.").replace(/\s+/g, " ").slice(0, 220);
+  const preview = (item.content_preview || t("noPreview")).replace(/\s+/g, " ").slice(0, 220);
   const selected = item.id === selectedId ? " selected" : "";
   const checked = selectedIds.has(item.id) ? "checked" : "";
   const image = item.image_preview_path ? `<img class="thumb" src="${esc(item.image_preview_path.replace(/^frontend\//, ""))}" alt="" />` : `<div class="thumb placeholder">${esc((item.extension || "file").toUpperCase())}</div>`;
@@ -281,26 +566,26 @@ function card(item) {
     <article class="material-card evidence-card${selected}" data-id="${esc(item.id)}">
       <div class="title-row">
         <label class="select-line"><input class="select-material" type="checkbox" data-select-id="${esc(item.id)}" ${checked} />${image}<span class="filename">${esc(item.filename)}</span></label>
-        <div class="confidence"><strong>${confidence(item)}</strong><span>confidence</span></div>
+        <div class="confidence"><strong>${confidence(item)}</strong><span>${esc(t("confidence"))}</span></div>
       </div>
       <div class="evidence-meta">
-        <span><b>Source</b>${esc(sourceLabel(item))}</span>
-        <span><b>Project</b>${esc(item.project_guess || "unknown")}</span>
-        <span><b>Stage</b>${esc(inferDesignStage(item))}</span>
-        <span><b>Type</b>${esc(inferEvidenceType(item))}</span>
-        <span><b>Placement</b>${esc(portfolioPlacement(item))}</span>
+        <span><b>${esc(t("source"))}</b>${esc(sourceLabel(item))}</span>
+        <span><b>${esc(t("project"))}</b>${esc(item.project_guess || "unknown")}</span>
+        <span><b>${esc(t("stage"))}</b>${esc(inferDesignStage(item))}</span>
+        <span><b>${esc(t("type"))}</b>${esc(inferEvidenceType(item))}</span>
+        <span><b>${esc(t("placement"))}</b>${esc(portfolioPlacement(item))}</span>
       </div>
-      ${item.url ? `<p class="link-line"><span>Captured from web</span><span>Platform: ${esc(item.platform || "generic webpage")}</span><a href="${esc(item.url)}" target="_blank" rel="noopener">Open source link</a></p>` : ""}
+      ${item.url ? `<p class="link-line"><span>${esc(t("capturedFromWeb"))}</span><span>${esc(t("platform"))}: ${esc(item.platform || "generic webpage")}</span><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(t("openLink"))}</a></p>` : ""}
       <div class="chips">${chips(item)}<span class="chip ${item.review_status === "confirmed" ? "confirmed" : "pending"}">${item.review_status === "confirmed" ? "confirmed" : "need confirm"}</span></div>
       <p class="meta">${esc(preview)}</p>
-      ${item.user_note ? `<p class="user-note">User note: ${esc(item.user_note)}</p>` : ""}
+      ${item.user_note ? `<p class="user-note">${esc(t("userNote"))}: ${esc(item.user_note)}</p>` : ""}
       <p class="why">${esc(evidenceWhy(item))}</p>
     </article>
   `;
 }
 
 function emptyState() {
-  return `<div class="empty">Put your materials into DesignMate/data/inbox, then run python DesignMate/scripts/run_designmate.py.</div>`;
+  return `<div class="empty">${esc(t("empty"))}</div>`;
 }
 
 function filterSummary(count) {
@@ -367,25 +652,25 @@ function showDetail(id) {
       <h3>Evidence Summary</h3>
       <dl>
         <dt>Path</dt><dd>${esc(item.path)}</dd>
-        <dt>Source</dt><dd>${esc(sourceLabel(item))}</dd>
+        <dt>${esc(t("source"))}</dt><dd>${esc(sourceLabel(item))}</dd>
         <dt>Parse</dt><dd>${esc(item.parse_status)}</dd>
         <dt>Words</dt><dd>${esc(item.word_count || 0)}</dd>
         <dt>Updated</dt><dd>${esc(item.updated_at || "")}</dd>
         <dt>Image</dt><dd>${esc(item.image_width && item.image_height ? `${item.image_width}x${item.image_height}` : "not image / unavailable")}</dd>
         <dt>URL</dt><dd>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.url)}</a>` : "not link"}</dd>
-        <dt>Platform</dt><dd>${esc(item.platform || "n/a")}</dd>
+        <dt>${esc(t("platform"))}</dt><dd>${esc(item.platform || "n/a")}</dd>
         <dt>Source type</dt><dd>${esc(item.source_type || "n/a")}</dd>
       </dl>
     </section>
     <section class="detail-section">
       <h3>Portfolio Placement</h3>
       <p class="meta">${esc(portfolioPlacement(item))}: ${esc(evidenceWhy(item))}</p>
-      ${item.user_note ? `<p class="meta">User note: ${esc(item.user_note)}</p>` : ""}
+      ${item.user_note ? `<p class="meta">${esc(t("userNote"))}: ${esc(item.user_note)}</p>` : ""}
       <p class="meta">Need confirm: ${esc(confirmQuestion(item))}</p>
     </section>
     <section class="detail-section edit-section">
       <h3>Edit Classification</h3>
-      <label>Project<select id="editProject">${options(PROJECTS, item.project_guess || "unknown")}</select></label>
+      <label>${esc(t("project"))}<select id="editProject">${options(PROJECTS, item.project_guess || "unknown")}</select></label>
       <label>Type<select id="editType">${options(TYPES, item.material_type || "unknown")}</select></label>
       <label>Stage<select id="editStage">${options(STAGES, item.portfolio_stage || "unknown")}</select></label>
       <label>Tags<input id="editTags" value="${esc((item.tags || []).join(", "))}" /></label>
@@ -397,20 +682,64 @@ function showDetail(id) {
     </section>
     <section class="detail-section">
       <h3>Preview</h3>
-      <p class="meta">${esc(item.content_preview || "No preview available.")}</p>
+      <p class="meta">${esc(item.content_preview || t("noPreview"))}</p>
     </section>
   `;
   document.getElementById("saveMaterial").addEventListener("click", () => saveMaterial(item.id));
 }
 
+function linkCaptureSummary(material) {
+  return `
+    <article class="material-card link-success-card">
+      <h2>${esc(currentLang === "zh" ? "链接已保存" : "Link captured")}</h2>
+      <dl class="link-summary">
+        <dt>${esc(currentLang === "zh" ? "链接标题" : "Title")}</dt><dd>${esc(material.title || material.filename || "Untitled link")}</dd>
+        <dt>${esc(t("platform"))}</dt><dd>${esc(material.platform || "generic webpage")}</dd>
+        <dt>${esc(currentLang === "zh" ? "原始链接" : "Source URL")}</dt><dd><a href="${esc(material.url)}" target="_blank" rel="noopener">${esc(material.url)}</a></dd>
+        <dt>${esc(t("userNote"))}</dt><dd>${esc(material.user_note || material.notes || (currentLang === "zh" ? "待补充" : "To be added"))}</dd>
+        <dt>${esc(t("designStage"))}</dt><dd>${esc(material.design_stage || material.portfolio_stage || "unknown")}</dd>
+        <dt>${esc(t("placement"))}</dt><dd>${esc(material.portfolio_placement || portfolioPlacement(material))}</dd>
+        <dt>${esc(t("linkWhy"))}</dt><dd>${esc(evidenceWhy(material))}</dd>
+        <dt>${esc(t("nextAction"))}</dt><dd>${esc(t("nextActionText"))}</dd>
+      </dl>
+    </article>
+    ${card(material)}
+  `;
+}
+
 async function captureLink() {
   const url = els.linkUrl.value.trim();
   if (!url) {
-    els.linkCaptureResult.innerHTML = `<div class="empty">Paste a design inspiration link first.</div>`;
+    els.linkCaptureResult.innerHTML = `<div class="empty">${esc(t("linkUrlLabel"))}</div>`;
     return;
   }
+  await submitLinkCapture({
+    url,
+    user_note: els.linkNote.value,
+    project: els.linkProject.value || "unknown",
+    design_stage: els.linkDesignStage.value || "unknown",
+    portfolio_placement: els.linkPlacement.value || "",
+  }, els.linkCaptureResult);
+}
+
+async function captureAddLink() {
+  const url = els.addLinkUrl.value.trim();
+  if (!url) {
+    els.addLinkResult.innerHTML = `<div class="empty">${esc(t("linkUrlLabel"))}</div>`;
+    return;
+  }
+  await submitLinkCapture({
+    url,
+    user_note: els.addLinkNote.value,
+    project: els.addLinkProject.value || "unknown",
+    design_stage: els.addLinkDesignStage.value || "unknown",
+    portfolio_placement: els.addLinkPlacement.value || "",
+  }, els.addLinkResult);
+}
+
+async function submitLinkCapture(payload, targetNode) {
   if (!apiConnected) {
-    els.linkCaptureResult.innerHTML = `<div class="empty">Static mode cannot capture links. Run python DesignMate/scripts/start_api.py, then try again.</div>`;
+    targetNode.innerHTML = `<div class="empty">${esc(t("captureLinkDisabled"))}</div>`;
     return;
   }
   try {
@@ -418,13 +747,7 @@ async function captureLink() {
     const response = await fetch(`${API_BASE}/api/link-capture`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        url,
-        user_note: els.linkNote.value,
-        project: els.linkProject.value || "unknown",
-        design_stage: els.linkDesignStage.value || "unknown",
-        portfolio_placement: els.linkPlacement.value || "",
-      }),
+      body: JSON.stringify(payload),
     });
     const data = await response.json();
     if (!response.ok || !data.ok) {
@@ -434,27 +757,65 @@ async function captureLink() {
     const index = materials.findIndex((item) => item.id === material.id);
     if (index >= 0) materials[index] = material;
     else materials.unshift(material);
-    els.linkCaptureResult.innerHTML = `
-      ${card(material)}
-      ${data.source_type === "short_video" || data.source_type === "social_post" ? `<div class="empty">This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.</div>` : ""}
-    `;
+    targetNode.innerHTML = `${linkCaptureSummary(material)}${data.source_type === "short_video" || data.source_type === "social_post" ? `<div class="empty">${esc(t("linkLimit"))}</div>` : ""}`;
     renderDashboard();
     renderSearch();
-    setStatus(`Captured ${data.platform} link`, "ok");
+    setStatus(currentLang === "zh" ? `已保存 ${data.platform} 链接` : `Captured ${data.platform} link`, "ok");
   } catch (error) {
-    els.linkCaptureResult.innerHTML = `<div class="empty">Capture failed: ${esc(error.message)}. If this is a restricted platform, save the URL and add a manual note after the API is available.</div>`;
-    setStatus("Link capture failed", "error");
+    targetNode.innerHTML = `<div class="empty">${esc(t("linkCapture"))} ${esc(t("failed"))}: ${esc(error.message)}</div>`;
+    setStatus(`${t("linkCapture")} ${t("failed")}`, "error");
+  }
+}
+
+async function savePastedNote() {
+  if (!els.noteContent.value.trim()) {
+    els.noteSaveResult.innerHTML = `<div class="empty">${esc(t("noteContentRequired"))}</div>`;
+    return;
+  }
+  if (!apiConnected) {
+    els.noteSaveResult.innerHTML = `<div class="empty">${esc(t("staticMode"))}</div>`;
+    setStatus(t("staticMode"), "warn");
+    return;
+  }
+  try {
+    setStatus(t("saving"), "");
+    const response = await fetch(`${API_BASE}/api/paste-note`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: els.noteTitle.value || t("pasteNote"),
+        content: els.noteContent.value,
+        project: els.noteProject.value || "unknown",
+        design_stage: els.noteDesignStage.value || "unknown",
+        material_type: els.noteMaterialType.value || "draft",
+        portfolio_placement: els.notePlacement.value || "",
+      }),
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.message || data.error || "Note save failed");
+    const material = data.material;
+    const index = materials.findIndex((item) => item.id === material.id);
+    if (index >= 0) materials[index] = material;
+    else materials.unshift(material);
+    els.noteSaveResult.innerHTML = `<div class="empty">${esc(t("noteSaved"))}</div>${card(material)}`;
+    els.noteContent.value = "";
+    renderDashboard();
+    renderSearch();
+    setStatus(t("noteSaved"), "ok");
+  } catch (error) {
+    els.noteSaveResult.innerHTML = `<div class="empty">${esc(t("saveNote"))} ${esc(t("failed"))}: ${esc(error.message)}</div>`;
+    setStatus(`${t("saveNote")} ${t("failed")}`, "error");
   }
 }
 
 async function askDesignMate() {
   const question = els.askQuestion.value.trim();
   if (!question) {
-    els.askResult.innerHTML = `<h2>Answer</h2><p class="empty">Please enter a portfolio-focused question.</p>`;
+    els.askResult.innerHTML = `<h2>${esc(t("answer"))}</h2><p class="empty">${esc(t("askEmpty"))}</p>`;
     return;
   }
   if (!apiConnected) {
-    els.askResult.innerHTML = `<h2>Answer</h2><p class="empty">Static mode cannot ask the API. Run python DesignMate/scripts/start_api.py.</p>`;
+    els.askResult.innerHTML = `<h2>${esc(t("answer"))}</h2><p class="empty">${esc(t("askStatic"))}</p>`;
     return;
   }
   try {
@@ -462,19 +823,19 @@ async function askDesignMate() {
     const response = await fetch(`${API_BASE}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, project: els.askProject.value === "all" ? null : els.askProject.value, limit: 10 }),
+      body: JSON.stringify({ question, project: els.askProject.value === "all" ? null : els.askProject.value, limit: 10, language: currentLang }),
     });
     const data = await response.json();
     if (!response.ok || !data.ok) throw new Error(data.error || "Ask failed");
     els.askResult.innerHTML = `
-      <h2>Answer <span class="mode">${esc(data.mode)}</span> <span class="mode">confidence ${esc(data.confidence ?? "n/a")}</span></h2>
+      <h2>${esc(t("answer"))} <span class="mode">${esc(data.mode)}</span> <span class="mode">${esc(t("confidence"))} ${esc(data.confidence ?? "n/a")}</span></h2>
       <div class="answer">${renderAnswerSections(data.answer_sections || {})}</div>
-      <h3>Used materials</h3>
+      <h3>${esc(t("usedMaterials"))}</h3>
       <div class="material-list">${(data.used_materials || []).slice(0, 6).map(card).join("") || emptyState()}</div>
     `;
     setStatus("Ask DesignMate answered", "ok");
   } catch (error) {
-    els.askResult.innerHTML = `<h2>Answer</h2><p class="empty">Ask failed: ${esc(error.message)}</p>`;
+    els.askResult.innerHTML = `<h2>${esc(t("answer"))}</h2><p class="empty">Ask ${esc(t("failed"))}: ${esc(error.message)}</p>`;
     setStatus("Ask DesignMate failed", "error");
   }
 }
@@ -486,7 +847,7 @@ function renderAnswerSections(sections) {
 async function applyBatchUpdate() {
   if (!selectedIds.size) return;
   if (!apiConnected) {
-    setStatus("Static mode cannot batch save. Run python DesignMate/scripts/start_api.py", "warn");
+    setStatus(t("staticMode"), "warn");
     return;
   }
   const updates = {};
@@ -499,7 +860,7 @@ async function applyBatchUpdate() {
     return;
   }
   try {
-    setStatus("Saving batch...", "");
+    setStatus(t("saving"), "");
     const response = await fetch(`${API_BASE}/api/materials/batch`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -521,15 +882,15 @@ async function applyBatchUpdate() {
     renderSearch();
     if (selectedId) showDetail(selectedId);
   } catch (error) {
-    setStatus(`Batch save failed: ${error.message}`, "error");
+    setStatus(`Batch ${t("failed")}: ${error.message}`, "error");
   }
 }
 
 async function saveMaterial(id) {
   const message = document.getElementById("saveMessage");
   if (!apiConnected) {
-    message.textContent = "Static mode cannot save. Run python DesignMate/scripts/start_api.py";
-    setStatus("Static mode cannot save", "warn");
+    message.textContent = t("staticMode");
+    setStatus(t("staticMode"), "warn");
     return;
   }
   const payload = {
@@ -542,7 +903,7 @@ async function saveMaterial(id) {
     review_status: "confirmed",
   };
   try {
-    setStatus("Saving...", "");
+    setStatus(t("saving"), "");
     const response = await fetch(`${API_BASE}/api/materials/${encodeURIComponent(id)}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -552,13 +913,13 @@ async function saveMaterial(id) {
     if (!response.ok || !data.ok) throw new Error(data.error || "Save failed");
     const index = materials.findIndex((item) => item.id === id);
     materials[index] = data.material;
-    message.textContent = "Saved";
-    setStatus("Saved", "ok");
+    message.textContent = t("saved");
+    setStatus(t("saved"), "ok");
     renderDashboard();
     showDetail(id);
   } catch (error) {
-    message.textContent = `Save failed: ${error.message}`;
-    setStatus("Save failed", "error");
+    message.textContent = `${t("failed")}: ${error.message}`;
+    setStatus(`${t("failed")}`, "error");
   }
 }
 
@@ -671,6 +1032,7 @@ async function init() {
     els.batchProject.value = "";
     els.batchType.value = "";
     els.batchStage.value = "";
+    applyTranslations();
     renderDashboard();
     renderSearch();
     renderImageSearch();
@@ -684,6 +1046,8 @@ async function init() {
 }
 
 els.tabs.forEach((tab) => tab.addEventListener("click", () => switchView(tab.dataset.view)));
+els.langZh.addEventListener("click", () => setLanguage("zh"));
+els.langEn.addEventListener("click", () => setLanguage("en"));
 [els.searchInput, els.projectFilter, els.typeFilter, els.stageFilter, els.sourceFilter, els.limitFilter, els.sortFilter].forEach((node) => node.addEventListener("input", renderSearch));
 els.clearFilters.addEventListener("click", () => {
   quickMode = "";
@@ -715,6 +1079,8 @@ els.clearSelection.addEventListener("click", () => {
 els.imageMetadataSearch.addEventListener("click", renderImageSearch);
 els.imageFilenameQuery.addEventListener("input", renderImageSearch);
 els.captureLinkButton.addEventListener("click", captureLink);
+if (els.addCaptureLinkButton) els.addCaptureLinkButton.addEventListener("click", captureAddLink);
+if (els.saveNoteButton) els.saveNoteButton.addEventListener("click", savePastedNote);
 document.querySelectorAll(".jump").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.target)));
 document.getElementById("quickFilters").addEventListener("click", (event) => {
   const button = event.target.closest("button");

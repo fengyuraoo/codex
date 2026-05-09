@@ -1,6 +1,6 @@
 # External References and Link Capture Evidence
 
-Generated at: 2026-05-09T19:58:57
+Generated at: 2026-05-09T21:28:16
 
 This file collects captured external links that can support moodboards, research sources, inspiration evidence and process references.
 
@@ -59,3 +59,17 @@ Platform: bilibili
 URL: https://www.bilibili.com/video/BV1DesignMateSmoke
 User note: api smoke external reference
 Capture note: This platform may limit automatic extraction. The link is saved, and your note will help De
+
+## behance link
+
+- Platform: behance
+- Source type: reference
+- Project: unknown
+- Portfolio placement: Moodboard
+- URL: https://www.behance.net/gallery/bilingual-test
+- User note: bilingual workflow reference
+- Excerpt: Title: behance link
+Platform: behance
+URL: https://www.behance.net/gallery/bilingual-test
+User note: bilingual workflow reference
+Capture note: Link captured.

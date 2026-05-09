@@ -41,6 +41,55 @@ Text Search 适合检索关键词、项目名、设计阶段和作品集主题�
 
 切到 Link Capture 页面，粘贴一个短视频或网页灵感链接，比如 B站案例、Behance 项目或 Pinterest 参考。填写项目、设计阶段和一句 user note，然后点击 Capture Link。DesignMate 会把这个外部链接转成一张可搜索的 Design Evidence Card，记录平台、原始链接、资料类型、作品集位置和用户备注。对于短视频平台，如果自动提取受限，DesignMate 不会下载视频或绕过限制，而是保存链接和你的说明，让它仍然能进入 Search 和 Ask DesignMate 的作品集证据链。
 
+## v0.7.2 中文 60 秒演示脚本
+
+这是 DesignMate v0.7.2，一个面向设计学生和设计师的本地 AI 作品集资料搜索助手。现在它支持中文和英文切换。日常整理时，我可以使用中文界面，搜索草图、调研笔记、反馈截图和外部灵感链接，把它们变成 Design Evidence Card。比如我粘贴一个 B站或 Behance 链接，填写“我的备注”和“作品集位置”，DesignMate 会把它保存为可搜索的设计证据。然后我可以问 DesignMate：“哪些资料适合放 moodboard？”它会根据本地资料返回摘要、相关资料、设计洞察、作品集位置、需要确认和下一步建议。切换到英文后，界面更适合截图、录屏和作品集展示。
+
+## v0.7.2 English 60-second demo script
+
+This is DesignMate v0.7.2, a local AI search hub for design portfolio materials. It now supports a bilingual workflow. In Chinese, design students can organize real project notes, feedback, sketches and inspiration links in a familiar working language. In English, the same product becomes cleaner for portfolio screenshots and demo recordings. I can search local materials as Design Evidence Cards, capture an external inspiration link, add a user note and portfolio placement, then ask DesignMate which references support a moodboard or research page. The current assistant uses a rule-based fallback, so it remains usable without an API key while keeping all materials local-first.
+
+## v0.7.2 中文录屏路径
+
+1. 切换到“中”。
+2. 展示搜索中心首页。
+3. 搜索“用户痛点”。
+4. 打开一张 Design Evidence Card。
+5. 进入“链接采集”，保存一个网页或短视频参考。
+6. 进入“问 DesignMate”，用中文提问。
+7. 展示报告和作品集草稿入口。
+
+## v0.7.2 English recording route
+
+1. Switch to `EN`.
+2. Show the Search Hub hero screen.
+3. Search for a design topic.
+4. Open a Design Evidence Card.
+5. Capture an inspiration link.
+6. Ask DesignMate an English portfolio question.
+7. Show Reports and Export.
+
+## v0.7.2 推荐截图
+
+- 中文首页。
+- 英文首页。
+- 中文 Link Capture。
+- 英文 Ask DesignMate。
+- 中英两种 Design Evidence Card。
+- 静态模式提示。
+
+## v0.7.2 Add Materials 演示路径
+
+新的推荐演示路线是：
+
+1. 添加资料：打开 Add Materials / 添加资料，展示 Upload Files、Capture Link、Paste Note 和 Import Folder 四个入口。
+2. 搜索资料：回到 Search Hub 或 Text Search，搜索刚加入的笔记、链接或本地文件。
+3. 问 DesignMate：进入 Ask DesignMate，询问“哪些资料能证明用户痛点？”或 “Which materials support the research page?”
+4. 链接采集：粘贴一个网页、B站、Behance 或 Pinterest 灵感链接，说明短视频平台不会下载视频，只保存链接和用户备注。
+5. 导出作品集叙事：进入 Reports / Drafts / Export，展示作品集草稿和 DesignMate 案例导出路径。
+
+这条路线更符合真实设计学生工作流：先收集资料，再搜索证据，再让 DesignMate 辅助整理叙事，最后导出作品集素材。
+
 ## 推荐截图清单
 
 - Search Hub 首页全屏。

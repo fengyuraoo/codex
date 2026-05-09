@@ -1,7 +1,7 @@
 # Classification Report
 
-Generated at: 2026-05-09T19:58:56
-Total materials: 76
+Generated at: 2026-05-09T21:28:14
+Total materials: 83
 
 ## Material Type Stats
 
@@ -10,8 +10,8 @@ Total materials: 76
 - feedback: 18
 - idea: 8
 - paper: 6
-- reference: 8
-- research: 18
+- reference: 9
+- research: 24
 - sketch: 4
 - unknown: 2
 
@@ -21,16 +21,16 @@ Total materials: 76
 - concept: 10
 - development: 16
 - presentation: 14
-- research: 21
-- unknown: 7
+- research: 27
+- unknown: 8
 
 ## Project Stats
 
 - general: 20
 - info-center: 18
-- reader-design: 21
+- reader-design: 27
 - thesis: 10
-- unknown: 7
+- unknown: 8
 
 ## Details
 
@@ -496,6 +496,72 @@ Total materials: 76
 - Needs confirmation: False
 - Reason: 有正文；类型明确为 sketch；可对应 development 阶段；项目归属为 general；包含 草图、方案、作品集
 
+### note-98e4e91d23efceee Add Materials unit note.note
+
+- Path: `pasted-note://note-98e4e91d23efceee`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
+### note-3f061f2fe3fd278b Add Materials unit note.note
+
+- Path: `pasted-note://note-3f061f2fe3fd278b`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
+### note-c8c9823775f1c16d Add Materials unit note.note
+
+- Path: `pasted-note://note-c8c9823775f1c16d`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
+### note-98a3a120fc36e675 Add Materials unit note.note
+
+- Path: `pasted-note://note-98a3a120fc36e675`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
+### note-2f2c9cd9c37cce8f Add Materials unit note.note
+
+- Path: `pasted-note://note-2f2c9cd9c37cce8f`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
+### note-7f0e1ec3f3adf2dd Add Materials unit note.note
+
+- Path: `pasted-note://note-7f0e1ec3f3adf2dd`
+- Material type: `research`
+- Portfolio stage: `research`
+- Project guess: `reader-design`
+- Score: 82
+- Tags: pasted-note, user-input, reader-design, research, User Research, research
+- Needs confirmation: False
+- Reason: Captured from Add Materials / Paste Note as user-provided design evidence.
+
 ### mat-322e15aa0400 info-center-circulation-flow.md
 
 - Path: `data/inbox/info-center-circulation-flow.md`
@@ -845,6 +911,17 @@ Total materials: 76
 - Project guess: `unknown`
 - Score: 37
 - Tags: bilibili, external-reference, inspiration, link, short_video, user
+- Needs confirmation: True
+- Reason: 有正文；类型明确为 reference
+
+### link-b4fe378f5745bbcb behance link
+
+- Path: `https://www.behance.net/gallery/bilingual-test`
+- Material type: `reference`
+- Portfolio stage: `unknown`
+- Project guess: `unknown`
+- Score: 37
+- Tags: behance, external-reference, link, reference, user
 - Needs confirmation: True
 - Reason: 有正文；类型明确为 reference
 

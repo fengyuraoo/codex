@@ -1,23 +1,23 @@
 # DesignMate 本地资料报告
 
-Generated at: 2026-05-09T19:58:57
+Generated at: 2026-05-09T21:28:16
 
 ## 1. 今日摘要
 
-当前资料库共有 76 条资料，其中 66 条属于高价值资料，7 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
-数据来源：Demo 36 条，User inbox 36 条，Imported library 4 条，Unknown 0 条。
+当前资料库共有 83 条资料，其中 72 条属于高价值资料，8 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。
+数据来源：Demo 36 条，User inbox 42 条，Imported library 5 条，Unknown 0 条。
 如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。
 
 ### 新增资料提示
 
 - 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。
-- 上次扫描时间：2026-05-09T19:58:57。
-- 上次报告生成时间：2026-05-09T19:58:56。
-- 最近扫描批次：scan-e8b8f9f8859d，新增 0，更新 0，重复 72，失败 2。
+- 上次扫描时间：2026-05-09T21:28:15。
+- 上次报告生成时间：2026-05-09T21:28:14。
+- 最近扫描批次：scan-fab8b2c8d411，新增 0，更新 0，重复 72，失败 2。
 
 ### 未解析资料提示
 
-- 未解析或解析异常资料：6 条。
+- 未解析或解析异常资料：13 条。
 - 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。
 
 ### 建议补充资料
@@ -44,8 +44,8 @@ Generated at: 2026-05-09T19:58:57
 | feedback | 19 |
 | idea | 8 |
 | paper | 6 |
-| reference | 8 |
-| research | 17 |
+| reference | 9 |
+| research | 23 |
 | sketch | 4 |
 | unknown | 2 |
 
@@ -55,9 +55,9 @@ Generated at: 2026-05-09T19:58:57
 | --- | ---: |
 | general | 20 |
 | info-center | 18 |
-| reader-design | 21 |
+| reader-design | 27 |
 | thesis | 10 |
-| unknown | 7 |
+| unknown | 8 |
 
 ### 阶段分布
 
@@ -67,14 +67,15 @@ Generated at: 2026-05-09T19:58:57
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 21 |
-| unknown | 7 |
+| research | 27 |
+| unknown | 8 |
 
 ### 解析状态
 
 | 项目 | 数量 |
 | --- | ---: |
-| link_captured | 4 |
+| link_captured | 5 |
+| note_captured | 6 |
 | parse_failed | 2 |
 | parsed | 70 |
 
@@ -83,8 +84,8 @@ Generated at: 2026-05-09T19:58:57
 | 项目 | 数量 |
 | --- | ---: |
 | demo | 36 |
-| imported | 4 |
-| user | 36 |
+| imported | 5 |
+| user | 42 |
 
 ## 3. 高价值资料 Top 10
 
@@ -162,7 +163,7 @@ Generated at: 2026-05-09T19:58:57
 
 ### reader-design
 
-- 当前资料数量：21
+- 当前资料数量：27
 - 最强资料：reader-design-low-interruption-reading.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
@@ -190,7 +191,7 @@ Generated at: 2026-05-09T19:58:57
 
 ### unknown
 
-- 当前资料数量：7
+- 当前资料数量：8
 - 最强资料：research_feedback.md
 - 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。
 - 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。
@@ -253,16 +254,16 @@ Generated at: 2026-05-09T19:58:57
 
 - `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
 - `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
+- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？
 - `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？
 - `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？
 - `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
-- `behance link` 解析状态为 link_captured，是否需要补充文本版摘要？
-- `bilibili link` 当前为 reference/unknown/unknown，是否符合真实项目语境？
-- `bilibili link` 解析状态为 link_captured，是否需要补充文本版摘要？
-- `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
-- `v06-fake-image.png` 解析状态为 parse_failed，是否需要补充文本版摘要？
-- `v06-fake-image.png` 当前为 unknown/unknown/development，是否符合真实项目语境？
 
 ## 7. 明日任务
 

@@ -1,8 +1,8 @@
 # Materials Dashboard
 
-Generated at: 2026-05-09T19:58:56
+Generated at: 2026-05-09T21:28:14
 
-- 总资料数：76
+- 总资料数：83
 
 ## 各类型数量
 
@@ -13,8 +13,8 @@ Generated at: 2026-05-09T19:58:56
 | feedback | 18 |
 | idea | 8 |
 | paper | 6 |
-| reference | 8 |
-| research | 18 |
+| reference | 9 |
+| research | 24 |
 | sketch | 4 |
 | unknown | 2 |
 
@@ -24,9 +24,9 @@ Generated at: 2026-05-09T19:58:56
 | --- | ---: |
 | general | 20 |
 | info-center | 18 |
-| reader-design | 21 |
+| reader-design | 27 |
 | thesis | 10 |
-| unknown | 7 |
+| unknown | 8 |
 
 ## 各阶段数量
 
@@ -36,8 +36,8 @@ Generated at: 2026-05-09T19:58:56
 | concept | 10 |
 | development | 16 |
 | presentation | 14 |
-| research | 21 |
-| unknown | 7 |
+| research | 27 |
+| unknown | 8 |
 
 ## 高价值资料 Top 10
 
@@ -59,5 +59,6 @@ Generated at: 2026-05-09T19:58:56
 - `generic webpage link`：有正文；类型明确为 reference；可对应 research 阶段
 - `behance link`：有正文；类型明确为 reference
 - `bilibili link`：有正文；类型明确为 reference
+- `behance link`：有正文；类型明确为 reference
 - `v06-fake-image.png`：可对应 development 阶段
 - `v06-fake-image.png`：可对应 development 阶段

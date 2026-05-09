@@ -1,5 +1,17 @@
 # DesignMate
 
+## v0.7.2 Bilingual Design Workflow
+
+DesignMate v0.7.2 adds a lightweight Chinese / English interface switch for the main workflow.
+
+What changed:
+- Top navigation now has `中 / EN` language buttons.
+- Language preference is saved in `localStorage`.
+- Main UI copy switches between Chinese and English across Search Hub, Text Search, Image Search, Link Capture, Ask DesignMate, Reports, static mode prompts and Design Evidence Cards.
+- Ask DesignMate can return Chinese section titles when the user asks in Chinese, even if the UI is currently English.
+- Link Capture success cards show bilingual-friendly fields such as Title / 链接标题, Platform / 平台, User Note / 我的备注 and Portfolio Placement / 作品集位置.
+- v0.7.2 quality gate: `python DesignMate/scripts/quality_gate_v072.py`.
+
 ## v0.7.1 Link Capture
 
 DesignMate v0.7.1 adds **Link Capture**, a safe way to turn external inspiration links into searchable design evidence.

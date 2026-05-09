@@ -1,4 +1,18 @@
 
+## v0.7.2 Bilingual Design Workflow - 2026-05-09
+
+- Added lightweight Chinese / English UI switching in `frontend/app.js`.
+- Added top-right `中 / EN` language controls in `frontend/index.html` and language toggle styling in `frontend/style.css`.
+- Language preference is stored in `localStorage` under `designmate_language`.
+- Updated static mode messaging in both languages: saving, editing and Link Capture require `python DesignMate/scripts/start_api.py`.
+- Updated Design Evidence Cards with bilingual fixed labels for source, project, stage, type, confidence, portfolio placement, user note and link opening.
+- Updated Link Capture success result into a design-student-friendly summary card with title, platform, source URL, user note, design stage, portfolio placement, why it matters and suggested next action.
+- Updated Ask DesignMate to accept a language parameter and return Chinese or English section titles; Chinese questions take priority.
+- Added `docs/v0.7.2_bilingual_workflow.md` and expanded `docs/demo_script_v07.md` with bilingual demo scripts and recording paths.
+- Added `tests/test_v072_bilingual.py` and `scripts/quality_gate_v072.py`.
+- Hardened `database.read_full_content` so temporary file permission contention does not crash search during parallel quality checks.
+- Validation: `run_tests.py` passed 94 tests; `quality_gate_v071.py`, `quality_gate_v072.py` and `quality_gate.py` all passed.
+
 ## v0.7.1 Link Capture - 2026-05-09
 
 - Added first-class Link Capture support for external design inspiration links.
@@ -2384,3 +2398,915 @@ Generated index/classification_report.md and index/materials_dashboard.md.
 - `build_static_site.py` stdout: Generated frontend data with 76 materials.
 Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
 - Pipeline completed successfully. Materials: 76.
+
+## Run 2026-05-09T20:24:54
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 76 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 76 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 76.
+
+## Run 2026-05-09T20:24:55
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 76 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 76 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 76.
+
+## Run 2026-05-09T20:25:07
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:10
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+
+## Run 2026-05-09T20:25:10
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:13
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+
+## Run 2026-05-09T20:25:13
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- Pipeline completed successfully. Materials: 77.
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:15
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:18
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:25
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:26
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:55
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:25:56
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:07
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:08
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:19
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:20
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:25
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:27
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:39
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:43
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:26:44
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:27:59
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:28:00
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:28:06
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:28:07
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:37:19
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:37:20
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 77 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 77 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 77.
+
+## Run 2026-05-09T20:37:35
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+
+## Run 2026-05-09T20:37:36
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 78 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `build_static_site.py` stdout: Generated frontend data with 78 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 78.
+- `classify_materials.py` stdout: Reclassified 78 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+
+## Run 2026-05-09T20:37:37
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 78 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 78.
+
+## Run 2026-05-09T20:37:38
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 78 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `classify_materials.py` stdout: Reclassified 78 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `build_static_site.py` stdout: Generated frontend data with 78 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 78.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 78 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 78.
+
+## Run 2026-05-09T20:37:47
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 80 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 80 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 80.
+
+## Run 2026-05-09T20:37:48
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 80 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 80 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 80.
+
+## Run 2026-05-09T20:38:00
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 81 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 81 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 81.
+
+## Run 2026-05-09T20:38:05
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 81 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 81 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 81.
+
+## Run 2026-05-09T20:38:06
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 81 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 81 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 81.
+
+## Run 2026-05-09T20:39:01
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+
+## Run 2026-05-09T20:39:01
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 82 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `classify_materials.py` stdout: Reclassified 82 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 82 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 82.
+- `build_static_site.py` stdout: Generated frontend data with 82 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 82.
+
+## Run 2026-05-09T20:39:03
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+
+## Run 2026-05-09T20:39:03
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 82 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `classify_materials.py` stdout: Reclassified 82 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 82 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 82.
+- `build_static_site.py` stdout: Generated frontend data with 82 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 82.
+
+## Run 2026-05-09T20:39:12
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## v0.7.2 Add Materials Completion - 2026-05-09
+
+- Added a unified Add Materials / 添加资料 entry to the top navigation and Search Hub home screen.
+- Added a bilingual Add Materials page with four input paths: Upload Files, Capture Link, Paste Note, and Import Folder.
+- Reused the existing Link Capture workflow from the Add Materials page so external inspiration links still save as searchable Design Evidence.
+- Added `backend/note_capture_service.py` and `POST /api/paste-note` so pasted research notes, feedback, project logic, and draft copy can be saved into SQLite as user materials.
+- Updated the frontend i18n dictionary with Add Materials, upload, link capture, paste note, and folder import copy in English and Chinese.
+- Updated v0.7.2 documentation and demo script with the new workflow: add materials -> search -> ask -> link capture -> export portfolio narrative.
+- Updated `quality_gate_v072.py` and tests to check the Add Materials page, translation keys, Paste Note API, and searchable note capture.
+- Verification passed:
+  - `python DesignMate/scripts/run_tests.py` -> 97 tests OK.
+  - `python DesignMate/scripts/quality_gate_v071.py` -> PASS.
+  - `python DesignMate/scripts/quality_gate_v072.py` -> PASS.
+  - `python DesignMate/scripts/quality_gate.py` -> PASS.
+- Known limitation: file upload is currently a UI shell with clear fallback instructions; users should place files in `DesignMate/data/inbox` and run the scan script. Paste Note and Capture Link are functional when the API is running.
+
+## Run 2026-05-09T20:39:13
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:29
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:30
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:44
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:45
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:52
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:39:53
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:40:06
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:40:11
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T20:40:12
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T21:28:02
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T21:28:03
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T21:28:11
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.
+
+## Run 2026-05-09T21:28:13
+- Started DesignMate v0.6.1 pipeline.
+- SQLite initialized. FTS5 available: True.
+- `scan_library.py` stdout: Scanned and indexed 72 materials.
+- `classify_materials.py` stdout: Reclassified 83 materials.
+Generated index/classification_report.md and index/materials_dashboard.md.
+- `generate_report.py` stdout: Generated reports:
+- latest_report: reports\latest_report.md
+- dated_report: reports\2026-05-09-designmate-report.md
+- need_confirm: review\latest_need_confirm.md
+- next_actions: review\latest_next_actions.md
+- portfolio_materials: drafts\latest_portfolio_materials.md
+- `build_static_site.py` stdout: Generated frontend data with 83 materials.
+Open E:\GitHub\codex-desktop\DesignMate\frontend\index.html in a browser.
+- Pipeline completed successfully. Materials: 83.

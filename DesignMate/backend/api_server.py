@@ -4,7 +4,7 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
-from . import ai_service, database, link_capture_service, report_service, search_engine
+from . import ai_service, database, link_capture_service, note_capture_service, report_service, search_engine
 from .material_parser import scan_library
 from .paths import REPORTS_DIR
 
@@ -106,6 +106,7 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                     payload = self.read_json_body()
                     question = str(payload.get("question", "")).strip()
                     project = payload.get("project") or None
+                    language = payload.get("language") or payload.get("ui_language") or None
                     limit = int(payload.get("limit", 10) or 10)
                     if not question:
                         error(self, "question is required", 400)
@@ -113,7 +114,7 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                     results = search_engine.search(question, project=project, limit=limit)
                     material_ids = [row["id"] for row in results]
                     context = [item for item_id in material_ids if (item := database.get_material(item_id))]
-                    ai_result = ai_service.ask_designmate(question, context)
+                    ai_result = ai_service.ask_designmate(question, context, language=language)
                     json_response(
                         self,
                         {
@@ -145,6 +146,21 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                     json_response(self, result.to_dict(), status)
                 except ValueError as exc:
                     json_response(self, {"ok": False, "message": str(exc), "fallback_saved": False}, 400)
+                return
+            if path == "/api/paste-note":
+                try:
+                    payload = self.read_json_body()
+                    result = note_capture_service.capture_note(
+                        title=str(payload.get("title", "") or ""),
+                        content=str(payload.get("content", "") or ""),
+                        project=str(payload.get("project", "unknown") or "unknown"),
+                        design_stage=str(payload.get("design_stage", "unknown") or "unknown"),
+                        material_type=str(payload.get("material_type", "draft") or "draft"),
+                        portfolio_placement=str(payload.get("portfolio_placement", "") or ""),
+                    )
+                    json_response(self, result.to_dict(), 200)
+                except ValueError as exc:
+                    json_response(self, {"ok": False, "message": str(exc)}, 400)
                 return
             if path in {"/api/reindex", "/api/rebuild"}:
                 database.init_db()

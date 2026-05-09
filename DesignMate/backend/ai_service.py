@@ -74,25 +74,67 @@ def critique_project(project: str, materials: list[MaterialRecord], provider: st
     }
 
 
-def ask_designmate(question: str, context_materials: list[MaterialRecord], provider: str | None = None) -> dict[str, Any]:
+def has_chinese(text: str) -> bool:
+    return any("\u4e00" <= char <= "\u9fff" for char in text or "")
+
+
+def resolve_language(question: str, language: str | None = None) -> str:
+    if has_chinese(question):
+        return "zh"
+    return "zh" if language == "zh" else "en"
+
+
+def section_keys(language: str) -> dict[str, str]:
+    if language == "zh":
+        return {
+            "summary": "摘要",
+            "materials": "相关资料",
+            "insight": "设计洞察",
+            "placement": "作品集位置",
+            "confirm": "需要确认",
+            "actions": "下一步建议",
+        }
+    return {
+        "summary": "Summary",
+        "materials": "Relevant Materials",
+        "insight": "Design Insight",
+        "placement": "Portfolio Placement",
+        "confirm": "Things to Confirm",
+        "actions": "Next Action",
+    }
+
+
+def ask_designmate(question: str, context_materials: list[MaterialRecord], provider: str | None = None, language: str | None = None) -> dict[str, Any]:
     _, mode = configured_provider(provider)
     q = (question or "").strip()
+    lang = resolve_language(q, language)
+    keys = section_keys(lang)
     top = sorted(context_materials, key=lambda item: item.material_score, reverse=True)[:8]
     if not top:
-        sections = {
-            "Summary": "No local materials were found for this question yet.",
-            "Relevant materials": [],
-            "Design insight": "DesignMate cannot make a reliable design judgement without evidence.",
-            "Portfolio placement": "Import project evidence first, then decide whether it belongs to research, pain points, design process, final solution or reflection.",
-            "Things to confirm": ["This answer has no supporting local evidence yet."],
-            "Next action": ["Import research notes, sketches, feedback or page drafts", "Run python scripts/run_designmate.py", "Ask again with a project name or material type"],
-        }
+        if lang == "zh":
+            sections = {
+                keys["summary"]: "暂时没有找到可引用的本地资料。",
+                keys["materials"]: [],
+                keys["insight"]: "没有证据时，DesignMate 不会编造设计判断。",
+                keys["placement"]: "请先导入项目证据，再判断它属于调研、痛点、设计过程、最终方案还是反思页。",
+                keys["confirm"]: ["当前回答没有本地资料支撑。"],
+                keys["actions"]: ["导入调研、草图、反馈或外部链接", "运行 python scripts/run_designmate.py", "带上项目名重新提问"],
+            }
+        else:
+            sections = {
+                keys["summary"]: "No local materials were found for this question yet.",
+                keys["materials"]: [],
+                keys["insight"]: "DesignMate cannot make a reliable design judgement without evidence.",
+                keys["placement"]: "Import project evidence first, then decide whether it belongs to research, pain points, design process, final solution or reflection.",
+                keys["confirm"]: ["This answer has no supporting local evidence yet."],
+                keys["actions"]: ["Import research notes, sketches, feedback or links", "Run python scripts/run_designmate.py", "Ask again with a project name or material type"],
+            }
         return {
             "mode": mode,
             "answer": sections_to_markdown(sections),
             "answer_sections": sections,
-            "suggestions": sections["Next action"],
-            "need_confirm": sections["Things to confirm"],
+            "suggestions": sections[keys["actions"]],
+            "need_confirm": sections[keys["confirm"]],
             "confidence": 0.2,
         }
     evidence = "\n".join(item_line(item) for item in top[:5])
@@ -110,20 +152,32 @@ def ask_designmate(question: str, context_materials: list[MaterialRecord], provi
     else:
         summary = "基于当前命中的本地资料，建议先把高分资料转成作品集证据。"
         judgement = "下一步应确认缺失阶段，并为每条关键资料写一句作品集用途。"
-    sections = {
-        "Summary": summary,
-        "Relevant materials": related,
-        "Design insight": judgement,
-        "Portfolio placement": f"Prioritize these portfolio stages: {', '.join(stages[:5]) or 'research / insight / concept'}.",
-        "Things to confirm": ["This rule-based answer is based on local fields and keyword evidence; confirm the design conclusion manually."],
-        "Next action": ["Open Text Search to inspect these materials", "Add notes to the top evidence cards", "Generate a page draft for the project", "Add missing image or research evidence"],
-    }
+    if lang == "en":
+        if any(item.url for item in top):
+            judgement = "Some matched materials are external links. Use their user notes to explain why they matter before placing them in a moodboard, research source list or process evidence section."
+        sections = {
+            keys["summary"]: summary if not has_chinese(summary) else "Based on the matched local materials, prioritize high-scoring evidence and turn it into portfolio proof.",
+            keys["materials"]: related,
+            keys["insight"]: judgement if not has_chinese(judgement) else "Check whether research, pain points, concept development and final presentation form a continuous evidence chain.",
+            keys["placement"]: f"Prioritize these portfolio stages: {', '.join(stages[:5]) or 'research / insight / concept'}.",
+            keys["confirm"]: ["This rule-based answer is based on local fields and keyword evidence; confirm the design conclusion manually."],
+            keys["actions"]: ["Open Text Search to inspect these materials", "Add notes to the top evidence cards", "Generate a page draft for the project", "Add missing image, link or research evidence"],
+        }
+    else:
+        sections = {
+            keys["summary"]: summary,
+            keys["materials"]: related,
+            keys["insight"]: judgement,
+            keys["placement"]: f"优先考虑这些作品集阶段：{', '.join(stages[:5]) or 'research / insight / concept'}。",
+            keys["confirm"]: ["这是规则版回答，只基于本地字段、关键词和用户备注，需要人工确认设计结论。"],
+            keys["actions"]: ["打开文本搜索检查这些资料", "为高价值资料补充备注", "生成对应项目的页面草稿", "补充缺失的图片、链接或调研证据"],
+        }
     return {
         "mode": mode,
         "answer": sections_to_markdown(sections) + "\n\n## 原始命中\n" + evidence,
         "answer_sections": sections,
-        "suggestions": sections["Next action"],
-        "need_confirm": sections["Things to confirm"],
+        "suggestions": sections[keys["actions"]],
+        "need_confirm": sections[keys["confirm"]],
         "confidence": min(0.9, 0.45 + len(top) * 0.05),
     }
 

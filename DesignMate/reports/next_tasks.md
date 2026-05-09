@@ -1,5 +1,28 @@
 # Next Tasks for v0.7
 
+## v0.7.3 / v0.8 bilingual workflow next steps
+
+### P0
+
+- Review every remaining hard-coded English phrase in the frontend and add it to the translation dictionary.
+- Add bilingual output options for generated reports.
+- Add bilingual output options for portfolio drafts.
+- Verify Chinese UI with real design students and collect confusing labels.
+- Verify English UI screenshots for portfolio case presentation.
+- Add a language-aware API smoke test for `/api/ask`.
+
+### P1
+
+- Add bilingual field suggestions for Link Capture user notes.
+- Add bilingual Portfolio Export pages.
+- Add language-aware saved settings beyond localStorage if a desktop app is introduced.
+- Add frontend smoke tests that assert Chinese and English labels render.
+
+### P2
+
+- Prepare v0.8 design around real AI provider selection without breaking fallback.
+- Plan bilingual prompt templates for future real AI providers.
+
 ## v0.7.2 / v0.8 Link Capture next steps
 
 ### P0
@@ -107,3 +130,36 @@
 - 增加导出当前搜索结果为 Markdown。
 - 增加发布前检查清单。
 - 增加安装说明和常见问题。
+
+## v0.7.3 Candidate Tasks - Add Materials Follow-up
+
+### P0
+
+- Add a real file upload API for Add Materials, saving uploaded files into `data/inbox` with safe filenames.
+- Add file upload tests for Markdown, TXT, image, PDF metadata, and unsupported file type rejection.
+- Add a frontend upload progress state and clear upload failure messages.
+- Add a user-only material mode that hides demo and test materials by default after first real import.
+- Add a cleanup strategy for test-created note materials so automated tests do not inflate real library counts.
+- Add API smoke coverage for `POST /api/paste-note`.
+- Add Add Materials checks to the main `quality_gate.py`, not only `quality_gate_v072.py`.
+- Improve bilingual copy for Add Materials form validation messages.
+
+### P1
+
+- Add folder import history UI with scan batch details.
+- Add a note editor for pasted notes after saving.
+- Add duplicate detection for pasted notes and external links.
+- Add quick templates for pasted notes: interview, feedback, critique, inspiration, portfolio copy.
+- Add project presets in Add Materials based on existing database projects.
+- Add portfolio placement suggestions when the user selects material type and design stage.
+- Add a stronger onboarding path: Add Materials -> Search -> Ask -> Draft -> Export.
+- Add visual QA screenshots for Add Materials in Chinese and English.
+
+### P2
+
+- Explore browser File System Access API as an optional local-folder picker where supported.
+- Add drag-and-drop sorting for captured evidence cards.
+- Add import presets for common design school workflows.
+- Add a privacy note explaining local-first storage for uploaded files and pasted notes.
+- Add a compact mobile layout for Add Materials.
+- Add an export of pasted notes to Markdown collections.

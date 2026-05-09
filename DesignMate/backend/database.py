@@ -207,7 +207,10 @@ def read_full_content(record: MaterialRecord) -> str:
     path = ROOT / record.content_full_path
     if not path.exists():
         return ""
-    return path.read_text(encoding="utf-8", errors="ignore")
+    try:
+        return path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return ""
 
 
 def upsert_material(record: MaterialRecord, db_path: Path = DB_PATH) -> None:

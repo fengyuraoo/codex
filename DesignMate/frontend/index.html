@@ -3,24 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.7 Search Hub</title>
+    <title>DesignMate v0.7.2 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.7</span></div>
+        <div class="brand">DesignMate <span>v0.7.2</span></div>
         <p>Search Hub for local design portfolio materials</p>
       </div>
       <nav class="tabs">
         <button class="tab active" data-view="dashboard">Search Hub</button>
+        <button class="tab" data-view="add">Add Materials</button>
         <button class="tab" data-view="search">Text Search</button>
         <button class="tab" data-view="image">Image Search</button>
         <button class="tab" data-view="link">Link Capture</button>
         <button class="tab" data-view="ask">Ask DesignMate</button>
         <button class="tab" data-view="report">Reports</button>
       </nav>
-      <button id="showcaseToggle" class="secondary">Showcase Mode</button>
+      <div class="top-actions">
+        <div class="language-toggle" aria-label="Language">
+          <button id="langZh" class="secondary small">中</button>
+          <button id="langEn" class="secondary small">EN</button>
+        </div>
+        <button id="showcaseToggle" class="secondary">Showcase Mode</button>
+      </div>
     </header>
 
     <main>
@@ -34,6 +41,7 @@
             <input id="hubSearchInput" type="search" placeholder="Search pain points, sketches, feedback, page themes..." />
             <button id="hubSearchButton" class="primary">Search</button>
           </div>
+          <button id="addMaterialsHeroButton" class="primary hub-add-button jump" data-target="add">Add Materials</button>
           <div class="hub-tags">
             <span>Local-first</span>
             <span>Portfolio-aware</span>
@@ -43,6 +51,10 @@
             <span>For portfolio building</span>
           </div>
           <div class="hub-entry-grid">
+            <article class="hub-entry hub-entry-primary" data-hub-target="add">
+              <strong>Add Materials</strong>
+              <p>Start here: add files, capture links, paste notes or import a folder before searching.</p>
+            </article>
             <article class="hub-entry" data-hub-target="search">
               <strong>Text Search</strong>
               <p>Find project names, keywords, user pain points, design stages, file content and portfolio page topics.</p>
@@ -118,6 +130,74 @@
         </section>
         <h2>High-value Design Evidence</h2>
         <div class="material-list" id="highlightList"></div>
+      </section>
+
+      <section id="addView" class="view">
+        <section class="add-materials-hero">
+          <p class="eyebrow" data-i18n="addEyebrow">Material Input Hub</p>
+          <h1 data-i18n="addMaterials">Add Materials</h1>
+          <p data-i18n="addMaterialsIntro">This is the material input hub for DesignMate. Add sketches, references, feedback screenshots, research notes, project files and inspiration links, then turn them into searchable design evidence.</p>
+        </section>
+
+        <section class="add-method-grid">
+          <article class="add-method">
+            <p class="eyebrow">A</p>
+            <h2 data-i18n="uploadFiles">Upload Files</h2>
+            <p data-i18n="uploadFilesBody">Drag in images, PDFs, Word, PPT, Markdown, TXT or screenshots from a design project.</p>
+            <div class="upload-zone add-upload-zone" id="addUploadZone">
+              <strong data-i18n="uploadDrop">Drop design materials here</strong>
+              <span data-i18n="uploadChoose">images, PDF, DOCX, PPTX, Markdown, TXT and screenshots</span>
+              <input type="file" multiple accept=".md,.txt,.pdf,.docx,.pptx,image/png,image/jpeg" />
+            </div>
+            <p class="placeholder-note" data-i18n="uploadFallback">File upload is prepared. In this version, place files into the user materials folder and run scan.</p>
+            <code>DesignMate/data/inbox</code>
+          </article>
+
+          <article class="add-method">
+            <p class="eyebrow">B</p>
+            <h2 data-i18n="linkCapture">Capture Link</h2>
+            <p data-i18n="captureLinkBody">Paste Xiaohongshu, Douyin, Bilibili, Behance, Pinterest, web articles or portfolio case links.</p>
+            <label class="wide"><span data-i18n="linkUrlLabel">Paste a design inspiration link here.</span><textarea id="addLinkUrl" rows="3" placeholder="https://www.behance.net/..."></textarea></label>
+            <div class="link-form-grid">
+              <label><span data-i18n="project">Project</span><input id="addLinkProject" placeholder="reader-design / info-center / general" value="general" /></label>
+              <label><span data-i18n="designStage">Design Stage</span><select id="addLinkDesignStage"><option>research</option><option>inspiration</option><option>reference</option><option>feedback</option><option>unknown</option></select></label>
+              <label><span data-i18n="placement">Portfolio Placement</span><select id="addLinkPlacement"><option>Research</option><option>Moodboard</option><option>Design Inspiration</option><option>User Insight</option><option>Process Evidence</option></select></label>
+            </div>
+            <label class="wide"><span data-i18n="userNote">User Note</span><textarea id="addLinkNote" rows="3" placeholder="Why does this link matter?"></textarea></label>
+            <button id="addCaptureLinkButton" class="primary" data-i18n="captureLink">Capture Link</button>
+            <div id="addLinkResult" class="material-list compact-result"></div>
+          </article>
+
+          <article class="add-method">
+            <p class="eyebrow">C</p>
+            <h2 data-i18n="pasteNote">Paste Note</h2>
+            <p data-i18n="pasteNoteBody">Save a quick research note, critique, idea or page draft directly into the local library.</p>
+            <div class="link-form-grid">
+              <label><span data-i18n="noteTitle">Title</span><input id="noteTitle" placeholder="Interview insight / Feedback note" /></label>
+              <label><span data-i18n="project">Project</span><input id="noteProject" placeholder="reader-design / info-center / general" value="general" /></label>
+              <label><span data-i18n="designStage">Design Stage</span><select id="noteDesignStage"><option>research</option><option>insight</option><option>concept</option><option>development</option><option>reflection</option><option>unknown</option></select></label>
+              <label><span data-i18n="materialType">Material Type</span><select id="noteMaterialType"><option>research</option><option>feedback</option><option>idea</option><option>draft</option><option>reference</option><option>unknown</option></select></label>
+            </div>
+            <label><span data-i18n="placement">Portfolio Placement</span><input id="notePlacement" placeholder="Pain Points / User Research / Design Process" /></label>
+            <label class="wide"><span data-i18n="noteContent">Content</span><textarea id="noteContent" rows="7" placeholder="Paste research notes, feedback, project logic or draft copy..."></textarea></label>
+            <button id="saveNoteButton" class="primary" data-i18n="saveNote">Save Note</button>
+            <div id="noteSaveResult" class="material-list compact-result"></div>
+          </article>
+
+          <article class="add-method">
+            <p class="eyebrow">D</p>
+            <h2 data-i18n="importFolder">Import Folder</h2>
+            <p data-i18n="importFolderBody">DesignMate scans local folders and adds materials to the local database.</p>
+            <ol class="import-steps">
+              <li data-i18n="importStep1">Put files into the DesignMate user materials folder</li>
+              <li data-i18n="importStep2">Run the scan script</li>
+              <li data-i18n="importStep3">Return to Search Hub to search them</li>
+            </ol>
+            <p class="meta"><span data-i18n="scanCommand">Scan command</span></p>
+            <code>python DesignMate/scripts/run_designmate.py</code>
+            <code>run_designmate.bat</code>
+          </article>
+        </section>
       </section>
 
       <section id="searchView" class="view">

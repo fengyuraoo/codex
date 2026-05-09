@@ -1,5 +1,15 @@
 # DesignMate Roadmap
 
+## v0.7.2 Bilingual Design Workflow (completed)
+
+- Add Chinese / English language switch in the top navigation.
+- Persist language preference in `localStorage`.
+- Cover primary UI copy across Search Hub, Text Search, Image Search, Link Capture, Ask DesignMate, Reports, static mode prompts and Design Evidence Cards.
+- Add bilingual Ask DesignMate fallback section titles.
+- Add bilingual Link Capture success summary card.
+- Add `docs/v0.7.2_bilingual_workflow.md`.
+- Add `tests/test_v072_bilingual.py` and `scripts/quality_gate_v072.py`.
+
 ## v0.7.1 Link Capture (completed)
 
 - Add Link Capture for external inspiration links.

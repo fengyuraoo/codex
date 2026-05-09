@@ -1,6 +1,6 @@
 # Latest Portfolio Materials
 
-Generated at: 2026-05-09T19:58:57
+Generated at: 2026-05-09T21:28:16
 
 ## general-design-critique-checklist.md
 
@@ -379,6 +379,60 @@ Generated at: 2026-05-09T19:58:57
 - 分数：85
 - 可用理由：有正文；类型明确为 sketch；可对应 development 阶段；项目归属为 general；包含 草图、方案、作品集
 - 路径：`data/examples/sketch_reference_note.md`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-98e4e91d23efceee`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-3f061f2fe3fd278b`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-c8c9823775f1c16d`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-98a3a120fc36e675`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-2f2c9cd9c37cce8f`
+
+## Add Materials unit note.note
+
+- 类型：research
+- 项目：reader-design
+- 作品集阶段：research
+- 分数：82
+- 可用理由：Captured from Add Materials / Paste Note as user-provided design evidence.
+- 路径：`pasted-note://note-7f0e1ec3f3adf2dd`
 
 ## info-center-circulation-flow.md
 

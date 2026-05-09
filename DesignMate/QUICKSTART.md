@@ -1,5 +1,13 @@
 # Quickstart
 
+## v0.7.2 language switch
+
+1. Open the Web UI at `http://127.0.0.1:8766/`.
+2. Use the top-right `中 / EN` buttons.
+3. `中` is better for daily design material organization.
+4. `EN` is better for portfolio screenshots and demo recordings.
+5. The choice is saved in your browser and reused next time.
+
 ## v0.7.1 Link Capture quick use
 
 1. Start the API:

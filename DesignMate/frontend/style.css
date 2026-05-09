@@ -52,6 +52,30 @@ code { background: #f1eef7; border: 1px solid var(--line); border-radius: 6px; p
 .topbar p, .meta, .why, .status { color: var(--muted); }
 
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.language-toggle {
+  display: flex;
+  gap: 4px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  border-radius: 12px;
+  padding: 3px;
+}
+.language-toggle .secondary {
+  min-height: 32px;
+  padding: 0 9px;
+  border-radius: 9px;
+  border-color: transparent;
+  background: transparent;
+}
+.language-toggle .active {
+  background: var(--accent-strong);
+  color: #fff;
+}
 .tab, .secondary, .primary, .quick-filters button {
   border: 1px solid var(--line);
   background: var(--panel);
@@ -141,7 +165,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 28px 22px 44px; }
   gap: 14px;
   width: min(900px, 100%);
 }
-.hub-entry, .entry-card, .ask-panel, .ask-result, .image-shell, .why-designmate, .showcase-panel, .onboarding, .stat, .mini-card, .material-card, .detail, .report-grid article, .empty {
+.hub-entry, .entry-card, .ask-panel, .ask-result, .image-shell, .why-designmate, .showcase-panel, .onboarding, .stat, .mini-card, .material-card, .detail, .report-grid article, .empty, .add-materials-hero, .add-method {
   background: rgba(255, 253, 250, 0.94);
   border: 1px solid rgba(217, 222, 236, 0.92);
   border-radius: 18px;
@@ -156,6 +180,78 @@ main { max-width: 1240px; margin: 0 auto; padding: 28px 22px 44px; }
 .hub-entry:hover { transform: translateY(-2px); border-color: var(--violet); }
 .hub-entry strong { display: block; font-size: 18px; margin-bottom: 8px; }
 .hub-entry p, .why-designmate p, .entry-card p { color: var(--muted); }
+.hub-entry-primary {
+  background: linear-gradient(135deg, rgba(234, 239, 255, 0.96), rgba(255, 253, 250, 0.98));
+  border-color: rgba(146, 151, 214, 0.5);
+}
+.hub-add-button {
+  margin: 18px auto 4px;
+  display: inline-flex;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.add-materials-hero {
+  padding: 34px;
+  margin-bottom: 22px;
+}
+.add-materials-hero h1 {
+  font-size: clamp(36px, 6vw, 68px);
+  margin: 4px 0 12px;
+}
+.add-materials-hero p:last-child {
+  max-width: 860px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.add-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.add-method {
+  padding: 24px;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+.add-method h2 {
+  margin: 0;
+  font-size: 24px;
+}
+.add-method p {
+  color: var(--muted);
+}
+.add-method label {
+  display: grid;
+  gap: 6px;
+  color: var(--text);
+}
+.add-method code {
+  display: block;
+  background: rgba(236, 239, 247, 0.95);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--accent-strong);
+  overflow-wrap: anywhere;
+}
+.add-upload-zone {
+  min-height: 150px;
+}
+.compact-result {
+  display: grid;
+  gap: 10px;
+}
+.compact-result .material-card {
+  margin: 0;
+}
+.import-steps {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text);
+  line-height: 1.8;
+}
 
 .showcase-panel, .why-designmate, .onboarding {
   padding: 22px;
@@ -336,6 +432,19 @@ textarea { padding: 10px; resize: vertical; }
   color: var(--accent-strong);
   text-decoration: none;
 }
+.link-summary {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 8px 12px;
+  margin: 12px 0 0;
+}
+.link-summary dt {
+  color: var(--muted);
+}
+.link-summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
 .user-note {
   border-radius: 12px;
   color: var(--ink);
@@ -407,7 +516,7 @@ textarea { padding: 10px; resize: vertical; }
 .status.error { border-color: #c96b6b; color: #8d2020; }
 
 @media (max-width: 980px) {
-  .topbar, .layout, .controls, .distribution, .report-grid, .showcase-panel, .batch-toolbar, .entry-grid, .ask-panel, .step-grid, .hub-entry-grid, .image-shell, .link-form-grid, .image-query, .hub-search, .evidence-meta, .answer {
+  .topbar, .top-actions, .layout, .controls, .distribution, .report-grid, .showcase-panel, .batch-toolbar, .entry-grid, .ask-panel, .step-grid, .hub-entry-grid, .image-shell, .link-form-grid, .image-query, .hub-search, .evidence-meta, .answer, .add-method-grid {
     display: grid;
     grid-template-columns: 1fr;
   }
