@@ -46,17 +46,17 @@ window.DESIGNMATE_DATA = {
       "import": {
         "inbox_file_count": 36,
         "library_file_count": 0,
-        "last_scan_time": "2026-05-09T21:28:15",
-        "last_report_time": "2026-05-09T21:28:16",
+        "last_scan_time": "2026-05-09T21:43:20",
+        "last_report_time": "2026-05-09T21:43:20",
         "watched_folders": [
           "data/examples",
           "data/inbox",
           "data/library"
         ],
         "latest_batch": {
-          "id": "scan-fab8b2c8d411",
-          "started_at": "2026-05-09T21:28:13",
-          "finished_at": "2026-05-09T21:28:13",
+          "id": "scan-772952576d64",
+          "started_at": "2026-05-09T21:43:18",
+          "finished_at": "2026-05-09T21:43:18",
           "total_files": 72,
           "new_files": 0,
           "updated_files": 0,
@@ -68,17 +68,17 @@ window.DESIGNMATE_DATA = {
     "import_stats": {
       "inbox_file_count": 36,
       "library_file_count": 0,
-      "last_scan_time": "2026-05-09T21:28:15",
-      "last_report_time": "2026-05-09T21:28:16",
+      "last_scan_time": "2026-05-09T21:43:20",
+      "last_report_time": "2026-05-09T21:43:20",
       "watched_folders": [
         "data/examples",
         "data/inbox",
         "data/library"
       ],
       "latest_batch": {
-        "id": "scan-fab8b2c8d411",
-        "started_at": "2026-05-09T21:28:13",
-        "finished_at": "2026-05-09T21:28:13",
+        "id": "scan-772952576d64",
+        "started_at": "2026-05-09T21:43:18",
+        "finished_at": "2026-05-09T21:43:18",
         "total_files": 72,
         "new_files": 0,
         "updated_files": 0,
@@ -113,8 +113,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -131,7 +131,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:15"
+        "updated_at": "2026-05-09T21:43:20"
       },
       {
         "id": "mat-76512a8f2d58",
@@ -159,8 +159,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "bdda92e776159f107b867dad79211941ca87ef30",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -177,7 +177,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:15"
+        "updated_at": "2026-05-09T21:43:20"
       },
       {
         "id": "mat-d4580285d017",
@@ -207,8 +207,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "ab8c5ac8ce7d9c8b50254aa4752a25870e0f8e4c",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -225,7 +225,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-df63ba5d00f8",
@@ -256,8 +256,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "e5df39536bd0871f5cbc6adcff0a79dff36cc018",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -274,7 +274,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-60428ed780cd",
@@ -306,8 +306,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "577fca56ffc8a136247697a64282c66606fdcad5",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -324,7 +324,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-dfc2acd76148",
@@ -357,8 +357,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "bdda92e776159f107b867dad79211941ca87ef30",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -375,7 +375,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-fb5eae63b8d8",
@@ -405,8 +405,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "ab8c5ac8ce7d9c8b50254aa4752a25870e0f8e4c",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -423,7 +423,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-daa0a8e04c35",
@@ -454,8 +454,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "e5df39536bd0871f5cbc6adcff0a79dff36cc018",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -472,7 +472,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-57a27cc7177e",
@@ -505,8 +505,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "37258921446b7cd22855ce7b872c1cabd08bfe21",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -523,7 +523,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-a14da01822ed",
@@ -554,8 +554,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "ee2a6c97804ce16c007ef8be9edfaf4643c33a36",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -572,7 +572,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-d2fceaa5fb7b",
@@ -605,8 +605,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "37258921446b7cd22855ce7b872c1cabd08bfe21",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -623,7 +623,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-51838444fb54",
@@ -654,8 +654,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "ee2a6c97804ce16c007ef8be9edfaf4643c33a36",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -672,7 +672,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-fb3d10cf2dc1",
@@ -703,8 +703,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5c0874005a7c9a5069a345a63d0f18fe61ccebd2",
         "first_seen_at": "2026-05-06T22:33:28",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -721,7 +721,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:33:28",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-ec4a0b556b6a",
@@ -754,8 +754,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "58cf30fd74cf7062cc73d9e103ccf88a3989eb4c",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -772,7 +772,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5126ef2253a8",
@@ -802,8 +802,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "185eee33dd1856d441a40a05aee2971bc08fb26b",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -820,7 +820,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-c782f9acdc3f",
@@ -849,8 +849,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "832fa03d2458b6d6bdce20b80517c24d8ab18b7b",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -867,7 +867,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-e1305e1c5e72",
@@ -896,8 +896,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "9fcfb5901eb41499a24f405b25b95a4749201a55",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -914,7 +914,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-8ab102771ef3",
@@ -944,8 +944,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e4d8ab85eb9c72320f7649d0932a56ea09ae420a",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -962,7 +962,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-3257caf95946",
@@ -993,8 +993,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5c0874005a7c9a5069a345a63d0f18fe61ccebd2",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1011,7 +1011,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-18ecff5a94a2",
@@ -1044,8 +1044,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "58cf30fd74cf7062cc73d9e103ccf88a3989eb4c",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1062,7 +1062,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-672202e5b355",
@@ -1092,8 +1092,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "185eee33dd1856d441a40a05aee2971bc08fb26b",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1110,7 +1110,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-ece2f8def105",
@@ -1139,8 +1139,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "832fa03d2458b6d6bdce20b80517c24d8ab18b7b",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1157,7 +1157,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-fc4ed6a401d8",
@@ -1186,8 +1186,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "9fcfb5901eb41499a24f405b25b95a4749201a55",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1204,7 +1204,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-63ff7227be82",
@@ -1234,8 +1234,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e4d8ab85eb9c72320f7649d0932a56ea09ae420a",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1252,7 +1252,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-ca8912ad16ca",
@@ -1281,8 +1281,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "082e79e16b0e367f034755abb2ffab814bbc338d",
         "first_seen_at": "2026-05-06T22:33:28",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1299,7 +1299,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:33:28",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5880f90d9cca",
@@ -1330,8 +1330,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5a3fdd985bf1ac25d664ce8563802d6b38eaa2b2",
         "first_seen_at": "2026-05-06T22:33:28",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1348,7 +1348,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:33:28",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-0f4493b41e40",
@@ -1377,8 +1377,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "fbbde0464587c22076f7dd5110cf182c94253bb2",
         "first_seen_at": "2026-05-06T22:33:28",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1395,7 +1395,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:33:28",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-8587d678fd1e",
@@ -1425,8 +1425,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "c157c0321cba744e58150c11dc56bcfd004fdd0d",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1443,7 +1443,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-9ee66b0234ef",
@@ -1473,8 +1473,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a22ffb6bf4ca47c84da882bf1d7239f23fa702b8",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1491,7 +1491,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-58d28f79ed49",
@@ -1521,8 +1521,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a1c39e5fea639830dc353f639b56c853edd6c3e5",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1539,7 +1539,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-d400143318c8",
@@ -1566,8 +1566,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "73b87693f04b6c1501c83db0bcd6356e1e57f784",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1584,7 +1584,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-30122984ed71",
@@ -1616,8 +1616,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "23be82308997652a2c3d2ae6ac8b85f4ced72bbd",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1634,7 +1634,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-94a2d214699b",
@@ -1663,8 +1663,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "b5a362aa8546e7a8bb57721fde158a35abd828e9",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1681,7 +1681,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-7202c0bfdb7a",
@@ -1711,8 +1711,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "c157c0321cba744e58150c11dc56bcfd004fdd0d",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1729,7 +1729,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-d9d819d845e7",
@@ -1759,8 +1759,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a22ffb6bf4ca47c84da882bf1d7239f23fa702b8",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1777,7 +1777,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-0a94f7fa3fe8",
@@ -1807,8 +1807,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a1c39e5fea639830dc353f639b56c853edd6c3e5",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1825,7 +1825,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5c7435626550",
@@ -1854,8 +1854,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "082e79e16b0e367f034755abb2ffab814bbc338d",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1872,7 +1872,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-69e2bf604f07",
@@ -1899,8 +1899,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "73b87693f04b6c1501c83db0bcd6356e1e57f784",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1917,7 +1917,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-339db57c7f2f",
@@ -1949,8 +1949,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "23be82308997652a2c3d2ae6ac8b85f4ced72bbd",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -1967,7 +1967,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-b82e5f579ef3",
@@ -1996,8 +1996,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "b5a362aa8546e7a8bb57721fde158a35abd828e9",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2014,7 +2014,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-bc3901eb4040",
@@ -2045,8 +2045,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5a3fdd985bf1ac25d664ce8563802d6b38eaa2b2",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2063,7 +2063,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-e1b23b44ca3c",
@@ -2092,8 +2092,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "fbbde0464587c22076f7dd5110cf182c94253bb2",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2110,7 +2110,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "note-98e4e91d23efceee",
@@ -2118,7 +2118,7 @@ window.DESIGNMATE_DATA = {
         "path": "pasted-note://note-98e4e91d23efceee",
         "extension": "note",
         "size": 98,
-        "modified_time": "2026-05-09T21:28:09",
+        "modified_time": "2026-05-09T21:43:14",
         "source_folder": "paste-note",
         "content_preview": "add-materials-unit-search-token 用户痛点来自课堂反馈，适合放进作品集调研页。",
         "content_full_path": "index/materials_content/note-98e4e91d23efceee.txt",
@@ -2142,7 +2142,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "confirmed",
         "file_hash": "",
         "first_seen_at": "2026-05-09T20:39:10",
-        "last_seen_at": "2026-05-09T21:28:09",
+        "last_seen_at": "2026-05-09T21:43:14",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -2160,7 +2160,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "research",
         "portfolio_placement": "User Research",
         "created_at": "2026-05-09T20:39:10",
-        "updated_at": "2026-05-09T21:28:09"
+        "updated_at": "2026-05-09T21:43:14"
       },
       {
         "id": "note-3f061f2fe3fd278b",
@@ -2441,8 +2441,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e0c732cd6599f19bf84cffb2261f80eec4a1d5e9",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2459,7 +2459,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-113e355a867c",
@@ -2489,8 +2489,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "039084036e0527078d5bdb00bf3a6ba668d6f758",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2507,7 +2507,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-b3050cc3f6c6",
@@ -2536,8 +2536,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "1eca23fb7b327022c2f51132f51fb41ab0bb9bd5",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2554,7 +2554,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-31bf56f9fdcb",
@@ -2585,8 +2585,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "598c79737c7d3c3c63b530347c086b289f1e28a3",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2603,7 +2603,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5d7b4dbd69d5",
@@ -2633,8 +2633,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e438c77506e3f59a56678b13643c7d0c45c9bc76",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2651,7 +2651,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-212a4b973648",
@@ -2682,8 +2682,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e0c732cd6599f19bf84cffb2261f80eec4a1d5e9",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2700,7 +2700,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-312cea4420ba",
@@ -2730,8 +2730,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "039084036e0527078d5bdb00bf3a6ba668d6f758",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2748,7 +2748,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-f66603d37a42",
@@ -2777,8 +2777,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "1eca23fb7b327022c2f51132f51fb41ab0bb9bd5",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2795,7 +2795,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-1dd00506ada0",
@@ -2826,8 +2826,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "598c79737c7d3c3c63b530347c086b289f1e28a3",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2844,7 +2844,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-f9e653e1dc73",
@@ -2874,8 +2874,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "e438c77506e3f59a56678b13643c7d0c45c9bc76",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2892,7 +2892,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-0b842113edcc",
@@ -2920,8 +2920,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a9a5f906155561f57cb3bd620d5e34cc95939a53",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2938,7 +2938,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-3c5126646e9e",
@@ -2967,8 +2967,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "bd8bc9deba6fead1e2e4c0f81933c9c7205c3d16",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -2985,7 +2985,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-7a1c5f38ef76",
@@ -3014,8 +3014,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "fdb83450d13ef7f7f7a9f4483bc83f8c023461a4",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3032,7 +3032,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-3af144c80e80",
@@ -3061,8 +3061,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "4ad06683a19bf56a8ae1e2806bfe21ef408646c9",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3079,7 +3079,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-ba6feb0c13c8",
@@ -3107,8 +3107,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5f57acd4b3ac66e62e06a1df4dce380df7979fea",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3125,7 +3125,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-345b220f9eb9",
@@ -3155,8 +3155,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "3f6f47a4c5153e925555645a06b8243aae047720",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3173,7 +3173,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-9c68cefcb6bb",
@@ -3201,8 +3201,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "a9a5f906155561f57cb3bd620d5e34cc95939a53",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3219,7 +3219,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5d534954879b",
@@ -3248,8 +3248,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "bd8bc9deba6fead1e2e4c0f81933c9c7205c3d16",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3266,7 +3266,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-b809aee2df32",
@@ -3295,8 +3295,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "fdb83450d13ef7f7f7a9f4483bc83f8c023461a4",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3313,7 +3313,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-fa467f388d29",
@@ -3342,8 +3342,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "4ad06683a19bf56a8ae1e2806bfe21ef408646c9",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3360,7 +3360,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-6ddede3b0968",
@@ -3388,8 +3388,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5f57acd4b3ac66e62e06a1df4dce380df7979fea",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3406,7 +3406,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-af1d28097240",
@@ -3436,8 +3436,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "3f6f47a4c5153e925555645a06b8243aae047720",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3454,7 +3454,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-40b5503ac0d5",
@@ -3482,8 +3482,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5bece1c33db8593064016b8e6d4537b6eff7156b",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3500,7 +3500,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-4666a27c484c",
@@ -3528,8 +3528,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "5bece1c33db8593064016b8e6d4537b6eff7156b",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3546,7 +3546,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-d39cc1d384bb",
@@ -3574,8 +3574,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "cda8c7a1f61c5b21c418f84c0618169a7d64323a",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3592,7 +3592,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-56ec384aa1fa",
@@ -3619,8 +3619,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "3d661f5d5a16de237cb43312c74bec7c22a3bab8",
         "first_seen_at": "2026-05-06T22:36:59",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3637,7 +3637,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-06T22:36:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-7ddead4f55db",
@@ -3665,8 +3665,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "cda8c7a1f61c5b21c418f84c0618169a7d64323a",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3683,7 +3683,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-5f2ed417f7b3",
@@ -3710,8 +3710,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "3d661f5d5a16de237cb43312c74bec7c22a3bab8",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "",
         "image_width": 0,
@@ -3728,7 +3728,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "link-9ec83e625fd3a3c7",
@@ -3736,7 +3736,7 @@ window.DESIGNMATE_DATA = {
         "path": "https://www.douyin.com/video/123",
         "extension": "link",
         "size": 0,
-        "modified_time": "2026-05-09T21:28:09",
+        "modified_time": "2026-05-09T21:43:14",
         "source_folder": "link-capture",
         "content_preview": "Title: douyin link\nPlatform: douyin\nURL: https://www.douyin.com/video/123\nUser note: short video reference for interaction motion\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
         "content_full_path": "",
@@ -3760,7 +3760,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "9ec83e625fd3a3c796db8ce3769abaa1085e7a22",
         "first_seen_at": "2026-05-09T19:14:16",
-        "last_seen_at": "2026-05-09T21:28:13",
+        "last_seen_at": "2026-05-09T21:43:18",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -3778,7 +3778,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "inspiration",
         "portfolio_placement": "Moodboard",
         "created_at": "2026-05-09T19:14:16",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "link-30e8b428c0d3dfda",
@@ -3786,7 +3786,7 @@ window.DESIGNMATE_DATA = {
         "path": "https://example.com/design-reference",
         "extension": "link",
         "size": 0,
-        "modified_time": "2026-05-09T21:28:09",
+        "modified_time": "2026-05-09T21:43:14",
         "source_folder": "link-capture",
         "content_preview": "Title: generic webpage link\nPlatform: generic webpage\nURL: https://example.com/design-reference\nUser note: example reference for moodboard\nCapture note: Link captured.",
         "content_full_path": "",
@@ -3811,7 +3811,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "30e8b428c0d3dfda639f5b7e007085e16772cc7a",
         "first_seen_at": "2026-05-09T19:14:16",
-        "last_seen_at": "2026-05-09T21:28:13",
+        "last_seen_at": "2026-05-09T21:43:18",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -3829,7 +3829,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "reference",
         "portfolio_placement": "Moodboard",
         "created_at": "2026-05-09T19:14:16",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "link-01deac4febc0133b",
@@ -3860,7 +3860,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "01deac4febc0133b76c4451d88728cdf80214aa9",
         "first_seen_at": "2026-05-09T19:09:57",
-        "last_seen_at": "2026-05-09T21:28:13",
+        "last_seen_at": "2026-05-09T21:43:18",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -3878,7 +3878,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "reference",
         "portfolio_placement": "Moodboard",
         "created_at": "2026-05-09T19:09:57",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "link-094f18ce8b8bbbbb",
@@ -3886,7 +3886,7 @@ window.DESIGNMATE_DATA = {
         "path": "https://www.bilibili.com/video/BV1DesignMateSmoke",
         "extension": "link",
         "size": 0,
-        "modified_time": "2026-05-09T21:28:11",
+        "modified_time": "2026-05-09T21:43:16",
         "source_folder": "link-capture",
         "content_preview": "Title: bilibili link\nPlatform: bilibili\nURL: https://www.bilibili.com/video/BV1DesignMateSmoke\nUser note: api smoke external reference\nCapture note: This platform may limit automatic extraction. The link is saved, and your note will help DesignMate understand why it matters.",
         "content_full_path": "",
@@ -3910,7 +3910,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "094f18ce8b8bbbbb9f3fedd0db54661477eaa094",
         "first_seen_at": "2026-05-09T19:15:22",
-        "last_seen_at": "2026-05-09T21:28:13",
+        "last_seen_at": "2026-05-09T21:43:18",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -3928,7 +3928,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "inspiration",
         "portfolio_placement": "Moodboard",
         "created_at": "2026-05-09T19:15:22",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "link-b4fe378f5745bbcb",
@@ -3936,7 +3936,7 @@ window.DESIGNMATE_DATA = {
         "path": "https://www.behance.net/gallery/bilingual-test",
         "extension": "link",
         "size": 0,
-        "modified_time": "2026-05-09T21:28:09",
+        "modified_time": "2026-05-09T21:43:14",
         "source_folder": "link-capture",
         "content_preview": "Title: behance link\nPlatform: behance\nURL: https://www.behance.net/gallery/bilingual-test\nUser note: bilingual workflow reference\nCapture note: Link captured.",
         "content_full_path": "",
@@ -3959,7 +3959,7 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "b4fe378f5745bbcbbeea7244dfaab8f07635fc6e",
         "first_seen_at": "2026-05-09T20:24:59",
-        "last_seen_at": "2026-05-09T21:28:13",
+        "last_seen_at": "2026-05-09T21:43:18",
         "scan_batch_id": "",
         "is_duplicate": false,
         "image_preview_path": "",
@@ -3977,7 +3977,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "reference",
         "portfolio_placement": "Moodboard",
         "created_at": "2026-05-09T20:24:59",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-a9754fc26e4a",
@@ -4002,8 +4002,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "eeb3de47efe293b7d1e7b66fa1c5bb2e6c5114eb",
         "first_seen_at": "2026-05-07T14:54:16",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "data/images/mat-a9754fc26e4a.png",
         "image_width": 0,
@@ -4020,7 +4020,7 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T14:54:16",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       },
       {
         "id": "mat-f1080306a896",
@@ -4028,7 +4028,7 @@ window.DESIGNMATE_DATA = {
         "path": "data/examples/v06-fake-image.png",
         "extension": "png",
         "size": 14,
-        "modified_time": "2026-05-09T21:28:07",
+        "modified_time": "2026-05-09T21:43:13",
         "source_folder": "data/examples",
         "content_preview": "Image parse failed. 待接入图像理解模型。",
         "content_full_path": "",
@@ -4045,8 +4045,8 @@ window.DESIGNMATE_DATA = {
         "review_status": "needs_review",
         "file_hash": "eeb3de47efe293b7d1e7b66fa1c5bb2e6c5114eb",
         "first_seen_at": "2026-05-07T23:42:11",
-        "last_seen_at": "2026-05-09T21:28:13",
-        "scan_batch_id": "scan-fab8b2c8d411",
+        "last_seen_at": "2026-05-09T21:43:18",
+        "scan_batch_id": "scan-772952576d64",
         "is_duplicate": true,
         "image_preview_path": "data/images/mat-f1080306a896.png",
         "image_width": 0,
@@ -4063,24 +4063,24 @@ window.DESIGNMATE_DATA = {
         "design_stage": "",
         "portfolio_placement": "",
         "created_at": "2026-05-07T23:42:11",
-        "updated_at": "2026-05-09T21:28:13"
+        "updated_at": "2026-05-09T21:43:18"
       }
     ]
   },
   "import_stats": {
     "inbox_file_count": 36,
     "library_file_count": 0,
-    "last_scan_time": "2026-05-09T21:28:15",
-    "last_report_time": "2026-05-09T21:28:16",
+    "last_scan_time": "2026-05-09T21:43:20",
+    "last_report_time": "2026-05-09T21:43:20",
     "watched_folders": [
       "data/examples",
       "data/inbox",
       "data/library"
     ],
     "latest_batch": {
-      "id": "scan-fab8b2c8d411",
-      "started_at": "2026-05-09T21:28:13",
-      "finished_at": "2026-05-09T21:28:13",
+      "id": "scan-772952576d64",
+      "started_at": "2026-05-09T21:43:18",
+      "finished_at": "2026-05-09T21:43:18",
       "total_files": 72,
       "new_files": 0,
       "updated_files": 0,
@@ -4088,37 +4088,37 @@ window.DESIGNMATE_DATA = {
       "failed_files": 2
     }
   },
-  "latest_report": "# DesignMate 本地资料报告\n\nGenerated at: 2026-05-09T21:28:16\n\n## 1. 今日摘要\n\n当前资料库共有 83 条资料，其中 72 条属于高价值资料，8 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。\n数据来源：Demo 36 条，User inbox 42 条，Imported library 5 条，Unknown 0 条。\n如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。\n\n### 新增资料提示\n\n- 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。\n- 上次扫描时间：2026-05-09T21:28:15。\n- 上次报告生成时间：2026-05-09T21:28:14。\n- 最近扫描批次：scan-fab8b2c8d411，新增 0，更新 0，重复 72，失败 2。\n\n### 未解析资料提示\n\n- 未解析或解析异常资料：13 条。\n- 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。\n\n### 建议补充资料\n\n- 阅读器设计：补充低干扰阅读的用户访谈摘录、草图演进和功能取舍说明。\n- 图信中心设计：补充空间调研照片说明、动线观察记录和功能分区依据。\n- 论文资料：补充双城通勤的概念定义、样本来源和结论边界。\n\n### 本次扫描资料状态\n\n- 本次新增资料：0 条。\n- 本次更新资料：0 条。\n- 重复资料：72 条。\n- 解析失败资料：2 条。\n\n## 2. 资料分布\n\n### 类型分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| competitor | 4 |\n| draft | 8 |\n| feedback | 19 |\n| idea | 8 |\n| paper | 6 |\n| reference | 9 |\n| research | 23 |\n| sketch | 4 |\n| unknown | 2 |\n\n### 项目分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| general | 20 |\n| info-center | 18 |\n| reader-design | 27 |\n| thesis | 10 |\n| unknown | 8 |\n\n### 阶段分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| background | 8 |\n| concept | 10 |\n| development | 16 |\n| presentation | 14 |\n| research | 27 |\n| unknown | 8 |\n\n### 解析状态\n\n| 项目 | 数量 |\n| --- | ---: |\n| link_captured | 5 |\n| note_captured | 6 |\n| parse_failed | 2 |\n| parsed | 70 |\n\n### 数据来源\n\n| 项目 | 数量 |\n| --- | ---: |\n| demo | 36 |\n| imported | 5 |\n| user | 42 |\n\n## 3. 高价值资料 Top 10\n\n### general-design-critique-checklist.md\n\n- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：concept\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-page-structure.md\n\n- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-low-interruption-reading.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：background\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-sketch-panel-layout.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### general-design-critique-checklist.md\n\n- 为什么重要：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：concept\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-page-structure.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-low-interruption-reading.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：background\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-sketch-panel-layout.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-feedback-page-order.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-feedback-mentor.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n## 4. 项目视角分析\n\n### reader-design\n\n- 当前资料数量：27\n- 最强资料：reader-design-low-interruption-reading.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### info-center\n\n- 当前资料数量：18\n- 最强资料：info-center-feedback-teacher.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### thesis\n\n- 当前资料数量：10\n- 最强资料：thesis-commuter-group.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### general\n\n- 当前资料数量：20\n- 最强资料：general-design-critique-checklist.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### unknown\n\n- 当前资料数量：8\n- 最强资料：research_feedback.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n## 5. 作品集转化建议\n\n### 背景页可用资料\n\n- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈\n- `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈\n- `thesis-dual-city-commute.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-langfang-urban-structure.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-dual-city-commute.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-langfang-urban-structure.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n\n### 调研页可用资料\n\n- `reader-design-user-interview-commute.md`：有正文；正文信息量较足；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、痛点\n- `reader-design-user-interview-commute.md`：有正文；正文信息量较足；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、痛点\n- `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案\n- `info-center-space-research.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研、动线\n- `portfolio-pain-point-analysis.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 general；包含 用户、痛点、作品集\n- `reader-design-research-note-reading-goals.txt`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、调研、低干扰\n- `info-center-space-research.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研、动线\n- `portfolio-pain-point-analysis.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 general；包含 用户、痛点、作品集\n\n### 痛点页可用资料\n\n- 暂无明确资料。\n\n### 概念页可用资料\n\n- `general-design-critique-checklist.md`：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- `general-design-critique-checklist.md`：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会\n- `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-competitor-kindle-notion.md`：有正文；类型明确为 competitor；可对应 concept 阶段；项目归属为 reader-design；包含 方案、机会、低干扰\n- `reader-design-competitor-kindle-notion.md`：有正文；类型明确为 competitor；可对应 concept 阶段；项目归属为 reader-design；包含 方案、机会、低干扰\n\n### 发展页可用资料\n\n- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- `info-center-feedback-teacher.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线\n- `info-center-feedback-teacher.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线\n- `sketch_reference_note.md`：有正文；类型明确为 sketch；可对应 development 阶段；项目归属为 general；包含 草图、方案、作品集\n- `reader-design-draft-portfolio-page.txt`：有正文；类型明确为 draft；可对应 development 阶段；项目归属为 reader-design；包含 用户、草图、机会\n\n### 最终展示页可用资料\n\n- 暂无明确资料。\n\n## 6. 需要确认的问题\n\n- `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？\n- `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？\n\n## 7. 明日任务\n\n- P0：复核 unknown 项目归属，优先处理高分资料。\n- P0：为阅读器设计补充一条用户痛点到设计机会的证据链。\n- P0：为图信中心设计补充空间动线和功能分区之间的关系。\n- P0：检查 feedback 类资料，把可执行修改点拆成任务。\n- P1：把 Top 10 高价值资料分别标注可进入的作品集页。\n- P1：为 thesis 资料确认是否进入作品集或独立论文资料库。\n- P1：为每个项目补一段 100 字项目概括。\n- P1：将 inbox 中已确认资料迁移到 library。\n- P2：给图片资料补充手动描述，方便后续搜索。\n- P2：整理一份页面结构草稿，把背景、调研、洞察、方案串起来。\n- P2：准备 PDF/DOCX/PPTX 解析测试文件。\n- P2：记录 Web UI 中最想先编辑的字段。\n",
-  "latest_need_confirm": "# Latest Need Confirm\n\nGenerated at: 2026-05-09T21:28:16\n\n- [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- [ ] `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？\n- [ ] `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- [ ] `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？",
-  "latest_next_actions": "# Latest Next Actions\n\nGenerated at: 2026-05-09T21:28:16\n\n- [ ] P0：复核 unknown 项目归属，优先处理高分资料。\n- [ ] P0：为阅读器设计补充一条用户痛点到设计机会的证据链。\n- [ ] P0：为图信中心设计补充空间动线和功能分区之间的关系。\n- [ ] P0：检查 feedback 类资料，把可执行修改点拆成任务。\n- [ ] P1：把 Top 10 高价值资料分别标注可进入的作品集页。\n- [ ] P1：为 thesis 资料确认是否进入作品集或独立论文资料库。\n- [ ] P1：为每个项目补一段 100 字项目概括。\n- [ ] P1：将 inbox 中已确认资料迁移到 library。\n- [ ] P2：给图片资料补充手动描述，方便后续搜索。\n- [ ] P2：整理一份页面结构草稿，把背景、调研、洞察、方案串起来。\n- [ ] P2：准备 PDF/DOCX/PPTX 解析测试文件。\n- [ ] P2：记录 Web UI 中最想先编辑的字段。",
+  "latest_report": "# DesignMate 本地资料报告\n\nGenerated at: 2026-05-09T21:43:20\n\n## 1. 今日摘要\n\n当前资料库共有 83 条资料，其中 72 条属于高价值资料，8 条仍需要确认分类或项目归属。`data/inbox` 中有 36 个文件，`data/library` 中有 0 个文件；资料已经写入本地 SQLite，并同步生成搜索索引、报告和 Web UI 数据。\n数据来源：Demo 36 条，User inbox 42 条，Imported library 5 条，Unknown 0 条。\n如果真实资料数量较少，请优先把自己的调研、草图说明、老师反馈、竞品分析和旧作品集文案放入 `data/inbox`，再重新运行扫描。不要把 demo 数据当成真实项目结论。\n\n### 新增资料提示\n\n- 当前 inbox 文件数：36。如果今天刚加入真实项目资料，建议先在 Search 中用项目名、痛点、调研、反馈等关键词检查命中情况。\n- 上次扫描时间：2026-05-09T21:43:20。\n- 上次报告生成时间：2026-05-09T21:43:19。\n- 最近扫描批次：scan-772952576d64，新增 0，更新 0，重复 72，失败 2。\n\n### 未解析资料提示\n\n- 未解析或解析异常资料：13 条。\n- 对 PDF、DOCX、PPTX 或图片资料，建议补一份同名 Markdown 摘要，写清项目、场景、证据价值和可用于作品集的位置。\n\n### 建议补充资料\n\n- 阅读器设计：补充低干扰阅读的用户访谈摘录、草图演进和功能取舍说明。\n- 图信中心设计：补充空间调研照片说明、动线观察记录和功能分区依据。\n- 论文资料：补充双城通勤的概念定义、样本来源和结论边界。\n\n### 本次扫描资料状态\n\n- 本次新增资料：0 条。\n- 本次更新资料：0 条。\n- 重复资料：72 条。\n- 解析失败资料：2 条。\n\n## 2. 资料分布\n\n### 类型分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| competitor | 4 |\n| draft | 8 |\n| feedback | 19 |\n| idea | 8 |\n| paper | 6 |\n| reference | 9 |\n| research | 23 |\n| sketch | 4 |\n| unknown | 2 |\n\n### 项目分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| general | 20 |\n| info-center | 18 |\n| reader-design | 27 |\n| thesis | 10 |\n| unknown | 8 |\n\n### 阶段分布\n\n| 项目 | 数量 |\n| --- | ---: |\n| background | 8 |\n| concept | 10 |\n| development | 16 |\n| presentation | 14 |\n| research | 27 |\n| unknown | 8 |\n\n### 解析状态\n\n| 项目 | 数量 |\n| --- | ---: |\n| link_captured | 5 |\n| note_captured | 6 |\n| parse_failed | 2 |\n| parsed | 70 |\n\n### 数据来源\n\n| 项目 | 数量 |\n| --- | ---: |\n| demo | 36 |\n| imported | 5 |\n| user | 42 |\n\n## 3. 高价值资料 Top 10\n\n### general-design-critique-checklist.md\n\n- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：concept\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-page-structure.md\n\n- 为什么重要：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-low-interruption-reading.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：background\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-sketch-panel-layout.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### general-design-critique-checklist.md\n\n- 为什么重要：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：concept\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-page-structure.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 用户、痛点、调研、方案、洞察\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-low-interruption-reading.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：background\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-sketch-panel-layout.md\n\n- 为什么重要：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### portfolio-feedback-page-order.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集\n- 可用于哪个项目：general\n- 可用于作品集哪个阶段：presentation\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n### reader-design-feedback-mentor.md\n\n- 为什么重要：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- 可用于哪个项目：reader-design\n- 可用于作品集哪个阶段：development\n- 需要补充什么：补充来源、图像证据或设计决策说明。\n\n## 4. 项目视角分析\n\n### reader-design\n\n- 当前资料数量：27\n- 最强资料：reader-design-low-interruption-reading.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### info-center\n\n- 当前资料数量：18\n- 最强资料：info-center-feedback-teacher.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### thesis\n\n- 当前资料数量：10\n- 最强资料：thesis-commuter-group.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### general\n\n- 当前资料数量：20\n- 最强资料：general-design-critique-checklist.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n### unknown\n\n- 当前资料数量：8\n- 最强资料：research_feedback.md\n- 最大缺口：缺少 insight 阶段资料，作品集叙事会断层。\n- 下一步建议：补齐缺口阶段，并为高价值资料写一句作品集用途说明。\n\n## 5. 作品集转化建议\n\n### 背景页可用资料\n\n- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- `reader-design-low-interruption-reading.md`：有正文；正文信息量较足；类型明确为 idea；可对应 background 阶段；项目归属为 reader-design；包含 用户、痛点、洞察、作品集、低干扰\n- `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈\n- `reader-design-feedback-usability-test.md`：有正文；类型明确为 feedback；可对应 background 阶段；项目归属为 reader-design；包含 用户、反馈\n- `thesis-dual-city-commute.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-langfang-urban-structure.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-dual-city-commute.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n- `thesis-langfang-urban-structure.md`：有正文；类型明确为 paper；可对应 background 阶段；项目归属为 thesis；包含 双城通勤\n\n### 调研页可用资料\n\n- `reader-design-user-interview-commute.md`：有正文；正文信息量较足；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、痛点\n- `reader-design-user-interview-commute.md`：有正文；正文信息量较足；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、痛点\n- `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案\n- `info-center-space-research.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研、动线\n- `portfolio-pain-point-analysis.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 general；包含 用户、痛点、作品集\n- `reader-design-research-note-reading-goals.txt`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 reader-design；包含 用户、调研、低干扰\n- `info-center-space-research.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 info-center；包含 用户、调研、动线\n- `portfolio-pain-point-analysis.md`：有正文；类型明确为 research；可对应 research 阶段；项目归属为 general；包含 用户、痛点、作品集\n\n### 痛点页可用资料\n\n- 暂无明确资料。\n\n### 概念页可用资料\n\n- `general-design-critique-checklist.md`：人工编辑：用户在 DesignMate v0.4 中确认或调整了分类。\n- `general-design-critique-checklist.md`：有正文；类型明确为 research；可对应 concept 阶段；项目归属为 general；包含 用户、痛点、调研、方案、机会\n- `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `portfolio-design-opportunity.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-idea-focus-session.md`：有正文；类型明确为 idea；可对应 concept 阶段；项目归属为 reader-design；包含 用户、方案、机会、低干扰\n- `reader-design-competitor-kindle-notion.md`：有正文；类型明确为 competitor；可对应 concept 阶段；项目归属为 reader-design；包含 方案、机会、低干扰\n- `reader-design-competitor-kindle-notion.md`：有正文；类型明确为 competitor；可对应 concept 阶段；项目归属为 reader-design；包含 方案、机会、低干扰\n\n### 发展页可用资料\n\n- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- `reader-design-sketch-panel-layout.md`：有正文；正文信息量较足；类型明确为 sketch；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、方案\n- `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- `reader-design-feedback-mentor.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰\n- `info-center-feedback-teacher.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线\n- `info-center-feedback-teacher.md`：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 info-center；包含 用户、反馈、方案、动线\n- `sketch_reference_note.md`：有正文；类型明确为 sketch；可对应 development 阶段；项目归属为 general；包含 草图、方案、作品集\n- `reader-design-draft-portfolio-page.txt`：有正文；类型明确为 draft；可对应 development 阶段；项目归属为 reader-design；包含 用户、草图、机会\n\n### 最终展示页可用资料\n\n- 暂无明确资料。\n\n## 6. 需要确认的问题\n\n- `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？\n- `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？\n\n## 7. 明日任务\n\n- P0：复核 unknown 项目归属，优先处理高分资料。\n- P0：为阅读器设计补充一条用户痛点到设计机会的证据链。\n- P0：为图信中心设计补充空间动线和功能分区之间的关系。\n- P0：检查 feedback 类资料，把可执行修改点拆成任务。\n- P1：把 Top 10 高价值资料分别标注可进入的作品集页。\n- P1：为 thesis 资料确认是否进入作品集或独立论文资料库。\n- P1：为每个项目补一段 100 字项目概括。\n- P1：将 inbox 中已确认资料迁移到 library。\n- P2：给图片资料补充手动描述，方便后续搜索。\n- P2：整理一份页面结构草稿，把背景、调研、洞察、方案串起来。\n- P2：准备 PDF/DOCX/PPTX 解析测试文件。\n- P2：记录 Web UI 中最想先编辑的字段。\n",
+  "latest_need_confirm": "# Latest Need Confirm\n\nGenerated at: 2026-05-09T21:43:20\n\n- [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- [ ] `research_feedback.md` 当前为 feedback/unknown/research，是否符合真实项目语境？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `Add Materials unit note.note` 解析状态为 note_captured，是否需要补充文本版摘要？\n- [ ] `douyin link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- [ ] `generic webpage link` 当前为 reference/unknown/research，是否符合真实项目语境？\n- [ ] `generic webpage link` 解析状态为 link_captured，是否需要补充文本版摘要？\n- [ ] `behance link` 当前为 reference/unknown/unknown，是否符合真实项目语境？",
+  "latest_next_actions": "# Latest Next Actions\n\nGenerated at: 2026-05-09T21:43:20\n\n- [ ] P0：复核 unknown 项目归属，优先处理高分资料。\n- [ ] P0：为阅读器设计补充一条用户痛点到设计机会的证据链。\n- [ ] P0：为图信中心设计补充空间动线和功能分区之间的关系。\n- [ ] P0：检查 feedback 类资料，把可执行修改点拆成任务。\n- [ ] P1：把 Top 10 高价值资料分别标注可进入的作品集页。\n- [ ] P1：为 thesis 资料确认是否进入作品集或独立论文资料库。\n- [ ] P1：为每个项目补一段 100 字项目概括。\n- [ ] P1：将 inbox 中已确认资料迁移到 library。\n- [ ] P2：给图片资料补充手动描述，方便后续搜索。\n- [ ] P2：整理一份页面结构草稿，把背景、调研、洞察、方案串起来。\n- [ ] P2：准备 PDF/DOCX/PPTX 解析测试文件。\n- [ ] P2：记录 Web UI 中最想先编辑的字段。",
   "drafts": [
     {
       "path": "drafts/portfolio_page_draft.md",
-      "modified_time": 1778333296.1004107
+      "modified_time": 1778334200.9548047
     },
     {
       "path": "drafts/reader-design_overview_draft.md",
-      "modified_time": 1778333296.1004107
+      "modified_time": 1778334200.9538045
     },
     {
       "path": "drafts/latest_portfolio_page_draft.md",
-      "modified_time": 1778333296.0994296
+      "modified_time": 1778334200.9528186
     },
     {
       "path": "drafts/info-center_overview_draft.md",
-      "modified_time": 1778333295.946243
+      "modified_time": 1778334200.7849112
     },
     {
       "path": "drafts/reader-design_research_draft.md",
-      "modified_time": 1778333287.5734005
+      "modified_time": 1778334193.8457627
     },
     {
       "path": "drafts/reader-design_pain-points_draft.md",
-      "modified_time": 1778333287.5620396
+      "modified_time": 1778334193.842751
     },
     {
       "path": "drafts/info-center_concept_draft.md",
-      "modified_time": 1778333287.5500288
+      "modified_time": 1778334193.8385644
     },
     {
       "path": "drafts/reader-design_portfolio_page_draft.md",

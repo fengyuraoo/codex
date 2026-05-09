@@ -1,6 +1,6 @@
 # Classification Report
 
-Generated at: 2026-05-09T21:28:14
+Generated at: 2026-05-09T21:43:18
 Total materials: 83
 
 ## Material Type Stats

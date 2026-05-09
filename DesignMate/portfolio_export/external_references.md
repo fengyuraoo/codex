@@ -1,6 +1,6 @@
 # External References and Link Capture Evidence
 
-Generated at: 2026-05-09T21:28:16
+Generated at: 2026-05-09T21:43:21
 
 This file collects captured external links that can support moodboards, research sources, inspiration evidence and process references.
 
