@@ -54,8 +54,8 @@ def main() -> int:
     ai_service = ROOT / "backend" / "ai_service.py"
     checks = [
         exists(ROOT / "docs" / "v0.7.4_design_process_positioning.md", "v0.7.4 positioning doc exists"),
-        contains_any(index_html, ["v0.7.4", "v0.7.5"], "frontend displays a compatible v0.7.x version"),
-        contains_any(app_js, ["v0.7.4", "v0.7.5"], "frontend script uses a compatible v0.7.x version"),
+        contains_any(index_html, ["v0.7.4", "v0.7.5", "v0.7.6"], "frontend displays a compatible v0.7.x version"),
+        contains_any(app_js, ["v0.7.4", "v0.7.5", "v0.7.6"], "frontend script uses a compatible v0.7.x version"),
         contains(app_js, "A Local AI Search Hub for the Design Process", "English home positioning uses design process"),
         contains(app_js, "面向设计全过程的本地 AI 资料助手", "Chinese home positioning uses 设计全过程"),
         contains(app_js, "Design process material assistant", "top subtitle uses design process"),

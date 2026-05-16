@@ -127,6 +127,15 @@ On the home screen, the three main actions are Add Materials, Search Library and
 7. 进入 Ask DesignMate，提问：“这条资料可以用于什么设计场景？”或者 “Which use case does this uploaded file support?”
 8. 说明当前版本已经实现真实本地上传和扫描入库，但图片视觉理解、深度文档解析和真实 AI provider 仍属于后续版本。
 
+## v0.7.6 推荐截图
+
+1. 中文简洁首页：展示 Search Hub、主搜索框、添加资料 / 问 DesignMate 两个核心按钮，以及资料库状态。
+2. 英文简洁首页：展示 Local-first / Design evidence / Project memory 三个标签。
+3. 添加资料页面：展示 Upload Files、Capture Link、Paste Note、Import Folder 四种输入方式。
+4. 拖拽上传状态：文件悬停在上传区时，边框高亮并显示“松开即可添加文件 / Release to add files”。
+5. 上传成功后的搜索结果：用刚上传的文件名或正文关键词检索，展示 Design Evidence Card。
+6. Ask DesignMate 页面：提问刚上传资料可以用于什么设计场景，展示规则版回答结构。
+
 ## 推荐截图清单
 
 - Search Hub 首页全屏。

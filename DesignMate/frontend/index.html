@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.7.5 Search Hub</title>
+    <title>DesignMate v0.7.6 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.7.5</span></div>
+        <div class="brand">DesignMate <span>v0.7.6</span></div>
         <p>Design process material assistant</p>
       </div>
       <nav class="tabs">
@@ -44,38 +44,18 @@
           <div class="hero-actions">
             <button id="addMaterialsHeroButton" class="primary jump" data-target="add">Add Materials</button>
             <button id="askHeroButton" class="secondary jump" data-target="ask">Ask DesignMate</button>
-            <button id="searchLibraryHeroButton" class="secondary jump" data-target="search">Search Library</button>
           </div>
           <div class="hub-tags">
             <span>Local-first</span>
-            <span>Project memory</span>
             <span>Design evidence</span>
-            <span>Privacy-friendly</span>
-            <span>For designers</span>
-            <span>Portfolio-ready</span>
+            <span>Project memory</span>
           </div>
-          <div class="hub-entry-grid">
-            <article class="hub-entry hub-entry-primary" data-hub-target="add">
-              <strong>Add Materials</strong>
-              <p>Import sketches, links, notes, research and project files.</p>
-            </article>
-            <article class="hub-entry" data-hub-target="search">
-              <strong>Search Library</strong>
-              <p>Find pain points, feedback, inspiration, competitors and design evidence.</p>
-            </article>
-            <article class="hub-entry" data-hub-target="ask">
-              <strong>Ask DesignMate</strong>
-              <p>Organize project clues, design insights and next actions.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="showcase-panel home-secondary">
-          <div>
-            <p class="eyebrow">Showcase / Demo Status</p>
-            <h2>Local library snapshot</h2>
-          </div>
-          <div class="status-grid" id="demoStatus"></div>
+          <section class="library-status" aria-label="Library Status">
+            <div>
+              <p class="eyebrow" data-i18n="libraryStatus">Library Status</p>
+            </div>
+            <div class="status-grid" id="demoStatus"></div>
+          </section>
         </section>
 
         <section class="why-designmate home-secondary">
@@ -141,8 +121,8 @@
             <h2 data-i18n="uploadFiles">Upload Files</h2>
             <p data-i18n="uploadFilesBody">Drag in images, PDFs, Word, PPT, Markdown, TXT or screenshots from a design project.</p>
             <div class="upload-zone add-upload-zone" id="addUploadZone">
-              <strong data-i18n="uploadDrop">Drop design materials here</strong>
-              <span data-i18n="uploadChoose">images, PDF, DOCX, PPTX, Markdown, TXT and screenshots</span>
+              <strong id="uploadDropText" data-i18n="uploadDrop">Drop design materials here, or click to choose files</strong>
+              <span data-i18n="uploadChoose">Supports images, PDF, Word, PPT, Markdown, TXT, CSV and Excel.</span>
               <input id="uploadFilesInput" type="file" multiple accept=".md,.txt,.csv,.xlsx,.pdf,.docx,.pptx,image/png,image/jpeg,image/webp,image/gif" />
             </div>
             <p class="placeholder-note" data-i18n="uploadFallback">Drop or choose design materials. DesignMate saves them locally and makes them available for search and questions.</p>

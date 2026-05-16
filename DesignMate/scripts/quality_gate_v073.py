@@ -51,11 +51,11 @@ def main() -> int:
     app_js = ROOT / "frontend" / "app.js"
     checks = [
         exists(ROOT / "docs" / "v0.7.3_minimal_home_ui.md", "v0.7.3 minimal home UI doc exists"),
-        contains_any(index_html, ["v0.7.3", "v0.7.4", "v0.7.5"], "frontend displays a compatible v0.7.x version"),
-        contains_any(app_js, ["v0.7.3", "v0.7.4", "v0.7.5"], "frontend script uses a compatible v0.7.x version"),
+        contains_any(index_html, ["v0.7.3", "v0.7.4", "v0.7.5", "v0.7.6"], "frontend displays a compatible v0.7.x version"),
+        contains_any(app_js, ["v0.7.3", "v0.7.4", "v0.7.5", "v0.7.6"], "frontend script uses a compatible v0.7.x version"),
         contains(index_html, "addMaterialsHeroButton", "home has Add Materials action"),
         contains(index_html, "askHeroButton", "home has Ask DesignMate action"),
-        contains(index_html, "searchLibraryHeroButton", "home has Search Library action"),
+        contains(index_html, "hubSearchInput", "home search box handles Search Library action"),
         contains(app_js, 'tagLocalFirst: "本地优先"', "Chinese Local-first label is translated"),
         contains_any(app_js, ['tagPortfolioAware: "面向作品集"', 'tagPortfolioAware: "项目记忆"'], "Chinese second tag is translated"),
         contains(app_js, 'tagDesignEvidence: "设计证据"', "Chinese Design evidence label is translated"),

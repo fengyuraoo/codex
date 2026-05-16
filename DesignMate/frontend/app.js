@@ -25,6 +25,12 @@ const translations = {
     heroSubtitle: "Search sketches, research, feedback, links and project files, then turn scattered materials into traceable design evidence.",
     heroSearchPlaceholder: "Search pain points, sketches, feedback, page themes...",
     searchLibrary: "Search Library",
+    libraryStatus: "Library Status",
+    totalMaterials: "Total Materials",
+    uploadedFiles: "Uploaded Files",
+    capturedLinks: "Captured Links",
+    savedNotes: "Saved Notes",
+    apiStatus: "API Status",
     coreAddBody: "Import sketches, links, notes, research and project files.",
     coreSearchBody: "Find pain points, feedback, inspiration, competitors and design evidence.",
     coreAskBody: "Organize project clues, design insights and next actions.",
@@ -40,15 +46,20 @@ const translations = {
     addEyebrow: "Material Input Hub",
     uploadFiles: "Upload Files",
     uploadFilesBody: "Drag in images, PDFs, Word, PPT, Markdown, TXT or screenshots from a design project.",
-    uploadDrop: "Drop design materials here",
-    uploadChoose: "images, PDF, DOCX, PPTX, Markdown, TXT, CSV, XLSX and screenshots",
+    uploadDrop: "Drop design materials here, or click to choose files",
+    uploadDragOver: "Release to add files",
+    uploadChoose: "Supports images, PDF, Word, PPT, Markdown, TXT, CSV and Excel.",
     uploadFallback: "Drop or choose design materials. DesignMate saves them locally and makes them available for search and questions.",
     uploadToLibrary: "Upload to Library",
     filesToUpload: "Files to Upload",
+    removeFile: "Remove",
     uploadSuccess: "Upload Successful",
     uploadFailed: "Upload Failed",
     addedToLibrary: "Added to Library",
     uploadRequiresApi: "Uploading requires the API.",
+    noUploadFiles: "Choose or drop files before uploading.",
+    unsupportedUploadFile: "Unsupported file type",
+    invalidUploadFile: "Invalid or empty file",
     savedPath: "Saved Path",
     fileType: "File Type",
     captureLinkBody: "Paste Xiaohongshu, Douyin, Bilibili, Behance, Pinterest, web articles or portfolio case links.",
@@ -124,6 +135,12 @@ const translations = {
     heroSubtitle: "搜索草图、调研、反馈、链接和项目文件，把零散设计资料整理成可追溯的设计证据。",
     heroSearchPlaceholder: "搜索用户痛点、草图、反馈、页面主题...",
     searchLibrary: "搜索资料",
+    libraryStatus: "资料库状态",
+    totalMaterials: "资料总数",
+    uploadedFiles: "上传文件",
+    capturedLinks: "采集链接",
+    savedNotes: "保存笔记",
+    apiStatus: "API 状态",
     coreAddBody: "导入草图、链接、笔记、调研和项目文件。",
     coreSearchBody: "查找痛点、反馈、灵感、竞品和方案证据。",
     coreAskBody: "整理项目线索、设计洞察和下一步行动。",
@@ -139,15 +156,20 @@ const translations = {
     addEyebrow: "统一资料入口",
     uploadFiles: "上传文件",
     uploadFilesBody: "拖入图片、PDF、Word、PPT、Markdown、TXT 或项目截图等设计资料。",
-    uploadDrop: "把设计资料拖到这里",
-    uploadChoose: "图片、PDF、DOCX、PPTX、Markdown、TXT、CSV、XLSX 和截图",
+    uploadDrop: "拖入设计资料，或点击选择文件",
+    uploadDragOver: "松开即可添加文件",
+    uploadChoose: "支持图片、PDF、Word、PPT、Markdown、TXT、CSV 和 Excel。",
     uploadFallback: "拖入或选择设计资料，DesignMate 会将它们保存到本地资料库，并用于搜索和提问。",
     uploadToLibrary: "上传并加入资料库",
     filesToUpload: "待上传文件",
+    removeFile: "移除",
     uploadSuccess: "上传成功",
     uploadFailed: "上传失败",
     addedToLibrary: "已加入资料库",
     uploadRequiresApi: "上传需要先启动 API。",
+    noUploadFiles: "请先选择或拖入文件。",
+    unsupportedUploadFile: "不支持的文件类型",
+    invalidUploadFile: "文件无效或为空",
     savedPath: "保存位置",
     fileType: "文件类型",
     captureLinkBody: "粘贴小红书、抖音、B站、Behance、Pinterest、网页文章或作品集案例链接。",
@@ -214,6 +236,7 @@ let currentLang = localStorage.getItem(LANGUAGE_KEY) || ((navigator.language || 
 const PROJECTS = ["reader-design", "info-center", "thesis", "general", "unknown"];
 const TYPES = ["sketch", "reference", "research", "competitor", "feedback", "draft", "presentation", "paper", "idea", "unknown"];
 const STAGES = ["background", "research", "insight", "concept", "development", "final", "presentation", "reflection", "unknown"];
+const UPLOAD_EXTENSIONS = new Set(["png", "jpg", "jpeg", "webp", "gif", "pdf", "docx", "pptx", "txt", "md", "csv", "xlsx"]);
 
 const els = {
   status: document.getElementById("status"),
@@ -321,9 +344,9 @@ function applyI18nAttributes() {
 
 function applyTranslations() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-  document.title = `DesignMate v0.7.5 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
+  document.title = `DesignMate v0.7.6 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
   applyI18nAttributes();
-  text(".brand span", "v0.7.5");
+  text(".brand span", "v0.7.6");
   text(".topbar p", t("appSubtitle"));
   const navLabels = { dashboard: "navDashboard", add: "navAdd", search: "navSearch", image: "navImage", link: "navLink", ask: "navAsk", report: "navReport" };
   els.tabs.forEach((tab) => {
@@ -339,22 +362,9 @@ function applyTranslations() {
   els.hubSearchButton.textContent = t("search");
   if (els.addMaterialsHeroButton) els.addMaterialsHeroButton.textContent = t("addMaterials");
   if (els.askHeroButton) els.askHeroButton.textContent = t("askDesignMate");
-  if (els.searchLibraryHeroButton) els.searchLibraryHeroButton.textContent = t("searchLibrary");
-  const tagKeys = ["tagLocalFirst", "tagPortfolioAware", "tagDesignEvidence", "tagPrivacyFriendly", "tagDesignStudents", "tagPortfolioBuilding"];
+  const tagKeys = ["tagLocalFirst", "tagDesignEvidence", "tagPortfolioAware"];
   document.querySelectorAll(".hub-tags span").forEach((tag, index) => {
     if (tagKeys[index]) tag.textContent = t(tagKeys[index]);
-  });
-  const entries = document.querySelectorAll(".hub-entry");
-  const entryKeys = [
-    ["addMaterials", t("coreAddBody")],
-    ["searchLibrary", t("coreSearchBody")],
-    ["askDesignMate", t("coreAskBody")],
-  ];
-  entries.forEach((entry, index) => {
-    const pair = entryKeys[index];
-    if (!pair) return;
-    entry.querySelector("strong").textContent = t(pair[0]);
-    entry.querySelector("p").textContent = pair[1];
   });
   text(".why-designmate .eyebrow", t("why"));
   text(".why-designmate h2", t("whyTitle"));
@@ -379,6 +389,7 @@ function applyTranslations() {
     if (searchLabels[index]) searchLabels[index].textContent = t(key);
   });
   if (!apiConnected) setStatus(t("staticMode"), "warn");
+  renderUploadFileList();
 }
 
 function setLanguage(lang) {
@@ -410,13 +421,13 @@ async function checkApi() {
     if (els.captureLinkButton) els.captureLinkButton.disabled = !apiConnected;
     if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = !apiConnected;
     if (els.saveNoteButton) els.saveNoteButton.disabled = !apiConnected;
-    if (els.uploadToLibraryButton) els.uploadToLibraryButton.disabled = !apiConnected;
+    updateUploadButton();
   } catch {
     apiConnected = false;
     if (els.captureLinkButton) els.captureLinkButton.disabled = true;
     if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = true;
     if (els.saveNoteButton) els.saveNoteButton.disabled = true;
-    if (els.uploadToLibraryButton) els.uploadToLibraryButton.disabled = true;
+    updateUploadButton();
     setStatus(t("staticMode"), "warn");
   }
 }
@@ -519,13 +530,15 @@ function renderDashboard() {
   const failed = materials.filter((item) => !["parsed", "metadata_only"].includes(item.parse_status)).length;
   const docs = materials.filter((item) => ["md", "txt", "pdf", "docx", "pptx"].includes(item.extension)).length;
   const images = materials.filter((item) => ["jpg", "jpeg", "png"].includes(item.extension)).length;
-  const exportReady = Boolean(window.DESIGNMATE_DATA?.showcase_status?.export_status);
+  const uploaded = materials.filter((item) => (item.path || "").includes("data/uploads/")).length;
+  const capturedLinks = materials.filter((item) => item.extension === "link" || item.parse_status === "link_captured" || item.url).length;
+  const savedNotes = materials.filter((item) => item.parse_status === "note_captured").length;
   els.demoStatus.innerHTML = [
-    statCard("total materials", materials.length),
-    statCard("user materials", bySource.user || 0),
-    statCard("demo materials", bySource.demo || 0),
-    statCard("drafts generated", drafts.length),
-    statCard("export status", exportReady ? "ready" : "not built"),
+    statCard(t("totalMaterials") || "Total Materials", materials.length),
+    statCard(t("uploadedFiles"), uploaded || "—"),
+    statCard(t("capturedLinks"), capturedLinks || "—"),
+    statCard(t("savedNotes"), savedNotes || "—"),
+    statCard(t("apiStatus"), apiConnected ? t("apiConnected") : "—"),
   ].join("");
   els.importStats.innerHTML = [
     statCard("inbox files", importStats.inbox_file_count ?? 0),
@@ -862,8 +875,52 @@ async function savePastedNote() {
   }
 }
 
-function setUploadFiles(fileList) {
-  selectedUploadFiles = Array.from(fileList || []);
+function uploadFileKey(file) {
+  return `${file.name}::${file.size}::${file.lastModified || 0}`;
+}
+
+function uploadExtension(file) {
+  const parts = String(file.name || "").split(".");
+  return parts.length > 1 ? parts.pop().toLowerCase() : "";
+}
+
+function formatFileSize(bytes) {
+  if (!bytes) return "0 KB";
+  if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function updateUploadButton() {
+  if (!els.uploadToLibraryButton) return;
+  els.uploadToLibraryButton.disabled = !apiConnected || selectedUploadFiles.length === 0;
+  els.uploadToLibraryButton.title = !apiConnected ? t("uploadRequiresApi") : "";
+}
+
+function setUploadFiles(fileList, append = false) {
+  const incoming = Array.from(fileList || []);
+  const kept = append ? [...selectedUploadFiles] : [];
+  const seen = new Set(kept.map(uploadFileKey));
+  const errors = [];
+  incoming.forEach((file) => {
+    const ext = uploadExtension(file);
+    if (!file.name || file.size <= 0) {
+      errors.push(`${file.name || "folder"}: ${t("invalidUploadFile")}`);
+      return;
+    }
+    if (!UPLOAD_EXTENSIONS.has(ext)) {
+      errors.push(`${file.name}: ${t("unsupportedUploadFile")}`);
+      return;
+    }
+    const key = uploadFileKey(file);
+    if (!seen.has(key)) {
+      kept.push(file);
+      seen.add(key);
+    }
+  });
+  selectedUploadFiles = kept;
+  if (errors.length && els.uploadResult) {
+    els.uploadResult.innerHTML = `<div class="empty">${esc(errors.join("; "))}</div>`;
+  }
   renderUploadFileList();
 }
 
@@ -871,14 +928,19 @@ function renderUploadFileList() {
   if (!els.uploadFileList) return;
   if (!selectedUploadFiles.length) {
     els.uploadFileList.innerHTML = `<p class="meta">${esc(t("filesToUpload"))}: 0</p>`;
+    updateUploadButton();
     return;
   }
-  els.uploadFileList.innerHTML = selectedUploadFiles.map((file) => `
+  els.uploadFileList.innerHTML = selectedUploadFiles.map((file, index) => `
     <div class="upload-file-row">
-      <strong>${esc(file.name)}</strong>
-      <span>${esc(Math.round(file.size / 1024) || 1)} KB</span>
+      <div>
+        <strong>${esc(file.name)}</strong>
+        <span>${esc(uploadExtension(file).toUpperCase() || "FILE")} / ${esc(formatFileSize(file.size))}</span>
+      </div>
+      <button class="secondary remove-upload-file" type="button" data-upload-index="${index}">${esc(t("removeFile"))}</button>
     </div>
   `).join("");
+  updateUploadButton();
 }
 
 function uploadResultCard(material) {
@@ -904,7 +966,7 @@ async function uploadMaterials() {
     return;
   }
   if (!selectedUploadFiles.length) {
-    els.uploadResult.innerHTML = `<div class="empty">${esc(t("filesToUpload"))}: 0</div>`;
+    els.uploadResult.innerHTML = `<div class="empty">${esc(t("noUploadFiles"))}</div>`;
     return;
   }
   const form = new FormData();
@@ -1211,20 +1273,56 @@ els.imageFilenameQuery.addEventListener("input", renderImageSearch);
 els.captureLinkButton.addEventListener("click", captureLink);
 if (els.addCaptureLinkButton) els.addCaptureLinkButton.addEventListener("click", captureAddLink);
 if (els.saveNoteButton) els.saveNoteButton.addEventListener("click", savePastedNote);
-if (els.uploadFilesInput) els.uploadFilesInput.addEventListener("change", (event) => setUploadFiles(event.target.files));
+if (els.uploadFilesInput) els.uploadFilesInput.addEventListener("change", (event) => setUploadFiles(event.target.files, true));
 if (els.uploadToLibraryButton) els.uploadToLibraryButton.addEventListener("click", uploadMaterials);
-if (els.addUploadZone) {
-  els.addUploadZone.addEventListener("dragover", (event) => {
-    event.preventDefault();
-    els.addUploadZone.classList.add("dragging");
-  });
-  els.addUploadZone.addEventListener("dragleave", () => els.addUploadZone.classList.remove("dragging"));
-  els.addUploadZone.addEventListener("drop", (event) => {
-    event.preventDefault();
-    els.addUploadZone.classList.remove("dragging");
-    setUploadFiles(event.dataTransfer.files);
+if (els.uploadFileList) {
+  els.uploadFileList.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-upload-index]");
+    if (!button) return;
+    selectedUploadFiles.splice(Number(button.dataset.uploadIndex), 1);
+    renderUploadFileList();
   });
 }
+if (els.addUploadZone) {
+  const stopUploadDrag = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  };
+  ["dragenter", "dragover"].forEach((eventName) => {
+    els.addUploadZone.addEventListener(eventName, (event) => {
+      stopUploadDrag(event);
+      els.addUploadZone.classList.add("dragging");
+      const label = document.getElementById("uploadDropText");
+      if (label) label.textContent = t("uploadDragOver");
+    });
+  });
+  els.addUploadZone.addEventListener("dragleave", (event) => {
+    stopUploadDrag(event);
+    if (event.currentTarget.contains(event.relatedTarget)) return;
+    els.addUploadZone.classList.remove("dragging");
+    const label = document.getElementById("uploadDropText");
+    if (label) label.textContent = t("uploadDrop");
+  });
+  els.addUploadZone.addEventListener("drop", (event) => {
+    stopUploadDrag(event);
+    els.addUploadZone.classList.remove("dragging");
+    const label = document.getElementById("uploadDropText");
+    if (label) label.textContent = t("uploadDrop");
+    setUploadFiles(event.dataTransfer.files, true);
+  });
+  els.addUploadZone.addEventListener("click", (event) => {
+    if (event.target === els.uploadFilesInput) return;
+    els.uploadFilesInput?.click();
+  });
+}
+["dragenter", "dragover", "drop"].forEach((eventName) => {
+  window.addEventListener(eventName, (event) => {
+    if (event.dataTransfer?.types?.includes("Files")) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  });
+});
 document.querySelectorAll(".jump").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.target)));
 document.getElementById("quickFilters").addEventListener("click", (event) => {
   const button = event.target.closest("button");
