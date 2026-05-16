@@ -51,8 +51,8 @@ def main() -> int:
     app_js = ROOT / "frontend" / "app.js"
     checks = [
         exists(ROOT / "docs" / "v0.7.3_minimal_home_ui.md", "v0.7.3 minimal home UI doc exists"),
-        contains_any(index_html, ["v0.7.3", "v0.7.4"], "frontend displays a compatible v0.7.x version"),
-        contains_any(app_js, ["v0.7.3", "v0.7.4"], "frontend script uses a compatible v0.7.x version"),
+        contains_any(index_html, ["v0.7.3", "v0.7.4", "v0.7.5"], "frontend displays a compatible v0.7.x version"),
+        contains_any(app_js, ["v0.7.3", "v0.7.4", "v0.7.5"], "frontend script uses a compatible v0.7.x version"),
         contains(index_html, "addMaterialsHeroButton", "home has Add Materials action"),
         contains(index_html, "askHeroButton", "home has Ask DesignMate action"),
         contains(index_html, "searchLibraryHeroButton", "home has Search Library action"),

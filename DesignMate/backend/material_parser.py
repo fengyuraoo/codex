@@ -15,7 +15,7 @@ from .paths import CONTENT_DIR, DATA_FOLDERS, ROOT
 from .utils import atomic_write_text
 
 
-SUPPORTED_EXTENSIONS = {".md", ".txt", ".pdf", ".jpg", ".jpeg", ".png", ".docx", ".pptx"}
+SUPPORTED_EXTENSIONS = {".md", ".txt", ".pdf", ".jpg", ".jpeg", ".png", ".webp", ".gif", ".docx", ".pptx", ".csv", ".xlsx"}
 
 
 def infer_source_mode(path: Path) -> str:
@@ -23,6 +23,8 @@ def infer_source_mode(path: Path) -> str:
     if rel.startswith("data/examples/"):
         return "demo"
     if rel.startswith("data/inbox/"):
+        return "user"
+    if rel.startswith("data/uploads/"):
         return "user"
     if rel.startswith("data/library/"):
         return "imported"
@@ -117,7 +119,7 @@ def image_metadata(path: Path) -> tuple[str, str, str, int, int]:
 
 def parse_file_payload(path: Path) -> tuple[str, str, str, int, int]:
     extension = path.suffix.lower()
-    if extension in {".md", ".txt"}:
+    if extension in {".md", ".txt", ".csv"}:
         text, status, error = read_text(path)
         return text, status, error, 0, 0
     if extension == ".pdf":
@@ -129,7 +131,9 @@ def parse_file_payload(path: Path) -> tuple[str, str, str, int, int]:
     if extension == ".pptx":
         text, status, error = extract_pptx_text(path)
         return text, status, error, 0, 0
-    if extension in {".jpg", ".jpeg", ".png"}:
+    if extension == ".xlsx":
+        return "Spreadsheet metadata recorded. Full spreadsheet text extraction is not enabled yet.", "metadata_only", "", 0, 0
+    if extension in {".jpg", ".jpeg", ".png", ".webp", ".gif"}:
         return image_metadata(path)
     return "", "unsupported", "Unsupported file type.", 0, 0
 
@@ -172,10 +176,10 @@ def parse_material(path: Path, source_folder: Path, scan_batch_id: str = "") -> 
         file_hash=digest,
         scan_batch_id=scan_batch_id,
         is_duplicate=database.hash_seen_elsewhere(material_id, digest),
-        image_preview_path=image_preview(path, material_id) if path.suffix.lower() in {".jpg", ".jpeg", ".png"} else "",
+        image_preview_path=image_preview(path, material_id) if path.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".gif"} else "",
         image_width=image_width,
         image_height=image_height,
-        image_note="当前未接入图像理解，可手动填写图片说明。" if path.suffix.lower() in {".jpg", ".jpeg", ".png"} else "",
+        image_note="当前未接入图像理解，可手动填写图片说明。" if path.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".gif"} else "",
         source_mode=infer_source_mode(path),
     )
     return classify(record, full_text)

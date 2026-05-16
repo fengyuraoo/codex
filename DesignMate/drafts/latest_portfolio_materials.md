@@ -1,6 +1,6 @@
 # Latest Portfolio Materials
 
-Generated at: 2026-05-10T01:30:07
+Generated at: 2026-05-16T17:03:13
 
 ## general-design-critique-checklist.md
 
@@ -81,24 +81,6 @@ Generated at: 2026-05-10T01:30:07
 - 作品集阶段：presentation
 - 分数：95
 - 可用理由：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集
-- 路径：`data/inbox/portfolio-feedback-page-order.md`
-
-## reader-design-feedback-mentor.md
-
-- 类型：feedback
-- 项目：reader-design
-- 作品集阶段：development
-- 分数：95
-- 可用理由：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
-- 路径：`data/inbox/reader-design-feedback-mentor.md`
-
-## portfolio-feedback-page-order.md
-
-- 类型：feedback
-- 项目：general
-- 作品集阶段：presentation
-- 分数：95
-- 可用理由：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集
 - 路径：`data/examples/portfolio-feedback-page-order.md`
 
 ## reader-design-feedback-mentor.md
@@ -109,6 +91,24 @@ Generated at: 2026-05-10T01:30:07
 - 分数：95
 - 可用理由：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
 - 路径：`data/examples/reader-design-feedback-mentor.md`
+
+## portfolio-feedback-page-order.md
+
+- 类型：feedback
+- 项目：general
+- 作品集阶段：presentation
+- 分数：95
+- 可用理由：有正文；类型明确为 feedback；可对应 presentation 阶段；项目归属为 general；包含 调研、草图、反馈、方案、作品集
+- 路径：`data/inbox/portfolio-feedback-page-order.md`
+
+## reader-design-feedback-mentor.md
+
+- 类型：feedback
+- 项目：reader-design
+- 作品集阶段：development
+- 分数：95
+- 可用理由：有正文；类型明确为 feedback；可对应 development 阶段；项目归属为 reader-design；包含 用户、痛点、草图、反馈、低干扰
+- 路径：`data/inbox/reader-design-feedback-mentor.md`
 
 ## design_student_notes.md
 
@@ -694,3 +694,471 @@ Generated at: 2026-05-10T01:30:07
 - 分数：62
 - 可用理由：有正文；类型明确为 reference；可对应 research 阶段；项目归属为 general
 - 路径：`http://xhslink.com/o/7vKpRwVaDiz`
+
+## v075-upload-research.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research.md`
+
+## v075-upload-note.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note.txt`
+
+## v075-upload-research-8d4617d0.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-8d4617d0.md`
+
+## v075-upload-note-8a5da184.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-8a5da184.txt`
+
+## v075-upload-research-ce85173c.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-ce85173c.md`
+
+## v075-upload-note-c549db88.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-c549db88.txt`
+
+## v075-upload-research-6ef9c5cc.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-6ef9c5cc.md`
+
+## v075-upload-note-63cc1541.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-63cc1541.txt`
+
+## v075-upload-research-265cd906.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-265cd906.md`
+
+## v075-upload-note-3c2ba873.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-3c2ba873.txt`
+
+## v075-upload-research-e1573f41.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-e1573f41.md`
+
+## v075-upload-note-271f1de4.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-271f1de4.txt`
+
+## v075-upload-research-ba2f3ea6.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-ba2f3ea6.md`
+
+## v075-upload-note-b7050b67.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-b7050b67.txt`
+
+## v075-upload-research-688500e8.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-688500e8.md`
+
+## v075-upload-note-ee1bbaac.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-ee1bbaac.txt`
+
+## v075-upload-research-a88ed436.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-a88ed436.md`
+
+## v075-upload-note-f1ac3333.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-f1ac3333.txt`
+
+## v075-upload-research-88bf023d.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-88bf023d.md`
+
+## v075-upload-note-6474556f.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-6474556f.txt`
+
+## v075-upload-research-3accc230.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-3accc230.md`
+
+## v075-upload-note-15f3f343.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-15f3f343.txt`
+
+## v075-upload-research-c33b16c2.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-c33b16c2.md`
+
+## v075-upload-note-26a712f4.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-26a712f4.txt`
+
+## v075-upload-research-7e26dbb4.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-7e26dbb4.md`
+
+## v075-upload-note-5455e43d.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-5455e43d.txt`
+
+## v075-upload-research-effc04b2.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-effc04b2.md`
+
+## v075-upload-note-f6a443fe.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-f6a443fe.txt`
+
+## v075-upload-research-8fa7f997.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-8fa7f997.md`
+
+## v075-upload-note-e9bdeb75.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-e9bdeb75.txt`
+
+## v075-upload-research-b58cef82.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-b58cef82.md`
+
+## v075-upload-note-31d86b83.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-31d86b83.txt`
+
+## v075-upload-research-c3b4b451.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-c3b4b451.md`
+
+## v075-upload-note-b5389e4f.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-b5389e4f.txt`
+
+## v075-upload-research-e6b799a6.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-e6b799a6.md`
+
+## v075-upload-note-666ea77e.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-666ea77e.txt`
+
+## v075-upload-research-ba266aed.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-ba266aed.md`
+
+## v075-upload-note-3e06ea77.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-3e06ea77.txt`
+
+## v075-upload-research-2c9bb23e.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-2c9bb23e.md`
+
+## v075-upload-note-877bd009.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-877bd009.txt`
+
+## v075-upload-research-51eb136a.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-51eb136a.md`
+
+## v075-upload-note-1b253d75.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-1b253d75.txt`
+
+## v075-upload-research-ad72b993.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-ad72b993.md`
+
+## v075-upload-note-d6877f33.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-d6877f33.txt`
+
+## v075-upload-research-b0cd0e5d.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-b0cd0e5d.md`
+
+## v075-upload-note-3b2d0ced.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-3b2d0ced.txt`
+
+## v075-upload-research-e552bb0a.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-e552bb0a.md`
+
+## v075-upload-note-6f1e7970.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-6f1e7970.txt`
+
+## v075-upload-research-978a4440.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-978a4440.md`
+
+## v075-upload-note-c297040b.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-c297040b.txt`
+
+## v075-upload-research-47339836.md
+
+- 类型：research
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 research；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-research-47339836.md`
+
+## v075-upload-note-2cce61a8.txt
+
+- 类型：feedback
+- 项目：unknown
+- 作品集阶段：research
+- 分数：55
+- 可用理由：有正文；类型明确为 feedback；可对应 research 阶段
+- 路径：`data/uploads/v075-upload-note-2cce61a8.txt`

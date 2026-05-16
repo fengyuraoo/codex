@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import json
+import cgi
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
-from . import ai_service, database, link_capture_service, note_capture_service, report_service, search_engine
+from . import ai_service, database, link_capture_service, note_capture_service, report_service, search_engine, upload_service
 from .material_parser import scan_library
 from .paths import REPORTS_DIR
 
@@ -49,6 +50,32 @@ class DesignMateHandler(BaseHTTPRequestHandler):
         if not isinstance(payload, dict):
             raise ValueError("JSON body must be an object")
         return payload
+
+    def read_multipart_upload(self) -> tuple[list[upload_service.UploadFileInput], dict[str, str]]:
+        content_type = self.headers.get("Content-Type", "")
+        if not content_type.startswith("multipart/form-data"):
+            raise ValueError("Content-Type must be multipart/form-data")
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={"REQUEST_METHOD": "POST", "CONTENT_TYPE": content_type},
+            keep_blank_values=True,
+        )
+        metadata = {}
+        for key in ("project", "design_stage", "use_case", "user_note"):
+            item = form[key] if key in form else None
+            if item is not None and not getattr(item, "filename", None):
+                metadata[key] = str(item.value or "")
+        file_fields = form["files"] if "files" in form else []
+        if not isinstance(file_fields, list):
+            file_fields = [file_fields]
+        files = []
+        for item in file_fields:
+            filename = getattr(item, "filename", "") or ""
+            if not filename:
+                continue
+            files.append(upload_service.UploadFileInput(filename=filename, content=item.file.read()))
+        return files, metadata
 
     def do_GET(self) -> None:
         try:
@@ -159,6 +186,20 @@ class DesignMateHandler(BaseHTTPRequestHandler):
                         portfolio_placement=str(payload.get("portfolio_placement", "") or ""),
                     )
                     json_response(self, result.to_dict(), 200)
+                except ValueError as exc:
+                    json_response(self, {"ok": False, "message": str(exc)}, 400)
+                return
+            if path == "/api/upload-materials":
+                try:
+                    files, metadata = self.read_multipart_upload()
+                    result = upload_service.upload_materials(
+                        files,
+                        project=metadata.get("project", ""),
+                        design_stage=metadata.get("design_stage", ""),
+                        use_case=metadata.get("use_case", ""),
+                        user_note=metadata.get("user_note", ""),
+                    )
+                    json_response(self, result, 200 if result.get("materials_created") else 400)
                 except ValueError as exc:
                     json_response(self, {"ok": False, "message": str(exc)}, 400)
                 return

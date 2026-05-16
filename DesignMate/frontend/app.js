@@ -5,6 +5,7 @@ let selectedId = null;
 let selectedIds = new Set();
 let apiConnected = false;
 let quickMode = "";
+let selectedUploadFiles = [];
 const API_BASE = "http://127.0.0.1:8765";
 const LANGUAGE_KEY = "designmate_language";
 
@@ -40,8 +41,16 @@ const translations = {
     uploadFiles: "Upload Files",
     uploadFilesBody: "Drag in images, PDFs, Word, PPT, Markdown, TXT or screenshots from a design project.",
     uploadDrop: "Drop design materials here",
-    uploadChoose: "images, PDF, DOCX, PPTX, Markdown, TXT and screenshots",
-    uploadFallback: "File upload is prepared. In this version, place files into the user materials folder and run scan.",
+    uploadChoose: "images, PDF, DOCX, PPTX, Markdown, TXT, CSV, XLSX and screenshots",
+    uploadFallback: "Drop or choose design materials. DesignMate saves them locally and makes them available for search and questions.",
+    uploadToLibrary: "Upload to Library",
+    filesToUpload: "Files to Upload",
+    uploadSuccess: "Upload Successful",
+    uploadFailed: "Upload Failed",
+    addedToLibrary: "Added to Library",
+    uploadRequiresApi: "Uploading requires the API.",
+    savedPath: "Saved Path",
+    fileType: "File Type",
     captureLinkBody: "Paste Xiaohongshu, Douyin, Bilibili, Behance, Pinterest, web articles or portfolio case links.",
     pasteNote: "Paste Note",
     pasteNoteBody: "Save a quick research note, critique, idea or page draft directly into the local library.",
@@ -131,8 +140,16 @@ const translations = {
     uploadFiles: "上传文件",
     uploadFilesBody: "拖入图片、PDF、Word、PPT、Markdown、TXT 或项目截图等设计资料。",
     uploadDrop: "把设计资料拖到这里",
-    uploadChoose: "图片、PDF、DOCX、PPTX、Markdown、TXT 和截图",
-    uploadFallback: "文件上传入口已预留。当前版本请先把文件放入 DesignMate 的用户资料文件夹后运行扫描。",
+    uploadChoose: "图片、PDF、DOCX、PPTX、Markdown、TXT、CSV、XLSX 和截图",
+    uploadFallback: "拖入或选择设计资料，DesignMate 会将它们保存到本地资料库，并用于搜索和提问。",
+    uploadToLibrary: "上传并加入资料库",
+    filesToUpload: "待上传文件",
+    uploadSuccess: "上传成功",
+    uploadFailed: "上传失败",
+    addedToLibrary: "已加入资料库",
+    uploadRequiresApi: "上传需要先启动 API。",
+    savedPath: "保存位置",
+    fileType: "文件类型",
     captureLinkBody: "粘贴小红书、抖音、B站、Behance、Pinterest、网页文章或作品集案例链接。",
     pasteNote: "粘贴笔记",
     pasteNoteBody: "把调研记录、老师反馈、设计想法或页面草稿直接保存进本地资料库。",
@@ -207,6 +224,15 @@ const els = {
   hubSearchInput: document.getElementById("hubSearchInput"),
   hubSearchButton: document.getElementById("hubSearchButton"),
   addMaterialsHeroButton: document.getElementById("addMaterialsHeroButton"),
+  uploadFilesInput: document.getElementById("uploadFilesInput"),
+  addUploadZone: document.getElementById("addUploadZone"),
+  uploadProject: document.getElementById("uploadProject"),
+  uploadDesignStage: document.getElementById("uploadDesignStage"),
+  uploadUseCase: document.getElementById("uploadUseCase"),
+  uploadUserNote: document.getElementById("uploadUserNote"),
+  uploadFileList: document.getElementById("uploadFileList"),
+  uploadToLibraryButton: document.getElementById("uploadToLibraryButton"),
+  uploadResult: document.getElementById("uploadResult"),
   askHeroButton: document.getElementById("askHeroButton"),
   searchLibraryHeroButton: document.getElementById("searchLibraryHeroButton"),
   demoStatus: document.getElementById("demoStatus"),
@@ -295,9 +321,9 @@ function applyI18nAttributes() {
 
 function applyTranslations() {
   document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-  document.title = `DesignMate v0.7.4 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
+  document.title = `DesignMate v0.7.5 ${currentLang === "zh" ? "搜索中心" : "Search Hub"}`;
   applyI18nAttributes();
-  text(".brand span", "v0.7.4");
+  text(".brand span", "v0.7.5");
   text(".topbar p", t("appSubtitle"));
   const navLabels = { dashboard: "navDashboard", add: "navAdd", search: "navSearch", image: "navImage", link: "navLink", ask: "navAsk", report: "navReport" };
   els.tabs.forEach((tab) => {
@@ -384,11 +410,13 @@ async function checkApi() {
     if (els.captureLinkButton) els.captureLinkButton.disabled = !apiConnected;
     if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = !apiConnected;
     if (els.saveNoteButton) els.saveNoteButton.disabled = !apiConnected;
+    if (els.uploadToLibraryButton) els.uploadToLibraryButton.disabled = !apiConnected;
   } catch {
     apiConnected = false;
     if (els.captureLinkButton) els.captureLinkButton.disabled = true;
     if (els.addCaptureLinkButton) els.addCaptureLinkButton.disabled = true;
     if (els.saveNoteButton) els.saveNoteButton.disabled = true;
+    if (els.uploadToLibraryButton) els.uploadToLibraryButton.disabled = true;
     setStatus(t("staticMode"), "warn");
   }
 }
@@ -834,6 +862,81 @@ async function savePastedNote() {
   }
 }
 
+function setUploadFiles(fileList) {
+  selectedUploadFiles = Array.from(fileList || []);
+  renderUploadFileList();
+}
+
+function renderUploadFileList() {
+  if (!els.uploadFileList) return;
+  if (!selectedUploadFiles.length) {
+    els.uploadFileList.innerHTML = `<p class="meta">${esc(t("filesToUpload"))}: 0</p>`;
+    return;
+  }
+  els.uploadFileList.innerHTML = selectedUploadFiles.map((file) => `
+    <div class="upload-file-row">
+      <strong>${esc(file.name)}</strong>
+      <span>${esc(Math.round(file.size / 1024) || 1)} KB</span>
+    </div>
+  `).join("");
+}
+
+function uploadResultCard(material) {
+  return `
+    <article class="material-card">
+      <div class="filename">${esc(material.filename)}</div>
+      <dl class="link-summary">
+        <dt>${esc(t("fileType"))}</dt><dd>${esc(material.extension || "unknown")}</dd>
+        <dt>${esc(t("project"))}</dt><dd>${esc(material.project_guess || "unknown")}</dd>
+        <dt>${esc(t("designStage"))}</dt><dd>${esc(material.design_stage || material.portfolio_stage || "unknown")}</dd>
+        <dt>${esc(t("placement"))}</dt><dd>${esc(material.portfolio_placement || portfolioPlacement(material))}</dd>
+        <dt>${esc(t("savedPath"))}</dt><dd>${esc(material.path || "")}</dd>
+        <dt>${esc(t("addedToLibrary"))}</dt><dd>${esc(material.parse_status || "saved")}</dd>
+      </dl>
+    </article>
+  `;
+}
+
+async function uploadMaterials() {
+  if (!apiConnected) {
+    els.uploadResult.innerHTML = `<div class="empty">${esc(t("uploadRequiresApi"))}</div>`;
+    setStatus(t("uploadRequiresApi"), "warn");
+    return;
+  }
+  if (!selectedUploadFiles.length) {
+    els.uploadResult.innerHTML = `<div class="empty">${esc(t("filesToUpload"))}: 0</div>`;
+    return;
+  }
+  const form = new FormData();
+  selectedUploadFiles.forEach((file) => form.append("files", file, file.name));
+  form.append("project", els.uploadProject.value || "");
+  form.append("design_stage", els.uploadDesignStage.value || "");
+  form.append("use_case", els.uploadUseCase.value || "");
+  form.append("user_note", els.uploadUserNote.value || "");
+  try {
+    setStatus(t("saving"), "");
+    const response = await fetch(`${API_BASE}/api/upload-materials`, { method: "POST", body: form });
+    const data = await response.json();
+    if (!response.ok || !data.materials_created?.length) throw new Error(data.message || data.error || "Upload failed");
+    data.materials_created.forEach((material) => {
+      const index = materials.findIndex((item) => item.id === material.id);
+      if (index >= 0) materials[index] = material;
+      else materials.unshift(material);
+    });
+    const errorHtml = (data.errors || []).length ? `<div class="empty">${esc(data.errors.map((item) => `${item.filename}: ${item.message}`).join("; "))}</div>` : "";
+    els.uploadResult.innerHTML = `<div class="empty">${esc(t("uploadSuccess"))}</div>${data.materials_created.map(uploadResultCard).join("")}${errorHtml}`;
+    selectedUploadFiles = [];
+    els.uploadFilesInput.value = "";
+    renderUploadFileList();
+    renderDashboard();
+    renderSearch();
+    setStatus(t("uploadSuccess"), "ok");
+  } catch (error) {
+    els.uploadResult.innerHTML = `<div class="empty">${esc(t("uploadFailed"))}: ${esc(error.message)}</div>`;
+    setStatus(t("uploadFailed"), "error");
+  }
+}
+
 async function askDesignMate() {
   const question = els.askQuestion.value.trim();
   if (!question) {
@@ -1062,6 +1165,7 @@ async function init() {
     renderDashboard();
     renderSearch();
     renderImageSearch();
+    renderUploadFileList();
     await checkApi();
     if (materials[0]) showDetail(materials[0].id);
   } catch (error) {
@@ -1107,6 +1211,20 @@ els.imageFilenameQuery.addEventListener("input", renderImageSearch);
 els.captureLinkButton.addEventListener("click", captureLink);
 if (els.addCaptureLinkButton) els.addCaptureLinkButton.addEventListener("click", captureAddLink);
 if (els.saveNoteButton) els.saveNoteButton.addEventListener("click", savePastedNote);
+if (els.uploadFilesInput) els.uploadFilesInput.addEventListener("change", (event) => setUploadFiles(event.target.files));
+if (els.uploadToLibraryButton) els.uploadToLibraryButton.addEventListener("click", uploadMaterials);
+if (els.addUploadZone) {
+  els.addUploadZone.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    els.addUploadZone.classList.add("dragging");
+  });
+  els.addUploadZone.addEventListener("dragleave", () => els.addUploadZone.classList.remove("dragging"));
+  els.addUploadZone.addEventListener("drop", (event) => {
+    event.preventDefault();
+    els.addUploadZone.classList.remove("dragging");
+    setUploadFiles(event.dataTransfer.files);
+  });
+}
 document.querySelectorAll(".jump").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.target)));
 document.getElementById("quickFilters").addEventListener("click", (event) => {
   const button = event.target.closest("button");

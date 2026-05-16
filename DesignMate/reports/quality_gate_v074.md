@@ -1,13 +1,13 @@
 # DesignMate v0.7.4 Quality Gate
 
-- Generated at: 2026-05-10T01:30:09
+- Generated at: 2026-05-16T17:03:03
 - Final status: PASS
 
 | Check | Status | Detail | Fix |
 | --- | --- | --- | --- |
 | v0.7.4 positioning doc exists | PASS | docs\v0.7.4_design_process_positioning.md | - |
-| frontend displays version v0.7.4 | PASS | Found v0.7.4 | - |
-| frontend script uses version v0.7.4 | PASS | Found v0.7.4 | - |
+| frontend displays a compatible v0.7.x version | PASS | Found v0.7.5 | - |
+| frontend script uses a compatible v0.7.x version | PASS | Found v0.7.5 | - |
 | English home positioning uses design process | PASS | Found A Local AI Search Hub for the Design Process | - |
 | Chinese home positioning uses 设计全过程 | PASS | Found 面向设计全过程的本地 AI 资料助手 | - |
 | top subtitle uses design process | PASS | Found Design process material assistant | - |

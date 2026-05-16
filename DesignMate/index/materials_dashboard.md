@@ -1,8 +1,8 @@
 # Materials Dashboard
 
-Generated at: 2026-05-10T01:30:05
+Generated at: 2026-05-16T17:03:11
 
-- 总资料数：84
+- 总资料数：267
 
 ## 各类型数量
 
@@ -10,13 +10,13 @@ Generated at: 2026-05-10T01:30:05
 | --- | ---: |
 | competitor | 4 |
 | draft | 8 |
-| feedback | 18 |
+| feedback | 44 |
 | idea | 8 |
 | paper | 6 |
 | reference | 10 |
-| research | 24 |
-| sketch | 4 |
-| unknown | 2 |
+| research | 50 |
+| sketch | 30 |
+| unknown | 107 |
 
 ## 各项目数量
 
@@ -26,7 +26,7 @@ Generated at: 2026-05-10T01:30:05
 | info-center | 18 |
 | reader-design | 27 |
 | thesis | 10 |
-| unknown | 8 |
+| unknown | 191 |
 
 ## 各阶段数量
 
@@ -34,10 +34,10 @@ Generated at: 2026-05-10T01:30:05
 | --- | ---: |
 | background | 8 |
 | concept | 10 |
-| development | 16 |
+| development | 42 |
 | presentation | 14 |
-| research | 28 |
-| unknown | 8 |
+| research | 80 |
+| unknown | 113 |
 
 ## 高价值资料 Top 10
 
@@ -56,9 +56,21 @@ Generated at: 2026-05-10T01:30:05
 
 - `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案
 - `research_feedback.md`：有正文；类型明确为 feedback；可对应 research 阶段；包含 用户、痛点、调研、反馈、方案
-- `generic webpage link`：有正文；类型明确为 reference；可对应 research 阶段
-- `behance link`：有正文；类型明确为 reference
-- `bilibili link`：有正文；类型明确为 reference
-- `behance link`：有正文；类型明确为 reference
-- `v06-fake-image.png`：可对应 development 阶段
-- `v06-fake-image.png`：可对应 development 阶段
+- `v075-upload-research.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-8d4617d0.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-8a5da184.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-ce85173c.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-c549db88.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-6ef9c5cc.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-63cc1541.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-265cd906.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-3c2ba873.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-e1573f41.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-271f1de4.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-ba2f3ea6.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-b7050b67.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-688500e8.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-ee1bbaac.txt`：有正文；类型明确为 feedback；可对应 research 阶段
+- `v075-upload-research-a88ed436.md`：有正文；类型明确为 research；可对应 research 阶段
+- `v075-upload-note-f1ac3333.txt`：有正文；类型明确为 feedback；可对应 research 阶段

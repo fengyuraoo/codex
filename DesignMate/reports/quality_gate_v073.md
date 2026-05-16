@@ -1,13 +1,13 @@
 # DesignMate v0.7.3 Quality Gate
 
-- Generated at: 2026-05-10T01:30:02
+- Generated at: 2026-05-16T17:02:48
 - Final status: PASS
 
 | Check | Status | Detail | Fix |
 | --- | --- | --- | --- |
 | v0.7.3 minimal home UI doc exists | PASS | docs\v0.7.3_minimal_home_ui.md | - |
-| frontend displays a compatible v0.7.x version | PASS | Found v0.7.4 | - |
-| frontend script uses a compatible v0.7.x version | PASS | Found v0.7.4 | - |
+| frontend displays a compatible v0.7.x version | PASS | Found v0.7.5 | - |
+| frontend script uses a compatible v0.7.x version | PASS | Found v0.7.5 | - |
 | home has Add Materials action | PASS | Found addMaterialsHeroButton | - |
 | home has Ask DesignMate action | PASS | Found askHeroButton | - |
 | home has Search Library action | PASS | Found searchLibraryHeroButton | - |

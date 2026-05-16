@@ -460,7 +460,7 @@ def rebuild_fts_index(db_path: Path = DB_PATH) -> bool:
 
 def search_materials(query: str, project: str | None = None, material_type: str | None = None, stage: str | None = None, limit: int = 20, db_path: Path = DB_PATH) -> list[MaterialRecord]:
     # The ranked app search lives in search_engine.py. This DB helper returns filtered candidates.
-    return list_materials(db_path, project=project, material_type=material_type, stage=stage, limit=None)[: max(limit, 100)]
+    return list_materials(db_path, project=project, material_type=material_type, stage=stage, limit=None)
 
 
 def get_stats(db_path: Path = DB_PATH) -> dict[str, Any]:

@@ -28,6 +28,13 @@ def contains(path: Path, marker: str, name: str) -> dict[str, str]:
     return check(name, ok, f"Found {marker}" if ok else f"Missing {marker}", f"Add `{marker}` to {path.relative_to(ROOT)}.")
 
 
+def contains_any(path: Path, markers: list[str], name: str) -> dict[str, str]:
+    content = read(path)
+    found = [marker for marker in markers if marker in content]
+    ok = bool(found)
+    return check(name, ok, f"Found {', '.join(found)}" if ok else f"Missing one of {markers}", f"Add one of `{markers}` to {path.relative_to(ROOT)}.")
+
+
 def not_contains(path: Path, marker: str, name: str) -> dict[str, str]:
     content = read(path)
     ok = marker not in content
@@ -47,8 +54,8 @@ def main() -> int:
     ai_service = ROOT / "backend" / "ai_service.py"
     checks = [
         exists(ROOT / "docs" / "v0.7.4_design_process_positioning.md", "v0.7.4 positioning doc exists"),
-        contains(index_html, "v0.7.4", "frontend displays version v0.7.4"),
-        contains(app_js, "v0.7.4", "frontend script uses version v0.7.4"),
+        contains_any(index_html, ["v0.7.4", "v0.7.5"], "frontend displays a compatible v0.7.x version"),
+        contains_any(app_js, ["v0.7.4", "v0.7.5"], "frontend script uses a compatible v0.7.x version"),
         contains(app_js, "A Local AI Search Hub for the Design Process", "English home positioning uses design process"),
         contains(app_js, "面向设计全过程的本地 AI 资料助手", "Chinese home positioning uses 设计全过程"),
         contains(app_js, "Design process material assistant", "top subtitle uses design process"),

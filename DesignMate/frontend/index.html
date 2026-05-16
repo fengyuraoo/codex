@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DesignMate v0.7.4 Search Hub</title>
+    <title>DesignMate v0.7.5 Search Hub</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <div class="brand">DesignMate <span>v0.7.4</span></div>
+        <div class="brand">DesignMate <span>v0.7.5</span></div>
         <p>Design process material assistant</p>
       </div>
       <nav class="tabs">
@@ -143,10 +143,19 @@
             <div class="upload-zone add-upload-zone" id="addUploadZone">
               <strong data-i18n="uploadDrop">Drop design materials here</strong>
               <span data-i18n="uploadChoose">images, PDF, DOCX, PPTX, Markdown, TXT and screenshots</span>
-              <input type="file" multiple accept=".md,.txt,.pdf,.docx,.pptx,image/png,image/jpeg" />
+              <input id="uploadFilesInput" type="file" multiple accept=".md,.txt,.csv,.xlsx,.pdf,.docx,.pptx,image/png,image/jpeg,image/webp,image/gif" />
             </div>
-            <p class="placeholder-note" data-i18n="uploadFallback">File upload is prepared. In this version, place files into the user materials folder and run scan.</p>
-            <code>DesignMate/data/inbox</code>
+            <p class="placeholder-note" data-i18n="uploadFallback">Drop or choose design materials. DesignMate saves them locally and makes them available for search and questions.</p>
+            <div class="upload-form-grid">
+              <label><span data-i18n="project">Project</span><input id="uploadProject" placeholder="reader-design / info-center / general" value="general" /></label>
+              <label><span data-i18n="designStage">Design Stage</span><select id="uploadDesignStage"><option>research</option><option>inspiration</option><option>concept</option><option>development</option><option>feedback</option><option>presentation</option><option>unknown</option></select></label>
+              <label><span data-i18n="placement">Use Case</span><select id="uploadUseCase"><option>Research</option><option>Inspiration</option><option>Design Process</option><option>Decision Evidence</option><option>Presentation</option><option>Portfolio</option><option>Reflection</option></select></label>
+            </div>
+            <label class="wide"><span data-i18n="userNote">User Note</span><textarea id="uploadUserNote" rows="3" placeholder="Why does this file matter?"></textarea></label>
+            <h3 data-i18n="filesToUpload">Files to Upload</h3>
+            <div id="uploadFileList" class="upload-file-list"></div>
+            <button id="uploadToLibraryButton" class="primary" data-i18n="uploadToLibrary">Upload to Library</button>
+            <div id="uploadResult" class="material-list compact-result"></div>
           </article>
 
           <article class="add-method">

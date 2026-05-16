@@ -116,6 +116,17 @@ On the home screen, the three main actions are Add Materials, Search Library and
 4. Ask DesignMate 页面：展示设计过程问题和 Use Cases / 可用场景。
 5. Link Capture 页面：展示外部参考链接如何变成设计证据。
 
+## v0.7.5 Real File Upload 演示路径
+
+1. 打开 Add Materials / 添加资料。
+2. 在 Upload Files 区域拖入或选择一个设计资料文件，例如 Markdown 调研记录、TXT 反馈记录、PDF、PPT 或图片。
+3. 填写项目、设计阶段和使用场景，也可以补充一段用户备注。
+4. 点击 Upload to Library / 上传并加入资料库。
+5. 上传成功后查看结果卡片，确认文件名、文件类型、项目、阶段、使用场景、保存位置和入库状态。
+6. 回到 Text Search / 搜索资料，搜索刚上传的文件名或正文关键词。
+7. 进入 Ask DesignMate，提问：“这条资料可以用于什么设计场景？”或者 “Which use case does this uploaded file support?”
+8. 说明当前版本已经实现真实本地上传和扫描入库，但图片视觉理解、深度文档解析和真实 AI provider 仍属于后续版本。
+
 ## 推荐截图清单
 
 - Search Hub 首页全屏。
