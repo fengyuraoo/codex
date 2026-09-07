@@ -102,7 +102,7 @@ export function NodeDetails({
 
   if (!selected || !draft) {
     return (
-      <aside className="h-full w-full shrink-0 border-l border-border bg-[#fbf4ea] p-6">
+      <aside className="h-full w-full shrink-0 bg-background p-6">
         <p className="text-sm text-muted">请选择一个素材节点 / Select a material node.</p>
       </aside>
     );
@@ -162,11 +162,11 @@ export function NodeDetails({
   return (
     <aside
       className={cn(
-        "quiet-scrollbar h-full w-full shrink-0 border-l border-border bg-[#fbf4ea]",
+        "quiet-scrollbar h-full w-full shrink-0 bg-background",
         scrollInside ? "overflow-auto" : "overflow-visible"
       )}
     >
-      <div className="min-h-full px-6 py-7">
+      <div className="mx-auto min-h-full max-w-4xl px-4 py-6 sm:px-8 sm:py-8">
         {onBack && (
           <Button
             className="mb-4 min-h-10"
@@ -175,13 +175,13 @@ export function NodeDetails({
             variant="secondary"
           >
             <ArrowLeft className="h-4 w-4" />
-            返回素材树 / Back to tree
+            返回素材库
           </Button>
         )}
-        <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
             <p className="mb-3 text-xs font-medium text-muted">
-              Node detail / 素材详情
+              READ · SPEAK · REFLECT
             </p>
             <h2 className="break-words text-3xl font-semibold leading-tight text-foreground">
               {isEditing ? draft.zhTitle : selected.zhTitle}
@@ -191,7 +191,7 @@ export function NodeDetails({
             </p>
             {!isEditing && (
               <div className="mt-3">
-                <SpeakButton label="朗读标题 / Speak title" text={selected.enTitle} />
+                <SpeakButton label="听标题" text={selected.enTitle} />
               </div>
             )}
           </div>
@@ -217,11 +217,11 @@ export function NodeDetails({
               <Button
                 onClick={() => setIsEditing(true)}
                 size="sm"
-                title="编辑 / Edit"
+                title="编辑素材"
                 variant="secondary"
               >
                 <Edit3 className="h-4 w-4" />
-                编辑 / Edit
+                编辑素材
               </Button>
             )}
           </div>
@@ -271,7 +271,7 @@ export function NodeDetails({
             </label>
 
             <label className="block text-sm">
-              <span className="mb-1 block text-xs text-muted">中文想法 zhContent</span>
+              <span className="mb-1 block text-xs text-muted">中文想法</span>
               <Textarea
                 onChange={(event) =>
                   setDraft({ ...draft, zhContent: event.target.value })
@@ -281,7 +281,7 @@ export function NodeDetails({
             </label>
 
             <label className="block text-sm">
-              <span className="mb-1 block text-xs text-muted">英文表达 enContent</span>
+              <span className="mb-1 block text-xs text-muted">英文表达</span>
               <Textarea
                 onChange={(event) =>
                   setDraft({ ...draft, enContent: event.target.value })
@@ -291,7 +291,7 @@ export function NodeDetails({
             </label>
 
             <label className="block text-sm">
-              <span className="mb-1 block text-xs text-muted">可用话题 tags</span>
+              <span className="mb-1 block text-xs text-muted">可用话题</span>
               <Input
                 onChange={(event) => setTagText(event.target.value)}
                 placeholder="用英文逗号分隔 / Separate with commas"
@@ -301,7 +301,7 @@ export function NodeDetails({
 
             <label className="block text-sm">
               <span className="mb-1 block text-xs text-muted">
-                相关题目 relatedQuestions（附属信息）
+                相关题目（每行一题）
               </span>
               <Textarea
                 className="min-h-24"
@@ -341,7 +341,7 @@ export function NodeDetails({
             <ContentBlock
               action={
                 <SpeakButton
-                  label="朗读英文 / Speak"
+                  label="听英文示范"
                   size="md"
                   text={selected.enContent}
                 />
@@ -378,6 +378,10 @@ export function NodeDetails({
             </section>
           </div>
         )}
+
+        <div className="mt-5">
+          <NodeRecorder nodeId={selected.id} />
+        </div>
 
         <section className="mt-5 rounded-lg border border-border bg-card p-4 shadow-sm">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -531,9 +535,6 @@ export function NodeDetails({
           Updated {formatDateTime(selected.updatedAt)}
         </div>
 
-        <div className="mt-5">
-          <NodeRecorder nodeId={selected.id} />
-        </div>
 
         {!isRoot && (
           <Button
