@@ -20,9 +20,9 @@ export function AppFrame({
   }, [initialize]);
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex h-[100dvh] flex-col bg-background">
       {showSidebar && <Sidebar />}
-      <main className="h-screen min-w-0 flex-1 overflow-hidden">{children}</main>
+      <main className="min-h-0 min-w-0 flex-1 overflow-hidden">{children}</main>
       {!isReady && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/70 backdrop-blur-sm">
           <div className="rounded-lg border border-border bg-card px-5 py-4 text-sm text-muted shadow-notion">

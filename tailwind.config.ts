@@ -10,16 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#f7f1e8",
-        foreground: "#2b2926",
-        card: "#fffdf9",
-        border: "#e7ded2",
-        muted: "#7d746b",
-        accent: "#8b5e34",
-        soft: "#f1e7d8"
+        background: "#f5f6f3",
+        foreground: "#263c35",
+        card: "#ffffff",
+        border: "#e1e7e1",
+        muted: "#68766f",
+        accent: "#356653",
+        soft: "#eaf1eb"
       },
       boxShadow: {
-        notion: "0 8px 30px rgba(69, 51, 33, 0.08)"
+        notion: "0 4px 20px rgba(38, 60, 53, 0.035)"
       }
     }
   },

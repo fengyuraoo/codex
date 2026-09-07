@@ -180,9 +180,9 @@ export function NodeRecorder({ nodeId }: { nodeId: string }) {
 
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
-          <h3 className="font-semibold">节点录音 / Node Recordings</h3>
+          <h3 className="font-semibold">开口练一遍</h3>
           <p className="mt-1 text-xs leading-5 text-muted">
-            录音只保存在本地浏览器 IndexedDB，不上传服务器。
+            对照上面的表达练习，再听听自己的进步。录音保存在此浏览器。
           </p>
         </div>
         <Badge>{recordings.length} local</Badge>
@@ -191,7 +191,7 @@ export function NodeRecorder({ nodeId }: { nodeId: string }) {
       <div className="mb-4 flex flex-wrap gap-2">
         <Button disabled={isRecording} onClick={() => void startRecording()} size="sm">
           <Mic className="h-4 w-4" />
-          开始录音 / Record
+          开始录音
         </Button>
         <Button
           disabled={!isRecording}
@@ -200,21 +200,21 @@ export function NodeRecorder({ nodeId }: { nodeId: string }) {
           variant="secondary"
         >
           <Square className="h-4 w-4" />
-          停止录音 / Stop
+          结束并保存
         </Button>
         {latestRecording ? (
-          renderPlaybackButton(latestRecording, "播放最近 / Play Latest")
+          renderPlaybackButton(latestRecording, "听最近一次")
         ) : (
           <Button disabled size="sm" variant="secondary">
             <Play className="h-4 w-4" />
-            播放最近 / Play Latest
+            听最近一次
           </Button>
         )}
       </div>
 
       {isRecording && (
         <div className="mb-4 rounded-md border border-[#ead6ca] bg-[#fff4ed] px-3 py-2 text-xs text-[#8a5a42]">
-          Recording... 请说完后点击 Stop。
+          正在录音…说完后点击「结束并保存」。
         </div>
       )}
 

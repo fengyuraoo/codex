@@ -8,6 +8,7 @@ import {
   FileText,
   Folder,
   FolderOpen,
+  Search,
   FolderTree
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -78,7 +79,9 @@ function TreeNodeRow({
         style={{ paddingLeft: `${10 + level * 24}px` }}
       >
         <button
-          aria-label={isExpanded ? "Collapse" : "Expand"}
+          aria-label={`${isExpanded ? "收起" : "展开"}${node.zhTitle}`}
+          aria-expanded={hasChildren ? isExpanded : undefined}
+          disabled={!hasChildren}
           className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-muted transition hover:bg-card hover:text-foreground"
           onClick={(event) => {
             event.stopPropagation();
@@ -122,8 +125,8 @@ function TreeNodeRow({
         </button>
 
         <button
-          aria-label="Add child node"
-          className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted transition hover:bg-card hover:text-foreground group-hover:flex"
+          aria-label={`在${node.zhTitle}下新增素材`}
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted transition hover:bg-card hover:text-foreground opacity-60 hover:opacity-100"
           onClick={(event) => {
             event.stopPropagation();
             void addNode(node.id);
@@ -161,6 +164,8 @@ export function TreeView({
 }) {
   const nodes = useMaterialStore((state) => state.nodes);
   const addNode = useMaterialStore((state) => state.addNode);
+  const [query, setQuery] = useState("");
+  const matches = useMemo(() => nodes.filter(node => `${node.zhTitle} ${node.enTitle} ${node.zhContent} ${node.enContent} ${node.tags.join(" ")}`.toLowerCase().includes(query.trim().toLowerCase())), [nodes, query]);
   const tree = useMemo(() => buildTree(nodes), [nodes]);
   const [expanded, setExpanded] = useState<Set<string>>(
     () =>
@@ -192,16 +197,16 @@ export function TreeView({
   };
 
   return (
-    <section className="flex h-full min-w-0 flex-col px-4 py-5 sm:px-6 lg:px-8 lg:py-7">
+    <section className="flex h-full min-w-0 flex-col px-3 py-5 sm:px-5">
       <div className="mb-5 flex flex-wrap items-start justify-between gap-4">
-        <div className="min-w-[220px] flex-1">
+        <div className="min-w-0 flex-1">
           <div className="mb-2 flex items-center gap-2 text-sm text-muted">
             <FolderTree className="h-4 w-4" />
-            Local-first material tree
+            MY MATERIALS
           </div>
-          <h2 className="text-2xl font-semibold">树状笔记库 / Tree View</h2>
+          <h2 className="text-2xl font-semibold">我的素材库</h2>
           <p className="mt-2 text-sm text-muted">
-            以“冯雨娆 / Feng Yurao”为中心整理雅思口语素材
+            从熟悉的话题开始，慢慢说得更好。
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-start gap-2 sm:justify-end">
@@ -217,6 +222,11 @@ export function TreeView({
         </div>
       </div>
 
+      <label className="relative mb-4 block">
+        <Search className="absolute left-3 top-3 h-4 w-4 text-muted" />
+        <input aria-label="搜索素材" type="search" placeholder="搜索中文、英文或关键词" value={query} onChange={event => setQuery(event.target.value)} className="h-11 w-full rounded-lg border border-border bg-card pl-9 pr-3 text-sm outline-none focus:border-accent" />
+      </label>
+      {query.trim() && <p role="status" className="mb-2 text-xs text-muted">找到 {matches.length} 个素材</p>}
       <div
         className={cn(
           "quiet-scrollbar min-h-0 rounded-xl border border-border bg-card p-3 shadow-notion sm:p-4",
@@ -224,7 +234,8 @@ export function TreeView({
         )}
       >
         <div className="space-y-0.5">
-          {tree.map((node) => (
+          {query.trim() && !matches.length && <p className="px-3 py-8 text-sm leading-6 text-muted">没有找到相关素材，试试更短的关键词。</p>}
+          {(query.trim() ? matches.map(node => ({ ...node, children: [] })) : tree).map((node) => (
             <TreeNodeRow
               expanded={expanded}
               key={node.id}

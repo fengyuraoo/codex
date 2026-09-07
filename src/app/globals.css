@@ -8,8 +8,8 @@
 
 body {
   margin: 0;
-  background: #f7f1e8;
-  color: #2b2926;
+  background: #f5f6f3;
+  color: #263c35;
 }
 
 button,
@@ -37,3 +37,7 @@ select {
   background: #d7cab8;
   border-radius: 999px;
 }
+
+body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+:focus-visible { outline: 2px solid #356653; outline-offset: 3px; }
+@media (max-width: 420px) { nav a { font-size: 12px; padding-inline: 8px; gap: 5px; } }
